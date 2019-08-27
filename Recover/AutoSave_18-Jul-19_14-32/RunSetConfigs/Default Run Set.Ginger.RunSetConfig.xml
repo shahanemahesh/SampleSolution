@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="a73c6e8c-30c0-499f-a459-8dd7d46a6291" ItemType="RunSetConfig" CreatedBy="MOHDKHAN" Created="201907171240" GingerVersion="3.3.0.0" Version="23" LastUpdateBy="MOHDKHAN" LastUpdate="201907171418" />
+<RunSetConfig Guid="a73c6e8c-30c0-499f-a459-8dd7d46a6291" Name="Default Run Set" ParentGuid="00000000-0000-0000-0000-000000000000">
+<GingerRunners>
+<GingerRunner Guid="7f6b043e-f91d-42b6-8bd1-6f54bccaee0c" Name="Runner 1" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentName="Test - Agent 1" AppName="Test" Guid="cb5f88a1-0dd1-42c1-bbc7-c70853af773e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="c52b5a77-dee2-4ded-b294-57620416c065" BusinessFlowInstanceGuid="8781d4fc-8a4a-438a-990a-d321a410f015" BusinessFlowIsActive="True" BusinessFlowName="Flow 1" Guid="e7729def-0752-4bb6-836d-b8d70f327381" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+</GingerRunners>
+</RunSetConfig></GingerRepositoryItem>

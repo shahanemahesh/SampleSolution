@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.3.0.0" Version="2" LastUpdateBy="MOHDKHAN" LastUpdate="201907180942" />
+<BusinessFlow Guid="4f041002-2b77-4184-aa24-140719186948" Name="Web" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Activity 1" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ec997379-d406-4a28-aa7a-461f7899780d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Test">
+<Acts>
+<ActBrowserElement Active="True" Description="Browser Action" Guid="e25222af-7b86-4e2d-81de-ba4864281890" ImplicitWait="60" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="05ddd4ae-7990-4bb8-ad90-2ff9c6395c20" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="GotoURL" Value="GotoURL" />
+<ActInputValue Guid="dfc9c4f2-fe4e-4c2c-b1fc-edaddcf0df31" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="45be5ea2-7d8f-4600-a152-da36a48077d5" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="22cf1bf8-2d97-4e07-af2c-f922972b6792" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://google.com" Value="http://google.com" />
+<ActInputValue Guid="63f1c0ea-92ca-4825-8994-85606cba7b1d" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Current" Value="Current" />
+<ActInputValue Guid="83c6ef87-8ddb-4bc3-a577-df4181f6fabb" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Static" Value="Static" />
+</InputValues>
+</ActBrowserElement>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Test" Guid="bffe2080-9f82-4f6f-b27c-92d97c3b7462" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+</BusinessFlow></GingerRepositoryItem>
