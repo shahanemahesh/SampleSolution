@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.4.0.0" Version="16" LastUpdateBy="MOHDKHAN" LastUpdate="201908291244" />
+<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.4.0.0" Version="12" LastUpdateBy="MOHDKHAN" LastUpdate="201908291233" />
 <BusinessFlow Guid="4f041002-2b77-4184-aa24-140719186948" Name="Web" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
 <Activities>
 <Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Activity 1" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ec997379-d406-4a28-aa7a-461f7899780d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Test">
@@ -105,8 +105,8 @@
 <ActivitiesGroups>
 <ActivitiesGroup Guid="1d1cab82-2040-408b-b1de-df34c3495ad1" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
 <ActivitiesIdentifiers>
-<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="ec997379-d406-4a28-aa7a-461f7899780d" ActivityName="Activity 1" Guid="4ef5d907-3526-4f73-95d0-a9bb341b8a57" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="8be154d5-e5bb-47e5-9474-bdb231966ae0" ActivityName="WebSerice" Guid="b7d0b1d3-d504-486d-95a4-58edbbb0fb9b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="ec997379-d406-4a28-aa7a-461f7899780d" ActivityName="Activity 1" Guid="486faeb3-2462-4cea-9eed-5cd9a6c677b9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="8be154d5-e5bb-47e5-9474-bdb231966ae0" ActivityName="WebSerice" Guid="31754cdb-340d-47e7-85c6-ca9d65027491" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </ActivitiesIdentifiers>
 </ActivitiesGroup>
 </ActivitiesGroups>

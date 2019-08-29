@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="dbd1f336-b148-4404-88b1-06520a89a03b" ItemType="RunSetConfig" CreatedBy="MOHDKHAN" Created="201908291229" GingerVersion="3.4.0.0" Version="6" LastUpdateBy="MOHDKHAN" LastUpdate="201908291244" />
+<RunSetConfig Guid="dbd1f336-b148-4404-88b1-06520a89a03b" Name="Demo" ParentGuid="00000000-0000-0000-0000-000000000000">
+<GingerRunners>
+<GingerRunner Guid="9fa5f65c-46b5-416a-9e4f-799091932ca5" Name="Runner 1" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentName="Plugin-FireFox" AppName="Test" Guid="c0a0e88d-e65f-427c-a8ff-05feef734313" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ApplicationAgent AgentName="Plugin-Webservice" AppName="MyWebServicesApp" Guid="59fe3a9b-4039-438b-9acc-3d79cc10140b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="4f041002-2b77-4184-aa24-140719186948" BusinessFlowInstanceGuid="1a6c9c72-6989-4c9c-8e1f-0154f6ec98db" BusinessFlowIsActive="True" BusinessFlowName="Web" Guid="fdf35653-db74-4285-9fa4-f7dff32b57c7" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+</GingerRunners>
+
+<RunSetActions>
+<RunSetActionHTMLReport Condition="AlwaysRun" Guid="385bb867-a99a-4eab-b721-0fabb9d008d5" Name="Produce HTML Report" ParentGuid="00000000-0000-0000-0000-000000000000" RunAt="ExecutionEnd" />
+</RunSetActions>
+</RunSetConfig></GingerRepositoryItem>

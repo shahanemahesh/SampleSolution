@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="82cd4db8-d117-420b-abeb-b0db67403675" ItemType="Agent" CreatedBy="MOHDKHAN" Created="201908291209" GingerVersion="3.4.0.0" Version="2" LastUpdateBy="MOHDKHAN" LastUpdate="201908291210" />
+<Agent Active="True" AgentType="Service" DriverType="InternalBrowser" Guid="82cd4db8-d117-420b-abeb-b0db67403675" Name="Plugin-FireFox" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" PluginId="SeleniumPlugin" ServiceId="SeleniumFireFoxService">
+<DriverConfiguration>
+<DriverConfigParam Description="Run Browser in UI " Guid="2a44804a-36c1-43c8-90ba-b1f9f5eb809c" Parameter="Headless Browser" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<DriverConfigParam Description="Full path for the User Profile folder" Guid="b1869130-6ed3-44f4-a1ce-8468dda42792" Parameter="User Profile Path" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<DriverConfigParam Description="Proxy type" Guid="e363c5ac-6db5-4503-990f-7b8a815846f8" Parameter="Proxy Type" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Manual" />
+<DriverConfigParam Description="Proxy URL or prixy autoconfig url" Guid="866749f2-0d57-4554-8538-a1b2efa990e2" Parameter="Proxy Url" ParentGuid="00000000-0000-0000-0000-000000000000" Value="genproxy.amdocs.com:8080" />
+<DriverConfigParam Description="Amount of time the driver should wait when searching for an element if it is not immediately present" Guid="d602d209-bf9c-47f1-854b-bd59235bac5d" Parameter="ImplicitWait" ParentGuid="00000000-0000-0000-0000-000000000000" Value="30" />
+<DriverConfigParam Description="PageLoad Timeout for Web Action Completion" Guid="a4f14d54-1c72-4303-a9fb-420e2bcf1752" Parameter="Pageload Timeout" ParentGuid="00000000-0000-0000-0000-000000000000" Value="60" />
+<DriverConfigParam Description="Use Browser In Private/Incognito Mode (Please use 64bit Browse with Internet Explorer " Guid="c75a26f3-af71-4410-b81a-f2d817388f58" Parameter="Browser Private Mode" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<DriverConfigParam Description="HttpServer Timeout for Web Action Completion. Default/Recommended is minimum 60 secs" Guid="0d1f61ba-cf9b-489e-8d1a-0324e14b54cf" Parameter="Http Server TimeOut" ParentGuid="00000000-0000-0000-0000-000000000000" Value="60" />
+<DriverConfigParam Description="Switch to Iframe automatically with POM" Guid="6045850f-cd8c-4382-b399-7516edf80026" Parameter="Auto Switch Frame" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+</DriverConfiguration>
+</Agent></GingerRepositoryItem>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8859bf71-482d-4576-bf7d-03f3318de83b" ItemType="Agent" CreatedBy="MOHDKHAN" Created="201908291210" GingerVersion="3.4.0.0" Version="3" LastUpdateBy="MOHDKHAN" LastUpdate="201908291243" />
+<Agent Active="True" AgentType="Service" DriverType="WebServices" Guid="8859bf71-482d-4576-bf7d-03f3318de83b" Name="Plugin-Webservice" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" PluginId="Ginger Rest Plugin" ServiceId="ResetService">
+<DriverConfiguration>
+<DriverConfigParam Description="Proxy type" Guid="38743a1d-c9f6-4fa4-8463-1dda04b355e6" Parameter="Proxy Type" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<DriverConfigParam Description="Proxy URL or prixy autoconfig url" Guid="e8ffab7b-6ce0-4898-90c5-a3be1bfcdd7b" Parameter="Proxy Url" ParentGuid="00000000-0000-0000-0000-000000000000" Value="genproxy.amdocs.com:8080" />
+</DriverConfiguration>
+</Agent></GingerRepositoryItem>
