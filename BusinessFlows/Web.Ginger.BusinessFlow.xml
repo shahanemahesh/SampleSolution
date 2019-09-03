@@ -1,73 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.4.0.0" Version="16" LastUpdateBy="MOHDKHAN" LastUpdate="201908291244" />
+<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.4.0.0" Version="18" LastUpdateBy="MOHDKHAN" LastUpdate="201909030632" />
 <BusinessFlow Guid="4f041002-2b77-4184-aa24-140719186948" Name="Web" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
 <Activities>
-<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Activity 1" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ec997379-d406-4a28-aa7a-461f7899780d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Test">
-<Acts>
-<ActBrowserElement Active="True" Description="Browser Action" Guid="e25222af-7b86-4e2d-81de-ba4864281890" ImplicitWait="60" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
-<InputValues>
-<ActInputValue Guid="05ddd4ae-7990-4bb8-ad90-2ff9c6395c20" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GotoURL" />
-<ActInputValue Guid="dfc9c4f2-fe4e-4c2c-b1fc-edaddcf0df31" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="45be5ea2-7d8f-4600-a152-da36a48077d5" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="22cf1bf8-2d97-4e07-af2c-f922972b6792" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="https://github.com/" />
-<ActInputValue Guid="63f1c0ea-92ca-4825-8994-85606cba7b1d" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
-<ActInputValue Guid="83c6ef87-8ddb-4bc3-a577-df4181f6fabb" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
-<ActInputValue Guid="f98f570a-2f51-47f6-ac1a-5790af12e458" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
-</InputValues>
-</ActBrowserElement>
-<ActUIElement Active="True" Description="UIElement Action" Guid="647b0ac0-84e1-4ba5-a4f5-3e742231c4c3" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
-<InputValues>
-<ActInputValue Guid="4369c586-bf73-433c-accc-d860b8b60eee" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
-<ActInputValue Guid="424ab3fb-e888-4705-b663-9eb609cd4504" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SendKeys" />
-<ActInputValue Guid="cb255c8e-f1c6-4c40-a50f-cf212da4c88f" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
-<ActInputValue Guid="626aac71-da0f-4b78-a96d-816766f20139" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="3bb64080-8e08-4ee2-8aec-42dc9d62cb5f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="e8d93631-0bc1-4076-943c-448223c2da01" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body/div[1]/header/div/div[2]/div[2]/div/div/div/form/label/input[1]" />
-<ActInputValue Guid="b73c3004-fce1-44c3-b11a-b6add39a682e" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="36b4dbd2-144f-48af-9697-95b61192d240" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Ginger" />
-<ActInputValue Guid="70626b4a-5eb7-49c4-a579-46b0f8dc7aaa" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="a4556413-aab7-4288-ab53-84c81d775d16" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="d3e830e0-0b9a-4093-a568-aa12c250ccaf" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="eb5ef03d-e8a1-4e19-9cbe-a9f893ea770a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="1de65b9c-7afe-44e5-8795-fc12345a9b86" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-</InputValues>
-</ActUIElement>
-<ActUIElement Active="True" Description="UIElement Action" Guid="536e5aad-c38e-4781-8ca7-b8b5227d72f8" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
-<InputValues>
-<ActInputValue Guid="0c9907bf-e1b7-4590-a27b-64ff05ed4853" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
-<ActInputValue Guid="297a318a-8940-49ef-858e-3bbfe55a67e7" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
-<ActInputValue Guid="6c80fe4f-2651-4723-8876-2c317df4287c" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
-<ActInputValue Guid="11218936-707d-4cf5-9dc8-0d5aeeeb39ca" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="edf6e542-4a66-4f6b-bb44-aae460324acb" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="4f32fe28-dde5-4c96-899b-ed934078688c" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[@id=&quot;jump-to-suggestion-search-global&quot;]/a/div[2]" />
-<ActInputValue Guid="a86ebdf9-22f1-4893-86e2-0c93086f05a9" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="7e302a56-886c-4f78-bf12-69507b2d3443" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="bf622833-c696-48f5-9956-5ccea4c3bf2f" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="07665640-ed81-46e3-beeb-48c06cac3977" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="40ae8ab1-6dce-4db2-aeb8-9de6e2bdfa73" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="7dfa3806-8602-4c2a-b0ba-35d86c53d4f8" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="a69c079b-260e-49fd-8037-5674b43c8957" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-</InputValues>
-</ActUIElement>
-<ActUIElement Active="True" Description="UIElement Action" Guid="a608e266-e013-46d0-891b-7c7b10538c06" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
-<InputValues>
-<ActInputValue Guid="7c034692-6bfa-4bae-8246-370d3705fc03" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
-<ActInputValue Guid="9581ef59-d0d7-485c-b3e8-5d4b1e422fd5" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
-<ActInputValue Guid="483a6433-c764-416c-aa37-14f03683f353" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
-<ActInputValue Guid="1e93a36b-0ad4-424c-9c67-2faa4230936b" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="3a6b0b98-15da-4560-ae50-6b6635ac508f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="ad96d9ce-33d3-4ff2-8c45-ff6c00691b80" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[@id=&quot;js-pjax-container&quot;]/div/div[3]/div/ul/li[2]/div[1]/h3/a" />
-<ActInputValue Guid="9334286e-65d5-4a43-bbe7-ca9919cb216d" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="02b375ec-b1f8-4d73-885d-199512b7b069" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="a198a5f0-8d31-4c47-abb1-de34a7f23fcc" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="03f93c55-4476-428e-bd92-f847f6fd0f64" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="c984eb76-73b6-4dd7-acea-d958dadfad67" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="d1993984-64cb-42db-96d8-3604c1afd487" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="ca072777-a259-4650-908b-164d97fa6b75" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" />
-</InputValues>
-</ActUIElement>
-</Acts>
-</Activity>
 <Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="WebSerice" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8be154d5-e5bb-47e5-9474-bdb231966ae0" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MyWebServicesApp">
 <Acts>
 <ActWebAPIRest Active="True" Description="WebAPI REST Action" Guid="d254bb11-0af8-48c8-9eff-7f30a1679b78" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
@@ -105,14 +39,12 @@
 <ActivitiesGroups>
 <ActivitiesGroup Guid="1d1cab82-2040-408b-b1de-df34c3495ad1" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
 <ActivitiesIdentifiers>
-<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="ec997379-d406-4a28-aa7a-461f7899780d" ActivityName="Activity 1" Guid="4ef5d907-3526-4f73-95d0-a9bb341b8a57" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="8be154d5-e5bb-47e5-9474-bdb231966ae0" ActivityName="WebSerice" Guid="b7d0b1d3-d504-486d-95a4-58edbbb0fb9b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="8be154d5-e5bb-47e5-9474-bdb231966ae0" ActivityName="WebSerice" Guid="257562fe-dbfd-470d-b31d-101de95c87e0" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </ActivitiesIdentifiers>
 </ActivitiesGroup>
 </ActivitiesGroups>
 
 <TargetApplications>
-<TargetApplication AppName="Test" Guid="bffe2080-9f82-4f6f-b27c-92d97c3b7462" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <TargetApplication AppName="MyWebServicesApp" Guid="a2e9d4a0-0468-402b-ba5c-b0c9048d14e7" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </TargetApplications>
 </BusinessFlow></GingerRepositoryItem>
