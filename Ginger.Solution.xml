@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="5ddd1e1f-cdae-420d-9231-9abbdb002b75" ItemType="Solution" CreatedBy="MOHDKHAN" Created="201907171236" GingerVersion="3.4.0.0" Version="9" LastUpdateBy="MOHDKHAN" LastUpdate="201908291234" />
+<GingerRepositoryItem><Header ItemGuid="5ddd1e1f-cdae-420d-9231-9abbdb002b75" ItemType="Solution" CreatedBy="MOHDKHAN" Created="201907171236" GingerVersion="3.4.0.0" Version="10" LastUpdateBy="MOHDKHAN" LastUpdate="201909040724" />
 <Solution AlmType="QC" Guid="5ddd1e1f-cdae-420d-9231-9abbdb002b75" Name="Plugin Demo Web and Rest" ParentGuid="00000000-0000-0000-0000-000000000000">
 <ApplicationPlatforms>
 <ApplicationPlatform AppName="Test" CoreGUID="00000000-0000-0000-0000-000000000000" Guid="c762277d-181b-4dd2-aef9-dfc9bd7f8d16" GUID="00000000-0000-0000-0000-000000000000" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" />
@@ -7,7 +7,7 @@
 </ApplicationPlatforms>
 
 <ExecutionLoggerConfigurationSetList>
-<ExecutionLoggerConfiguration ExecutionLoggerConfigurationExecResultsFolder="C:\SampleSolutions\ExecutionResults\" ExecutionLoggerConfigurationIsEnabled="True" ExecutionLoggerConfigurationMaximalFolderSize="250" Guid="3092b863-3c51-4035-9689-dafaec1db5db" IsSelected="True" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedDataRepositoryMethod="LiteDB" Seq="0" />
+<ExecutionLoggerConfiguration ExecutionLoggerConfigurationExecResultsFolder="C:\SampleSolutions\ExecutionResults\" ExecutionLoggerConfigurationIsEnabled="True" ExecutionLoggerConfigurationMaximalFolderSize="250" Guid="3092b863-3c51-4035-9689-dafaec1db5db" IsSelected="True" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedDataRepositoryMethod="TextFile" Seq="0" />
 </ExecutionLoggerConfigurationSetList>
 
 <HTMLReportsConfigurationSetList>

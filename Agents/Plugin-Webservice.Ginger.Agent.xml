@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="8859bf71-482d-4576-bf7d-03f3318de83b" ItemType="Agent" CreatedBy="MOHDKHAN" Created="201908291210" GingerVersion="3.4.0.0" Version="4" LastUpdateBy="MOHDKHAN" LastUpdate="201909030633" />
-<Agent Active="True" AgentType="Service" DriverType="WebServices" Guid="8859bf71-482d-4576-bf7d-03f3318de83b" Name="Plugin-Webservice" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" PluginId="Ginger Rest Plugin" ServiceId="RestService">
+<GingerRepositoryItem><Header ItemGuid="8859bf71-482d-4576-bf7d-03f3318de83b" ItemType="Agent" CreatedBy="MOHDKHAN" Created="201908291210" GingerVersion="3.4.0.0" Version="5" LastUpdateBy="MOHDKHAN" LastUpdate="201909040730" />
+<Agent Active="True" AgentType="Service" DriverType="WebServices" Guid="8859bf71-482d-4576-bf7d-03f3318de83b" Name="Plugin-Webservice" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" PluginId="Ginger WebService Plugin" ServiceId="GingerWebService">
 <DriverConfiguration>
 <DriverConfigParam Description="Proxy type" Guid="c05fd097-e588-4755-981b-e2c91deeb385" Parameter="Proxy Type" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <DriverConfigParam Description="Proxy URL or prixy autoconfig url" Guid="5769016e-eff5-4f18-9916-df891cfc7ddf" Parameter="Proxy Url" ParentGuid="00000000-0000-0000-0000-000000000000" Value="genproxy.amdocs.com:8080" />
