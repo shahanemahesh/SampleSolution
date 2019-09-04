@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.4.0.0" Version="22" LastUpdateBy="MOHDKHAN" LastUpdate="201909040703" />
+<GingerRepositoryItem><Header ItemGuid="4f041002-2b77-4184-aa24-140719186948" ItemType="BusinessFlow" CreatedBy="MOHDKHAN" Created="201907180903" GingerVersion="3.4.0.0" Version="21" LastUpdateBy="MOHDKHAN" LastUpdate="201909040700" />
 <BusinessFlow Guid="4f041002-2b77-4184-aa24-140719186948" Name="WebService Demo" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
 <Activities>
 <Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="WebSerice" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8be154d5-e5bb-47e5-9474-bdb231966ae0" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MyWebServicesApp">
@@ -31,17 +31,15 @@
 <ActInputValue Guid="d2e41471-3872-4fb1-b99f-f04386c20bb8" Param="ResponseContentType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JSon" />
 <ActInputValue Guid="1c4d3f0a-0835-4bac-915d-82910ec1ef89" Param="TemplateFileNameFileBrowser" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </InputValues>
-
-<ReturnValues>
-</ReturnValues>
 </ActWebAPIRest>
-<ActWebAPIModel Active="True" APImodelGUID="08d7c2b1-1fae-4228-b70a-efca8dd3764a" Description=" API Model Execution" Guid="ea559803-3e27-409b-adf1-dbbe8131e6c6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ActWebAPIModel Active="True" APImodelGUID="08d7c2b1-1fae-4228-b70a-efca8dd3764a" Description="CheckPhoneNumber_PhoneVerifySoap- API Model Execution" Guid="ea559803-3e27-409b-adf1-dbbe8131e6c6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <APIModelParamsValue>
 <EnhancedActInputValue Guid="ae5a1044-d7f3-4104-bddb-183546254be7" Param="{PHONENUMBER}" ParamGuid="318d2279-7776-49c4-8581-9128821e2adb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="7575449510" />
 <EnhancedActInputValue Guid="b2f7b4e9-0217-43e0-a6e3-538a756b86a2" Param="{LICENSEKEY}" ParamGuid="2ef04a7e-d822-44b7-8b2d-5366e7cb18cf" ParentGuid="00000000-0000-0000-0000-000000000000" Value="F01d89fd-5155-5455-5585- e84ab8de8591" />
 </APIModelParamsValue>
 
 <InputValues>
+<ActInputValue Guid="0b5d3b85-97b8-46e7-b2be-c05d0d16468a" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="08d7c2b1-1fae-4228-b70a-efca8dd3764a" />
 <ActInputValue Guid="9f2e22fb-deac-4d53-a7a7-dbc3cd4193a1" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="08d7c2b1-1fae-4228-b70a-efca8dd3764a" />
 </InputValues>
 
@@ -51,9 +49,9 @@
 <ActReturnValue Active="True" Guid="44942a1b-99f8-4fb7-9738-07efbd629425" mExpected="252" Operator="Equals" Param="LATA" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/CheckPhoneNumberResponse[1]/CheckPhoneNumberResult[1]/LATA[1]" StoreTo="None" />
 </ReturnValues>
 </ActWebAPIModel>
-<ActWebAPISoap Active="True" Description="WebAPI SOAP Action" Guid="57925d5b-fd6f-4a01-8b3f-290e85317f51" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ActWebAPISoap Active="True" Description="WebAPI SOAP Action" Guid="57925d5b-fd6f-4a01-8b3f-290e85317f51" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
-<ActInputValue Guid="5c0378f8-0394-4dc4-93ec-bb799706ab08" Param="EndPointURL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="https://ws.cdyne.com/phoneverify/phoneverify.asmx" />
+<ActInputValue Guid="5c0378f8-0394-4dc4-93ec-bb799706ab08" Param="EndPointURL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" />
 <ActInputValue Guid="6bbff239-5382-4f52-92d3-f6062f2dc6fc" Param="URLUser" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <ActInputValue Guid="907815df-53a1-4ed4-aa9e-359f12905ea0" Param="URLDomain" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <ActInputValue Guid="9ce55922-97ef-4590-9f7e-689834a16e5d" Param="URLPass" ParentGuid="00000000-0000-0000-0000-000000000000" />
@@ -62,7 +60,7 @@
 <ActInputValue Guid="849f2997-4677-46b1-9289-7bdf1a1e07c9" Param="CertificateTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AllSSL" />
 <ActInputValue Guid="ca1e69e0-ac35-47cc-9c01-b2f189bff14b" Param="DoNotFailActionOnBadRespose" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
 <ActInputValue Guid="07348e37-bab7-4885-80a4-5f1d11a1ca51" Param="UseLegacyJSONParsing" ParentGuid="00000000-0000-0000-0000-000000000000" Value="True" />
-<ActInputValue Guid="fd0d0170-156c-43c0-9c3f-2349cbe26c01" Param="RequestBody" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:que=&quot;http://ws.cdyne.com/PhoneVerify/query&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;que:CheckPhoneNumber&gt;&#xD;&#xA;      &lt;!--Optional:--&gt;&#xD;&#xA;      &lt;que:PhoneNumber&gt;7575449510&lt;/que:PhoneNumber&gt;&#xD;&#xA;      &lt;!--Optional:--&gt;&#xD;&#xA;      &lt;que:LicenseKey&gt;F01d89fd-5155-5455-5585- e84ab8de8591&lt;/que:LicenseKey&gt;&#xD;&#xA;    &lt;/que:CheckPhoneNumber&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" />
+<ActInputValue Guid="fd0d0170-156c-43c0-9c3f-2349cbe26c01" Param="RequestBody" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ws=&quot;http://ws.cdyne.com/&quot;&gt;&#xD;&#xA;   &lt;soapenv:Header/&gt;&#xD;&#xA;   &lt;soapenv:Body&gt;&#xD;&#xA;      &lt;ws:GetQuickQuote&gt;&#xD;&#xA;         &lt;!--Optional:--&gt;&#xD;&#xA;         &lt;ws:StockSymbol&gt;?&lt;/ws:StockSymbol&gt;&#xD;&#xA;         &lt;!--Optional:--&gt;&#xD;&#xA;         &lt;ws:LicenseKey&gt;?&lt;/ws:LicenseKey&gt;&#xD;&#xA;      &lt;/ws:GetQuickQuote&gt;&#xD;&#xA;   &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" />
 <ActInputValue Guid="3ba9856b-8c1a-4dd1-bf11-ef97b9f846d4" Param="ImportRequestFile" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
 <ActInputValue Guid="2a4e4357-8a20-41af-9eac-af5e53d23dee" Param="CertificatePath" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <ActInputValue Guid="62df503e-093e-4e6a-b4dc-25ff4ea644f2" Param="CertificatePassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
@@ -71,12 +69,9 @@
 <ActInputValue Guid="f3198119-042a-46a8-9ba4-0cc95232a287" Param="AuthorizationType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NoAuthentication" />
 <ActInputValue Guid="a78f7c48-e673-4f1d-9299-ce028199119b" Param="AuthUsername" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <ActInputValue Guid="cf877240-fdc6-4e9c-9bc7-bb88d9712779" Param="AuthPassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
-<ActInputValue Guid="07c62197-d44e-4c70-8bec-d45114ec3444" Param="SOAPAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://ws.cdyne.com/PhoneVerify/query/CheckPhoneNumber" />
+<ActInputValue Guid="07c62197-d44e-4c70-8bec-d45114ec3444" Param="SOAPAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://ws.cdyne.com/GetQuickQuote" />
 <ActInputValue Guid="1338648b-72c8-4c7e-ab21-dae413f0582a" Param="TemplateFileNameFileBrowser" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </InputValues>
-
-<ReturnValues>
-</ReturnValues>
 </ActWebAPISoap>
 </Acts>
 </Activity>

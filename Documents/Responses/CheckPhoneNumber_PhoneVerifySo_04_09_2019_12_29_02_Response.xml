@@ -1,0 +1,34 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <CheckPhoneNumberResponse xmlns="http://ws.cdyne.com/PhoneVerify/query">
+      <CheckPhoneNumberResult>
+        <Company>LEVEL 3 COMMUNICATIONS. LLC - </Company>
+        <Valid>true</Valid>
+        <Use>Assigned to a code holder for normal use.</Use>
+        <State>VA</State>
+        <RC>PARKSLEY</RC>
+        <OCN>8825</OCN>
+        <OriginalNumber>7575449510</OriginalNumber>
+        <CleanNumber>7575449510</CleanNumber>
+        <SwitchName>NORFOLK</SwitchName>
+        <SwitchType />
+        <Country>United States</Country>
+        <CLLI>CHSKVAAYDS0</CLLI>
+        <PrefixType>CLEC - (Competitive Local Exchange Carrier)</PrefixType>
+        <LATA>252</LATA>
+        <sms>CLEC - (Competitive Local Exchange Carrier)</sms>
+        <Email />
+        <AssignDate>23/10/2005</AssignDate>
+        <TelecomCity>Chesapeake</TelecomCity>
+        <TelecomCounty />
+        <TelecomState>VA</TelecomState>
+        <TelecomZip>23324</TelecomZip>
+        <TimeZone>EST</TimeZone>
+        <Lat />
+        <Long />
+        <Wireless>false</Wireless>
+        <LRN>7576559199</LRN>
+      </CheckPhoneNumberResult>
+    </CheckPhoneNumberResponse>
+  </soap:Body>
+</soap:Envelope>
