@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="7da96a18-1635-45ae-865e-3fb7fdde9c9a" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901100858" GingerVersion="3.1.0.0" Version="1" LastUpdateBy="NATISHAK" LastUpdate="201901100858" />
+<BusinessFlow Active="False" Elapsed="22732" Guid="7da96a18-1635-45ae-865e-3fb7fdde9c9a" Name="CRM_Login" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Login CRM - Clean Cache &amp; Temp Files" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ae005fe3-5ce7-4cfd-b7b8-84031ccd9941" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="50%" TargetApplication="Java-App">
+<Acts>
+<ActFileOperations Description="Clean Temp Files" FileOperationMode="Execute" Guid="4a391bb9-f350-45f1-96cd-4aee84aeb777" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="56f0c0b3-9b9c-4789-bc81-ea4e645c9c4d" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\DOCUMENTS\SCRIPTS\DELETE_TEMP.BAT" Value="~\DOCUMENTS\SCRIPTS\DELETE_TEMP.BAT" />
+<ActInputValue Guid="c4a73287-2542-4419-a2fa-5a71499c7c41" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Clean Java Cache &amp; Kill CRM" FileOperationMode="Execute" Guid="e760a70e-d4e0-4b44-9781-ddfd0962f94c" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c5dbaada-e704-4491-bf2a-5ddca333cb84" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\DOCUMENTS\SCRIPTS\KILLANDCLEAN.BAT" Value="~\DOCUMENTS\SCRIPTS\KILLANDCLEAN.BAT" />
+<ActInputValue Guid="4f6aadd2-c7d3-463f-bbd7-95fde197bebc" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Terminate Script" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5a2cea38-6e12-47fc-9572-138b900db40a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Java-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="752210aa-e514-4cf5-9b08-e09dd471db94" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="TerminateVB.vbs" ScriptPath="C:\SVN\Ginger_AMX\\Documents\Scripts\" StatusConverter="AlwaysPass" Timeout="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="498ed82c-ec52-44bd-af4f-bf74de60a54a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Login CRM - Launch CRM Till Login Screen" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="42c35e5d-a9e0-45af-9ab1-8e2b494f3192" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="67%" TargetApplication="Java-App">
+<Acts>
+<ActScript Active="True" Description="Handle Popups Script" Guid="a2ce215b-180f-4e59-964d-24a82f2f3ff9" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="Close PopUp.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_AMX\\Documents\Scripts\" StatusConverter="IgnoreFail" Timeout="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="220ea9a3-046c-4bc8-a39b-fd21f43a0b44" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+<ActLaunchJavaWSApplication Description="Launch Java Application" Guid="fb2d9f04-1911-4cd1-be88-75eef36df5ce" JavaWSEXEPath="C:\Program Files (x86)\Java\jre1.8.0_111" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="f3e11a48-2fe0-4611-9acb-7c3d644cdc63" Platform="NA" Port="8888" RetryMechanismInterval="5" StatusConverter="None" URL="C:\Users\amxauto\Desktop\AMX Agt.jnlp" WaitForWindowTitle="Login" WaitForWindowTitleMaxTime="60" WaitVE="0" WindowsToCapture="OnlyActiveWindow" />
+<ActLaunchJavaWSApplication Active="True" Description="Launch CRM" Guid="56375e40-0aa9-4798-94e1-d8101697aa1c" JavaWSEXEPath="C:\Program Files (x86)\Java\jdk1.8.0_144" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="bc6389b6-03f3-4187-8307-c5f5b06978cf" Platform="NA" Port="8888" RetryMechanismInterval="5" StatusConverter="None" URL="{EnvParam App=CRM Param=CRM_URL}" WaitForWindowTitle="Login" WaitForWindowTitleMaxTime="60" WaitVE="0" WindowsToCapture="OnlyActiveWindow" />
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Dummy" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="a28d7d49-abec-4b8e-b862-207a1e36138e" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Mediation">
+<Acts>
+<ActDummy Active="True" Description="Dummy Action" Guid="b336955d-584b-4da3-8919-a18c4f9177f6" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitVE="15" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b344fd68-b466-4717-a45a-b6e0f68c08f3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDummy>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Handle Internal Error" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="671a110a-1ff8-40f6-8456-89200abe9ab1" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Java-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="c8f44dd0-4223-4369-851c-e66d11a49184" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="Close PopUp.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_AMX\\Documents\Scripts\" StatusConverter="AlwaysPass" Timeout="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="80be2737-4387-483f-9a1f-cc7b724213ac" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Launch java APPlication" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="1776951d-05af-46f2-b9e1-c1e9aaf3024a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Java-App">
+<Acts>
+<ActLaunchJavaWSApplication Active="True" Description="Launch Java Application" Guid="25f59e33-b0c6-4d8e-9a11-037488bc6cb5" JavaWSEXEPath="C:\Program Files (x86)\Java\jdk1.6.0_29" LaunchJavaApplication="False" LaunchWithAgent="True" LocateBy="NA" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" Port="8888" StatusConverter="None" Timeout="120" WaitForWindowTitle="Login" WaitForWindowTitleMaxTime="120" WaitForWindowWhenDoingLaunch="True" WaitVE="3" WindowsToCapture="OnlyActiveWindow" />
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Handle Login Window" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="680ff21c-4088-4f4f-ba7f-2a1b301bae45" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="40%" TargetApplication="Java-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window - Login" Guid="e4e82478-0abf-45ba-90f2-cb609e9dd097" LocateBy="ByTitle" LocateValue="Login" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitTime="-1" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0f70bf08-0212-48a1-b7ae-99a0252ed02c" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActJavaElement Active="True" ControlAction="Select" Description="Login To 'Customer Interaction Manager'" Guid="a936c8c0-da2f-4609-894c-1b344791742a" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Combobox_32][ClassName:com.amdocs.uif.widgets.ComboBoxNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5c5e3b27-4216-456c-a565-bd5565cbecfe" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Customer Interaction Manager" Value="Customer Interaction Manager" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set Text Box 'Textfield_33'" Guid="66e4054a-b58d-4093-a922-317954f705a4" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Textfield_33][ClassName:com.amdocs.uif.widgets.TextFieldNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5cb8cebd-b657-4040-9acc-d6e14fbbd6a6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement Active="True" ControlAction="SetValue" Description="Set UserName" Guid="670b72e4-7efd-4ed9-bf33-f1cb8726570a" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Textfield_33][ClassName:com.amdocs.uif.widgets.TextFieldNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8fb25095-6136-4e5a-96bf-f1c6ad5565b9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="sa" Value="sa" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement Active="True" ControlAction="SetValue" Description="Set 'Password'" Guid="bca4d29a-2594-41ef-aed6-ab8d1270f01d" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:ObscuredText_44][ClassName:com.amdocs.uif.widgets.ObscuredTextNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7a4f9af7-8140-4320-9744-0b75c95aa9cd" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="sa" Value="sa" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement Active="True" ControlAction="Select" Description="Select ComboBox 'Languages'" Guid="1aa723fc-667f-4881-99ee-dad95e9400ac" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Languages][ClassName:com.amdocs.uif.widgets.ComboBoxNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b6153530-6323-4914-95ff-a57866e52d53" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Spanish (Spain)" Value="Spanish (Spain)" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set JList '/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]'" Guid="50546ffd-14b4-4d8b-9968-600cdbc29aaf" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3690260e-0817-4226-990d-39e9ac50ae58" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="English (United States)" Value="English (United States)" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set JList '/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]'" Guid="1c076d62-97c0-4e94-949d-8201bce3db69" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ee8a0a03-07ca-4e23-9ab2-42b307dc6a08" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Spanish (Spain)" Value="Spanish (Spain)" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement Active="True" ControlAction="Click" Description="Click Button 'Login'" Guid="4f646aca-27ec-4478-9918-7786f4b3be8b" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/Panel_3_25/[[Name:Button_38][ClassName:com.amdocs.uif.widgets.ButtonNative$JXButton]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="Medium" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="39333cea-bc08-4bd6-8caa-d7273713cb98" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Login" Value="Login" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set Text Box 'Textfield_33'" Guid="8cf01ceb-8df7-4fe2-b2ab-223fe996ffd4" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Textfield_33][ClassName:com.amdocs.uif.widgets.TextFieldNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c5b0b55a-8dfb-47c8-b11c-279caee9b7f1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set JList '/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]'" Guid="ad74dec9-fbb9-4524-9532-176c8ee068ac" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9954122b-faf8-4f4e-99fe-4b4df3af5eee" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Administrator" Value="Administrator" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="Select" Description="Select ComboBox 'Languages'" Guid="8e3c1d8a-c77e-4411-9a64-9d577d85ef9a" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Languages][ClassName:com.amdocs.uif.widgets.ComboBoxNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="bc66cda3-4d5c-4b29-8838-680f4c3cf341" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="English (United States)" Value="English (United States)" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="Select" Description="Select ComboBox 'Combobox_32'" Guid="6c551ec2-37b3-4406-a8b1-f4d5797c905d" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/root/Panel_1_15/CardPanel_login/Panel_3/Panel_3/[[Name:Combobox_32][ClassName:com.amdocs.uif.widgets.ComboBoxNative$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3e61e46f-6b9e-4336-9bda-a2d15d1266f1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Administrator" Value="Administrator" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set JList '/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]'" Guid="67d2738d-897c-4a57-82cf-e5953686a60c" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="970bde2b-05dc-4777-9067-e79d3da1061f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Customer Interaction Manager" Value="Customer Interaction Manager" />
+</InputValues>
+</ActJavaElement>
+<ActJavaElement ControlAction="SetValue" Description="Set JList '/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]'" Guid="fb023995-3d01-411f-a72a-156a4f82e986" LocateBy="ByXPath" LocateValue="/javax.swing.JRootPane[0]/null.layeredPane/javax.swing.JPanel[0]/ComboPopup.popup/ComboBox.scrollPane/javax.swing.JViewport[0]/[[Name:ComboBox.list][ClassName:javax.swing.plaf.basic.BasicComboPopup$1]]" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" StatusConverter="None" WaitforIdle="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fa26f224-2f59-4064-8b70-9069943812ee" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Spanish (Spain)" Value="Spanish (Spain)" />
+</InputValues>
+</ActJavaElement>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Terminate Script" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e36db079-20b3-4834-a1c8-a722c95735b0" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Java-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="752210aa-e514-4cf5-9b08-e09dd471db94" LocateBy="NA" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="TerminateVB.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_AMX\\Documents\Scripts\" StatusConverter="AlwaysPass" Timeout="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="498ed82c-ec52-44bd-af4f-bf74de60a54a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Switch Window - Gestor de Interacción del Consumidor" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="1049e848-6846-46fd-9144-42515ff0310b" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window Action" EnableRetryMechanism="True" Guid="06b18452-12e4-4b31-a85a-2e679b1ba549" LocateBy="ByTitle" LocateValue="Gestor de Interacción del Consumidor" MaxNumberOfRetries="100" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" WaitTime="-1" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="021cd3fd-d749-43e1-8527-384304ecd57b" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Java-App" Guid="3c511929-1da8-45a0-a785-78ad29cd9e30" LastExecutingAgentName="Java-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<TargetApplication AppName="Windows-App" Guid="edd9deb9-b92a-4d7a-a899-942326be9266" LastExecutingAgentName="Windows-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<TargetApplication AppName="Mediation" Guid="b4dc8c4d-82df-44a5-86d0-828f624316bf" LastExecutingAgentName="ABP Unix" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+</BusinessFlow></GingerRepositoryItem>

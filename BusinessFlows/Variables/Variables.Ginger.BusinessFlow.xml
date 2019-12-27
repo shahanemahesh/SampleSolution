@@ -1,0 +1,1656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="ec3ab5df-d574-4cc3-9fc1-dfed35dab01e" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901100729" GingerVersion="3.5.0.0" Version="440" LastUpdateBy="ravikugu" LastUpdate="201911110916" />
+<BusinessFlow Elapsed="55228" EnableActivitiesVariablesDependenciesControl="True" Guid="ec3ab5df-d574-4cc3-9fc1-dfed35dab01e" Name="Variables_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Initial Setup" AutomationStatus="Development" Description="Initial set up of variables are created here" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ba1ad07e-c766-45d8-9314-82fe3717e4df" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="7744697b-1682-42df-b074-9efd56672133" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\GingerSourceControl\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Operator="Legacy" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActSetVariableValue Active="True" Description="Set Variable Action for URL Local" Guid="564dd833-488f-4fed-a147-3332ed206fd6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="URL Local" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="file:///{Var Name=DocumentFolder}\Web\WebPages\TestForm.htm" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Reset BF Selection List Variable- Initiate" Guid="74ff9461-95fe-4996-aa38-da88b222d0bf" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="BF Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Set ScrShot Action Var" Guid="6f1af2d1-6102-476a-8096-60e80f1d3150" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="ScrnshotFolder" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=DocumentFolder}\Web\ScreenShots" />
+</InputValues>
+</ActSetVariableValue>
+<ActGotoURL Active="True" Description="Variable Testing - Initiate" Guid="084bd422-4b50-4d98-a79a-47a8b997d12f" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6687041f-9547-4168-9663-afefd755e801" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=URL Local}" />
+</InputValues>
+</ActGotoURL>
+</Acts>
+
+<VariablesDependencies>
+<VariableDependency Guid="9b7e7ea6-0a30-434f-894a-cb4adb726eb6" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Global Variables - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8cbd0c13-77bc-44d5-82ad-ca7d523bf331" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActSetVariableValue Active="True" Description="Reset Global Timer Variable - Initiate" Guid="75662203-3779-42ea-bf51-5f2e35273646" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="Global Timer" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Start Global Timer Variable - Testing" Guid="43598c43-33ec-4649-aad4-9cc441a277b7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="StartTimer" StatusConverter="None" VariableName="Global Timer" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Stop Global Timer Variable - Tesing" Guid="2a92dc75-35fc-4c3e-ae1d-4763ee4b22c7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="StopTimer" StatusConverter="None" VariableName="Global Timer" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="{Var Name=Global Timer}&gt;5" Description="Global timer Variable- Validation" EnableRetryMechanism="True" Guid="0ea1698f-6876-42a2-98c2-6208aad18883" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d5359cfe-99b6-45b2-8b67-0c531007fd9a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Timer}&gt;5" />
+<ActInputValue Guid="eecfcf15-a9ac-4b25-9658-12edd19f60f4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Timer}&gt;5" />
+</InputValues>
+</ActValidation>
+<ActUIElement Active="True" Description="Global Var Dynamic - Testing" Guid="ca28913f-07ef-493a-af9e-0e01386b3574" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="31b318db-3042-466b-986d-7097119ba18a" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="305e5880-9da2-42f0-a06d-ecf2e02b43bd" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="506b2b65-6779-438c-9bee-5c0f766837e8" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="422e9466-b927-4e62-bd42-889eb500fa2d" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1118fa2b-541f-4901-87ab-9b54f23a00f7" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0b7b3b85-9200-4162-b79b-79c24b4b61ee" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="11666559-0e82-4a76-9351-f4701e643b8a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fd9e9daa-a6cd-43c4-8551-5764844ad342" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="52765328-b302-4fba-abb6-58a79dbf39d0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d39d5603-8bda-4cff-8df4-2b6b7365760b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Dynamic}" />
+<ActInputValue Guid="07166aa9-adb4-4e2f-9aee-3539415c3f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d60e0ca-768b-48c0-9c51-b3130c2b699f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ccbcd9ac-35b1-4750-ba59-b1ff3bfc1ea5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Dynamic - Validation" Guid="43e2a0a1-04cb-408d-b1e8-14dec661149a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c1f87f78-8f57-4aa6-9a0d-bfc8f0bcff0f" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="ad1051ad-d03b-4a04-af5c-cbe55013a8a9" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="d5a6eaa2-3c16-4d5d-96fd-f61f533b608f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="8730072a-a46b-445b-96f0-b580692a3972" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f37beab7-a0cf-4041-85df-c16a3482aa5a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="25a035bb-6de9-4456-9abd-d73353a66d55" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="8d65f08f-cf15-4112-99a6-b584cc638d7e" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fd9e9daa-a6cd-43c4-8551-5764844ad342" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="52765328-b302-4fba-abb6-58a79dbf39d0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d39d5603-8bda-4cff-8df4-2b6b7365760b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="07166aa9-adb4-4e2f-9aee-3539415c3f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d60e0ca-768b-48c0-9c51-b3130c2b699f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ccbcd9ac-35b1-4750-ba59-b1ff3bfc1ea5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="757d3ee0-e7e7-44a4-87a5-d78200c1232d" mExpected="{Var Name=Global Dynamic}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Random Number- Testing" Guid="be678f97-d031-46fb-b335-ef8d9b89e265" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f4146df-b6f2-4b1c-afec-386bea974ba6" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="46ee02b1-4ccc-41a4-9fd7-e31803f2d041" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="b7658236-2b68-4bae-8108-56c15b8da262" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="399a4d88-4c21-48c7-9032-4545a3f44271" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="74bb5e68-752d-46fe-9163-3607c8a7223d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="69fb2ccf-b41b-4ff0-9733-2d8fff45b0c4" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="cc0b32dc-21c4-42a9-88cf-bd8109b3072c" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Random Number}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Random Number- Validation" Guid="7a2d71b9-dc5a-47fb-91da-27b54706300c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="499bffe6-07ff-40f7-80ea-71059d1eb75c" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="2ece68d7-b74e-4e1a-ad50-b094f027be6b" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5e8f6227-8fa9-4359-b6a6-39600e58d8e4" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="7151ecd6-5aca-45a9-a0c3-38ad219bb493" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a2204569-f1be-4850-97a0-2d43872c666a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d4fdc633-1171-44cb-b4fa-a6b5f605ba6e" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c5d5eda8-ee14-4b16-914a-cdecaf5e2ae3" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Global Random Number}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Random String- Testing" Guid="5197e7e0-c6ee-466d-80d7-09648a9a0234" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="17318013-bd54-4e80-b63f-c2d995ec3a56" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="56854382-efa9-41b5-8e61-a910c14a356a" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="bc7d8ccb-f0a5-4ce8-a454-e271af9dac35" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="c03a7b00-0fcf-43bc-9a27-8b706d53691b" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a860b772-16d1-42b7-8929-f8e88af44b2a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a21a61ce-c92f-46f9-b3ed-0682ffa8a685" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="4c9f7010-9bc0-49d0-b764-9771f60cce16" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Random String}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Random String- Validation" Guid="992fe6b9-9cce-4e02-bc63-eafe91285d03" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="db1a2835-105c-4a67-bdec-ed3480a5a8d2" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="4d719bb0-5bb7-4c1b-be39-f13ead480f8f" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="69d25888-7443-410e-ad2f-09cd93252b02" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="d82516dd-a241-40c5-9201-cb8ee34e8d43" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="755c70d7-9e4b-4af2-80c9-d078fbd26d70" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f650d6a1-492b-4206-8311-50a64f3d494f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a3757381-9acd-4a2b-ae10-98384f2e6729" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Global Random String}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var String- Testing" Guid="ed5ab9ef-b3f3-42e6-8b5c-c336cf5e2805" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="01f74c09-b690-4f22-9ea5-356e0d4f4ada" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="c00506bb-99c0-4948-8d19-df44d7ba50a6" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="60d4e7f4-9a50-4ee1-8651-6be4524ad5d1" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="6ee58a41-8b47-4f1f-b1c0-b8a771739a1e" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="29241c5e-c564-49ba-a408-d9f56a6b10cb" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="054daab6-912b-42e9-8c2b-8f6a381d36b3" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2e233013-e284-4e58-a1f0-9871259ade53" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global String}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var  String- Validation" Guid="a74ccbd6-8580-4860-97ab-c4924a34a06c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cd835ca1-8ec3-46bb-8c5e-68be8770a9b1" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="44c64507-4f50-426c-94c5-3435f77e516c" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="9e0640ee-fa27-4c03-9725-9842b105b5cb" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="d9170e59-9ce2-463e-94d6-dad2f38851fa" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b0aea284-fb0e-446b-9e71-1ddf1943b69d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ec790c90-67fb-43c9-b1e7-d856acd4ede9" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d8692f21-f95b-4fde-a8aa-5d82b881efe3" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Global String}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Sequence- Testing" Guid="4257f8c9-2e1e-40c8-9b8a-ae4e72c8e042" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6cb07b8b-cf2b-46a8-b453-9ab8bd53b7a5" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="f1c943f7-a724-4c53-bf95-a3c240f6c2de" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="aefb0b25-5e33-420e-855f-85930a5bbaae" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="e15ef224-4243-49bd-8b22-34ab9bf92af6" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fd1295ef-f0a1-412a-a17a-82a1848b0646" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b30ec493-b3f5-4d5d-854e-23dcf752f616" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="dcf4fa6e-4e22-4731-afff-e97300deec64" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Sequence}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Sequence- Validation" Guid="f406aca6-de46-4f80-8fd6-e6ac55764f79" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="511232be-eca8-4a04-a58a-6596c4c537b9" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="f69ed3c1-b585-4ed0-b14c-a9a9476a8164" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="799253eb-741b-4614-ba38-c040fda047bc" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="45f1df43-7393-4e18-af1e-e06ca2138272" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a93914e9-a723-498c-9e16-b5b5bcafc92a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="75a7cc65-a373-44a6-b248-ff2fca34df98" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ab4be0d3-1b47-463f-9017-685fe578aec7" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Global Sequence}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Password- Testing" Guid="71aebaf7-fd26-4d80-a0ae-f56807c390f6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b2b8aa8e-aafc-4d5b-af2c-1bd385760ad0" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="e27c07ee-6c54-4bd3-879b-313c27b98278" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="404dd104-1dd0-4c84-9d43-c3fb88bf107c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="6ac643df-918b-41cc-bb8f-91e42c52c9fe" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0614f2c5-7d22-4e74-a18b-ec0ea9708899" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="24d3a462-3d70-41ca-8494-1be25740f795" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9575cf5a-155b-490f-8a9c-7f7abc65bed4" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Password}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Password- Validation" Guid="931b918f-efee-4ebe-a976-dc75b6a0b131" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7f852a61-450b-4ad2-b883-211ded541b1c" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="8d9a9e87-937e-40f2-a9bd-13692b9bbebd" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="31411def-4360-4ccb-9efe-737baf9e7a57" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="b25d08e2-1ec1-4dbd-9b05-f9ed937705e7" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f04d7c1c-7764-4872-ae32-41d9cefdcc9a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6eae4306-2626-46c3-a5a0-1569a5b3f155" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9cc3c8aa-a1fd-4cab-aa1e-b6b1972ef315" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="efcce258-5660-4157-9c39-ee598ce8e7c7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="46134a1a-649c-496f-a0af-08b74a7f6065" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e38a44d1-3921-4d01-b8c1-d9ab1af77b26" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="741aa7b3-c328-4d19-9b40-94809624e310" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="31c8d7c3-457d-4206-ba7b-2caec1f23fc4" mExpected="{Var Name=Global Password}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var List- Testing" Guid="942ecbc1-f3ae-4c1f-8d65-3c805ea7980d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c83d100d-a993-4de8-8975-4e7733b335fa" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="1b73526f-7342-412e-bef0-8622967fc3b6" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="dba1a03c-0c69-41b0-9705-6e08bec87fe1" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="8ddd9e49-8e58-4657-90f0-282b24f14e65" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="608ffeb7-7060-4eaf-911d-da6ff372aa87" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="17def6b2-4856-46db-b733-b96510650061" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6a66261d-69b3-40db-812c-7155ceb47231" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var List- Validation" Guid="f03c0bb3-bb5e-4e79-b303-d6b9b11f3401" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d48a6ce4-8dc5-4d91-a435-a3b2c0010f52" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="e9468acd-c23b-4279-9976-fee95f2dce41" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="67e152fe-ffc3-43a0-851c-9d3fe072c4cb" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="17c0c6e3-1797-4d15-a9eb-ac847c03f133" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="740f4ddb-9cd1-422a-9ced-e9a45caf9ab5" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3ed9272d-65ad-44a3-8074-836afb6ca27f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e3af03ab-cdb1-4c34-a9b3-81437fc01490" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Global List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Global Var Selection List - Initiate" Guid="07516f15-f218-4b36-8479-298d8b3a8742" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="Global Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Selection List}" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Global Var Selection List- Testing" Guid="5e2f3f4f-5fb3-4b0a-9644-69af0ea8ed38" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b8cc5bf0-ee8d-4fb5-a5f6-0c3df690c6b3" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="2eb34d04-e9fc-4f90-9488-cde9c5339869" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="dc9bd51b-c8f3-4c55-8429-a0f1660cf315" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="723ee5ae-79e9-4247-8739-ae363dba470e" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e11a158b-674c-4ca6-954f-9958c9249020" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c10c5fc0-dd29-4d97-bdf7-cb0760b52c5f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0d3ca886-d23a-4388-9f1a-c2b9f0797cde" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Selection List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Selection List- Validation" Guid="bca33a9d-fd3a-48c5-ab1e-3bda0d6733d8" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="542772b9-a378-4544-9c94-5efa5ceffcb6" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="f52ed4e4-c4cc-4f34-827c-6f68d474853d" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="e8fcbda0-aa97-448b-b2a6-6cda25ae0f97" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="03349c5a-406f-4bd4-a851-6c11b8da85fe" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1f3efef0-4d85-4f2e-a84b-b89c86be749d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ed583100-dd89-4a84-91c5-0328e16a5dec" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b0b9fe73-8e02-477b-84c5-8c8f9ce8fed2" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Global Selection List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Global Var List- Initiate" Guid="492ee173-91d3-4bbd-a32c-1bcc29594572" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Global List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="efg" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Global Var List- Testing2" Guid="6e19685c-28ea-4a71-83b6-266fb91e32c7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="702caa3e-8112-4a72-8f94-a0bfede5e8e6" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="96e5de0d-cb36-4372-b040-3ca1c3719bd1" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="9df50e5a-2fe5-4afe-ab11-3cda5293252e" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="696b947d-4c6a-4aea-8dfa-06aeb45a19ce" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b2d248ec-e7eb-4da8-b5a7-94afc2c71ba6" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1e9f3e87-cfaa-4c07-b3af-1d6e7740ed2b" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3fb47294-edad-426d-8b8d-5af6ebc4670d" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var List- Validation2" Guid="974e25dc-63ce-4f8d-a004-30bb0767afcf" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c515097b-d6f7-4f2e-a8c3-01cc44855c67" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="efb089a7-d229-4321-9bbb-65217eeab9c7" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="41c0ece1-e1b1-4c56-bbfb-8e20dec1d551" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="b0393a9c-1d50-4015-9830-539d92683131" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="30fe9b1f-60fe-419d-be7e-868b60868ef1" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6b19f4dd-3200-427a-96b0-c6b8a0d781e6" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="19047c82-f702-402b-8aff-93f83ddc8731" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Global List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Global Var  Selection List- Initiate" Guid="ec6bd9c3-f905-4222-9f83-6a6a12ed9f7c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Global Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="green" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Global Var Selection List- Testing2" Guid="d2ad6bc8-4d42-42fd-85ab-93beb90e28f6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ebcac613-dd13-4eba-92cd-190fa4b2dd63" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="1bfb507c-7a82-408d-bbba-60d4c5544948" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="1519e67c-4b6e-414c-861a-dcf649cec80f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="a9aa8564-d3ae-4a47-b59b-fddb1a5d440e" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="10ca5a2b-0976-49de-a286-6ebb82341efc" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="31fc6bf6-68af-46bd-a010-16f41a517532" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f97d83f5-f280-418d-8631-a565bfeb0680" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Global Selection List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Global Var Selection List- Validation2" Guid="7163024d-bcb3-47ca-9f7c-7765e3e96e2b" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8603d9b3-9888-4bdc-a28d-fab07b0658bb" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="a4c0f2a3-638b-4b5f-ba2f-5fc1f8ba80af" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="ec929360-9157-4fcf-b213-f80e7c5aedbc" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="80cfb480-6910-401f-a5ea-a3ea99feec41" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2cbb500a-58f2-46af-b676-961d559bc7bf" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c2d58c50-f61d-4f17-9da4-6bb4333b960c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="99780c68-106f-4cd0-81d2-262c8052b572" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Global Selection List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+</Acts>
+
+<VariablesDependencies>
+<VariableDependency Guid="53fb3c7c-8fea-479b-ae67-ebda0ed83e9b" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Business Flow Variables - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="91d5fd5e-a8b9-431e-8163-df272bb6ae45" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActSetVariableValue Active="True" Description="Business Flow Reset Timer Variable - Intiate" Guid="bffde91f-0c71-4aca-84b0-a3e84b53add0" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="BF Timer" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Business Flow Start Timer Variable - Testing" Guid="eed0d49f-d770-48db-845e-b9263012f196" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="StartTimer" StatusConverter="None" VariableName="BF Timer" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Business Flow Timer Variable - Stop - Testing" Guid="8bfb78dc-9a3d-4912-ace0-814c88b22344" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="StopTimer" StatusConverter="None" VariableName="BF Timer" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="{Var Name=BF Timer}&gt;5" Description="Business Flow Timer Variable - Validation" Guid="2eeccb09-f060-4356-826f-d1aa94b4ddf8" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3e6aba2b-3e4a-4afe-81d6-7a4ef4e1cd4c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Timer}&gt;5" />
+<ActInputValue Guid="821f41d4-f1ea-416f-8ea2-c32c9c6f863f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Timer}&gt;5" />
+<ActInputValue Guid="aba9f124-e11d-458a-a777-4d8a871f6c02" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Timer}&gt;5" />
+<ActInputValue Guid="67e65f9d-7ba2-4277-aeff-f3662d245604" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Timer}&gt;5" />
+</InputValues>
+</ActValidation>
+<ActUIElement Active="True" Description="Business Flow Var Dynamic - Testing" Guid="ca28913f-07ef-493a-af9e-0e01386b3574" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="26c70109-91a9-42d1-83b1-f6c71fb7a6d1" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="3570d733-1485-4ab2-8ad9-1ec360a67460" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="3d985311-4a9d-4993-86ac-b9207126f98d" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="736dac8a-7d43-47db-aa3d-dfc126419d14" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="383d279e-1954-4292-bc4d-d586ae8c5421" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f5d3ffd5-021a-4b58-b51b-ff37d1b9d359" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="01bf4af5-25b7-4796-9398-b78af39a516a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fd9e9daa-a6cd-43c4-8551-5764844ad342" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="52765328-b302-4fba-abb6-58a79dbf39d0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d39d5603-8bda-4cff-8df4-2b6b7365760b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Dynamic}" />
+<ActInputValue Guid="07166aa9-adb4-4e2f-9aee-3539415c3f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d60e0ca-768b-48c0-9c51-b3130c2b699f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ccbcd9ac-35b1-4750-ba59-b1ff3bfc1ea5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Dynamic - Validation" Guid="43e2a0a1-04cb-408d-b1e8-14dec661149a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d758abe2-08ae-4326-ace9-06c7ae9ad68a" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="7d3fb7d8-76c3-479e-945c-09bcd228241f" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5d04eb6a-c102-4fab-b4bc-6ad501d81f34" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="c1858fc3-49e0-4b73-baec-b696eb32d751" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3973948b-d302-4d38-b55e-4fae499c2bc2" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ab9071e9-9c66-497f-ac41-4c232b59a7c8" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="11e8a449-7b65-4c93-a7e6-ad116d7290f0" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fd9e9daa-a6cd-43c4-8551-5764844ad342" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="52765328-b302-4fba-abb6-58a79dbf39d0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d39d5603-8bda-4cff-8df4-2b6b7365760b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="07166aa9-adb4-4e2f-9aee-3539415c3f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d60e0ca-768b-48c0-9c51-b3130c2b699f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ccbcd9ac-35b1-4750-ba59-b1ff3bfc1ea5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="757d3ee0-e7e7-44a4-87a5-d78200c1232d" mExpected="{Var Name=BF Dynamic}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Random Number- Testing" Guid="be678f97-d031-46fb-b335-ef8d9b89e265" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecbe7a00-27c6-419f-9b5e-2cd3ae7dea1a" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="43583c8d-0829-4e30-8211-79c7e27a8a50" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="95c08c00-f0c5-45b1-93d9-858a04855552" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="8798ca0a-3827-49ab-a22f-a2e5059f314f" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="24c6d162-eb7a-49f8-a3fc-a535ccb7d265" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fa98287c-e60d-4c89-bfd2-0d3358f88e28" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="51d193dd-35c7-4cd7-9ea9-9b42708ef863" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Random Number}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Random Number- Validation" Guid="7a2d71b9-dc5a-47fb-91da-27b54706300c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="79c981d1-7f67-4740-b3eb-3129324f762e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="ae29051b-f095-4fab-912a-41abaf3f3821" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="7460b4a5-ee00-4178-903d-ab0d4b08f90a" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="9cc21e3f-7699-4b03-adcc-ef0c677517fd" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="96b5fb84-6623-4d8c-9824-b2155089f891" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ecf8300c-a113-4e35-8edf-3434ffd5a02d" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="626e9171-f361-4ab4-8303-f2c35d5d029a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=BF Random Number}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Random String- Testing" Guid="5197e7e0-c6ee-466d-80d7-09648a9a0234" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23312f76-1879-4e85-87c6-97182f715710" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="d7901170-0f18-42fb-9eb5-1ceb6244a341" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="26aa841f-815a-462b-a50f-424cf621c088" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="f9e04b31-742f-4958-b025-e9a70e93a918" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5d4463f2-1664-481d-a427-8505a45f219c" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="78cfc4b4-fac4-4d72-84b0-c583225ef455" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="928fb757-6ccc-4608-b4c4-59cbe69a3426" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Random String}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Random String- Validation" Guid="992fe6b9-9cce-4e02-bc63-eafe91285d03" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="803deac3-c8ff-487e-a5db-18d95ed6f37d" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="ea785d7c-75f8-40eb-8582-b664d7e51560" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="7c547b6c-067c-4e1e-80db-caa78917370c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="54dbcc00-fa3f-4f6e-88d0-3c856b846518" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0213cefa-c91a-42ca-a5ef-1b27b8e7b317" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="639eac7c-03ba-486f-87cf-ea1b9b73b2bc" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="4c34abdb-4dc8-4ee7-abfb-3a1c15720470" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=BF Random String}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var String- Testing" Guid="860be244-2bd7-4343-b32c-a8abe387ff74" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="00673ac3-043f-4f29-84a3-15e337063461" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="e089ebb3-8658-4af3-964c-f2ff5a510d93" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="64a9440e-9298-47e5-9474-fbeb30b72403" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="17d64d84-1a44-439d-a956-a3533137e680" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0662f08f-6bf3-487f-93db-28e02a78b4ab" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="32ed82bb-070c-46c1-a416-014c6139d66a" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b804a629-80f9-48c6-98b6-ccd973aace1a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF String}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var String- Validation" Guid="fab8dbf1-5574-48a1-a7f7-65893cb2810c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2dc74cd3-6a7f-4866-9e0f-72d7ef1db26b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="926ac6f8-903e-4344-b4b0-aa81a107004d" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="43eeaa55-f338-4f8f-94f9-793c208befd8" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="9131d971-33bc-447e-8a0b-f1d971a97566" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="90250bd2-74b9-4d6a-879e-1bc5440acc7f" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="56a918fc-1d9a-477f-b3a9-41f9af83f7ce" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f867315c-d8ba-4952-a456-d6a132cd73b3" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=BF String}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Password- Testing" Guid="71aebaf7-fd26-4d80-a0ae-f56807c390f6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="98f803a3-da88-47c9-b9d7-3f5d759db24f" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="ebbb66e3-5512-40bb-b4e6-65745c8986f1" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="d4fc884c-01a4-466d-8ef9-6316e62334dc" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="db571ad8-414f-4a33-9561-67fc6e10a0f8" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ab7a7761-9bd2-496f-92a4-c2e5a9816fbf" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f26d17f4-1fe9-4016-aefb-89b1c4fd2576" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="023dea0c-9ba2-4338-93c7-e23f8e09afc7" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Password}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var Password- Validation" Guid="931b918f-efee-4ebe-a976-dc75b6a0b131" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a3e7de8e-538d-4538-aecd-c99355fa2faf" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="8718fcc2-1704-4e34-bb0f-8c68381a1689" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="d340aaf3-07b7-4078-ba1f-5790f3e22a0a" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="56855244-eeba-4d67-ab6d-e94fdd32afc7" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="8c6f3e8d-63b6-4d6a-a464-c53581a5ad14" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="249ffc10-9617-43b1-81d1-19493005ec0d" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="bc06a5e8-65c3-46a0-a86e-f3141a95615a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="efcce258-5660-4157-9c39-ee598ce8e7c7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="46134a1a-649c-496f-a0af-08b74a7f6065" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e38a44d1-3921-4d01-b8c1-d9ab1af77b26" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="741aa7b3-c328-4d19-9b40-94809624e310" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="31c8d7c3-457d-4206-ba7b-2caec1f23fc4" mExpected="{Var Name=BF Password}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var List- Testing" Guid="942ecbc1-f3ae-4c1f-8d65-3c805ea7980d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b07e1a32-6c68-4349-a695-6e8547aa0f0b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="966774dd-18ae-404a-895b-8ba6b2defd00" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="7de58395-4403-4b78-8cbb-403da0e74cf1" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="8a7e0306-09a3-47c6-9d4f-83f5cc1768b2" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="26c091d9-a732-4686-960f-309eaf5754c8" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f22e7266-7ecc-42df-b3c1-243aea78398d" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fe43c8de-9413-47ae-ad58-0419258680d1" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Flow Var List- Validation" Guid="f03c0bb3-bb5e-4e79-b303-d6b9b11f3401" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ac127869-6803-4a14-b463-6c6acfa805d6" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="5d2ad4fc-25e4-4931-b6b1-7d31ed3ceaf5" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="c9292ddd-37a7-41d8-b90f-8301d078fec9" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="2321f207-6412-4d74-b841-067e48325f7b" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="8b41281e-6711-451d-8180-e9408ae96d71" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7e6f7383-dad9-4bb0-86c2-20dbb24d2695" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="341944da-23aa-4d4c-a243-ba500f7aecc3" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=BF List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Business Var List- Initiate" Guid="398dde49-f5d3-4218-ac3f-a48a291bd1e8" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="BF List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ijk" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Business Var List- Testing2" Guid="3af62970-c42a-4083-b01f-000480d635ef" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1d2acba5-4920-4448-9a20-7f0bc585d608" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="13c0ef61-ed53-4fe1-9e9f-360ef172b502" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="1b67b354-ca49-4348-8bb7-0e3184abce71" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="ff91c867-2ebb-449c-8cb4-c868a7dc88d9" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9ae910f6-6549-4d32-a366-f2ced5c884eb" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2f665a7e-76e8-4b58-9da4-dce599fb0e29" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="adf441ca-0786-44c9-a876-7f7383859cc9" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Var List- Validation2" Guid="13aa74f5-8443-4a5a-900b-04b77e272b02" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4eea5d58-363c-4cc5-81d4-cd1853521e33" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="d32c3e04-f2a3-4c05-b9ba-18bc3104e992" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="aec7725c-65a3-4c7a-9211-d4025e1c1d07" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="a3c31192-7bbb-465a-8d23-64c43bda9abe" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="292ded57-f663-43bd-a1c0-a2f752fc9f9a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="4bf7d0d4-9870-4816-8c3d-981b76832507" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d8d05cba-0aed-4c53-82c8-8c7af649f353" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=BF List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+</Acts>
+
+<VariablesDependencies>
+<VariableDependency Guid="1bb533bd-ab8f-4036-90f2-12248e30c765" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Business Flow Selection List Variable - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="306661d3-5601-44b4-97ce-3afd67191b83" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="75%" TargetApplication="Web-App">
+<Acts>
+<ActSetVariableValue Description="Business Var Selection List- Initiate" Guid="7b3f8614-2c4f-4039-8d5f-cebbcc1e88f4" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="BF Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="mumbai" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Business Var Selection List- Testing" Guid="4364e36b-a0b5-41b9-b5a4-ffd23b8e1b7a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="bd04decb-2832-4973-9ca5-4d0d10b2995e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="b068defb-e2e8-4336-9d25-47424afe6ffd" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="fad462c0-c129-4cdf-99ae-3b5471411ae7" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="bf75dba7-f46d-48c4-a1e7-9837f7f97c31" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="42931d6a-bbbe-4fd5-a8db-0665a3092e33" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="88380bbb-20db-4cd8-8627-4163d61be390" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7fd754ca-dcd1-4bc2-bcca-34d30c3e22f6" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF Selection List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Business Var List- Validation" Guid="6e02e4d6-4f43-49b7-917e-f3972a23f3bd" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9c711dee-d474-4d32-93bf-610b771ec284" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="a22d80e0-cb26-42e8-b86c-ddbed0f41eba" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="9bdd0b88-2c44-405a-a16a-e5032727c966" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="23b24cab-03a9-4bd1-86ba-61e9f1760b55" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ef8ff2c3-d637-40d7-9ca2-e52a84417aac" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="bf9d36b5-f075-4d8e-b543-18ebb0e6e06c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="97d3490d-e31d-4fc8-bf23-21356adce3d0" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=BF Selection List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Business Var Selection List- Cleanup" Guid="0f9af860-0e2b-41d7-898f-5049e54c2676" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="AlwaysPass" VariableName="BF Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="StopBusinessFlow" Guid="0d97e8d4-7e0f-42b4-baa1-847315adb110" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="StopBusinessFlow" Guid="adf8257e-73eb-4489-b94f-3ea455805271" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="pune" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<VariablesDependencies>
+<VariableDependency Guid="686040a9-d0eb-4a85-b4e8-742ac064bca5" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>mumbai</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Activity Variables - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="f6fd1907-50a6-4b01-b8a1-bff3eb214852" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActSetVariableValue Active="True" Description="Activity Reset Timer Variable - Intiate" Guid="bffde91f-0c71-4aca-84b0-a3e84b53add0" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="Activity Var Timer" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Activity Start  Timer Variable - Testing" Guid="0228dbe9-6479-4d7d-aabb-e19d80efce40" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="StartTimer" StatusConverter="None" VariableName="Activity Var Timer" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Activity Stop Timer Variable - Testing" Guid="8bfb78dc-9a3d-4912-ace0-814c88b22344" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="StopTimer" StatusConverter="None" VariableName="Activity Var Timer" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="{Var Name=Activity Var Timer}&gt;0" Description="Activity Timer Variable - Validation" Guid="e6c24386-ea54-4cf5-9e90-3d6c48becbb3" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="99e20a46-f0de-4479-86c0-55b2b3b1c8fb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Timer}&gt;0" />
+<ActInputValue Guid="f5e942ca-347d-4e89-bb36-51cb19aca6b1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Timer}&gt;0" />
+<ActInputValue Guid="2d7d6cc8-2a78-490c-87fc-e9012c9e797c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Timer}&gt;0" />
+<ActInputValue Guid="eecfcf15-a9ac-4b25-9658-12edd19f60f4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Timer}&gt;0" />
+</InputValues>
+</ActValidation>
+<ActUIElement Active="True" Description="Activity Flow Dynamic - Testing" Guid="ca28913f-07ef-493a-af9e-0e01386b3574" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b517bcfb-8a67-42c6-9106-024fc404a35c" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="9c5ec785-99cd-4fb7-b9bc-5f367f617d06" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="1e826b79-eec8-4d15-a9fb-e9b3c9126b83" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="7edcbc42-518f-4c55-83c5-abfa2ac3b59a" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="690dce00-7952-4fb4-a537-d08df369b52e" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f8f32108-5ac1-4327-91c6-66610dc792ab" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e5d32441-d33b-4d63-8c01-a1ab758fe1a8" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fd9e9daa-a6cd-43c4-8551-5764844ad342" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="52765328-b302-4fba-abb6-58a79dbf39d0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d39d5603-8bda-4cff-8df4-2b6b7365760b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Dynamic}" />
+<ActInputValue Guid="07166aa9-adb4-4e2f-9aee-3539415c3f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d60e0ca-768b-48c0-9c51-b3130c2b699f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ccbcd9ac-35b1-4750-ba59-b1ff3bfc1ea5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Dynamic - Validation" Guid="43e2a0a1-04cb-408d-b1e8-14dec661149a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="33619dcc-4abc-4c21-8483-eae644ad3522" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="89f46382-5c67-4004-8d44-443e6c398e99" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="a165f20a-afeb-43a8-8aa5-840b81ed5f86" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="dbe861eb-a294-43d7-8234-786c70ec8c6f" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="15afaa3b-6eac-4f05-9b56-a018f45d4539" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="30f52345-27dd-4696-a3bf-2218feea4656" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="399f1ca7-7099-4c1d-8645-f956f98033b9" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fd9e9daa-a6cd-43c4-8551-5764844ad342" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="52765328-b302-4fba-abb6-58a79dbf39d0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d39d5603-8bda-4cff-8df4-2b6b7365760b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="07166aa9-adb4-4e2f-9aee-3539415c3f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d60e0ca-768b-48c0-9c51-b3130c2b699f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ccbcd9ac-35b1-4750-ba59-b1ff3bfc1ea5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="757d3ee0-e7e7-44a4-87a5-d78200c1232d" mExpected="{Var Name=Activity Var Dynamic}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Random Number- Testing" Guid="be678f97-d031-46fb-b335-ef8d9b89e265" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7979b64c-26f3-4acd-aa3c-3581ce611e0e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="eccf4648-a8bf-4776-b376-8850e8645323" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="0e254866-b78e-4321-8b75-f3a1c6365b5c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="40074ab8-c6aa-475c-9764-71296efcffbc" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6b642527-fb8f-4df3-ae4f-ecfcd053afd7" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7db7785b-de43-4718-b415-aa8eb84c0661" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="85d10e42-57db-421d-8e0f-4051f9bdcc74" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Random Number}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Random Number- Validation" Guid="7a2d71b9-dc5a-47fb-91da-27b54706300c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9163e81f-4a49-45d8-87cc-e3b52adeefc8" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="45c46eb5-ae45-4add-8b55-e09292cdf528" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="6756452c-d0b5-4fd3-b46c-59ec9283b843" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="70e62616-13ed-454f-b17a-647e61d27065" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2e293435-b77e-42d3-bd1f-c1d97c7335f0" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="8959d184-5025-43ad-b806-e09df567a96d" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="83704b7d-93a0-4683-8ffe-847f6062cb36" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Activity Var Random Number}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Random String- Testing" Guid="5197e7e0-c6ee-466d-80d7-09648a9a0234" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23a8faa7-3607-4338-9186-d66c039520d6" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="37375a94-c75f-429c-b99d-8c7fe84f8d82" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="c5684888-44e1-4c69-bf86-ade3ce072b1e" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="14493568-9929-496e-90ac-21bbdac51ba8" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6c25aa9c-a522-40df-9475-86d88f848aef" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="60cee93d-dfb8-46b7-b746-dd05da365c5f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="8da35652-10a6-478d-a32c-2514ed9907bb" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Random String}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Random String- Validation" Guid="992fe6b9-9cce-4e02-bc63-eafe91285d03" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70a9fe4f-5506-4f94-a0e5-ff70e3bfed2e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="af0df5f6-cc06-4361-8a37-cfb61d29de91" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="bc5c20dd-7d9c-40f9-943c-f9336f22ae79" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="3e6c9b50-1a08-414a-a438-8f5c8fbef2ea" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a33ced8c-bdda-47b8-b083-c58a7dff8956" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="252ec7e0-85c3-49b8-aa87-0a7cbf6c20f1" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="356a443c-2bde-40d0-858c-372a56849c8f" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Activity Var Random String}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var String- Testing" Guid="ec430084-b04b-4e0d-b190-096212878e7d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55bf3cc2-9560-45e8-903c-7fe9c077f531" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="24a17ca3-3c1b-4392-8251-ab6817debee9" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="8ecf9b55-93a8-41d0-846b-da1934efa369" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="48dfb8e7-21d7-4d8a-9f4f-817f3c3b6f8b" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="855a6d55-d2a1-4517-a3d1-447711424177" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="77b638e1-0bb3-4193-b8be-23acd2c27998" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c42b8fa7-e55e-4f04-8b20-a08e689c186c" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var String}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var String- Validation" Guid="2bbcbb66-d2bd-4a14-99a1-f64027f782b4" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="036ef739-0c53-4772-bdd3-eb2f3979f103" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="ac920596-c811-47a0-b3d5-0ec11401ac56" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="b7890863-50b7-45a6-84b4-1293381a058e" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="aeaa2f7e-2722-476e-a526-b084f546b59d" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d64eaad5-347d-46a7-af9b-47c93fb4d22e" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f41e5a15-2379-4918-b8a1-f898cf354c2c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1abbe7ff-4579-408f-8550-4d3278cbd84a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="81983614-d733-4dd6-a5b0-bd3a161aefc7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1876276a-bf2a-4fa6-8f58-4f45e4c5c322" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f50dbe43-4140-4702-a1d8-c17d42262ff8" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5933af53-31b9-4e65-acb5-ad67b62b246b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a7be8a27-2d0f-417f-a716-55ee9f8f0ff6" mExpected="{Var Name=Activity Var String}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Password- Testing" Guid="71aebaf7-fd26-4d80-a0ae-f56807c390f6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b3518c89-dcc6-4df4-8862-3de05fd7a9df" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="98694342-e41e-4b5b-b2cc-d4e19551d7f2" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="2d968064-d753-40f5-9062-9ee18a3784f1" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="1a3a28da-d8f8-46ed-99fb-b84e369831da" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="16e2ee34-7de0-42d9-9c9b-ac973207dc87" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="30a3a245-cac0-422d-a2fc-f546e4f77196" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7c5fd317-8cf1-4656-a7ae-91bc8368bf27" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Password}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Password- Validation" Guid="931b918f-efee-4ebe-a976-dc75b6a0b131" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edc50fdd-6fe4-4e56-b5bd-18e0bdf8d6e9" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="d50c5bb5-a523-4e87-98e4-61ac76f7f059" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="660af8a9-876c-4a09-be87-29763b3a563a" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="4e2644b5-3b98-4d2d-b9dc-4e6e3f86cfae" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="15b20f43-74ba-47be-aa82-e991ee754dab" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="218cd852-25da-45a9-85d0-2036792a3f07" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="31e1b2aa-d7cb-4e52-91b6-7d78bc55ff5b" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="efcce258-5660-4157-9c39-ee598ce8e7c7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="46134a1a-649c-496f-a0af-08b74a7f6065" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e38a44d1-3921-4d01-b8c1-d9ab1af77b26" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="741aa7b3-c328-4d19-9b40-94809624e310" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="31c8d7c3-457d-4206-ba7b-2caec1f23fc4" mExpected="{Var Name=Activity Var Password}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var List- Testing" Guid="942ecbc1-f3ae-4c1f-8d65-3c805ea7980d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fcc5d210-cd17-420e-82aa-93a6a5728e47" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="f3cbab87-b430-4864-91dd-a1a372a58374" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="c93ef856-919b-49dd-a5a3-8f7bc385e2fd" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="4aaf30d3-64cc-4ea3-9965-49bf1627bb9e" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0df83cb1-5a89-447a-90ab-ba26c29bdeee" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="500a9282-27a8-4b3e-a7ff-c793b2e2c39a" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="035c830a-00d4-4cd3-b048-df741548022a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var List- Validation" Guid="f03c0bb3-bb5e-4e79-b303-d6b9b11f3401" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f939152a-008e-47d6-9d71-bbe6ad937c7b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="97e24eec-8b5b-4eea-a07d-d7d2605d07e7" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="0565b12a-0a98-469a-a2de-6cb4ac015b29" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="1f32f749-21ef-416d-8a72-fac312a88672" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="01ba8c05-45af-414d-8861-7988038e882d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5abeee28-e34c-455d-96f5-75b2fd03c7bc" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f0effc75-1a4a-4d2f-bbf6-c1e18b5d609d" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Activity Var List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Activity Var List- Initiate" Guid="398dde49-f5d3-4218-ac3f-a48a291bd1e8" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Activity Var List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="fdgdgf" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Activity Var List- Testing2" Guid="3af62970-c42a-4083-b01f-000480d635ef" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e8bd8e8c-5610-412e-9343-5cc1659e25c0" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="74ff08f4-7ff6-4adf-b670-47eef07fc2bd" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="3ca603f2-742c-4541-9bfa-fa555612af4c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="2b46a605-1749-438c-a603-d98bd0d42d91" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="43ddc2e2-7057-4651-adf9-917400bf39f6" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="67a5bfb5-212a-4f45-8440-d455a44eff9c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="dc984d80-ba5c-45b7-b443-d6a0318559fa" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var List- Validation2" Guid="13aa74f5-8443-4a5a-900b-04b77e272b02" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3302beb6-c7df-4196-a6ca-558fcc683c79" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="4a11c2f6-336e-43f8-93f2-fc6db9a45556" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="aa7a74ac-a17c-4980-89bb-860cdcffabd0" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="b5872fa4-1d26-4b8a-b4a6-53a37853e69a" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="05ce96e2-4a99-4331-9669-00c71134863e" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="bcd4a0f6-7cc9-4f67-9870-c0a39d13f045" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="78d5af52-faeb-480f-bc9a-7df9370c3fda" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Activity Var List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Activity Var Selection List- Initiate" Guid="0a075578-6fb8-4f9c-a224-fab7efd58f8d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Activity Var Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="vcbbv" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Activity Var Selection List- Testing2" Guid="40e523e0-407a-4014-a289-bd6666bef110" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="15ad9e75-53e1-4b57-b0fe-91b1b9b825ea" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="5d9392ab-4604-44d4-a727-b90f584c4de3" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="a5cfc2af-81c5-4df5-b314-ebf12ed9059b" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="09549bcf-a67a-45fb-9da1-e017732b67c5" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c20e0c5b-b06f-4154-9f20-8bf0ba23f156" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e5e00851-66aa-4ff2-9523-fe2d281efe0f" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="734d4470-337e-42cd-97df-823cd1b3109b" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Var Selection List}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Activity Var Selection List- Validation2" Guid="6cab3ea4-ac25-4f8e-b654-a8d8e98720bb" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="be7f6f24-e0a5-4404-b11d-3224d00bed12" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetValue" />
+<ActInputValue Guid="750f320f-5d63-41f6-a938-ab1b3dea256f" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="54730ce2-ffbe-4279-b9de-2620713a0978" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="0f5e0c0d-3f4b-421b-a1ae-da4bc75016dc" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1de06d15-08a1-4ed9-82a8-4135014ca5f4" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5b9c75e9-4237-43f9-8925-e0aedfff8a9c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fbd260d4-0938-4955-b7d1-c9fd55beb29f" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3b7f8b22-0ba6-42de-8cdd-9aea15e100e1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]" />
+<ActInputValue Guid="3c297d4d-2969-443d-b30d-4c2815b00478" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a363268-279c-42d1-85e1-86bdf070d03f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="88e116e0-af68-4850-91b4-84dd41cb3a15" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b489e4a0-021a-4d7f-b7fc-f22731b025c5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c40416a-6a5c-4e9b-bdb7-8dc47ae8fc8b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d9a7494f-c728-4cbb-9716-a3ce95d7d98a" mExpected="{Var Name=Activity Var Selection List}" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Activity Var Reset Selection List- Testing" Guid="386e703f-5d5e-48a2-bc90-79eee05290c7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="Activity Var Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=Activity Var Selection List}&quot;,&quot;rertetr&quot;)&gt;0" Description="Condition Validation Action" Guid="21e3388b-9e44-40b6-b959-c0a9efd48498" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3ea44ad9-77d1-4343-83b4-abec5abddcf8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=Activity Var Selection List}&quot;,&quot;rertetr&quot;)&gt;0" />
+<ActInputValue Guid="e505207b-2c68-4dd4-81a7-26f2a8116120" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=Activity Var Selection List}&quot;,&quot;rertetr&quot;)&gt;0" />
+<ActInputValue Guid="1793e99f-7fac-4f8b-a049-ec4dac91c9bb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=Activity Var Selection List}&quot;,&quot;rertetr&quot;)&gt;0" />
+<ActInputValue Guid="7dd48086-f024-43cc-84e5-d0beea3d0475" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=Activity Var Selection List}&quot;,&quot;rertetr&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+</Acts>
+
+<Variables>
+<VariableDynamic Guid="50a39e8c-190b-4151-b863-7d43a40477ad" MappedOutputType="None" Name="Activity Var Dynamic" ParentGuid="00000000-0000-0000-0000-000000000000" ValueExpression="{RegEx Fun=1 Pat=.+([\d\D]{3})$ P1=12345567576}" />
+<VariableList Guid="418fd774-cf22-4341-ab84-842d6fde928e" MappedOutputType="None" Name="Activity Var List" ParentGuid="00000000-0000-0000-0000-000000000000" ValueList="ijkgh&#xD;&#xA;fdgdgf&#xD;&#xA;werwer&#xD;&#xA;vcbcbv" />
+<VariablePasswordString Guid="90b8d052-0e4e-405e-a8ce-62266694685f" MappedOutputType="None" Name="Activity Var Password" ParentGuid="00000000-0000-0000-0000-000000000000" Password="iWw/2NrRarUA7ssxOeyjcA==" />
+<VariableRandomNumber Guid="2c7cbc96-4dfb-4b77-8552-7f1e8f616e49" Interval="1" MappedOutputType="None" Max="30" Min="1" Name="Activity Var Random Number" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableRandomString Guid="ee95fc61-cd23-4e62-8152-a31a4141c7f4" IsUpperCase="True" MappedOutputType="None" Max="40" Min="1" Name="Activity Var Random String" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableSelectionList Guid="4ef4671f-b8ec-4b8c-97c9-e4590d249f56" MappedOutputType="None" Name="Activity Var Selection List" ParentGuid="00000000-0000-0000-0000-000000000000" Value="rertetr">
+<OptionalValuesList>
+<OptionalValue Guid="33fc138a-681f-42f4-95ad-12d408a8ac04" ParentGuid="00000000-0000-0000-0000-000000000000" Value="rertetr" />
+<OptionalValue Guid="1b0e8f21-e9f2-4d04-8547-536d28031c12" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dzsfsfds" />
+<OptionalValue Guid="6c0ee940-6939-439c-8e24-a4fc34fe22f9" ParentGuid="00000000-0000-0000-0000-000000000000" Value="wqerwer" />
+<OptionalValue Guid="72198f3e-9f9d-4841-9fab-03aa71ee8d44" ParentGuid="00000000-0000-0000-0000-000000000000" Value="vcbbv" />
+</OptionalValuesList>
+</VariableSelectionList>
+<VariableSequence Guid="a5c410e3-e78d-4c07-b1c7-2dbae2357b81" Interval="1" MappedOutputType="None" Max="70" Min="1" Name="Activity Var Sequence" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="1b7762b1-5097-4400-b3f6-57f08d15b095" InitialStringValue="erer234" MappedOutputType="None" Name="Activity Var String" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableTimer Guid="a5edf924-24ea-4796-8797-1c68431b393c" MappedOutputType="None" Name="Activity Var Timer" ParentGuid="00000000-0000-0000-0000-000000000000" TimerUnit="Seconds" />
+</Variables>
+
+<VariablesDependencies>
+<VariableDependency Guid="9941eaad-d11d-4585-a444-4f1f44d47f63" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Store data in variable- Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5a0af670-7b6f-443e-b896-9f0a9ff31c4d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActUIElement Active="True" Description="Store to BF String variable - Initiate" Guid="b3a46480-7ac8-45bc-9c4c-e5f007a826fc" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="225701a9-7eaf-470b-90da-e38b076cc2ca" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="510090f7-687f-432d-b2e4-e5b525bb9132" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="6f2599fd-d1d2-404c-910f-f2e6732a3ee0" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="7734607e-12ec-4df4-8ffa-2ddb56e73b57" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a5f6914f-18e1-4cc6-b422-832cb6416f12" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a9751680-083d-47c3-89c0-9880e4f10ec4" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ecb1288a-46d1-4d2e-b9ef-699ca4136b75" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="5d1f5515-7036-49c1-a69c-e54a287ef066" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="14ef6297-a92f-44cb-b800-3e3127a38e7a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF String}" />
+<ActInputValue Guid="9fc7ebe0-290f-4ed6-a392-fb8501adb4ae" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0868c9c4-52bd-4b07-a9cb-5a25c408509e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="67bc1dba-0df0-4243-872d-870be130dc91" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Store to BF String variable - Testing" Guid="3b5fee0e-5153-4d62-a86d-8b52676e086f" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f4bbf126-50bc-485d-a368-012134bce15e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="05836baf-5252-4ada-90eb-9bf4818072b5" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5a0c20de-af57-45a4-bf30-601254ce3210" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="aa6eb921-22c9-4e96-843b-7566aae03099" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2adee887-b5da-40de-8708-06c386a0d349" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="579d88d7-d5b1-4a5e-bee2-4eadd2343529" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2657ca82-5d1c-4e12-aaa7-f29ad6aec051" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="39a30d49-6cf1-41fd-96b5-4688e8c18169" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Store String" />
+</ReturnValues>
+</ActUIElement>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store String}&quot;)&gt;0" Description="Store to BF String variable - Validation" Guid="2f840d2e-cdec-4edc-b8e5-56dd8e66ebe2" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d619e5a4-1e7f-488e-bfec-06e3b9fd1af0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store String}&quot;)&gt;0" />
+<ActInputValue Guid="ae72a183-6486-46eb-b01c-4ca995a39df9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store String}&quot;)&gt;0" />
+<ActInputValue Guid="6cca685f-08f4-473c-894c-95ace9e49105" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store String}&quot;)&gt;0" />
+<ActInputValue Guid="2144b8bb-0ebc-4f3f-a711-bbad8df7c1a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store String}&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+<ActUIElement Active="True" Description="Store to Global String variable - Initiate" Guid="aac3c36a-8737-484e-a68e-78cbb9822486" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4f470e77-3738-4fac-90d8-546837aec994" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="1d1ba3ee-d81d-4945-9bfc-a49979aa92b8" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="cc07136b-905c-41d1-b70a-39d3520e41c7" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="81db92ad-a864-4e51-b69e-288a3722e244" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d39fba58-764b-4dad-925c-f679c1b2b3b3" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2f3fe3cc-231e-4e2f-87db-5bd69d86743a" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="43e8afa3-6773-419d-98fd-4ff550573d0e" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="5d1f5515-7036-49c1-a69c-e54a287ef066" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="14ef6297-a92f-44cb-b800-3e3127a38e7a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF String}" />
+<ActInputValue Guid="9fc7ebe0-290f-4ed6-a392-fb8501adb4ae" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0868c9c4-52bd-4b07-a9cb-5a25c408509e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="67bc1dba-0df0-4243-872d-870be130dc91" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Store to Global String variable - Testing" Guid="67c7a4ae-05a7-4d6a-8e89-991b829a85c0" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6d48c401-107f-42cb-a2fc-3a7973ac1939" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="ee1c93ad-afe6-4059-979d-d420e2e1109a" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5231e436-38af-41d3-80a0-552fe7868297" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="63b4c19c-a0d6-4404-8463-6e6c602eb206" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9ea0c862-f45d-4ac5-acfb-0269f9d80221" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0b23d0f0-546a-47cc-b327-41219f5cd8d8" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ac683341-b788-435e-9128-2c802dc9d031" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="39a30d49-6cf1-41fd-96b5-4688e8c18169" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Store Global String" />
+</ReturnValues>
+</ActUIElement>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Global String}&quot;)&gt;0" Description="Store to Global String variable - Validation" Guid="4af0f675-8493-4efd-bae8-e1209d6cc844" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2469c3e1-fe26-40d2-94d5-3f8cdb357d22" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Global String}&quot;)&gt;0" />
+<ActInputValue Guid="f2b20cc1-805f-415e-9bc2-16e3271db57f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Global String}&quot;)&gt;0" />
+<ActInputValue Guid="eca2352e-e30c-4bc5-991b-dcf553e6044b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Global String}&quot;)&gt;0" />
+<ActInputValue Guid="2144b8bb-0ebc-4f3f-a711-bbad8df7c1a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Global String}&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+<ActUIElement Active="True" Description="Store to Activity String variable - Initiate" Guid="5973b417-56bc-4f5a-9d81-ecb6b87a8827" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a6410e25-22d4-49ad-94cb-b65896314b8c" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="78487d59-dece-44f5-af77-38d139ed304e" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="0e434233-180f-4881-af43-63754ab8f6a2" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="c42e1b99-12bd-47de-9fda-3e4893572414" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3bbd3425-d760-47ba-8f02-f2f99b7e9024" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="246ebae1-60ea-44f2-a199-f1e8c701b70c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="25c41bdc-4f09-4699-9c1a-36ef1eff6a0e" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="5d1f5515-7036-49c1-a69c-e54a287ef066" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="14ef6297-a92f-44cb-b800-3e3127a38e7a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF String}" />
+<ActInputValue Guid="9fc7ebe0-290f-4ed6-a392-fb8501adb4ae" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0868c9c4-52bd-4b07-a9cb-5a25c408509e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="67bc1dba-0df0-4243-872d-870be130dc91" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Store to Activity String variable - Testing" Guid="e6303af8-0bfd-4aea-b463-d903ccc4d9ee" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5f104995-86c1-4a1c-81ab-9099bdf8b9f0" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="03c03872-3e0e-4d06-bb9d-10ffaee8ed41" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="b72ef6ed-a36b-4ff0-99c6-ff7ec0ab9397" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="1cc23321-8a85-4948-a92d-637d8d8a4ca1" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="35f41d54-780c-417d-8dfa-adce3d1e2d3d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2d0f768f-f56b-4be8-8965-ea31436fdf85" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ef17fdfc-0d32-40d3-9d1d-85c28c529429" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="39a30d49-6cf1-41fd-96b5-4688e8c18169" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Store Activity String variable" />
+</ReturnValues>
+</ActUIElement>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Activity String variable}&quot;)&gt;0" Description="Store to Activity String variable - Validation" Guid="fe627847-8d3e-4d8b-9653-b78f945244d0" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1d84e0b1-ab39-45f3-b031-0fd51e349cc1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Activity String variable}&quot;)&gt;0" />
+<ActInputValue Guid="035e06c9-547d-4b9e-975e-42409a81c1ca" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Activity String variable}&quot;)&gt;0" />
+<ActInputValue Guid="650b42c8-99fe-4b43-aced-4fa16fe544ba" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Activity String variable}&quot;)&gt;0" />
+<ActInputValue Guid="2144b8bb-0ebc-4f3f-a711-bbad8df7c1a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="InStr(&quot;{Var Name=BF String}&quot;,&quot;{Var Name=Store Activity String variable}&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+</Acts>
+
+<Variables>
+<VariableString Guid="71e228cb-04c8-4a05-868b-257f2e148122" InitialStringValue="abc" MappedOutputType="None" Name="Store Activity String variable" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Variables>
+
+<VariablesDependencies>
+<VariableDependency Guid="c413de93-68bf-42fe-a462-b9811880221b" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Store variable data in Data Source- Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="39767777-7e15-4eda-8d7c-ef0080f6b41f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActDSTableElement Active="True" ControlAction="SetValue" Description="Store String variable in Data Source - Testing" Guid="ec09808c-18de-4a85-8c88-4a73ae3c69e1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=VariableTesting ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=Variables IROW=NxtAvail}" WaitVE="0" WhereColSelector="ColTitle" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a2421442-f95b-4f23-960a-edd0241a16a2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BF String}" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Store String variable in Data Source - Validation" Guid="bfbde3f4-b196-423d-a047-45e9138ca274" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=VariableTesting ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=Variables IROW=NxtAvail}" WaitVE="0" WhereColSelector="ColTitle" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a2421442-f95b-4f23-960a-edd0241a16a2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="77d5208e-7ad8-4538-afe9-97f6b10d689b" mExpected="{Var Name=BF String}" Operator="Legacy" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+</Acts>
+
+<VariablesDependencies>
+<VariableDependency Guid="15172f22-5065-451d-94a2-56b14493b583" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Set Variable Action -Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="01f22040-ded9-4224-9ff8-3bf01af075c8" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Variable Action-List Var- Initiate" Guid="5e786d93-a7a7-486c-8639-7abf870c7f75" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Set List Var" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fc0249b1-e012-4099-937c-f15da8d69bae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ijk" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Set Variable Action - List Var- Testing" Guid="e39d4179-4d48-42f5-bdc1-2c2dcd0c224f" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="518ee607-3604-4db4-a974-63aec055999d" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="df18c54f-179e-47be-b8a9-b0738e0867ee" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="253f85ed-cc2a-4be1-9d95-69f31a834b3b" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="3c944651-4a97-4f04-a996-f7f549791450" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7caa95c0-1a20-4d85-812e-52afc38e9431" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="616ece69-4bbb-4d92-8628-4a0d8ac90c09" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e65cf776-e104-48a1-bc3c-995b6f7377a9" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set List Var}" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Set Variable Action - List Var- Validation" Guid="f55512d7-10ec-470f-af1e-b570a28aca82" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4b40e9b8-a121-4100-80b1-54ce97cb1b2b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="4968a6e9-424d-4af8-84aa-cde3f71093cc" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="cc47dbe0-8408-4f15-a090-3335a58351c4" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="0b26c490-a24b-4db9-8eb4-2d4115d10e41" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6065a1b6-2ae7-40fe-a7ce-c7b3ea2257f2" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7ae6a094-c538-4ec1-bbf5-db7311655597" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5509b0e5-2deb-452c-a20a-3b9804e06068" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="66b4b7c9-d95f-4096-823b-69f3819ef511" mExpected="ijk" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Set Variable Action-Random Number Var- Testing" Guid="6cc95ce2-be5e-4774-9228-65d9d74559a7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="AutoGenerateValue" StatusConverter="None" VariableName="Set Random Number Var" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fc0249b1-e012-4099-937c-f15da8d69bae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="{Var Name=Set Random Number Var} &gt; 0" Description="Set Variable Action-Random Number Var- Validation" Guid="4ee993af-ef8a-4fdb-a075-f9be9e69b2b7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3d19a43c-ea99-49fb-96b9-8d10f1da6970" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Random Number Var} &gt; 0" />
+<ActInputValue Guid="3c12f8c7-7182-4738-b1f5-1334572c2004" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Random Number Var} &gt; 0" />
+<ActInputValue Guid="df762c46-a7bf-4f6e-bebd-3b9cf4ff794f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Random Number Var} &gt; 0" />
+<ActInputValue Guid="b6e403d1-3af1-4683-a1f2-75a560fb02c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Random Number Var} &gt; 0" />
+</InputValues>
+</ActValidation>
+<ActSetVariableValue Active="True" Description="Set Variable Action-Random String Var- Testing" Guid="74c49180-8f03-4cce-8d0d-8bfb73bf86d7" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="AutoGenerateValue" StatusConverter="None" VariableName="Set RandomString Var" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fc0249b1-e012-4099-937c-f15da8d69bae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="{VBS Eval=Len(&quot;{Var Name=Set RandomString Var}&quot;)}&gt;0" Description="Set Variable Action-Random String Var- Validation" Guid="a98ff98b-4886-4c82-b761-460f619d7e90" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a5ed1e71-4292-461c-aadc-51025486be1f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{VBS Eval=Len(&quot;{Var Name=Set RandomString Var}&quot;)}&gt;0" />
+<ActInputValue Guid="6d078ed0-f252-48b9-9876-9204854c8b06" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{VBS Eval=Len(&quot;{Var Name=Set RandomString Var}&quot;)}&gt;0" />
+<ActInputValue Guid="2e1a5834-9412-4962-8b37-210f6e319859" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{VBS Eval=Len(&quot;{Var Name=Set RandomString Var}&quot;)}&gt;0" />
+<ActInputValue Guid="b6e403d1-3af1-4683-a1f2-75a560fb02c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{VBS Eval=Len(&quot;{Var Name=Set RandomString Var}&quot;)}&gt;0" />
+</InputValues>
+</ActValidation>
+<ActSetVariableValue Active="True" Description="Set Variable Action-Sequence Var- Testing" Guid="8370b064-855c-4d13-931d-b5c30d118f0d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="AutoGenerateValue" StatusConverter="None" VariableName="Set Sequence Var" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fc0249b1-e012-4099-937c-f15da8d69bae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Condition="{Var Name=Set Sequence Var} &gt; 0" Description="Set Variable ActionSequence Var- Validation" Guid="a458f566-e671-454f-9d0d-0d53bb6b8cc5" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0b88ef86-178f-4684-89d2-a2719686e727" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Sequence Var} &gt; 0" />
+<ActInputValue Guid="48a7e9f7-69b6-4f32-a31b-e631a18c62f8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Sequence Var} &gt; 0" />
+<ActInputValue Guid="45146858-7f23-4964-89c5-ac03d6d62ada" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Sequence Var} &gt; 0" />
+<ActInputValue Guid="b6e403d1-3af1-4683-a1f2-75a560fb02c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set Sequence Var} &gt; 0" />
+</InputValues>
+</ActValidation>
+<ActSetVariableValue Active="True" Description="Set Variable Action-String Var- Initiate" Guid="71f373b0-67fe-4e05-bb6a-d43277d8f1fb" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Set String Var" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fc0249b1-e012-4099-937c-f15da8d69bae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="testing" />
+</InputValues>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Set Variable Action - String Var- Testing" Guid="dd545e54-05fc-4d75-ae05-6011bd2b75ea" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="84ad03c8-45c2-4c22-82f0-a13952adba66" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="de5cf3be-81cf-4167-8cae-eeef50a05827" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="635ddc30-00c3-4520-ac4c-70dbb68f3c9f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="6af9d225-3cb1-4926-9962-37ded6bb97f2" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f5279d7e-12d5-41e6-bac0-163f20a9aa89" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1bd94329-20ef-4594-bfcc-5ab02d43e4dc" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e7ea0265-8c4c-40c6-87b8-620acb7d8d08" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Set String Var}" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Set Variable Action - String Var- Validation" Guid="a90f5d23-4c94-4dc8-aaac-7ebcacd63e73" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d5393cd3-6ab0-43af-bca9-dc982accdade" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="9029cf31-3831-42b0-8c1c-865106320d5f" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="9e71904e-2c1f-4e9d-ac61-547f7594dfe8" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="23d56bf6-7828-4446-bd42-3a8d5727bc78" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="dea25fd9-f515-472d-a64f-c3f67dd0e091" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="bfca56c8-2c2e-4c44-9207-174aa8053b83" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="afdbd8d6-47bc-4d0b-9de6-bcb8d5befd85" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="66b4b7c9-d95f-4096-823b-69f3819ef511" mExpected="testing" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+</Acts>
+
+<VariablesDependencies>
+<VariableDependency Guid="b9f938f8-7987-4534-bb39-e422f560af8c" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Action Level Variable Dependency - Testing" AutomationStatus="Development" EnableActionsVariablesDependenciesControl="True" ErrorHandlerMappingType="AllAvailableHandlers" Guid="653b0a87-3478-43e7-9a2d-f6cba86c6267" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActSetVariableValue Active="True" Description="Action Level Variable Dependency - Initiate 1st value" Guid="66de703d-f242-4689-9c44-67d4acd29648" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="ResetValue" StatusConverter="None" VariableName="Activity Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7db63727-3d7d-4f45-bfa4-ee1bbf84309d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="0a1a4e79-d18b-4816-b6ac-2935ff5fe959" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>xyz</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Action Level Variable Dependency - Testing with first value " Guid="42b5e9ad-51aa-47fb-9751-802b35ef1887" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="62d00f97-25ed-440f-9dad-757a388ee54c" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="476858e2-db65-4041-b53e-415bf5e037c3" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="3051642e-1a8a-40ac-8960-6bae75e3ef8f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="ab288db9-0052-4408-8f1c-1183e3120e65" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d269d007-0539-4696-b6d1-7faeb0def5eb" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c897f876-031d-4d83-bb0e-39aa3a259144" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="1156495c-1e52-4ec5-9996-8e1333389bb2" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Selection List}" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="d60941f3-dde8-4312-b603-31b1f5f7c216" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>abc</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActUIElement>
+<ActUIElement Active="True" Description="Action Level Variable Dependency - Validation of first value" Guid="f659cbf1-820d-47ee-95f2-a3b75726cf27" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="745c3653-4523-4c81-9db8-18f43a0c84da" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="f7124a72-4193-40ff-8b5e-ffb80e043cab" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="3479ab07-bf17-446c-afb8-117e90fb5e5c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="e1f68208-da83-41b1-8eec-03e787df6b98" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="979d01b3-a3dd-40fd-a014-d3f875ca62e1" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="79f890a1-60cc-4499-9877-7e257e589235" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b98a2d4f-3600-4a43-91ae-65c2a2cb1df7" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="66b4b7c9-d95f-4096-823b-69f3819ef511" mExpected="abc" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="3b213319-0d2d-4bca-9cad-b8599b7a4f0f" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>abc</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Action Level Variable Dependency - Initiate of 2nd value" Guid="482f0875-e8b3-4645-8d21-89352c03833f" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Activity Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7db63727-3d7d-4f45-bfa4-ee1bbf84309d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="xyz" />
+</InputValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="640ea1e4-4150-4b90-81b3-054e322c9d8f" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>abc</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActSetVariableValue>
+<ActUIElement Active="True" Description="Action Level Variable Dependency - Testing with 2nd value " Guid="c29f36ca-7a77-4ca5-b187-f47a9895fafa" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e880b496-b285-4713-9dd6-2fa10d770387" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="920a42dc-c448-466d-8cbf-e9a1d1cf145e" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="af952b03-8679-406a-8134-a7cbad4a8a26" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="a7322093-6228-4580-9727-a45e92d3cf3f" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0cfbf394-1f0a-47fb-955a-46b43131d687" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="69af2a93-ba8b-43db-89b8-bdd8ae23c95d" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fa1b1da6-c741-41c4-94a3-673d4337047f" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Activity Selection List}" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="84b5b40a-c57f-49f1-a468-0797ae7a8eca" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>xyz</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActUIElement>
+<ActUIElement Active="True" Description="Action Level Variable Dependency - Validation of 2nd value  " Guid="c7ddf058-ff25-49db-b522-28da32108d4a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8c55cd28-8139-4aa8-84b8-35f753445608" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetText" />
+<ActInputValue Guid="6d3dc096-f6ff-4db0-8e26-f502ab1256d4" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="dff31af6-b716-4170-8eec-61bdeb5b3f0f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="6f53187f-aa1d-4c6e-a64b-af69d4ff9635" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5bb057c0-8b2b-486d-a38f-9efdce73ccb2" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="62dc4ddb-3202-467b-9c88-1f8b238e578e" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="17cb7aa5-69d7-4c90-b4dc-fc90c5c5512a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="20a4826f-1f5a-4c9b-89ae-d1afaf9bffb2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="88752a72-b145-47c5-b534-4546a6e5d274" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54f09b8f-f43c-445f-a2f6-5fbfd0e4b722" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="037052be-98c1-4e4c-8580-a18cb8de310a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c17945ab-4ab0-40af-b69d-868a466750ce" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1d2b31a9-4810-4d84-88ea-5fea9bfc6af2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="66b4b7c9-d95f-4096-823b-69f3819ef511" mExpected="xyz" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="232d77fe-dae0-4fb2-8a02-02e52b3984d2" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>xyz</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActUIElement>
+<ActSetVariableValue Active="True" Description="Set Variable Action" Guid="d45c4118-1bf0-46c8-873a-d46e93f6c84e" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="BF Selection List" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToActivity" Guid="8d298187-3474-43b7-bb3b-6e54f8a3cbfd" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="306661d3-5601-44b4-97ce-3afd67191b83#GUID_NAME#Business Flow Selection List Variable - Testing" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="0655efa7-37ad-40b0-a70c-700038bbf09c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="mumbai" />
+</InputValues>
+
+<VariablesDependencies>
+<VariableDependency Guid="f5f116a5-a176-4c65-9f20-e1e91e65456e" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="b523502e-9589-4a9b-b260-71dad5149e33" VariableName="Activity Selection List">
+<VariableValues>
+<string>xyz</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableSelectionList Guid="b523502e-9589-4a9b-b260-71dad5149e33" MappedOutputType="None" Name="Activity Selection List" ParentGuid="00000000-0000-0000-0000-000000000000" Value="xyz">
+<OptionalValuesList>
+<OptionalValue Guid="cbcbdc40-9383-42c9-b58a-dec2eff4435c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="abc" />
+<OptionalValue Guid="0e4cd460-6568-470f-9a8e-86e5ccc95ae0" ParentGuid="00000000-0000-0000-0000-000000000000" Value="xyz" />
+</OptionalValuesList>
+</VariableSelectionList>
+</Variables>
+
+<VariablesDependencies>
+<VariableDependency Guid="a8bc4c0b-daa3-4cd9-baa7-3e983de6fae6" ParentGuid="00000000-0000-0000-0000-000000000000" VariableGuid="288fceff-1c50-4041-94e9-4065a0ae8412" VariableName="BF Selection List">
+<VariableValues>
+<string>pune</string>
+</VariableValues>
+</VariableDependency>
+</VariablesDependencies>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="2a8bddb6-7f6a-486e-b4d7-f8e1b5521092" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="Initial set up of variables are created here" ActivityGuid="ba1ad07e-c766-45d8-9314-82fe3717e4df" ActivityName="Initial Setup" Guid="d6128d93-cdae-45ab-a2de-e8e08ab24b93" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="8cbd0c13-77bc-44d5-82ad-ca7d523bf331" ActivityName="Global Variables - Testing" Guid="39891bfb-0725-424a-ab6a-219cf155f1d8" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="91d5fd5e-a8b9-431e-8163-df272bb6ae45" ActivityName="Business Flow Variables - Testing" Guid="90cf4503-91a4-4f3c-aeb7-098e062793b2" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="306661d3-5601-44b4-97ce-3afd67191b83" ActivityName="Business Flow Selection List Variable - Testing" Guid="21a3f4c9-7b9f-4189-82e8-1a326d5abf84" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="f6fd1907-50a6-4b01-b8a1-bff3eb214852" ActivityName="Activity Variables - Testing" Guid="1d38727b-7eb5-4a55-aec1-c100a260c2ae" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="5a0af670-7b6f-443e-b896-9f0a9ff31c4d" ActivityName="Store data in variable- Testing" Guid="76f7c34a-8d02-4203-9406-aadfe78e2430" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="39767777-7e15-4eda-8d7c-ef0080f6b41f" ActivityName="Store variable data in Data Source- Testing" Guid="ad47ad1c-e186-484d-9ab1-55244be3830d" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="01f22040-ded9-4224-9ff8-3bf01af075c8" ActivityName="Set Variable Action -Testing" Guid="32c4c75e-03b3-4dd3-8646-088ece97d5db" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="653b0a87-3478-43e7-9a2d-f6cba86c6267" ActivityName="Action Level Variable Dependency - Testing" Guid="be37f556-eb5e-4026-a538-1ca73caf63e4" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="Web-App" Guid="a3627628-c1a8-47fd-86f1-53f985dcbc0b" LastExecutingAgentName="ChromeAgentForVariableRunner" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableDynamic Guid="0900fb90-2a4b-423e-8ee4-b9ce984b47ec" MappedOutputType="None" Name="BF Dynamic" ParentGuid="00000000-0000-0000-0000-000000000000" ValueExpression="{VBS Eval=Right(&quot;0&quot; &amp; Day(Now), 2)}" />
+<VariableDynamic Guid="b9a23cc1-df0a-4848-a7e4-6339981a73c3" MappedOutputType="None" Name="Set Dynamic Var" ParentGuid="00000000-0000-0000-0000-000000000000" ValueExpression="{VBS Eval=Right(&quot;0&quot; &amp; Day(Now), 2)}" />
+<VariableList Guid="a7488dcb-e215-4ab9-a05c-96b0152423b7" MappedOutputType="None" Name="Set List Var" ParentGuid="00000000-0000-0000-0000-000000000000" ValueList="abc&#xD;&#xA;ijk&#xD;&#xA;xyz" />
+<VariablePasswordString Guid="e75007f9-8536-47aa-99f9-59204fa81055" MappedOutputType="None" Name="Set Password Var " ParentGuid="00000000-0000-0000-0000-000000000000" Password="MmPYOEJLrMMSHSqqrlpMsg==" />
+<VariableRandomNumber Guid="48a3e693-d1f6-4425-b2ea-f50b1a42eb60" Interval="1" IsInteger="True" MappedOutputType="None" Max="100" Min="1" Name="Set Random Number Var" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableRandomString Guid="7f6a00ad-8791-411d-a00e-8e78c6a610c7" IsLowerCase="True" MappedOutputType="None" Max="10" Min="1" Name="Set RandomString Var" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableSequence Guid="a50282b5-3049-432e-96b3-67bf4ec5b231" Interval="5" MappedOutputType="None" Max="100" Min="1" Name="Set Sequence Var" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="0fd4c070-5b6c-4e93-97ae-c61ef2b3cfbf" InitialStringValue="testing" MappedOutputType="None" Name="Set String Var" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableDynamic Guid="15473968-fca6-43ac-9265-e3eba9268ead" MappedOutputType="None" Name="Store Dynamic" ParentGuid="00000000-0000-0000-0000-000000000000" ValueExpression="{VBS Eval=Right(&quot;0&quot; &amp; Day(Now), 2)}" />
+<VariableList Guid="93c09e9f-c3f9-4ab6-a439-1825aa6ba7e9" MappedOutputType="None" Name="BF List" ParentGuid="00000000-0000-0000-0000-000000000000" ValueList="abc&#xD;&#xA;ijk&#xD;&#xA;xyz" />
+<VariablePasswordString Guid="9b5588d9-ef08-4d4c-b46b-18dcf529c4fe" MappedOutputType="None" Name="BF Password" ParentGuid="00000000-0000-0000-0000-000000000000" Password="MmPYOEJLrMMSHSqqrlpMsg==" />
+<VariableRandomNumber Guid="25df6c7d-620d-4e45-b204-9f199131b914" Interval="1" IsInteger="True" MappedOutputType="None" Max="100" Min="1" Name="BF Random Number" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableRandomString Guid="16eb0a36-d4a2-4d38-8e83-d3b38ea004be" IsLowerCase="True" MappedOutputType="None" Max="10" Min="1" Name="BF Random String" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableSelectionList Guid="288fceff-1c50-4041-94e9-4065a0ae8412" MappedOutputType="None" Name="BF Selection List" ParentGuid="00000000-0000-0000-0000-000000000000" Value="pune">
+<OptionalValuesList>
+<OptionalValue Guid="cb488bf5-59ce-4975-9327-67415961fcb7" ParentGuid="00000000-0000-0000-0000-000000000000" Value="pune" />
+<OptionalValue Guid="46e81547-709f-443e-8126-ce8073e25183" ParentGuid="00000000-0000-0000-0000-000000000000" Value="mumbai" />
+</OptionalValuesList>
+</VariableSelectionList>
+<VariableSequence Guid="f9d1ee89-194d-4e4e-9b06-60d27d350ce1" Interval="5" MappedOutputType="None" Max="100" Min="1" Name="BF Sequence" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="3355d84c-0550-48f3-ae6a-64260dd90e9a" InitialStringValue="abc" MappedOutputType="None" Name="BF String" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="ef406530-db49-47dc-b3c2-226f0a103f39" InitialStringValue="14" MappedOutputType="None" Name="Store String" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableTimer Guid="2134d3c1-18c9-4be4-8d80-88b64f7ef176" MappedOutputType="None" Name="BF Timer" ParentGuid="00000000-0000-0000-0000-000000000000" TimerUnit="Seconds" />
+<VariableString Guid="a73668ef-7609-4756-8ccb-d7eb06c0eaa9" InitialStringValue="file:///ERROR: The Variable 'DocumentFolder' was not found\Web\WebPages\TestForm.htm" MappedOutputType="None" Name="URL Local" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="3af71f59-b5dc-4b14-9019-5e1a93dc4528" InitialStringValue="ERROR: The Variable 'DocumentFolder' was not found\Web\ScreenShots" MappedOutputType="None" Name="ScrnshotFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="0e0c65c2-6364-4e16-8039-de14a50a2956" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="48e8d787-7c44-437d-8ec9-b413d7e7c5b3" InitialStringValue="trial" MappedOutputType="None" Name="BF Var String Input Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="54e4dcfb-ec48-47e3-86d9-c066e6b6eed5" InitialStringValue="0" MappedOutputType="None" Name="StringLen" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

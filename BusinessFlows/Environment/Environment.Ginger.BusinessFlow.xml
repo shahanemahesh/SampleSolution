@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="defca3d4-b637-461b-972b-8e1b77256a0a" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901171121" GingerVersion="3.1.0.0" Version="127" LastUpdateBy="JGHODKE" LastUpdate="201902221549" />
+<BusinessFlow Elapsed="46740" Guid="defca3d4-b637-461b-972b-8e1b77256a0a" Name="Environment_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Environment Param-Validation" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="9b87cef6-e9d7-43cf-97df-d27f751ad10e" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Active="True" Condition="InStr({EnvParam App=Web-App Param=Param1},{Var Name=Expected Parameter value})&gt;0" Description="Validate environment param value" Guid="9deedaca-b7ab-46a5-ac9c-3f92dd1d6b89" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d9cd3b9a-59fd-4a8b-8289-eeafd7194516" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InStr({EnvParam App=Web-App Param=Param1},{Var Name=Expected Parameter value})&gt;0" Value="InStr({EnvParam App=Web-App Param=Param1},{Var Name=Expected Parameter value})&gt;0" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="WithoutPlatform-App" Guid="ee6f8283-f99b-467f-9e22-e161d016f567" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="a43f4f79-bd7c-42d3-a132-eb2481d3cf95" MappedOutputType="None" Name="Expected Parameter value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

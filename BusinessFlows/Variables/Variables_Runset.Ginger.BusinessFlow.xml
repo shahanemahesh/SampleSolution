@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="341c8112-278b-4da4-b0f2-5a1a21fcfac5" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901160935" GingerVersion="3.1.0.0" Version="41" LastUpdateBy="JGHODKE" LastUpdate="201901251253" />
+<BusinessFlow Guid="341c8112-278b-4da4-b0f2-5a1a21fcfac5" Name="Variables_RunsetConfigurationTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Initial Setup" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2d110019-7008-45a3-a39b-cf5907851cff" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="2997fde7-867c-4851-b964-337007f8f33a" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\GingerSourceControl\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActSetVariableValue Active="True" Description="Set Variable Action for URL Local" Guid="afc6f12f-d134-458e-814d-4f9f269c54cb" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="URL Local" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="file:///{Var Name=DocumentFolder}\Web\WebPages\TestForm.htm" Value="file:///{Var Name=DocumentFolder}\Web\WebPages\TestForm.htm" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Set ScrShot Action Var" Guid="9b5ce578-e24f-4a10-bf3c-dbefa4374ba0" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="ScrnshotFolder" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentFolder}\Web\ScreenShots" Value="{Var Name=DocumentFolder}\Web\ScreenShots" />
+</InputValues>
+</ActSetVariableValue>
+<ActGotoURL Active="True" Description="Variable Testing - Initiate" Guid="97d24a2f-35b3-41f7-8d1f-414f02c265ab" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6687041f-9547-4168-9663-afefd755e801" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=URL Local}" Value="{Var Name=URL Local}" />
+</InputValues>
+</ActGotoURL>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Set as Output Value Variable - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="f3cf8129-c70c-42dd-ad16-8656a02dffb8" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActUIElement Active="True" Description="Set as Output Value Variable - Initiate" ElementAction="SetValue" ElementLocateBy="ByXPath" ElementType="TextBox" Guid="497fd2b4-00c0-48df-b050-a6aa0d4b1169" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fe2b72ee-da8c-4405-a960-b28a644fa5b5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="9eaf14a6-6429-4487-a856-27dfc530599a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=BF Runset String }" Value="{Var Name=BF Runset String }" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Set as Output Value Variable - Testing" ElementAction="GetText" ElementLocateBy="ByXPath" ElementType="TextBox" Guid="f3f81297-86f6-4958-a9a1-bebf806b146a" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fe2b72ee-da8c-4405-a960-b28a644fa5b5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="9eaf14a6-6429-4487-a856-27dfc530599a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="56551c50-fc33-406c-8976-789758fefe14" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c96efed-7a68-4384-b86f-9d1c3bece461" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c0f3559-a8f9-4ef1-a8c9-1e4756db0bc1" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="aa026162-17bf-4305-913e-327bef537910" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="08117479-b164-4cd0-b2d3-f231d2fa1da1" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="BF Runset String Get Value" />
+</ReturnValues>
+</ActUIElement>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=BF Runset String Get Value}&quot;,&quot;abc&quot;)&gt;0" Description="Set as Output Value Variable - Validation" Guid="6d665d01-b726-4c84-b369-bf8c2152bc48" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="debe1cbe-7666-4af3-adc0-9f1598197a94" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InStr(&quot;{Var Name=BF Runset String Get Value}&quot;,&quot;abc&quot;)&gt;0" Value="InStr(&quot;{Var Name=BF Runset String Get Value}&quot;,&quot;abc&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Set as Input Value Variable - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="bad5719a-5977-4a23-b8fc-c824123bcb4f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActUIElement Active="True" Description="Set as Input Value Variable - Initiate" ElementAction="SetValue" ElementLocateBy="ByXPath" ElementType="TextBox" Guid="497fd2b4-00c0-48df-b050-a6aa0d4b1169" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fe2b72ee-da8c-4405-a960-b28a644fa5b5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="9eaf14a6-6429-4487-a856-27dfc530599a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=BF Runset String Input Value}" Value="{Var Name=BF Runset String Input Value}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Set as Input Value Variable - Testing" ElementAction="GetText" ElementLocateBy="ByXPath" ElementType="TextBox" Guid="f3f81297-86f6-4958-a9a1-bebf806b146a" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fe2b72ee-da8c-4405-a960-b28a644fa5b5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="9eaf14a6-6429-4487-a856-27dfc530599a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="56551c50-fc33-406c-8976-789758fefe14" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c96efed-7a68-4384-b86f-9d1c3bece461" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c0f3559-a8f9-4ef1-a8c9-1e4756db0bc1" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="aa026162-17bf-4305-913e-327bef537910" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="08117479-b164-4cd0-b2d3-f231d2fa1da1" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="BF Runset String Input Value Validate" />
+</ReturnValues>
+</ActUIElement>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=BF Runset String Input Value Validate}&quot;,&quot;InputTest1&quot;)&gt;0" Description="Set as Input Value Variable - Validation" Guid="d003eb46-39ce-453d-93d1-262cafb8a4a0" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="debe1cbe-7666-4af3-adc0-9f1598197a94" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InStr(&quot;{Var Name=BF Runset String Input Value Validate}&quot;,&quot;InputTest1&quot;)&gt;0" Value="InStr(&quot;{Var Name=BF Runset String Input Value Validate}&quot;,&quot;InputTest1&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Take value from Data Source into Var - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c01d5d78-ceea-42b0-98e7-9ad389e31e3d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActUIElement Active="True" Description="Take value from Data Source into Var - Testing" ElementAction="SetValue" ElementLocateBy="ByXPath" ElementType="TextBox" Guid="497fd2b4-00c0-48df-b050-a6aa0d4b1169" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fe2b72ee-da8c-4405-a960-b28a644fa5b5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="9eaf14a6-6429-4487-a856-27dfc530599a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=Data Source Var}" Value="{Var Name=Data Source Var}" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Take value from Data Source into Var - Validation" ElementAction="GetText" ElementLocateBy="ByXPath" ElementType="TextBox" Guid="f3f81297-86f6-4958-a9a1-bebf806b146a" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fe2b72ee-da8c-4405-a960-b28a644fa5b5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" Value="/html/body[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]" />
+<ActInputValue Guid="9eaf14a6-6429-4487-a856-27dfc530599a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="56551c50-fc33-406c-8976-789758fefe14" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c96efed-7a68-4384-b86f-9d1c3bece461" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c0f3559-a8f9-4ef1-a8c9-1e4756db0bc1" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="aa026162-17bf-4305-913e-327bef537910" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="08117479-b164-4cd0-b2d3-f231d2fa1da1" mExpected="reuse" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Web-App" Guid="fdafac98-8972-4f73-92c1-cd6d367fa65e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="56ad5f2b-e51a-4c5d-ae69-63925b61124f" MappedOutputType="None" Name="BF Runset String " ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="d29a1850-58b8-4b3a-9d16-e6edd02d6381" MappedOutputType="None" Name="BF Runset String Get Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="cb19acf8-b3c5-4137-a914-419575a4c83d" MappedOutputType="None" Name="BF Runset String Input Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="3b376b57-019e-4a38-9d31-bc5a3c73c8bb" MappedOutputType="None" Name="BF Runset String Input Value Validate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="92810afd-521b-4856-b57d-e2153ff643b4" InitialStringValue="file:///ERROR: The Variable 'DocumentFolder' was not found\Web\WebPages\TestForm.htm" MappedOutputType="None" Name="URL Local" ParentGuid="00000000-0000-0000-0000-000000000000" Value="file:///ERROR: The Variable 'DocumentFolder' was not found\Web\WebPages\TestForm.htm" />
+<VariableString Guid="294976bf-97da-4a17-b9ca-1fa5b089cf2c" InitialStringValue="ERROR: The Variable 'DocumentFolder' was not found\Web\ScreenShots" MappedOutputType="None" Name="ScrnshotFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ERROR: The Variable 'DocumentFolder' was not found\Web\ScreenShots" />
+<VariableString Guid="6fec3a34-3d12-4985-be1d-cb665d8832c8" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" />
+<VariableString Guid="005a2860-d59f-40ba-a7ae-7aaf5f36c63b" MappedOutputType="None" Name="Data Source Var" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

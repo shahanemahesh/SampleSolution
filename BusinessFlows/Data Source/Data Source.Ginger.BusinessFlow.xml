@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="03535776-f33f-43ae-b42c-baaff2317f02" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901070702" GingerVersion="3.1.0.0" Version="203" LastUpdateBy="JGHODKE" LastUpdate="201902021649" />
+<BusinessFlow Elapsed="9061" Guid="03535776-f33f-43ae-b42c-baaff2317f02" Name="DataSource_RegressinTestigSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Data Source - Initial Setup &amp; Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5c3d017c-a5e1-41be-8eb4-b4b311be019f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Web-App">
+<Acts>
+<ActDSTableElement Active="True" ControlAction="DeleteAll" Description="Data Source Action - Delete All -Testing (DataSourceTestingSetValue)" Guid="234657fc-fdbe-4209-aed0-ceea9c03aa75" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=DA MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b6cbeae1-2a8d-4e67-82de-86a05c3a61c0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="RowCount" Description="Data Source Action - Delete All -Validation" Guid="7aac567c-09a0-4e6e-b731-30917deb4dcd" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=RC MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b6cbeae1-2a8d-4e67-82de-86a05c3a61c0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="0914ad71-d6f5-433f-bffe-52d87e439d54" mExpected="0" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="DeleteAll" Description="Data Source Action - Delete All - (DataSourceTestingStoreValue)" Guid="c8781e65-c5b1-4d1d-8f64-5031393a8bb5" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingStoreValue ACT=DA MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b6cbeae1-2a8d-4e67-82de-86a05c3a61c0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="DeleteAll" Description="Data Source Action - Delete All -(MultiValueParamToRow)" Guid="2dab2835-eceb-4223-845d-240764855b79" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=MultiValueParamToRow ACT=DA MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b6cbeae1-2a8d-4e67-82de-86a05c3a61c0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="DeleteAll" Description="Data Source Action - Delete All -(MultiValueParamToCol)" Guid="0935857e-e550-4f56-a3b6-4111402251ef" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=MultiValueParamToCol ACT=DA MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b6cbeae1-2a8d-4e67-82de-86a05c3a61c0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActScript Active="True" Description="Script Action" Guid="dfa189c4-9f8b-4770-addf-3054ee82948c" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\GingerSourceControl\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Data Source - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="97ae9d8d-d58b-462b-b62c-568e10c92769" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="92%" TargetApplication="Web-App">
+<Acts>
+<ActDSTableElement Active="True" ControlAction="SetValue" Description="Data Source Action- Set Value - Testing" Guid="e247edf4-df9d-4f33-8ace-bb98568df764" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=ParamValue IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="92b33419-d004-407d-9547-857f3ef0d098" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abcdef" Value="abcdef" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action - Set Value- Validation" Guid="fdce2178-f1d6-4d2d-bd7f-cdbe7cf105b3" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=ParamValue IROW=Where COND=  [ParamValue] = 'abcdef'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8b082ba1-3b77-4a1e-9394-aa589e679d9e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="342418ea-a584-4a22-8c11-d1d4d14abf80" mExpected="abcdef" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action- Get Value - Testing &amp; Validation" Guid="e0176cb9-1846-4488-b224-486254739fa5" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=ParamValue IROW=Where COND=  [ParamValue] = 'abcdef'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="97470f88-b87d-40f6-8f49-86b7d2050968" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5e6cdf0d-5419-48f8-83e0-c34df9bb1329" mExpected="abcdef" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action- Store Value to Variable - Testing" Guid="f360a0d5-3dd1-4bce-bed7-f4e30164df4b" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=ParamValue IROW=Where COND=  [ParamValue] = 'abcdef'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="97470f88-b87d-40f6-8f49-86b7d2050968" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5e6cdf0d-5419-48f8-83e0-c34df9bb1329" mExpected="abcdef" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Data Source Variable" />
+</ReturnValues>
+</ActDSTableElement>
+<ActValidation Active="True" Condition="InStr(&quot;{Var Name=Data Source Variable}&quot;,&quot;abcdef&quot;)&gt;0" Description="Data Source Action- Store Value to Variable - Validation" Guid="72f96956-b5d8-4188-ae3d-f81aeed26c9e" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="aa83250e-7f25-49a1-99bd-b90b65d9cf3f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InStr(&quot;{Var Name=Data Source Variable}&quot;,&quot;abcdef&quot;)&gt;0" Value="InStr(&quot;{Var Name=Data Source Variable}&quot;,&quot;abcdef&quot;)&gt;0" />
+</InputValues>
+</ActValidation>
+<ActDSTableElement Active="True" ControlAction="AvailableRowCount" Description="Data Source Action - Get Available Row Count - Testing &amp; Validation" Guid="68cae809-8c33-41a8-a21c-fe240f53b1ab" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=ARC MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="24dda8cf-0a93-4c5f-923a-1ed949ea6fb2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7e0f4a3a-eab5-49cb-9f0e-efebe86ec845" mExpected="1" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement ControlAction="SetValue" Description="Data Source Action- Set Value - Cleanup" Guid="9cc9ea8f-9fdb-49b0-bbc6-8e4a5a4a3386" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=CUSTOMIZED ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_USED IROW=Where COND=  [name] = 'abcdef'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d1e6c7e1-6be4-4c47-a1db-190525b8b4c2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abc" Value="abc" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="MarkAsDone" Description="Data Source Action - Marked row as Used - Testing" Guid="bdab768f-cdd6-47bc-9467-dcdbdd50b822" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=Y MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2705eda6-728b-4ec2-a24c-9e8aa1a36a14" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action- Mark Row as Used - Validation" Guid="cd60dcc9-543d-4c82-88e2-a92d0f3939f5" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_USED IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="22e9aa01-cb6f-4d9e-a774-39af86dfaa6d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="32cc86d1-ce08-482a-9e24-61ae930b6329" mExpected="No Row found with Select [GINGER_USED],[GINGER_ID] from DataSourceTestingSetValue Where GINGER_USED &lt;&gt; 'True' or GINGER_USED is null" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="MarkAllUnUsed" Description="Data Source Action - Mark All As Unused - Testing" Guid="60c70539-827f-428e-b72d-c3bca823108b" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=NA MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7288bf13-0d0d-401b-856e-22e304c3dc14" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action - Mark All As Unused - Validation" Guid="5107794f-76a1-4f07-b57c-a317ecb69c85" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_USED IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6e683a83-4769-4980-a1ac-d9c80b17ad75" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7d4cbab2-301e-45b4-acc6-f6e233fcd85e" mExpected="False" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="MarkAsDone" Description="Data Source Action - Get Available Row Count - Intiate1" Guid="159df7f0-260c-416f-88f9-1ced7fc9c278" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=Y MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2705eda6-728b-4ec2-a24c-9e8aa1a36a14" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="SetValue" Description="Data Source Action - Get Available Row Count - Intiate2" Guid="8c3d42a6-6996-4846-823e-da94654610c8" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=ParamValue IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="92b33419-d004-407d-9547-857f3ef0d098" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="xyz" Value="xyz" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="RowCount" Description="Data Source Action - Row Count - Testing &amp; Validation" Guid="75b2ff21-9a59-4f12-a4ef-c3101e95e45d" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=RC MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6d31fd85-6b39-46f7-b867-b449a3c0a1b8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="8a853623-a4f0-4045-ab1b-18f20da51a79" mExpected="2" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="DeleteRow" Description="Data Source Action - Delete Row - Testing" Guid="9a469804-e38d-483b-9b59-cbd1fc353508" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=DR MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=Where COND=  [GINGER_USED] &lt;&gt; 'null'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="74e6be9d-dfdb-4e2b-8841-7b6a07a70ac1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action - Delete Row- Validation" Guid="a177f589-f045-4f5f-9d24-1e6d1fd1018f" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=ParamValue IROW=Where COND=  [ParamValue] = 'abcd'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="18d5af53-a5ee-4c2d-b1c0-e65a55290312" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7d920afe-8dfa-464a-89e2-6709382f4f14" mExpected="No Row found with Select [ParamValue],[GINGER_ID] from DataSourceTestingSetValue Where   [ParamValue] = 'abcd'" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActExcel Active="True" Description="Excel Action - Output Single value store to DS - Testing" ExcelActionType="ReadData" ExcelFileName="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" Guid="c20e3df3-0ced-45c3-ba36-03fcc4ec941f" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" PrimaryKeyColumn="PET" RetryMechanismInterval="5" SheetName="Sheet1" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c9e1f42b-b5f0-421b-946f-cf2634aea8af" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b27ceaf6-5d73-4afc-97af-48e0b6fa260d" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" Value="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" />
+<ActInputValue Guid="d23dae29-9fa2-494c-8b43-e0cb5c16965c" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Sheet1" Value="Sheet1" />
+<ActInputValue Guid="d34575a0-dc32-4a20-8dd9-cc8d7ac4fe41" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="PET" Value="PET" />
+<ActInputValue Guid="cbd0be8f-f9d3-4d77-afff-54708c94ed67" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3a23cbc8-352c-400a-a471-1b251b16b2c3" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a8077da7-1743-4bc2-9580-8dbf419894a2" Param="PET" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=GingerDataSource DST=DataSourceTestingStoreValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=Parameter IROW=NxtAvail}" />
+</ReturnValues>
+</ActExcel>
+<ActDSTableElement Active="True" ControlAction="GetValue" Description="Data Source Action - Output Single value store to DS - Validation" Guid="da105ab5-1562-47ae-8554-da11763f0d0f" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingStoreValue ACT=MASD MASD=N MR=N IDEN=Cust ICOLVAL=Parameter IROW=Where COND=  [Parameter] = 'PETID1'}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="73b3bd67-c071-4963-b460-ba5a7716172a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c76fa4b1-e0b5-4ce8-aa80-1ae5da3aa1ab" mExpected="PETID1" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActExcel Active="True" ConfigOutputDS="True" Description="Excel Action - Output value store to DS - Param To Row - Testing" ExcelActionType="ReadData" ExcelFileName="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" Guid="a1f17472-26c5-44e0-8453-41338a51083e" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" PrimaryKeyColumn="PET" RetryMechanismInterval="5" SelectAllRows="True" SheetName="Sheet1" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+<ActOutDataSourceConfig Active="True" DSName="GingerDataSource" DSTable="MultiValueParamToRow" Guid="c0ef2dad-7b2b-48ec-9b04-6c6130529a0c" OutParamMap="ParamToRow" OutputType="Parameter" ParentGuid="00000000-0000-0000-0000-000000000000" TableColumn="Parameter" />
+<ActOutDataSourceConfig Active="True" DSName="GingerDataSource" DSTable="MultiValueParamToRow" Guid="2962eaec-7c6e-4c29-abb5-21bd499beba6" OutParamMap="ParamToRow" OutputType="Path" ParentGuid="00000000-0000-0000-0000-000000000000" TableColumn="Path" />
+<ActOutDataSourceConfig Active="True" DSName="GingerDataSource" DSTable="MultiValueParamToRow" Guid="52870876-3319-4cfc-8bc6-a55846b77fc6" OutParamMap="ParamToRow" OutputType="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" TableColumn="Actual" />
+</DSOutputConfigParams>
+
+<InputValues>
+<ActInputValue Guid="c9e1f42b-b5f0-421b-946f-cf2634aea8af" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b27ceaf6-5d73-4afc-97af-48e0b6fa260d" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" Value="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" />
+<ActInputValue Guid="d23dae29-9fa2-494c-8b43-e0cb5c16965c" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Sheet1" Value="Sheet1" />
+<ActInputValue Guid="d34575a0-dc32-4a20-8dd9-cc8d7ac4fe41" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="PET" Value="PET" />
+<ActInputValue Guid="cbd0be8f-f9d3-4d77-afff-54708c94ed67" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3a23cbc8-352c-400a-a471-1b251b16b2c3" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ReturnValues>
+</ActExcel>
+<ActDSTableElement Active="True" ControlAction="RowCount" Description="Data Source Action - Output value store to DS - Param To Row - Validation" Guid="9df7d633-5f52-4a02-8992-f36d5aa3861d" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=MultiValueParamToRow ACT=RC MASD=N MR=N IDEN=Cust ICOLVAL=Parameter IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="73b3bd67-c071-4963-b460-ba5a7716172a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5bee3788-2a4a-459f-9e70-383e9cf7feab" mExpected="18" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActExcel Active="True" ConfigOutputDS="True" Description="Excel Action - Output value store to DS - Param To Col - Testing" ExcelActionType="ReadData" ExcelFileName="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" Guid="f84795a3-2959-4e6e-9273-51a673e40aab" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" PrimaryKeyColumn="PET" RetryMechanismInterval="5" SelectAllRows="True" SheetName="Sheet1" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+<ActOutDataSourceConfig Active="True" DSName="GingerDataSource" DSTable="MultiValueParamToCol" Guid="21caee8e-3e73-4a32-b17b-fe82fa249202" OutParamMap="ParamToCol" OutputType="PET" ParentGuid="00000000-0000-0000-0000-000000000000" TableColumn="PET" />
+<ActOutDataSourceConfig Active="True" DSName="GingerDataSource" DSTable="MultiValueParamToCol" Guid="3d15bb58-7bbd-4c9c-b957-0b74e0007e3f" OutParamMap="ParamToCol" OutputType="Used" ParentGuid="00000000-0000-0000-0000-000000000000" TableColumn="Used" />
+</DSOutputConfigParams>
+
+<InputValues>
+<ActInputValue Guid="c9e1f42b-b5f0-421b-946f-cf2634aea8af" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b27ceaf6-5d73-4afc-97af-48e0b6fa260d" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" Value="~\\DOCUMENTS\DATASOURCE REGRESSION\MULTIPLE VALUES.XLSX" />
+<ActInputValue Guid="d23dae29-9fa2-494c-8b43-e0cb5c16965c" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Sheet1" Value="Sheet1" />
+<ActInputValue Guid="d34575a0-dc32-4a20-8dd9-cc8d7ac4fe41" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="PET" Value="PET" />
+<ActInputValue Guid="cbd0be8f-f9d3-4d77-afff-54708c94ed67" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3a23cbc8-352c-400a-a471-1b251b16b2c3" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ReturnValues>
+</ActExcel>
+<ActDSTableElement Active="True" ControlAction="RowCount" Description="Data Source Action - Output value store to DS - Param To Col - Validation" Guid="ab9b6e67-59a5-40b6-8d66-2767aeec1c35" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=MultiValueParamToCol ACT=RC MASD=N MR=N IDEN=Cust ICOLVAL=PET IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="73b3bd67-c071-4963-b460-ba5a7716172a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c76fa4b1-e0b5-4ce8-aa80-1ae5da3aa1ab" mExpected="9" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="DeleteAll" Description="Data Source Action - Delete All - Testing" Guid="c58e62b7-2d2e-414d-a4ab-fc4edba150b5" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=DA MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="36380af1-6936-4b64-b606-cb6f7857ccec" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+<ActDSTableElement Active="True" ControlAction="RowCount" Description="Data Source Action - Delete All - Validation" Guid="6c6536c8-77fb-4d39-8307-18e3a17f2a54" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=RC MASD=N MR=N IDEN=Cust ICOLVAL=GINGER_ID IROW=NxtAvail}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="45114680-5822-442f-8364-0d3fbea3a023" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="22a63b6e-e3ed-42d3-9a91-bb2a1565cd81" mExpected="0" Param="Output" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDSTableElement>
+<ActDSTableElement ControlAction="ExportToExcel" Description="Data Source Action - Export to Excel- Testing--Need to update after #6932 is fixed" Guid="fa158148-96a4-4303-8282-73d30762cd20" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" ValueExp="{DS Name=GingerDataSource DST=DataSourceTestingSetValue ACT=ETE EP=C:\GingerSourceControl\Ginger_Regression_Testing\DOCUMENTS\BOOK2.XLSX ES=Sheet2}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4eaac085-a897-4afb-afd8-640af5e87e6d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDSTableElement>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Web-App" Guid="f5cdbe48-22b3-4d78-a700-80822b453516" LastExecutingAgentName="Internet Explorer-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="2a831edc-77a0-4b6a-af51-c1c0416b104b" InitialStringValue="C:\GingerSourceControl\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents" />
+<VariableString Guid="945a6961-0c71-4d26-a419-44c0119c83eb" InitialStringValue="abcdef" MappedOutputType="None" Name="Data Source Variable" ParentGuid="00000000-0000-0000-0000-000000000000" Value="abcdef" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

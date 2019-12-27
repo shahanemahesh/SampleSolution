@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="67674834-5024-4e54-a74a-9a933a5b92e3" ItemType="BusinessFlow" CreatedBy="mahessha" Created="201811211140" GingerVersion="3.1.0.0" Version="93" LastUpdateBy="JGHODKE" LastUpdate="201901251247" />
+<BusinessFlow Elapsed="35018" Guid="67674834-5024-4e54-a74a-9a933a5b92e3" Name="DOS_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Initial Setup" AutomationStatus="Development" Description="Initial set up of variables are created here" ErrorHandlerMappingType="AllAvailableHandlers" Guid="4b536b9e-f3b8-445d-810b-a1a83619dbe6" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="DOS-App">
+<Acts>
+<ActScript Active="True" Description="Script Action-Get DOS path " Guid="7744697b-1682-42df-b074-9efd56672133" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\RegressionSuite_Testing\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5ee84207-f8b1-49fc-8dd4-2b79d6a7ce5a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e54f605a-9b9d-402d-95ba-9ec720da7b45" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DOSPath" />
+</ReturnValues>
+</ActScript>
+<ActScript Active="True" Description="Script Action- Create TXT Files" Guid="f5e4f94d-5a2e-4869-b4ea-7468ba8ae59a" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="CreateTxt4Dos.vbs" ScriptPath="C:\GingerSourceControl\Latest_Regression_Suite_171218\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="be1c5969-a5ee-4745-bc04-9ba8b1027c78" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+<ActSetVariableValue Active="True" Description="Set Script Folder Variable " Guid="564dd833-488f-4fed-a147-3332ed206fd6" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="ScriptPath" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DOSPath}\Scripts" Value="{Var Name=DOSPath}\Scripts" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Set DOS Path Variable" Guid="6ae1b9ab-c145-4b72-adb0-0b9dcd9e60c8" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="DosFilesPath" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DOSPath}\DOS" Value="{Var Name=DOSPath}\DOS" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Console Command Action-Testing" AutomationStatus="Development" Description="Is File Exists - does not process output obtained from DOS properly.&#xD;&#xA;Get File - Not implemented&#xD;&#xA;Parameterized Command-Not Implemented&#xD;&#xA;Script-Not implemented&#xD;&#xA;" ErrorHandlerMappingType="AllAvailableHandlers" Guid="fe81f301-5f29-4cd6-9832-5aac0e5d4b97" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="92%" TargetApplication="DOS-App">
+<Acts>
+<ActConsoleCommand Active="True" ConsoleCommand="CopyFile" Description="Console Command Action-Copy File-Testing" Guid="8b069bb2-a583-448f-9696-e34502df29c8" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="afef08ab-bb6b-41db-9ba8-e6826809beb0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DosFilesPath}\TxtFile1.txt {Var Name=DosFilesPath}\TxtFile2.txt" Value="{Var Name=DosFilesPath}\TxtFile1.txt {Var Name=DosFilesPath}\TxtFile2.txt" />
+</InputValues>
+</ActConsoleCommand>
+<ActReadTextFile Active="True" AppendAt="End" Description="Console Command Action-Copy File-validation 1" FileActionMode="Read" Guid="25abbdc7-5e64-4dd9-912f-4508632c3261" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" TextFilePath="{Var Name=DosFilesPath}\TxtFile1.txt" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3516bc73-59e4-4717-8c08-55351a2771b3" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DosFilesPath}\TxtFile1.txt" Value="{Var Name=DosFilesPath}\TxtFile1.txt" />
+<ActInputValue Guid="dca7e2b5-b8d8-40b6-84c3-656f9c47edf8" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0fe914f4-ed5c-478a-9235-7eca66e75e02" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="031fd8fe-c326-4056-8701-f150e35f0266" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="File1Content" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="Console Command Action-Copy File-validation 2" FileActionMode="Read" Guid="c9f7c767-c186-4f34-9dac-88eae0cdeaf7" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" TextFilePath="{Var Name=DosFilesPath}\TxtFile1.txt" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3516bc73-59e4-4717-8c08-55351a2771b3" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DosFilesPath}\TxtFile1.txt" Value="{Var Name=DosFilesPath}\TxtFile1.txt" />
+<ActInputValue Guid="dca7e2b5-b8d8-40b6-84c3-656f9c47edf8" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f0242c1b-f3c5-41d4-85f0-9d9be0bccff1" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Guid="031fd8fe-c326-4056-8701-f150e35f0266" mExpected="{Var Name=File1Content}" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action-Free Command-Testing" Guid="623c6488-afdf-467f-a936-0c0103124689" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3d05de1e-3ab0-47b0-8d5e-0801e07c56a5" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="erase {Var Name=DosFilesPath}\TxtFile2.txt" Value="erase {Var Name=DosFilesPath}\TxtFile2.txt" />
+</InputValues>
+</ActConsoleCommand>
+<ActFileOperations Active="True" Description="Console Command Action-Free Command-Validation" FileOperationMode="CheckFileExists" Guid="9ab14e96-cebf-459e-a60a-49eb7c83fe02" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="InvertStatus" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="50d6fbf9-f4c9-4cff-bded-a33fc7d8f17a" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DosFilesPath}\TxtFile2.txt" Value="{Var Name=DosFilesPath}\TxtFile2.txt" />
+<ActInputValue Guid="849e7c10-746a-49c9-b55e-faf745a03878" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="59e3fe79-6d7a-4fab-b3bb-344881996790" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActConsoleCommand Active="True" ConsoleCommand="IsFileExist" Description="Console Command Action-IsFileExist-Testing-Validation" Guid="fed16aff-b54e-4dba-960e-6def06e845fc" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e36cdd6b-82e4-41ef-9163-759ecb70d4f3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DosFilesPath}\TxtFile0.txt" Value="{Var Name=DosFilesPath}\TxtFile0.txt" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Free Command Expected String '+ve' Scenario Testing" ExpString="12,345" Guid="16013690-53f7-48c7-b985-1f96bfacffd1" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="156f8094-6a6b-4abd-83ef-dfe7c9b1e8ed" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;12,345&quot;" Value="echo &quot;12,345&quot;" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Free Command Expected String '-ve' Scenario Testing" ExpString="12,45" Guid="e370f11a-53bb-4616-b6a3-2ef7d25c5fd3" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="InvertStatus" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7a77c481-811b-438a-8dd6-1b9fb4771911" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;12,345&quot;" Value="echo &quot;12,345&quot;" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Delimiter="=" Description="Console Command Action - Free Command Delimeter '+ve' Scenario Testing" ExpString="123" Guid="5ac29d75-70d1-4bb5-8495-4072ee2ab618" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cadd9bac-14e7-4a2e-bfba-53af9380aa99" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo VALUE=123" Value="echo VALUE=123" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c5c86ab4-f1cf-4289-b48f-ece3b2578231" mExpected="123" Param="VALUE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Delimiter="," Description="Console Command Action - Free Command Delimeter '-ve' Scenario Testing" ExpString="12,45" Guid="3427d96f-01a6-4475-96d5-c9b82f2c00bf" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="InvertStatus" WaitTime="3" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="92f404e3-f828-4622-a30b-dbde9452edbd" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;12,345&quot;" Value="echo &quot;12,345&quot;" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Wait time +ve scenario" ExpString="Output Value is  5" Guid="aecf293d-6662-4935-8b10-780ddaebe334" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="6" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fca00506-f970-479b-8470-1b2f58948f66" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="&quot;{Var Name=DOSPath}\DOS\Loop.bat&quot;" Value="&quot;{Var Name=DOSPath}\DOS\Loop.bat&quot;" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand ConsoleCommand="FreeCommand" Description="Console Command Action - Wait time -ve scenario" ExpString="Output Value is  8" Guid="a11bbced-bb1f-41c0-b11b-9b3168ae9113" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="InvertStatus" WaitTime="3" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d6e2e01b-33b1-42be-b11e-ab6e6ebcca50" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="&quot;{Var Name=DOSPath}\DOS\Loop.bat&quot;" Value="&quot;{Var Name=DOSPath}\DOS\Loop.bat&quot;" />
+</InputValues>
+</ActConsoleCommand>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="CleanUp" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="7682f3c3-c6ff-482f-aab8-eb4b65a3d507" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="DOS-App">
+<Acts>
+<ActAgentManipulation Active="True" Description="Close Agent " Guid="69d1b4a0-3c2d-4fc1-a845-6ac48a5db34c" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="33d306bf-4c38-468c-91c8-b3983c09fa04" Param="AgentManipulationActionType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="CloseAgent" Value="CloseAgent" />
+</InputValues>
+</ActAgentManipulation>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="DOS-App" Guid="53320953-f6b9-4860-8306-1e062366e27d" LastExecutingAgentName="DOS-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Description="Variable String" Guid="0ab25a6e-2b4e-4087-b19f-1815e148dd36" InitialStringValue="abcde&#xD;&#xA;" MappedOutputType="None" Name="File2Content" ParentGuid="00000000-0000-0000-0000-000000000000" Value="abcde&#xD;&#xA;" />
+<VariableString Description="Variable String" Guid="2fa21733-65cf-4688-bea2-01709e0a6b9d" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents\Scripts" MappedOutputType="None" Name="ScriptPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents\Scripts" />
+<VariableString Description="Variable String" Guid="09687015-e5d0-451d-90c6-d31f310bf326" InitialStringValue="8,10,11&#xD;&#xA;10,12,13&#xD;&#xA;8,10,11&#xD;&#xA;12,14,15" MappedOutputType="None" Name="File1Content" ParentGuid="00000000-0000-0000-0000-000000000000" Value="abcde&#xD;&#xA;" />
+<VariableString Description="Variable String" Guid="1a44cba7-e807-4973-9c90-8804f6c1f38c" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DOSPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents" />
+<VariableString Description="Variable String" Guid="be72c6e5-3b47-42e4-b310-a4db5da54a75" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents\Dos" MappedOutputType="None" Name="DosFilesPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\DOS" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

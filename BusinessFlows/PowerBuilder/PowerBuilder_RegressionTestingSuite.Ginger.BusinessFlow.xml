@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="3f4ad18e-1ad8-4a44-bb0a-657dee7a7340" ItemType="BusinessFlow" CreatedBy="JKAUR" Created="201810250103" GingerVersion="3.1.0.0" Version="257" LastUpdateBy="JGHODKE" LastUpdate="201903050850" />
+<BusinessFlow Active="False" Elapsed="10394" Guid="3f4ad18e-1ad8-4a44-bb0a-657dee7a7340" Name="PowerBuilder_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="InitCoreTeam" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="845b0a03-8410-43ca-b41f-16025c3adea0" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActFileOperations Active="True" Description="Init-File Operations-Launch Test App" FileOperationMode="Execute" Guid="7203a92f-cc56-46d1-9d8b-5f1bb41e9700" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="8c54b71a-e660-4787-ab27-d498d6de6edb" Platform="NA" RetryMechanismInterval="5" SourceFilePath="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\Power Builder\TestAplication\pb_test_app.exe" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8128b5af-1ec2-447d-b73f-b7647c2b61f5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5e1ddcfc-c4e6-48ff-92b2-39b8370435a3" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\Documents\Power Builder\TestAplication\pb_test_app.exe" Value="~\Documents\Power Builder\TestAplication\pb_test_app.exe" />
+<ActInputValue Guid="d6836a77-0cc5-4338-a840-a47c2ae6e609" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActSwitchWindow Active="True" Description="Init-Switch Window - Simple Page" EnableRetryMechanism="True" Guid="a39aca44-7b1e-4727-a7e1-0d3ae7b1c436" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dc47d573-3a2d-4fd8-8022-a54b4b57d197" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="Click" Description="Init-Maximize Window - Init" Guid="48cd0f9d-a899-4091-be76-290c199c960f" LocateBy="ByName" LocateValue="Maximize" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="928c14e4-c9c9-4c99-8640-63ba188bf6da" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Window Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="139eaf7a-dd72-4398-beef-5ccb915e65e4" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="33%" TargetApplication="CSM-App">
+<Acts>
+<ActWindow Active="True" Description="Window Action-Is Exist-Testing" Guid="0940cc2e-761d-4824-b3fb-6b42d387d46e" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="da68d2fb-5af1-472c-a4e0-badbde041cb8" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="433ca94c-0554-4701-9313-b15a6330f8a3" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindow>
+<ActWindow Description="Window Action-Minimize-Testing" Guid="1f132d5e-d80c-4f82-8d6c-65017ec74942" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="da68d2fb-5af1-472c-a4e0-badbde041cb8" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="Minimize" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="433ca94c-0554-4701-9313-b15a6330f8a3" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindow>
+<ActWindow Description="Window Action-Is Exist-Testing_Copy" Guid="a8300920-c9c5-4fdd-8cc6-d8425ab8622d" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7b0b41c7-4289-476f-8ff8-8929c5528802" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindow>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Power Builder Control Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="48d57f9f-8dee-4643-8968-f4e1eedf5419" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="93%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Power Builder Control Action-Switch Window-Init" Guid="10ae2965-f78f-447b-8ff0-9e4b6f019284" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="18c9bf44-50a3-483e-b7d7-6640e5f13ae1" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="Click" Description="Power Builder Control Action-Click-Testing" Guid="a0ac7805-56e5-41f4-97a9-25fbe03bfff4" LocateBy="ByXPath" LocateValue="/cb_acc_command" MaxNumberOfRetries="2" ParentGuid="0d06abd1-9018-4ed9-8f14-a09f9eaea755" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f59ce067-9186-40f1-b625-20ec756f876b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Power Builder Control Action-Click-Validate" Guid="5af61627-6666-409f-9cda-823d1bc284b3" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="b853b805-6b73-4aaa-b6ee-fe59432023d4" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e04aee3e-8496-40cf-86e4-c06e99b44355" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="1e935189-7963-4789-87d4-154ff13ed5f7" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Power Builder Control Action-Click-Cleanup" Guid="b31e0370-0eaa-451c-aea5-66d51749e3c4" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="3fbb3851-3eb6-4862-8a83-588282bcc8ef" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f59ce067-9186-40f1-b625-20ec756f876b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="ClickXY" Description="Power Builder Control Action-ClickXY-Testing" Guid="78acadfb-5e92-41e0-9795-a75c0d488f4e" LocateBy="ByXPath" LocateValue="/cb_acc_command" MaxNumberOfRetries="2" ParentGuid="bf562f45-89d0-4c76-a4cc-5acc1e7b691e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f59ce067-9186-40f1-b625-20ec756f876b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2,2" Value="2,2" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Power Builder Control Action-ClickXY-Validate" Guid="b446b168-7dd4-4457-ae24-543893c8fdb5" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="b2d35752-2b78-4d3f-aa37-49b4a6009c7f" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e04aee3e-8496-40cf-86e4-c06e99b44355" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="1e935189-7963-4789-87d4-154ff13ed5f7" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Power Builder Control Action-ClickXY-Cleanup" EnableRetryMechanism="True" Guid="88026c91-b9d8-4b50-8d02-5d553ee58f64" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="d9cb15a8-5efd-4457-83c4-968499128059" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f59ce067-9186-40f1-b625-20ec756f876b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="DoubleClick" Description="Power Builder Control Action-Double Click-Testing" Guid="2fb7b781-0c31-4c37-8b1a-05c0950466e2" LocateBy="ByXPath" LocateValue="/cb_acc_command" MaxNumberOfRetries="2" ParentGuid="8986ccf7-0304-4bc2-a0d9-58fab94b92ac" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f59ce067-9186-40f1-b625-20ec756f876b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Power Builder Control Action-Double Click-Validate" Guid="fb1d9e01-a4d8-4dcd-a386-591c363e6b3a" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="daed9e39-3336-46a1-bd62-bda18328a2d6" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e04aee3e-8496-40cf-86e4-c06e99b44355" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="1e935189-7963-4789-87d4-154ff13ed5f7" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Power Builder Control Action-Double Click-Cleanup" Guid="ade65f78-f689-4e2b-88a9-14ad1f52f616" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="c77fed36-a17f-4f3c-98a4-76a7e7490b55" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f59ce067-9186-40f1-b625-20ec756f876b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetFieldValue" Description="Power Builder Control Action-GetFieldValue-Testing" Guid="c3f13dc9-f75c-4ce8-bad4-c646b6479d21" LocateBy="ByName" LocateValue="lb_acc_language" MaxNumberOfRetries="2" ParentGuid="79fe6460-8034-4457-8a83-b74ac9643880" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c7b0c3d1-e649-4161-8635-ed009088a8d2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="English" Value="English" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bf619518-28f8-4492-8038-2803ddf8e6e0" mExpected="French" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Select" Description="Power Builder Control Action-GetSelected-Init" Guid="e13e0e42-b0c0-4ff6-92c7-b9c38342dc50" LocateBy="ByName" LocateValue="French" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cf045752-a161-4cc8-a608-29b5478b3a2d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetSelected" Description="Power Builder Control Action-GetSelected-Testing" Guid="70d53623-2c52-4458-a208-77d36fd1d920" LocateBy="ByName" LocateValue="lb_acc_language" MaxNumberOfRetries="2" ParentGuid="0b116220-e513-45c2-9bbd-b1f7de922e8f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1a15ed71-da65-4a19-89f5-7e99d268d94a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="3697a1c3-da3d-4884-9ec7-c5765ed84c14" mExpected="French" Operator="Legacy" Param="Selected Item" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetTitle" Description="Power Builder Control Action-Get Title-Testing" Guid="6379f754-fa89-4118-a280-605c14b38ef0" LocateBy="ByXPath" LocateValue="/st_acc_label" MaxNumberOfRetries="2" ParentGuid="e426c6d4-c3c3-40de-aebb-e2ba419dc330" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="58e42d89-7003-4787-8ca5-1f2c360376a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bb4874b7-9f1f-498d-83bd-9d064acedca7" mExpected="st_acc_label" Operator="Legacy" Param="Dialog Title" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="SetValue" Description="Power Builder Control Action-Get Value-Init" Guid="148647e6-ad38-47d2-aa40-013e65bacf76" LocateBy="ByXPath" LocateValue="/sle_acc_text" MaxNumberOfRetries="2" ParentGuid="e48f24c3-39cc-4cc5-a67c-1e64d9c9bc45" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="849d9951-671c-4bbf-93c7-cafdcc8835c6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetValue" Description="Power Builder Control Action-Get Value-Testing" Guid="f7442fe0-5341-4b8d-aad6-98b694af8311" LocateBy="ByXPath" LocateValue="/sle_acc_text" MaxNumberOfRetries="2" ParentGuid="b82d5f2b-f662-4ae5-894d-4115a77174ac" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8477b64a-8e77-4f4d-88c5-927c33c63820" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2c449e40-c216-4ad3-8eb6-bcf2c8f2214c" mExpected="Ginger" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Power Builder Control Action-IsExist-Testing" Guid="3e4e6536-d151-41fa-9b5d-20e827485a28" LocateBy="ByName" LocateValue="Tabbed" MaxNumberOfRetries="2" ParentGuid="e904614e-f30c-44c9-bd93-8da3ac1eb0b4" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="59d2fd38-09f0-4239-985a-2bab718c8471" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="9431e745-e651-4828-b681-435eaf8fb6b5" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsEnabled" Description="Power Builder Control Action-IsEnable-Testing" Guid="4bba1c82-eaa5-4597-98ed-dfa7a5a24694" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="4f5c1401-c22e-42b4-8df3-9a1226419664" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1e07fb12-170a-4adb-ac1e-e9bd0af529de" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ba3b120f-106e-4961-8eb7-dfc75641d76f" mExpected="true" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Select" Description="Power Builder Control Action-IsSelected-Init" Guid="b5202a66-7e95-44e2-8324-996db770bba7" LocateBy="ByName" LocateValue="French" MaxNumberOfRetries="2" ParentGuid="7d9e6158-674e-4b47-861e-8ff467c08c7b" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cf045752-a161-4cc8-a608-29b5478b3a2d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsSelected" Description="Power Builder Control Action-IsSelected-Testing" Guid="a231ceec-6d11-4a33-83bc-cffc6b7ee01d" LocateBy="ByName" LocateValue="French" MaxNumberOfRetries="2" ParentGuid="652f06d7-3962-4dff-b5eb-2b439481e29a" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3d788f29-3a13-400f-b903-996b108b39d8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="78cd8c3c-6871-4755-82de-e2e5234161cb" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="RightClick" Description="Power Builder Control Action-Right Click-Testing" Guid="dab31739-bc75-41bf-96bd-257b62f5f51d" LocateBy="ByName" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="579d4028-2393-47ee-a520-c2675b060cf0" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cec7bb6a-fd09-47aa-bd4f-c7f5c59129cd" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Select" Description="Power Builder Control Action-Select-Testing" Guid="eed88efd-9692-423a-96eb-92ed8d74fac6" LocateBy="ByName" LocateValue="Hindi" MaxNumberOfRetries="2" ParentGuid="9cebc753-72d2-4e22-9440-fb40fb83238f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="71623e43-2957-45fc-86ab-45f0f7e77d74" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Hindi" Value="Hindi" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetSelected" Description="Power Builder Control Action-Select-Validate" Guid="4b4ae6da-ec14-4b21-8036-915322094552" LocateBy="ByName" LocateValue="lb_acc_language" MaxNumberOfRetries="2" ParentGuid="efa45430-f5ce-4c64-8235-4766e342a23f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dc82642f-8dc2-4484-b63f-183157331a40" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ef912925-3e8e-484f-a5a3-3e52b7b91a06" mExpected="Hindi" Operator="Legacy" Param="Selected Item" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="SendKeys" Description="Power Builder Control Action-SendKeys-Testing" Guid="5932103f-f5a4-4adf-8dbb-a4bcfb6f95b3" LocateBy="ByXPath" LocateValue="/mle_acc_notes" MaxNumberOfRetries="2" ParentGuid="ea85cc47-9fd4-4427-9018-acc2b6d8500e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d6aa3c19-c843-4b40-91e2-a9c2675b74bd" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetValue" Description="Power Builder Control Action-SendKeys-Validate" Guid="f41e1d53-c0d0-4a51-a200-e2eb9a47753b" LocateBy="ByXPath" LocateValue="/mle_acc_notes" MaxNumberOfRetries="2" ParentGuid="905b436c-1475-45a5-ad13-671f7f020216" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6ced3103-b037-435b-aa8a-71cd723c20e5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="fe8ee499-8ae2-467d-91aa-b4613b6d6e11" mExpected="Gingernotes" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="SetValue" Description="Power Builder Control Action-Set Value-Testing" Guid="b8c45a95-e498-4425-8ce2-f27bd9a4ddb7" LocateBy="ByName" LocateValue="edit (1012)" MaxNumberOfRetries="2" ParentGuid="5483749c-5543-4f9f-9ee6-58029dcd9ebf" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e39e647e-9485-4563-82eb-7da69082952d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Welcome" Value="Welcome" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetValue" Description="Power Builder Control Action-Set Value-Validate" Guid="d2a345ed-4d92-457b-9a2b-f6bb46eeb876" LocateBy="ByName" LocateValue="edit (1012)" MaxNumberOfRetries="2" ParentGuid="90bf65d8-f588-4504-8d1e-0163057a09a0" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a548d2ab-23db-46cf-93fd-01a9691e7e4d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="646a965f-68ae-48fb-ae52-ad93558a7036" mExpected="Welcome" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Toggle" Description="Power Builder Control Action-Toggle-Testing" Guid="19f9ce72-9de3-446f-8f6a-281c9db421e5" LocateBy="ByXPath" LocateValue="/cbx_acc_check" MaxNumberOfRetries="2" ParentGuid="52dcb200-622d-419f-95bc-6205b623f466" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5f0ab56a-7c8f-496b-82cc-d244970ab95d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetValue" Description="Power Builder Control Action-Toggle-Validate" Guid="7a0d5249-52f3-4c76-8c87-10e52689ba69" LocateBy="ByName" LocateValue="Works in Amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6ab03a91-41ee-45a6-abf0-405d3dd6bc57" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Checked" Value="Checked" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ad55858b-e2b6-4b7f-953a-99f5796d4cca" mExpected="Checked" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-IsOffScreen-Testing-Validation" Guid="3a3a2d8c-f678-48b6-8399-1539f3b0468b" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsOffScreen" Value="IsOffScreen" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-Name-Testing-Validation" Guid="313e2338-11ae-4135-9461-590a9c2479d4" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="0ad9e7ee-695a-4db4-912a-a07683e67e0f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Name" Value="Name" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="Spanish" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-AutomationId-Testing" Guid="8a2d32af-fbd0-4027-b901-e31c13cd0774" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="8ce20caf-df14-4262-ae95-94d7de5f69eb" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="AutomationId" Value="AutomationId" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="24dc18ec-dabc-46cc-90c4-6b71477866a8" mExpected="1025" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-ClassName-Testing" Guid="c2e8e830-7866-4048-b818-75e88e1d2dfd" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="f3e2d1f0-1b9d-4e6e-82aa-ed91b2e61bba" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ClassName" Value="ClassName" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="40c01ff0-ca33-413c-b09a-cfa3708e96c1" mExpected="Button" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-LocalizedControlType-Testing-Validation" Guid="f1b1d4c9-0eaf-4534-87d9-87f26dc795c0" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="e24d1524-7b60-49d8-a6eb-0b0891a13231" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="LocalizedControlType" Value="LocalizedControlType" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="list item" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-IsPassword-Testing-Validation" Guid="f27ffc29-31ec-4010-ba7f-2f7794b342d9" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="de5e17b7-ca6e-4556-9e55-e7ee3acc4eb1" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsPassword" Value="IsPassword" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="False" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-ProcessId-Testing" Guid="febffac6-cdce-4b7a-ae3c-bc30b5219edf" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="0f7097c0-24aa-4acd-83d0-b48bebf3314a" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ProcessId" Value="ProcessId" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b274daeb-1438-4b8d-9830-533d8a3f8341" mExpected="4564" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-IsEnabled-Testing-Validation" Guid="cebb4035-0705-4e67-ba97-1499fba6c277" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="b72fdc32-aa2f-475c-9fc4-9bb5dce739f5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsEnabled" Value="IsEnabled" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-IsKeyboardFocusable-Testing" Guid="ac2cfe08-35d4-484b-9291-d7300e777695" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="02b40abd-a799-4bf4-8ef7-ca7ced505fe9" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsKeyboardFocusable" Value="IsKeyboardFocusable" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="3795c205-e567-4e25-a46a-934a684a22b0" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-XOffset-Testing" Guid="573aabdf-e9ad-4609-aa80-6c5ae82d69e9" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="fd67fc6a-0dba-4df1-89ca-8bf3989fb0e8" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="XOffset" Value="XOffset" />
+</InputValues>
+</ActPBControl>
+<ActPBControl ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-YOffset-Testing" Guid="c17e14da-ceab-4940-b3df-fddedcc58909" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="615f248d-bff4-4719-8010-ceea3cd56939" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="YOffset" Value="YOffset" />
+</InputValues>
+</ActPBControl>
+<ActPBControl ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-NativeWindowHandle-Testing" Guid="86f7ebd5-413e-44fd-9a4f-0a8a357a7293" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="571c4fb4-c168-4b72-841f-4bc446957e9b" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NativeWindowHandle" Value="NativeWindowHandle" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bade0d74-d8ad-4a5a-bfb1-8bfa38d1166d" mExpected="5443534" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-ToggleState-Testing-Validation" Guid="05c56d44-d11b-47cb-9f61-9703d91a146a" LocateBy="ByName" LocateValue="Illinois Resident" MaxNumberOfRetries="2" ParentGuid="044c2b10-6bf2-4107-bf8e-4e6ec03c7ad2" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ToggleState" Value="ToggleState" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="Off" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-IsSelected-Testing" Guid="b85b00da-8a01-4d28-8c93-2afb554d7079" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="e3c1dbc6-703c-4fd1-8964-46d49a11c0dd" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsSelected" Value="IsSelected" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="False" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-Text-Testing" Guid="35f4a730-8dfb-4918-bc5c-c0cba5db9025" LocateBy="ByName" LocateValue="name_t" MaxNumberOfRetries="2" ParentGuid="60691074-02c6-46d0-8792-c6beae1de9c6" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Text" Value="Text" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="677bf58d-c00d-415e-bd04-91b8ed503b74" mExpected="Name" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-XPATH-Testing" Guid="983dd697-8d51-4c4f-826d-9958b086f6fe" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="7656a655-b86d-42de-b371-b370128a868e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="XPATH" Value="XPATH" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" mExpected="/lb_acc_language/Spanish" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="GetControlProperty" Description="Power Builder Control Action-GetControlProperty-Value-Testing" Guid="09ff5070-650c-4c63-a47f-5b4f6025b9e3" LocateBy="ByXPath" LocateValue="address" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="484b28cb-cc40-40c6-a163-f20a557f4146" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Value" Value="Value" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bbe7dce6-289f-48ab-b7f8-df747843ab8b" mExpected="2109 Fox Dr, Champaign IL " Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Highlight" Description="Power Builder Control Action-Highlight-Testing" Guid="d2e7ccd8-b165-49d2-8dbe-3a101e2facd6" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f0521e58-1777-4832-8cec-0bc9eeb1f5b8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Repaint" Description="Power Builder Control Action-Repaint-Testing" Guid="81674ae4-14cc-4645-910b-587a5cd13514" LocateBy="ByName" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6b3de81b-8658-4c79-90cb-16d56ab05d2c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Power Builder Control Action-Select By Index-Init" Guid="85db2e7a-d8e2-4f5b-aa03-3ede669ccf6f" LocateBy="ByName" LocateValue="Tabbed" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6b3de81b-8658-4c79-90cb-16d56ab05d2c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="SelectByIndex" Description="Power Builder Control Action-Select By Index-Testing" Guid="cbeaaa14-cca2-4a3d-8449-6f2780490218" LocateBy="ByXPath" LocateValue="/Tabbed Page/[AutomationId:1002]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6b3de81b-8658-4c79-90cb-16d56ab05d2c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2" Value="2" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Set Checkbox to checked Check if you live in USA" Guid="6be2b2af-77cf-4065-a7f5-3637a543c1c7" LocateBy="ByName" LocateValue="Check if you live in USA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="47560db7-80ab-457d-8bbf-1e479292f8ec" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Checked" Value="Checked" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Power Builder Control Action-Select By Index-Validation" Guid="338a1702-deff-400c-950a-ebb8165fd1cb" LocateBy="ByName" LocateValue="Data Object Example" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3abc5be2-0803-499b-b0d0-f1e8a18b9cec" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="84f19048-990c-4807-bc9c-c85f24d5c632" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Power Builder Control Action-Select By Index-Cleanup" Guid="1cc1397c-0dbf-42c4-ba6d-a16d396acf70" LocateBy="ByXPath" LocateValue="/Tabbed Page/Exit" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="688d6d9a-f01a-4573-b61a-0ab96c9745ce" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Minimize" Description="Power Builder Control Action-Minimize-Testing" EnableRetryMechanism="True" Guid="b37d2f84-e950-4533-b687-7a62ca5edf18" LocateBy="ByName" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="3" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0a5ee6ac-6c09-456b-a591-1b98afba3c92" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Restore" Description="Power Builder Control Action-Restore-Testing" EnableRetryMechanism="True" Guid="796577c3-db2a-42c9-99b2-fe70df6a23c6" LocateBy="ByName" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="3" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="275fcf83-e081-4bbb-ae3b-9a953c1cc66f" Param="Value" ParentGuid="61f6e0a6-ba0e-44b6-9e42-7c2416841733" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Maximize" Description="Power Builder Control Action-Maximize-Testing" EnableRetryMechanism="True" Guid="75345b07-28a4-4309-8787-6af6159b7649" LocateBy="ByName" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="3" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7f87e3a3-0554-484d-a282-8095c9f13703" Param="Value" ParentGuid="82bc93ab-97ab-49a8-8c4a-01e7f4a34644" />
+</InputValues>
+</ActPBControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Screenshot Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="4f9b9ace-460b-4a76-820b-7e0cc85f81b1" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="50%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="ScreenShotAction-Init" Guid="560e8d98-4a82-4804-bd28-fe96c9b20faf" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="1077555c-7862-4f11-b155-99e9f0f0dc28" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a8bbf853-d440-45e2-9e04-70349e281253" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActScreenShot Active="True" Description="ScreenShotAction-Testing" Guid="66babc0c-982a-4630-8ea8-3ff320b761ea" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="52bc397c-38d7-4e3d-9e5e-f6693f1e12de" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d1758f4f-3464-4ad4-b94d-e34a8856a703" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ea98a57e-ccf0-4aac-9075-26b6f8a6ffa9" Param="SaveToFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" Value="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" />
+</InputValues>
+</ActScreenShot>
+<ActScript Active="True" Description="ScreenShotAction-Validation" Guid="4668a440-1739-4da8-acb1-99e6caf4c7ca" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="1201b0ee-f596-4398-b5fd-03885548c44c" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="Only_Active_Window_Script_pb.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f0c2b6f9-7a0c-487c-b088-f34cc926ebf6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+<ActScreenShot Description="ScreenShotAction-Testing" Guid="1a88ca5d-bcbb-40f5-8781-8004aeead5cb" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="e3ae1e13-1892-47d7-9e75-1ef124e8a62c" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="AllAvailableWindows">
+<InputValues>
+<ActInputValue Guid="d1758f4f-3464-4ad4-b94d-e34a8856a703" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ea98a57e-ccf0-4aac-9075-26b6f8a6ffa9" Param="SaveToFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" Value="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" />
+</InputValues>
+</ActScreenShot>
+<ActScript Description="ScreenShotAction-Validation" Guid="41e59475-8c20-4aae-8958-486a62c9958b" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="591472f0-b7ee-4113-a701-4a7d4f21a9a6" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="All_Available_Windows_Script.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9e404798-f17e-4a32-88a3-689440234f28" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+<ActScript Description="ScreenShotAction-Cleanup" Guid="b2ea5e44-c83e-47dd-bd71-3ac6ab1776bd" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="713b6ac9-5679-4ba3-bb65-b36ed02a2e60" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="Delete_All_Screenshots_pb.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="da8bb54b-e44c-474a-ad68-7b73aa595bea" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="SmartSync Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="3b273395-0b75-4b82-9bda-02a5f4c687a5" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="SmartSyncAction-Switch Window-Init" Guid="432c1e71-8ce3-4d17-a0d3-e861973a966b" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a6c17652-6a33-4e27-a71f-d572edebfedf" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActSmartSync Active="True" Description="SmartSyncAction-WaitUntilDisplay-Testing" Guid="a4862446-bb1d-4466-b4b4-b7a242514c4c" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="53dda564-7199-4e37-b77c-4b55d7b4d286" Platform="NA" RetryMechanismInterval="5" SmartSyncAction="WaitUntilDisplay" StatusConverter="None" TakeScreenShot="True" WaitTime="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a62720df-5449-49a3-acf0-cdbf5e7c2e77" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSmartSync>
+<ActSmartSync Active="True" Description="Smart Sync Action-WaitUntilDisplay (Negative Test)-Testing" Guid="0c92005a-3baa-4152-921a-58bf20bf6868" LocateBy="ByName" LocateValue="50" MaxNumberOfRetries="2" ParentGuid="ac143599-4d57-4477-9d1f-8af1b48d9a2e" Platform="NA" RetryMechanismInterval="5" SmartSyncAction="WaitUntilDisplay" StatusConverter="InvertStatus" TakeScreenShot="True" WaitTime="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a62720df-5449-49a3-acf0-cdbf5e7c2e77" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSmartSync>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Switch Window Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="bc3a5992-7870-4a9f-aebb-d423da026669" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window Action-Init" Guid="25f42032-8dfb-4f7a-9d0e-5ff8fdf7176d" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="7338e409-6409-4bd1-8e6a-ff7e5c3e300f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2d342314-8a88-47a5-9b11-b8f9d4edce29" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Switch Window Action-IsExist-Validate" Guid="f32423eb-16be-4057-9560-c5a7c6a226af" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2ff76915-6ec9-4b2d-b390-70749b0996c5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="000153d7-9e69-404b-a959-0af7a61770fa" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Menu Elements Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="accb29c4-4f7f-446b-a8da-5b0e1fec1d47" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window - Simple Page" Guid="1d45bc32-b3c6-45ac-97da-c0c014513185" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51849be7-f8d4-466b-a1e5-7b9d2f64560f" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="20" Value="20" />
+</InputValues>
+</ActSwitchWindow>
+<ActMenuItem Active="True" Description="Menu Element Action-Click-Testing" EnableRetryMechanism="True" Guid="81bb3e9d-45d4-47e7-beba-40576cbd2e26" LocateBy="ByName" LocateValue="File|New" MaxNumberOfRetries="2" MenuAction="Click" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cdea2470-06e2-4f1e-8ff6-f4a6f842dc07" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMenuItem>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Menu Element Action-Click-Validation" Guid="aec4a001-8591-404e-95a6-e8169670ba8f" LocateBy="ByName" LocateValue="Menu" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="bfb0fcfa-bac3-42e0-a3c3-de500ef6e4cc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Menu Element Action-Click-Cleanup" Guid="661db7fb-9d99-4576-b2a9-5b8781e63e39" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="05b22f35-b2fa-4e7e-bb2c-605c83275a88" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActMenuItem Active="True" Description="Menu Element Action-Expand-Testing" Guid="27826758-5aab-44cc-bda1-5913f347e0ba" LocateBy="ByName" LocateValue="File" MaxNumberOfRetries="2" MenuAction="Expand" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ede042b4-b901-4c09-b677-399b40750461" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMenuItem>
+<ActMenuItem Active="True" Description="Menu Element Action-Collapse-Testing" Guid="94873c57-b816-4b0a-b84b-73fe329ac34d" LocateBy="ByName" LocateValue="File" MaxNumberOfRetries="2" MenuAction="Collapse" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ede042b4-b901-4c09-b677-399b40750461" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMenuItem>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="UIElement Action - Tesing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="cc46c9cb-2bb7-431e-be2b-77dee8db73a8" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="40%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="UIElement Actions-Switch Window-Init" Guid="042419e0-0505-4977-9479-547107fa7119" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6db19516-3cd2-4bdb-8250-9c6402b679fd" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="20" Value="20" />
+</InputValues>
+</ActSwitchWindow>
+<ActUIElement Active="True" Description="UIElement Action - Click and Validate - Is Exist- Validation" ElementAction="ClickAndValidate" ElementLocateBy="ByName" ElementType="Button" Guid="cc0ee839-ef2e-41c8-9d9e-ce67b3ef4017" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a5f8d047-0e01-42f7-bb86-f3e4e25380f4" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Click Me" Value="Click Me" />
+<ActInputValue Guid="5566fa0d-a1cc-48b9-a3e1-8c909e727250" Param="ClickType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InvokeClick" Value="InvokeClick" />
+<ActInputValue Guid="0ccfe65f-a9df-4985-a00e-f7cab401af9b" Param="ValidationType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Exist" Value="Exist" />
+<ActInputValue Guid="49e07449-12da-4bf0-9583-c51cf8192790" Param="ValidationElement" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Unknown" Value="Unknown" />
+<ActInputValue Guid="65fc6ea6-08da-446d-9fef-49df2e25e4c7" Param="ValidationElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ByName" Value="ByName" />
+<ActInputValue Guid="c73d4b0e-36e7-47d9-befb-3fcd451eb2a8" Param="ValidationElementLocatorValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Button is Clicked" Value="Button is Clicked" />
+<ActInputValue Guid="fc13100a-b4c9-46e0-8ffa-c14218fa13e6" Param="LoopThroughClicks" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+</InputValues>
+</ActUIElement>
+<ActPBControl Active="True" ControlAction="IsExist" Description="UIElement Action - Click and Validate - Is Exist - Validation" Guid="7973e027-fc8d-43ef-99bd-93e929ede49c" LocateBy="ByName" LocateValue="Button is Clicked" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5f6774bd-966d-4a86-af7a-93a780499077" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2ef6880a-73ab-4778-8045-636575ab2a61" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="UIElement Action - Click and Validate- CLeanup" Guid="28f3cd19-7372-42cd-9657-9830e283faa4" LocateBy="ByXPath" LocateValue="/MsgBox Test/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="22bc7311-f012-4aef-beef-9e8f5bce3b0a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActUIElement Description="UIElement Action - Click and Validate - Is Enabled - Testing" ElementAction="ClickAndValidate" ElementLocateBy="ByName" ElementType="Button" Guid="49c392c6-a12c-4b6c-bb18-013050b4e05b" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" Timeout="40" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a5f8d047-0e01-42f7-bb86-f3e4e25380f4" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Click Me" Value="Click Me" />
+<ActInputValue Guid="5566fa0d-a1cc-48b9-a3e1-8c909e727250" Param="ClickType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InvokeClick" Value="InvokeClick" />
+<ActInputValue Guid="0ccfe65f-a9df-4985-a00e-f7cab401af9b" Param="ValidationType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsEnabled" Value="IsEnabled" />
+<ActInputValue Guid="49e07449-12da-4bf0-9583-c51cf8192790" Param="ValidationElement" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Unknown" Value="Unknown" />
+<ActInputValue Guid="65fc6ea6-08da-446d-9fef-49df2e25e4c7" Param="ValidationElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ByName" Value="ByName" />
+<ActInputValue Guid="c73d4b0e-36e7-47d9-befb-3fcd451eb2a8" Param="ValidationElementLocatorValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="MsgBox Test" Value="MsgBox Test" />
+<ActInputValue Guid="fc13100a-b4c9-46e0-8ffa-c14218fa13e6" Param="LoopThroughClicks" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+</InputValues>
+</ActUIElement>
+<ActPBControl ControlAction="IsEnabled" Description="UIElement Action - Click and Validate - Is Enabled - Validation" Guid="1d833009-05c6-4a8d-82a1-4ed126b5923e" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5f6774bd-966d-4a86-af7a-93a780499077" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl ControlAction="Click" Description="UIElement Action - Click and Validate - Is enabled - Cleanup" Guid="eebb3cdb-6e88-4486-852d-e0161468d1aa" LocateBy="ByXPath" LocateValue="/MsgBox Test/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="22bc7311-f012-4aef-beef-9e8f5bce3b0a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActUIElement Description="UIElement Action - Click and Validate -Loop through Click - Validation" ElementAction="ClickAndValidate" ElementLocateBy="ByName" ElementType="Button" Guid="9af69813-8c9b-4c3e-8698-f3da321d0bd7" HandleActionType="Unknown" HandleElementType="Unknown" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TargetElementType="Unknown" TargetLocateBy="NA" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a5f8d047-0e01-42f7-bb86-f3e4e25380f4" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Click Me" Value="Click Me" />
+<ActInputValue Guid="5566fa0d-a1cc-48b9-a3e1-8c909e727250" Param="ClickType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="InvokeClick" Value="InvokeClick" />
+<ActInputValue Guid="0ccfe65f-a9df-4985-a00e-f7cab401af9b" Param="ValidationType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsEnabled" Value="IsEnabled" />
+<ActInputValue Guid="49e07449-12da-4bf0-9583-c51cf8192790" Param="ValidationElement" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Unknown" Value="Unknown" />
+<ActInputValue Guid="65fc6ea6-08da-446d-9fef-49df2e25e4c7" Param="ValidationElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ByName" Value="ByName" />
+<ActInputValue Guid="c73d4b0e-36e7-47d9-befb-3fcd451eb2a8" Param="ValidationElementLocatorValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Button is Clicked" Value="Button is Clicked" />
+<ActInputValue Guid="fc13100a-b4c9-46e0-8ffa-c14218fa13e6" Param="LoopThroughClicks" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="True" Value="True" />
+</InputValues>
+</ActUIElement>
+<ActPBControl ControlAction="IsExist" Description="UIElement Action - Click and Validate -Loop through Click- Validation" Guid="ac2b5201-f482-4321-9a75-49d969937ab7" LocateBy="ByName" LocateValue="Button is Clicked" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5f6774bd-966d-4a86-af7a-93a780499077" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2ef6880a-73ab-4778-8045-636575ab2a61" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl ControlAction="Click" Description="UIElement Action - Click and Validate -Loop through Click - Cleanup" Guid="b0239771-2a38-43b2-baf1-6106a989d36f" LocateBy="ByXPath" LocateValue="/MsgBox Test/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="22bc7311-f012-4aef-beef-9e8f5bce3b0a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Table element Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ed9636e3-09a9-44dd-859d-9a931e026b40" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Table Element Action-Switch window-Init" Guid="cca73767-a8b5-4053-9bca-21967d4fa966" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="007772b1-f574-4ba9-afac-762fcbe71df6" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActTableElement Active="True" ByRowNum="True" ColSelectorValue="ColTitle" ControlAction="GetRowCount" Description="Table Element Action-Get Row Count-Testing" Guid="069146e0-67d2-4c2f-8414-d20fd3e4aba6" LocateBy="ByName" LocateColTitle="0" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnCellRowNumColNum" StatusConverter="None" WaitVE="0" WhereColSelector="ColTitle" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="bb570e36-063c-492f-8b4c-b83b4ad69706" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" />
+<ActInputValue Guid="cf4d4418-b767-464b-9b11-9efec1068c6a" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Row Number" Value="Row Number" />
+<ActInputValue Guid="47f10875-5259-4858-b574-6078ff03bf38" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7a55eab9-37ab-4807-ab6c-28e93bbfc3b7" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6b7912e7-8f83-48be-ac24-ee36ea0c6fb5" mExpected="3" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActTableElement>
+<ActTableElement Active="True" ByWhere="True" ColSelectorValue="ColTitle" ControlAction="GetValue" Description="Table Element Action-Get Value-Testing" Guid="fd23ae3a-9177-42b2-87f7-91cb3e0ea880" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" WaitVE="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" />
+<ActInputValue Guid="189edb7a-f8b8-478e-8613-c554701257da" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="188aa5a5-8e59-4114-8556-501118530ed2" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Yaron" Value="Yaron" />
+<ActInputValue Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b4786a4f-4173-4bfd-afb6-653c15587517" mExpected="2109 Fox Dr, Champaign IL " Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActTableElement>
+<ActTableElement Active="True" ByWhere="True" ColSelectorValue="ColTitle" ControlAction="Click" Description="Table Element Action-Click-Testing" Guid="0cef37ac-3d68-43e2-b107-1467ed73c675" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" WaitVE="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" />
+<ActInputValue Guid="189edb7a-f8b8-478e-8613-c554701257da" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="188aa5a5-8e59-4114-8556-501118530ed2" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Yaron" Value="Yaron" />
+<ActInputValue Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActTableElement>
+<ActTableElement Active="True" ByWhere="True" ColSelectorValue="ColTitle" ControlAction="Click" Description="Table Element Action-DoubleClick-Testing" Guid="3f28413e-e0cd-4f41-b5f1-dde73f6a60c5" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" WaitVE="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" />
+<ActInputValue Guid="189edb7a-f8b8-478e-8613-c554701257da" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="188aa5a5-8e59-4114-8556-501118530ed2" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Yaron" Value="Yaron" />
+<ActInputValue Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActTableElement>
+<ActTableElement Active="True" ByWhere="True" ColSelectorValue="ColTitle" ControlAction="ClickXY" Description="Table Element Action-ClickXY-Testing" Guid="5ee71b35-4b82-44f1-927c-6851fa29a2fc" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" WaitVE="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" />
+<ActInputValue Guid="189edb7a-f8b8-478e-8613-c554701257da" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="188aa5a5-8e59-4114-8556-501118530ed2" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Yaron" Value="Yaron" />
+<ActInputValue Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="3,3" Value="3,3" />
+</InputValues>
+</ActTableElement>
+<ActTableElement Active="True" ByWhere="True" ColSelectorValue="ColTitle" ControlAction="SetValue" Description="Table Element ActionValue-Set Value-Testing" Guid="fe1f0770-6ab4-4782-903e-a77afdbbda0b" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="d18dd136-0e8b-4e21-97ae-fc050d70bc78" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" WaitVE="2" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" />
+<ActInputValue Guid="189edb7a-f8b8-478e-8613-c554701257da" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="188aa5a5-8e59-4114-8556-501118530ed2" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ravi" Value="Ravi" />
+<ActInputValue Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Pune" Value="Pune" />
+</InputValues>
+</ActTableElement>
+<ActTableElement Active="True" ByWhere="True" ColSelectorValue="ColTitle" ControlAction="GetValue" Description="Table Element Action-Set Value-Validate" Guid="78068aed-2bc6-4954-af4f-d976ec65ea41" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="cda72f31-97d8-41b0-a032-72c777cdbc8e" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" WaitVE="4" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" />
+<ActInputValue Guid="189edb7a-f8b8-478e-8613-c554701257da" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="188aa5a5-8e59-4114-8556-501118530ed2" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ravi" Value="Ravi" />
+<ActInputValue Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b4786a4f-4173-4bfd-afb6-653c15587517" mExpected="Pune" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActTableElement>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Browser Action-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="0427ae95-57e0-475a-9ad1-9958e6a2d89e" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Browser Action-Switch Window - Simple Page -Init" Guid="c4211089-c289-49c8-b853-04b75bd9c97e" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f06a97aa-5a03-4dfe-b4a8-18ba6f38fefc" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="SetValue" Description="Browser Action-Set URL Widget Window-Init" Guid="e0d8bfbb-ce4d-4063-81e4-663aa6b71e34" LocateBy="ByXPath" LocateValue="/[AutomationId:1001]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="faf36404-d59b-44f3-acc4-5a5a09591bc4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\Documents\Power Builder\TestAplication\Browser.html" Value="~\Documents\Power Builder\TestAplication\Browser.html" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Browser Action-Click Button Launch Widget Window-Init" Guid="a9a10e87-903d-44f1-9a60-35f44e60ab78" LocateBy="ByName" LocateValue="Launch Widget Window" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a362e0ee-1580-4962-a96e-6ab6aef2e825" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActSwitchWindow Active="True" Description="Browser Action-Switch to Browser Window-Init" Guid="0cee0dc2-aca2-4d00-a064-ed89a390ef88" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2b7390f2-ca01-451a-8f58-fef1a8b8d8a6" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="20" Value="20" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Browser Action-Check for Pop up-Init" EnableRetryMechanism="True" Guid="e7102ec7-3da0-4176-bc1d-b1690e77c982" LocateBy="ByName" LocateValue="Script Error" MaxNumberOfRetries="1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="1" StatusConverter="IgnoreFail" Timeout="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="d317e30b-16d0-4ff8-b026-a6f9272690df" ParentGuid="00000000-0000-0000-0000-000000000000" Value="947f56e3-5d83-44cd-8ca5-7335c3f3d9da#GUID_NAME#Click Button Close" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="f955f5be-7dc3-40df-bf4b-35f7d43db31b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="5da7778e-67dc-4c9d-9e32-8544bc1e0e86#GUID_NAME#Browser Action-Switch Window - CSM Widgets Test Applicaiton -Init" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="8892e5f6-22b9-4128-b317-3f9d7e7de6fc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="00dab9ad-19cb-4fee-91f2-5bcd316bc806" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Browser Action-Close Pop Up-Init" Guid="947f56e3-5d83-44cd-8ca5-7335c3f3d9da" LocateBy="ByXPath" LocateValue="/Script Error/[LocalizedControlType:title bar]/Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="754a3246-f6e6-4daf-9ce4-0cf5b8d82b91" ParentGuid="00000000-0000-0000-0000-000000000000" Value="e7102ec7-3da0-4176-bc1d-b1690e77c982#GUID_NAME#If Popup Exist" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="529b0b17-16d1-4e40-8021-65953c9bfd62" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActSwitchWindow Active="True" Description="Browser Action-Switch Window - CSM Widgets Test Applicaiton -Init" Guid="5da7778e-67dc-4c9d-9e32-8544bc1e0e86" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="7" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="972ba5ec-5f0b-4d27-a87e-a1f52a4ae74e" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="60" Value="60" />
+</InputValues>
+</ActSwitchWindow>
+<ActBrowserElement Active="True" ControlAction="InitializeBrowser" Description="Browser Action-Initialize Browser-Testing" GotoURLRadioButton="Current" Guid="2c0cb5f9-6b76-428c-9152-d82e0e339c01" ImplicitWait="60" LocateBy="ByXPath" LocateValue="/[AutomationId:1000]/[LocalizedControlType:pane]/[LocalizedControlType:pane]/[LocalizedControlType:pane]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5c9442a4-d44e-416b-8afb-09e1fd2f96dc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="03570df0-9310-48d2-b99f-a563d7d99d7a" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Current" Value="Current" />
+<ActInputValue Guid="38f18dcb-fe5a-4cf3-960a-52bce142c4e0" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+<ActGenElement Active="True" Description="Browser Action-Initialize Browser-Validation" GenElementAction="GetValue" Guid="d8553f1b-06cd-4bf9-8a8b-04b2f69a4017" LocateBy="ByXPath" LocateValue="/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/div[1]/a[2]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="67758697-084e-4c30-8cb5-592758440e70" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fa2539a3-3326-4f28-9ceb-9fff5e8fdbcf" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8921fec4-59ff-426f-8453-44b69fb1555f" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="1d0ec043-588d-4e69-ab7d-dbb8e535b661" mExpected="Sign Out" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActBrowserElement Active="True" ControlAction="GetPageURL" Description="Browser Action-Get Page URL-Testing" GotoURLRadioButton="Current" Guid="0cc17bf6-7a3a-49a3-94c6-455ea6e894c8" ImplicitWait="60" LocateBy="ByClassName" LocateValue="Internet Explorer_Server" MaxNumberOfRetries="2" ParentGuid="00c1d799-2549-471d-a801-98b8f7c3ef02" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="031d9732-2dc4-4f8d-8614-d3fe7817ea00" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d289fe42-9447-4759-a3d9-8c050f1529d8" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Current" Value="Current" />
+<ActInputValue Guid="7d1b8d1c-cf7c-416b-9aed-24897bd755e8" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="8fb19af3-f02c-489f-ae7b-43bbef2f32c2" mExpected="{VBS Eval=InStr({Actual},&quot;Browser.html&quot;)}&gt;0" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActBrowserElement>
+<ActBrowserElement Active="True" ControlAction="SwitchToDefaultFrame" Description="Browser Action-Switch Default frame-Testing" GotoURLRadioButton="Current" Guid="9ab4fed6-2945-441f-9001-085f0fae3794" ImplicitWait="60" LocateBy="ByClassName" LocateValue="Internet Explorer_Server" MaxNumberOfRetries="2" ParentGuid="00c1d799-2549-471d-a801-98b8f7c3ef02" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="031d9732-2dc4-4f8d-8614-d3fe7817ea00" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d289fe42-9447-4759-a3d9-8c050f1529d8" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Current" Value="Current" />
+<ActInputValue Guid="4fb96377-01ee-4aae-b0a5-a1e587239cc5" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+<ActPBControl Active="True" ControlAction="Click" Description="Browser Action-Initialize Browser-Cleanup" Guid="80d0d519-c2c8-4d03-a693-264eae0397f8" LocateBy="ByName" LocateValue="Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f4b3a5e-9ad4-420d-b1b2-b1b9e310d62c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Generic Element Action-Testing" AutomationStatus="Development" Description="CoreTeam" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c72960a4-a859-4622-9898-495234a833da" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="53%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Browser Action-Switch Window - Simple Page -Init" Guid="00c5a775-a94f-4240-b6bd-54f4f9483900" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3d789317-957d-4682-96ec-f65e606955e4" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="SetValue" Description="Browser Action-Set URL Widget Window-Init" Guid="50084bc2-9b35-4ead-bc9b-094ba1c2fee1" LocateBy="ByXPath" LocateValue="/[AutomationId:1001]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="38fbfb6c-78d9-4443-b1f3-3c67b73f942f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\Documents\Power Builder\TestAplication\Browser.html" Value="~\Documents\Power Builder\TestAplication\Browser.html" />
+</InputValues>
+
+<ReturnValues>
+
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Browser Action-Click Button Launch Widget Window-Init" Guid="7a66fd62-f1da-4254-8a83-aedfc385bbf3" LocateBy="ByName" LocateValue="Launch Widget Window" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="542ada3e-2591-465e-9471-983319189de3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActSwitchWindow Active="True" Description="Browser Action-Switch to Browser Window-Init" Guid="07f10184-0db3-47b8-ab63-b36bbf1e638e" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="859472c8-f739-45ac-a76d-d83d1a748880" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="20" Value="20" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Browser Action-Check for Pop up-Init" Guid="dc4722f1-f2e2-4402-a99c-e111d0f9aa8a" LocateBy="ByName" LocateValue="Script Error" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="15" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="e6ab1666-34bd-40f6-9c0f-99acbe4f7304" ParentGuid="00000000-0000-0000-0000-000000000000" Value="d679062a-a1c6-4f1a-9710-dcc097bd2da0#GUID_NAME#Browser Action-Close Pop Up-Init" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="3a9ddc59-4ae5-4710-8f7c-60600ab7788c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="eb358d98-4b07-4f1c-8528-210cee245e8a#GUID_NAME#Browser Action-Switch Window - CSM Widgets Test Applicaiton -Init" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="470aa18b-0cce-4658-bb15-ea30b1e38788" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2ce7fa37-7db4-4433-899b-aba25198cc0f" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Browser Action-Close Pop Up-Init" Guid="d679062a-a1c6-4f1a-9710-dcc097bd2da0" LocateBy="ByXPath" LocateValue="/Script Error/[LocalizedControlType:title bar]/Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="32e5b82a-06f1-4606-be72-2d39c0d234d1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dc4722f1-f2e2-4402-a99c-e111d0f9aa8a#GUID_NAME#Browser Action-Check for Pop up-Init" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="3baeded1-8d40-407b-b354-5bc6b1f0023a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActSwitchWindow Active="True" Description="Browser Action-Switch Window - CSM Widgets Test Applicaiton -Init" Guid="eb358d98-4b07-4f1c-8528-210cee245e8a" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="691eeb8f-e47f-43ed-a6c4-bfb363181804" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="60" Value="60" />
+</InputValues>
+</ActSwitchWindow>
+<ActBrowserElement Active="True" ControlAction="InitializeBrowser" Description="Browser Action-Initialize Browser-Testing" GotoURLRadioButton="Current" Guid="d79126e3-2cd9-4271-ba7c-76f6288caee0" ImplicitWait="60" LocateBy="ByXPath" LocateValue="/[AutomationId:1000]/[LocalizedControlType:pane]/[LocalizedControlType:pane]/[LocalizedControlType:pane]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="PowerBuilder" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5532a532-bb36-4075-a140-4f419092c8ef" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="82aa4b8b-0a09-4436-aca9-c1de5aade8a7" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Current" Value="Current" />
+<ActInputValue Guid="79286e50-142b-40c8-9885-f78a3b5a7455" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+<ActGenElement Active="True" Description="Browser Action-Initialize Browser-Validation" GenElementAction="GetValue" Guid="cff7f98c-fb17-45bd-a863-9c43a8d8f4d5" LocateBy="ByXPath" LocateValue="/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/div[1]/a[2]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fac7c638-22db-46ae-92cd-8f1867e96149" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d71cc42-d79e-45f7-8d43-c37cd2a0a3aa" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4d35b505-9b44-49f7-a3cb-cf4b931f3542" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="4c145a9a-3ade-4b6c-b4f5-8a51026ebf9c" mExpected="Sign Out" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Set Value-Testing" GenElementAction="SetValue" Guid="279b2ed2-9fc7-46b4-a2c6-0b4474906f2a" LocateBy="ByName" LocateValue="firstName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b13489cb-23b0-4cd8-8333-41825c386d4c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="cd995162-0b6e-4e9d-9a14-82080009b837" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0459cc03-4bd7-4d25-932b-5765ec9b08c9" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Set Value-Validation" GenElementAction="GetValue" Guid="ecc714f7-98ac-4c3b-873e-cc1d4e0a7e6c" LocateBy="ByName" LocateValue="firstName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="36b44110-2159-4236-bcbd-8962b5232b3f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="f4acf2b6-6838-4851-bfd7-4836ca955bea" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6b0cf1e3-72a3-453f-95b0-ae27b04bf9b2" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Send Keys-Testing" EnableRetryMechanism="True" GenElementAction="SendKeys" Guid="b0305fd1-3254-4f62-a44c-0e46d9ca7460" LocateBy="ByName" LocateValue="lastName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0960ba72-612d-4917-a1e6-99b53b66aeb0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="CoreTeam" Value="CoreTeam" />
+<ActInputValue Guid="6913e748-5de9-443c-ae92-26b56055857c" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="38023e86-cfa3-46f5-8dc1-82f9c98a27e2" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Select From Dropdown -Testing" GenElementAction="SelectFromDropDown" Guid="d1e3c058-1c0c-4e33-b82c-8d6f377ac0aa" LocateBy="ByID" LocateValue="accountSubType" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7e7cf33d-2183-4849-991a-c7fc96cb7a19" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="EMPLOYEE" Value="EMPLOYEE" />
+<ActInputValue Guid="6511d500-f150-4e4e-bd39-85965988e5a3" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d9a2c9b5-2bc8-4dda-8ec3-f6a61a4c154a" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Select From Dropdown -Validation" GenElementAction="GetValue" Guid="e69503b0-01cc-4918-ada0-9ea64b37a550" LocateBy="ByID" LocateValue="accountSubType" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2df5fba0-e259-4d6c-8a37-43f8cb876f77" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6e5e7f6d-7656-42e8-a347-1507e4c5d08f" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d5264ef9-6188-4f1a-9799-bb7ed333c684" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="436aeee9-9c4a-4f17-885f-f1d03a3bd235" mExpected="2" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Is Enabled-Testing" GenElementAction="Enabled" Guid="a26cc8fd-2a8b-4186-89e0-8f8a2b3f13c7" LocateBy="ByName" LocateValue="firstName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="bd776755-626f-4f5e-b3ff-71fa55909794" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="35230ddd-c85a-44a0-aca1-47626dafbd12" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="295ac677-0206-42f2-b10c-855f724beb1a" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="333f333a-0eae-4371-a997-6fb08c27f7e0" mExpected="true" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Is Visible-Testing" GenElementAction="Visible" Guid="72e1f313-d3bb-4347-b31f-811d0a526684" LocateBy="ByName" LocateValue="firstName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6fd1854f-4908-41f0-909f-d4082b1c7e96" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="6b92bb9c-604a-4b43-9908-e8a3368429ca" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d203a94a-6a9d-46c9-b775-6e44e805fa3f" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e3caa52c-8d7e-4b36-9143-44ebb7952f59" mExpected="true" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Get Inner Text-Testing" GenElementAction="GetInnerText" Guid="76949a07-ee40-44ca-bd2c-f2365ae93c38" LocateBy="ByName" LocateValue="accountSubType" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="aeffa92e-ff8a-44db-8851-6b8c05bcc76a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="651e016b-a338-4f50-8d52-61ee25f6e33e" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6871f216-a38b-40f5-bd11-a8988623cfbe" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="4ea0b7dc-3243-4451-b0f4-fd37a6ebf5c9" mExpected="RETAILEMPLOYEEDEMOTESTDEALER EMPLOYEEVIPBUSINESSHOUSE" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Get Style-Testing" GenElementAction="GetStyle" Guid="ccdb685b-3520-40ca-a5a2-b7e0ae7dd60a" LocateBy="ByID" LocateValue="accountSubType" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="05279559-f21f-4285-be2f-606e3c7f6184" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f9f20e04-7116-4ade-8b73-c51c22f9c7ad" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6f9ed407-cfd5-4063-9af2-6c6b223048b9" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2fec0ed4-2c51-4923-a0c8-b322c4fe485e" mExpected="width: 140px;" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-GetElementAttribute Value-Testing" GenElementAction="GetElementAttributeValue" Guid="9214ce27-5b41-4e1d-8f8b-8e3ccc79bdfc" LocateBy="ByName" LocateValue="accountSubType" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="68d86142-df75-483f-9ad9-649f11dcfcd2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="544a7269-ee08-4dd6-ab46-6a22fda793ec" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="00c8b483-9691-4d27-8a35-d02af809e1ed" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b675f252-5d27-4ef3-aaa2-d4ab231fff77" mExpected="RETAILEMPLOYEEDEMOTESTDEALER EMPLOYEEVIPBUSINESSHOUSE" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-Click-Testing" GenElementAction="Click" Guid="146240e4-cd49-407d-9723-321abaee8cd9" LocateBy="ByXPath" LocateValue="/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[6]/td[1]/a[1]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="515df28d-91da-473a-9fcc-07b2502a4cd3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e0c20602-ff1c-483c-bafc-3e936bbffd83" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3d068e98-caf5-424c-95c8-935c647b94db" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Generic Element Action-Click-Validation" Guid="69a39818-a8dc-4209-b804-37cb9c7b299e" LocateBy="ByXPath" LocateValue="/Message from webpage/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edbbe6a0-e21c-4520-9d0c-6732a5054a89" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6c8a4677-e8c9-48ef-ac7b-70fab02b18ce" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Generic Element Action-Click-Cleanup" Guid="39c04c53-b99d-484d-a17e-b1b8b44d4dfc" LocateBy="ByXPath" LocateValue="/Message from webpage/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b58a00f2-ea03-4176-af76-594e07e7ae7d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActGenElement Active="True" Description="Generic Element Action-Click At-Testing" GenElementAction="ClickAt" Guid="c72fef3f-a359-4e13-8ca0-b33a3e9279b8" LocateBy="ByXPath" LocateValue="//td/a[contains(text(),&quot;Tax Exemption&quot;)]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="86df9f12-386a-4d2a-9d36-4d42156dd2e3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="70,20" Value="70,20" />
+<ActInputValue Guid="ebe05aa8-78c6-4a0c-a6af-db209190a7ea" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="64078b43-3c0f-432d-8d5f-654707a47c1c" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActPBControl Active="True" ControlAction="IsExist" Description="Generic Element Action-Click At-Validation" Guid="2fe4ba39-711f-4cc3-9290-1169f834b46a" LocateBy="ByXPath" LocateValue="/Message from webpage/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="381ab9b5-673c-4460-a381-1751823d06e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ec0fe2a5-abf0-47e5-8e34-c8dfc78c4520" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Generic Element Action-Click At-Cleanup" Guid="7a7b0ab7-8cbf-4c16-975e-4206e9d3b2c9" LocateBy="ByXPath" LocateValue="/Message from webpage/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="32dd29cd-5ff2-48ed-ad8d-94211883abaa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActGenElement Description="Generic Element Action-Right Click- Set Value to email-Init" GenElementAction="SetValue" Guid="10a527f3-be22-42f9-8e92-711b8b110275" LocateBy="ByName" LocateValue="lastName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b283a908-d988-4c85-ab22-39ed61b840c8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abc@gmail.com" Value="abc@gmail.com" />
+<ActInputValue Guid="892278ce-4596-4bdd-a1dd-6c907b142de6" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9d8a059a-1241-4859-907c-acae43a19fae" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Right Click-Testing" GenElementAction="RightClick" Guid="eeefb579-d7c8-4ab8-9c36-fc1a29b6957a" LocateBy="ByName" LocateValue="lastName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a247d5f2-516e-41bc-9f74-30dd157ab6d1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="06a15b67-96de-49e2-8d33-b4dbf9dd4327" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4b492eec-0d5a-4985-a105-3e398cb9319f" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Right Click-Validation" GenElementAction="GetValue" Guid="b283c669-ed02-4579-b397-2e028a929fc3" LocateBy="ByName" LocateValue="lastName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="be5f1b31-d9f2-46ae-9886-444dcb8588af" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ee38217f-35cb-4bf7-9e66-83b8a9dcd4a3" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="93978191-435a-42ca-a4c0-71ccd56831aa" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="881367b4-feee-40ae-b94a-846f1731b3aa" mExpected="InStr({Actual},&quot;CoreTeam&quot;)&gt;0" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Active="True" Description="Generic Element Action-GetAttribute Value-Testing" GenElementAction="GetCustomAttribute" Guid="a055d18e-f9cd-4664-85cc-ad8f2156f302" LocateBy="ByName" LocateValue="firstName" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5acb4f95-9a56-4e17-9470-9eee0e0b1825" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="size" Value="size" />
+<ActInputValue Guid="d23c9687-a85d-409f-a705-9c9582e8c6f8" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2a13b446-fdf4-4e33-b3aa-2d21e1936078" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="8a7e5840-d6c3-43d3-9c8e-047b578dbb8f" mExpected="20" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Hover - Testing" GenElementAction="Hover" Guid="64a8ab73-5f71-4fc6-ab7f-236e17c3e42c" LocateBy="ByName" LocateValue="stateForStandard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b0806872-6dc2-4b4c-99dd-5387e851527c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d298d6b9-b258-4b6a-b901-3bee380d55da" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d7519574-4145-4e34-80b5-15917775bb8c" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActPBControl ControlAction="IsExist" Description="Generic Element Action-Hover - Validation" Guid="76d4fbf2-d094-4097-a74f-773f5e09d2ef" LocateBy="ByName" LocateValue="Script Error" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="b5005645-1181-4ac0-99d4-d44a38045f30" ParentGuid="00000000-0000-0000-0000-000000000000" Value="c323cc4e-6e8b-4972-a174-ce3b1d6f7eb1#GUID_NAME#Generic Element Action-hover Pop Up click-Cleanup" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="050e537f-c26c-4985-89c6-24bfcef2ffeb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="78717580-ce5f-4c7a-9c4d-1d4f5d1c953d#GUID_NAME#Generic Element Action-Click Button Close-Cleanup" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="6360e72f-2876-4196-ba38-f63e94d6d165" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e9636300-edd2-4864-ab6b-e37c4f0af760" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl ControlAction="IsExist" Description="Generic Element Action-hover Pop Up Check-Cleanup" Guid="ea51f4a4-071f-43b5-af00-93dc3f160b4e" LocateBy="ByName" LocateValue="Script Error" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="15" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="a4b4e53d-94d7-49bd-ac11-a2b8bc7d6e04" ParentGuid="00000000-0000-0000-0000-000000000000" Value="76d4fbf2-d094-4097-a74f-773f5e09d2ef#GUID_NAME#Generic Element Action-Hover - Validation" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="530fd8aa-bb26-4aff-8807-0ebe49416416" ParentGuid="00000000-0000-0000-0000-000000000000" Value="20d9108f-4561-4cba-b2d4-ed3c470a884f#GUID_NAME#Generic Element Action-Click Button Close-Hover Cleanup" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="2f3ba8d8-5375-4dbf-a26c-e821d6e26ff1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b0a75dc9-8b25-4c1c-888e-3f1bab929f3d" mExpected="True" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActPBControl>
+<ActPBControl ControlAction="Click" Description="Generic Element Action-hover Pop Up click-Cleanup" Guid="c323cc4e-6e8b-4972-a174-ce3b1d6f7eb1" LocateBy="ByXPath" LocateValue="/Script Error/[LocalizedControlType:title bar]/Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="499ed8ce-bca6-4336-8f21-1c298dbd729b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ea51f4a4-071f-43b5-af00-93dc3f160b4e#GUID_NAME#Generic Element Action-hover Pop Up Check-Cleanup" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="b7cd175a-7d7b-4c15-9136-329b12f78728" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActPBControl Active="True" ControlAction="Click" Description="Generic Element Action-Click Button Close-Hover Cleanup" Guid="20d9108f-4561-4cba-b2d4-ed3c470a884f" LocateBy="ByXPath" LocateValue="/[LocalizedControlType:title bar]/Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="752f926f-e183-4519-8552-500c2c167e4d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActSwitchWindow Description="Generic Element Action-Switch Window - Simple Page -Init" Guid="9d3d57b8-3016-4472-aa13-e69050f580c8" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="acedc199-7415-4b9f-8039-c0fa1513950a" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl ControlAction="SetValue" Description="Generic Element Action-Set URL Widget Window-Init" Guid="5d2f3726-eb09-4a03-82a0-46c7f96747c1" LocateBy="ByXPath" LocateValue="/[AutomationId:1001]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1762506c-9948-41b4-8af0-9c6e0ea7429f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="https://www.google.com" Value="https://www.google.com" />
+</InputValues>
+</ActPBControl>
+<ActPBControl ControlAction="Click" Description="Generic Element Action-Click Button Launch Widget Window-Init" Guid="adfaf512-b107-4a36-a83c-4bc10fe0375e" LocateBy="ByName" LocateValue="Launch Widget Window" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="66f92841-05a7-4d61-a3f3-f3a237309cbb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+<ActSwitchWindow Description="Generic Element Action-Switch to Browser Window-Init" Guid="fecce676-e871-489e-9f33-861ee9e39b2e" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e93f03aa-c48d-470e-8b8b-157a5ec2f20c" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="20" Value="20" />
+</InputValues>
+</ActSwitchWindow>
+<ActBrowserElement ControlAction="InitializeBrowser" Description="Generic Element Action-Initialize Browser-Init" GotoURLRadioButton="Current" Guid="b9fe57a6-2c88-4c0a-af6a-e9b4b16a4289" ImplicitWait="60" LocateBy="ByXPath" LocateValue="/[AutomationId:1000]/[LocalizedControlType:pane]/[LocalizedControlType:pane]/https:&amp;#x2F&amp;#x2Fwww.google.com&amp;#x2F?gws_rd=ssl" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="PowerBuilder" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="76ec3346-d22e-43dd-b35f-70347e42c02d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="87d8b1ab-92c5-4d0f-a84d-470750f7f348" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Current" Value="Current" />
+<ActInputValue Guid="3c0c2613-4c80-48f4-922e-ae85f3882c8b" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+<ActGenElement Description="Generic Element Action-Set Value-Testing" GenElementAction="SetValue" Guid="6b3a0d94-33dd-4aae-9441-52cd2f78d054" LocateBy="ByName" LocateValue="q" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3af2ccb4-a668-4ccc-989a-20dea23bab83" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger Core" Value="Ginger Core" />
+<ActInputValue Guid="124a7807-9220-4343-ba7b-4eb71fadea83" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="20045348-a2c3-4ddf-97ca-87522d7a9a46" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Set Value-Validation" GenElementAction="GetValue" Guid="6657f14c-c41e-4dbd-bdde-c1f0ccba0a7b" LocateBy="ByName" LocateValue="q" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7a75066c-9b07-45df-8f94-949183a50495" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger Core" Value="Ginger Core" />
+<ActInputValue Guid="1d4e593e-189f-41c2-b7bd-612fc0f999e7" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="283c97d5-b9de-46e7-9e75-dc8ad4483acd" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d6b60273-1de5-49ee-9c8b-c5d3878dc24e" mExpected="Ginger Core" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Click-Testing" GenElementAction="Click" Guid="f6b593f3-d655-43bc-80a2-ea25908f64ec" LocateBy="ByXPath" LocateValue="/html[1]/body[1]/div[1]/div[3]/div[1]/nobr[1]/a[7]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="aea05998-4cbd-47d0-98fd-1cd62fc265db" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a8e66f99-1335-45a7-be1d-f300aca368c6" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="20c1502f-b615-4e8a-bdba-0e067f4b540f" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Click-Validation" EnableRetryMechanism="True" GenElementAction="Enabled" Guid="d1b17875-0d86-4de5-9885-ecc98a580006" LocateBy="ByID" LocateValue="Email" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43b28c4a-cffa-40f0-b5df-1b7ff8f9a6e1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b22cff8e-96ce-4133-ae72-0e0c53321041" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="508e184f-b357-452c-9cbd-0d585d906197" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="86c1f024-15a1-4ac5-992b-27c9e0a15a3a" mExpected="true" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Select From Drop Down-Testing" GenElementAction="SelectFromDropDown" Guid="339893c8-3f34-4b8d-9204-222cc9ce2154" LocateBy="ByID" LocateValue="lang-chooser" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="77836b83-6ffc-465f-83d0-aba4a57b885f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="mr" Value="mr" />
+<ActInputValue Guid="4c398267-24d9-46bb-b2ca-1e71064bae36" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="90bf72cc-8d62-4a0a-a779-038d2255b563" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Select From Drop Down-Validation" GenElementAction="GetValue" Guid="70b1259d-104a-43eb-af04-68fc4c639907" LocateBy="ByID" LocateValue="lang-chooser" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="034b60bb-53a3-4723-b48a-243cf1df7a31" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="mr" Value="mr" />
+<ActInputValue Guid="44dd16d3-0311-4f8a-82a5-244099bd0641" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1223cdf9-3525-4f0c-aa14-9d39999fc600" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-ClickAt-Testing" EnableRetryMechanism="True" GenElementAction="Click" Guid="6844f645-5105-4cc6-a8dd-3d21160493fd" LocateBy="ByID" LocateValue="next" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5bb9fb0f-26b0-4a48-971f-477e0902ab86" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2,2" Value="2,2" />
+<ActInputValue Guid="f18cfd31-bef7-43b6-abe9-2790cdc167d2" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6df89bd0-79b6-4a56-9a87-06b94d5778e4" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-ClickAt-Validation" GenElementAction="Visible" Guid="b3dbe34a-7b4e-479b-9fe1-d5eda51e5270" LocateBy="ByID" LocateValue="errormsg_0_Email" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="af2ca784-d136-4dc6-8bcb-919ad8817e35" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="35fd950d-88b4-44e0-a25d-2dc9fc9577a0" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9bf59da9-85ed-45e9-8b4f-9b5adf49d75b" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ea376a38-8dda-44d0-806f-ee1318dc3b0e" mExpected="true" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActGenElement>
+<ActGenElement Description="Generic Element Action-Click-Validate" GenElementAction="GetValue" Guid="b5abae90-ca51-459c-b016-a7eada87b691" LocateBy="ByID" LocateValue="next" MaxNumberOfRetries="2" ParentGuid="f727d33d-27f5-4a3a-91a3-f7da00ef4dc2" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a3b63898-7751-4ed4-84fa-969755b5bb90" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="30a43636-7e20-4e31-a699-ee0a71b63181" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" />
+<ActInputValue Guid="f6d71752-21f4-4a27-9d35-730d2adcc355" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" />
+</InputValues>
+</ActGenElement>
+<ActPBControl ControlAction="Click" Description="Generic Element Action-Click Close Button-Cleanup Last Action" Guid="78717580-ce5f-4c7a-9c4d-1d4f5d1c953d" LocateBy="ByXPath" LocateValue="/[LocalizedControlType:title bar]/Close" MaxNumberOfRetries="2" ParentGuid="1b5dfc79-7d88-4a3f-8807-8ab3a8fcb7ec" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f4b3a5e-9ad4-420d-b1b2-b1b9e310d62c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Cleanup" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="473ddc4c-8fdd-4a38-962c-f5d213e7ceb8" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window - Simple Page" Guid="b1e98271-be68-4416-9427-94b429fa604d" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5c927ad7-5d3e-4654-839c-13f15f43fb70" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="60" Value="60" />
+</InputValues>
+</ActSwitchWindow>
+<ActPBControl Active="True" ControlAction="Click" Description="Click Button Close" Guid="eb031f43-692b-42a2-9472-d8ff211f97d7" LocateBy="ByName" LocateValue="Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d34b0b01-7e97-460a-9b9f-97c7b313cd3b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActPBControl>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="CSM-App" Guid="9bbc3344-9fbb-40cc-8678-52b3a2692b9d" LastExecutingAgentName="PowerBuilder-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+</BusinessFlow></GingerRepositoryItem>

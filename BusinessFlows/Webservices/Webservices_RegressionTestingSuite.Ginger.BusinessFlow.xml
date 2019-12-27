@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2aa6ce84-42af-4b4b-b4a5-ee31d388c74b" ItemType="BusinessFlow" CreatedBy="mahessha" Created="201811260910" GingerVersion="3.1.0.0" Version="18" LastUpdateBy="mahessha" LastUpdate="201901080656" />
+<BusinessFlow Elapsed="6249" Guid="2aa6ce84-42af-4b4b-b4a5-ee31d388c74b" Name="Webservices_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Web Service Action - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="b627e3fa-3bd1-44f2-aad7-14b8becd9922" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WebServices-App">
+<Acts>
+<ActWebService Active="True" Description="Web Service Action -Web Service SOAP - Testing" Guid="a578e444-d054-419b-8a33-ce21b1a21bc6" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="17cbfc2c-0d86-4d0b-ad2d-1dd69f571039" Param="SOAPAction" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/GetQuickQuote" Value="http://ws.cdyne.com/GetQuickQuote" />
+<ActInputValue Guid="11cdb26f-b33f-4867-a1be-d04e7712b21b" Param="URL" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" Value="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" />
+<ActInputValue Guid="abf1b258-4ef3-4f6e-9730-fd24824c5528" Param="URLDomain" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8a1c9e15-e3d4-4db9-a781-1745953a0d69" Param="URLPass" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c89ee8cc-fc78-44f5-9443-f93e3b1e0716" Param="URLUser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a4c40037-9550-4055-8e6d-6022c035ac56" Param="XMLfileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\\DOCUMENTS\WEBSERVICES\REQUSTFILE\STOCK.XML" Value="~\\DOCUMENTS\WEBSERVICES\REQUSTFILE\STOCK.XML" />
+</InputValues>
+</ActWebService>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="WebAPI SOAP Action - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5a2ae136-89a3-4515-ab55-9c03be6a8e76" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WebServices-App">
+<Acts>
+<ActWebAPISoap Active="True" Description="WebAPI SOAP Action - SOAP - From File - Testing" Guid="511a2483-3056-4bf6-87af-cb24ec710c83" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f69bc6e-43ec-4b9d-a421-392102cb15f6" Param="EndPointURL" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" Value="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" />
+<ActInputValue Guid="3334ba32-764e-4d31-87b6-2a8a99c144cf" Param="URLUser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c2b759ef-24b9-47da-a6da-38492756d72d" Param="URLDomain" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4b1fe08e-3354-4350-a156-fa2b85231413" Param="URLPass" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5b0cad13-9a7c-4076-817f-41c09148b9f3" Param="NetworkCredentialsRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Default" Value="Default" />
+<ActInputValue Guid="eedc3d7d-7858-4152-a53a-249f7cdb058f" Param="RequestBodyTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="TemplateFile" Value="TemplateFile" />
+<ActInputValue Guid="48002d22-d216-4c2c-bcf2-1c683b5325dd" Param="CertificateTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="AllSSL" Value="AllSSL" />
+<ActInputValue Guid="d3580e57-eca7-40a0-9590-719b462396b7" Param="DoNotFailActionOnBadRespose" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="eba62f89-b38c-4efe-ae44-f42aaab2b82f" Param="RequestBody" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2e33b0d2-08a0-406b-bddb-b544cb1e13eb" Param="ImportRequestFile" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="True" Value="True" />
+<ActInputValue Guid="957f1eb3-a7d7-49fd-a0b6-2ef7b963f87e" Param="CertificatePath" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bc74b6dd-fe40-414b-8969-6b36f0f386ea" Param="CertificatePassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="400ca4a5-3e01-4165-9659-3ea78ec83ea1" Param="ImportCetificateFile" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="ccac7d56-2285-478a-be3c-b924f411ba89" Param="SecurityType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="None" Value="None" />
+<ActInputValue Guid="d175071b-ddba-4993-b9ca-f37debae5445" Param="AuthorizationType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NoAuthentication" Value="NoAuthentication" />
+<ActInputValue Guid="d0a0cee3-f64f-41ab-873a-f1de33c744f4" Param="AuthUsername" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d705207e-b006-4a56-aa17-bff0a3b596c5" Param="AuthPassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8712d2fd-f88f-4dc1-86c4-fea48e1e7fbf" Param="SOAPAction" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/GetQuickQuote" Value="http://ws.cdyne.com/GetQuickQuote" />
+<ActInputValue Guid="8883010c-b5b1-4b12-b099-512111e35332" Param="TemplateFileNameFileBrowser" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\\DOCUMENTS\WEBSERVICES\REQUSTFILE\STOCK.XML" Value="~\\DOCUMENTS\WEBSERVICES\REQUSTFILE\STOCK.XML" />
+<ActInputValue Guid="da691730-913a-42cb-aec9-fcee7b5dc4ef" Param="UseLegacyJSONParsing" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="True" Value="True" />
+<ActInputValue Guid="70aa67e3-c114-47d2-9df9-d7d128f9cf4b" Param="ResponseContentType" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="4af98189-7f8a-40b6-b8e3-d30c5fade9a1" mExpected="OK" Param="Header: Status Code " ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWebAPISoap>
+<ActWebAPISoap Active="True" Description="WebAPI SOAP Action - SOAP - From Request Body - Testing" Guid="39c026c7-c09b-4488-8f26-afaa18fa8d9e" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="21161b67-8870-4b38-94d6-104e38b903bf" Param="EndPointURL" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" Value="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" />
+<ActInputValue Guid="dca01659-9016-4406-b1ea-ac207e971eda" Param="URLUser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="93cc8484-bc76-4eb1-a32c-f1ad773a70a6" Param="URLDomain" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1904165b-50ba-4999-8fee-df0d22097a75" Param="URLPass" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1be25add-05fe-4745-80ad-312da7bd229d" Param="NetworkCredentialsRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Default" Value="Default" />
+<ActInputValue Guid="874d991a-3751-4bd8-9c93-caaa662137af" Param="RequestBodyTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="FreeText" Value="FreeText" />
+<ActInputValue Guid="6ff6b871-273b-4981-b7ec-9fff985193ef" Param="CertificateTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="AllSSL" Value="AllSSL" />
+<ActInputValue Guid="784312c5-79d1-4935-ad11-e886cf894021" Param="DoNotFailActionOnBadRespose" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="c77eff60-4ecb-45f9-97eb-6f7e7737478b" Param="RequestBody" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ws=&quot;http://ws.cdyne.com/&quot;&gt;&#xD;&#xA;   &lt;soapenv:Header/&gt;&#xD;&#xA;   &lt;soapenv:Body&gt;&#xD;&#xA;      &lt;ws:GetQuickQuote&gt;&#xD;&#xA;         &lt;!--Optional:--&gt;&#xD;&#xA;         &lt;ws:StockSymbol&gt;?&lt;/ws:StockSymbol&gt;&#xD;&#xA;         &lt;!--Optional:--&gt;&#xD;&#xA;         &lt;ws:LicenseKey&gt;?&lt;/ws:LicenseKey&gt;&#xD;&#xA;      &lt;/ws:GetQuickQuote&gt;&#xD;&#xA;   &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" Value="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ws=&quot;http://ws.cdyne.com/&quot;&gt;&#xD;&#xA;   &lt;soapenv:Header/&gt;&#xD;&#xA;   &lt;soapenv:Body&gt;&#xD;&#xA;      &lt;ws:GetQuickQuote&gt;&#xD;&#xA;         &lt;!--Optional:--&gt;&#xD;&#xA;         &lt;ws:StockSymbol&gt;?&lt;/ws:StockSymbol&gt;&#xD;&#xA;         &lt;!--Optional:--&gt;&#xD;&#xA;         &lt;ws:LicenseKey&gt;?&lt;/ws:LicenseKey&gt;&#xD;&#xA;      &lt;/ws:GetQuickQuote&gt;&#xD;&#xA;   &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" />
+<ActInputValue Guid="14a1cecb-3fd3-4a46-b79f-fc566fece176" Param="ImportRequestFile" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="a5c2bff7-1c0f-45c4-9dfe-5022807fd3db" Param="CertificatePath" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c34896c4-19ab-429d-b8a8-ab852c6d5144" Param="CertificatePassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="31e75fc6-5bfa-40f1-8e75-42a4099cabcb" Param="ImportCetificateFile" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="26d191b9-8a83-4e07-9546-825ec0fa8141" Param="SecurityType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="None" Value="None" />
+<ActInputValue Guid="5005c9ae-0969-4e50-8668-5de543081019" Param="AuthorizationType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NoAuthentication" Value="NoAuthentication" />
+<ActInputValue Guid="67f23f7f-ed45-4fb0-a11a-767eeab68df4" Param="AuthUsername" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3814ba2d-607b-444f-9d6d-a882e496f765" Param="AuthPassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f2e14c76-c556-4702-aaf4-685dccf55935" Param="SOAPAction" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/GetQuickQuote" Value="http://ws.cdyne.com/GetQuickQuote" />
+<ActInputValue Guid="2b0a9457-2387-4d85-a245-92a8466b80ce" Param="TemplateFileNameFileBrowser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="de28c223-b494-4120-ab1f-bb65fd80cf96" Param="UseLegacyJSONParsing" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="True" Value="True" />
+<ActInputValue Guid="2430e9f2-7770-4ed3-8660-01a071774c5d" Param="ResponseContentType" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ebbb6816-0968-4a8b-94d7-dddf02b0f87d" mExpected="OK" Param="Header: Status Code " ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWebAPISoap>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="WebAPI REST Action - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="93ab0f20-a7c0-4b8a-a231-0404a56a4498" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WebServices-App">
+<Acts>
+<ActWebAPIRest Active="True" Description="WebAPI REST Action - GET - Testing" Guid="248cfb40-d564-43f7-bc01-558437df69e3" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="aef1ec43-cdc9-4cab-9842-7dd75a27455b" Param="EndPointURL" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="https://jsonplaceholder.typicode.com/posts/1" Value="https://jsonplaceholder.typicode.com/posts/1" />
+<ActInputValue Guid="90028225-902a-4d5a-a315-8363784ad540" Param="URLUser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="34bd0b9e-bcc0-49db-a247-0be7b786917c" Param="URLDomain" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="247a709e-8085-4f9d-b3e6-c10f7ccd2b47" Param="URLPass" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5f8ac80e-08a3-40ba-a2d6-fcc702d13711" Param="NetworkCredentialsRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Default" Value="Default" />
+<ActInputValue Guid="3d8443d9-a010-46ca-8a9b-d300de641204" Param="RequestBodyTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="FreeText" Value="FreeText" />
+<ActInputValue Guid="248c685e-1042-40f9-ad77-1a8c98e307ac" Param="CertificateTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="AllSSL" Value="AllSSL" />
+<ActInputValue Guid="f56f0e76-5282-49a8-8562-1228cc65be0f" Param="DoNotFailActionOnBadRespose" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="41b62b9a-cd75-498f-b629-a8234e93ca0b" Param="RequestBody" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e807226c-3c33-4ca0-9bb5-e21565bed08f" Param="ImportRequestFile" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="c0d67a58-e4f8-49ab-a65b-dfa11b94b079" Param="CertificatePath" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="684f2bd6-fa5d-4a2d-aecd-fa547ef747d6" Param="CertificatePassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d1a71c8-a1b7-4507-a779-35126ce9ac46" Param="ImportCetificateFile" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="False" Value="False" />
+<ActInputValue Guid="dd3b002e-2a2f-4344-9533-23a7917237d8" Param="SecurityType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="None" Value="None" />
+<ActInputValue Guid="eb9b169a-c171-426b-8fa9-6f2a4950ced8" Param="AuthorizationType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NoAuthentication" Value="NoAuthentication" />
+<ActInputValue Guid="0604dd97-29af-48f6-a706-ed3650ea9c99" Param="AuthUsername" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="46af0333-baf3-437b-a026-9901fa55c2b9" Param="AuthPassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8cef80af-8862-48e8-812f-4f890b7e1383" Param="CookieMode" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="New" Value="New" />
+<ActInputValue Guid="68014ecf-07b8-442b-bd9b-a062b50eac28" Param="RequestType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="GET" Value="GET" />
+<ActInputValue Guid="2ccaa749-fba4-4ecd-9b2c-1a68ef42dc76" Param="ReqHttpVersion" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="HTTPV11" Value="HTTPV11" />
+<ActInputValue Guid="07fa027b-1d5b-48ee-b5f9-8748266fed61" Param="ContentType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="JSon" Value="JSon" />
+<ActInputValue Guid="8b1dc422-2ad7-4d04-afea-b7fa3f3d9972" Param="ResponseContentType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="JSon" Value="JSon" />
+<ActInputValue Guid="986b4e66-968e-497d-85fe-b70ba90f81de" Param="TemplateFileNameFileBrowser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3aca0616-58ce-43f0-82c0-7775dfd217c9" Param="UseLegacyJSONParsing" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="True" Value="True" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6e49484b-5533-434c-a65a-8f41b0de5ee8" mExpected="OK" Param="Header: Status Code " ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="70a14ec4-9522-4c1f-9a12-655b67ccaf34" mExpected="1" Param="userId" ParentGuid="00000000-0000-0000-0000-000000000000" Path="/root/userId" StoreTo="None" />
+<ActReturnValue Active="True" Guid="8ce6bed7-92a4-4b15-b38a-42852dce7f3b" mExpected="1" Param="id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="/root/id" StoreTo="None" />
+<ActReturnValue Active="True" Guid="60a0743b-8fd2-4902-ad2e-885b9022ae91" mExpected="sunt aut facere repellat provident occaecati excepturi optio reprehenderit" Param="title" ParentGuid="00000000-0000-0000-0000-000000000000" Path="/root/title" StoreTo="None" />
+<ActReturnValue Active="True" Guid="8c9ef88d-951f-4fb9-a903-e1913d5527fa" mExpected="quia et suscipit&#xA;suscipit recusandae consequuntur expedita et cum&#xA;reprehenderit molestiae ut ut quas totam&#xA;nostrum rerum est autem sunt rem eveniet architecto" Param="body" ParentGuid="00000000-0000-0000-0000-000000000000" Path="/root/body" StoreTo="None" />
+</ReturnValues>
+</ActWebAPIRest>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Web API Model Action - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="75ee597d-e68d-4ce4-bd91-d8e52e6a593a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WebServices-App">
+<Acts>
+<ActWebAPIModel Active="True" APImodelGUID="4f0c85dd-8f31-4c88-afb4-0310632dff76" Description="Web API Model Action SOAP - Testing" Guid="d7b622d6-9700-47dc-a0b0-a4d123b4782e" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="672fb667-82bd-4e14-b2ef-45e4da63053f" Param="{STOCKSYMBOL}" ParamGuid="51a93f74-cafd-42d4-94af-3eb587f11e4c" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="1" Value="1" />
+<EnhancedActInputValue Guid="f53f2acc-488b-4d1c-937c-a39f99532feb" Param="{LICENSEKEY}" ParamGuid="9ba6f5fb-a246-40b5-9e15-1fad6d8857f5" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="aa" Value="aa" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="7df9e9ba-56bb-40ef-ae47-57ecb5ed1f4f" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="4f0c85dd-8f31-4c88-afb4-0310632dff76" Value="4f0c85dd-8f31-4c88-afb4-0310632dff76" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="971920e1-caa7-4226-843e-61abf1da9ce6" mExpected="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;soap:Body&gt;&#xD;&#xA;    &lt;GetQuoteResponse xmlns=&quot;http://ws.cdyne.com/&quot;&gt;&#xD;&#xA;      &lt;GetQuoteResult&gt;&#xD;&#xA;        &lt;StockSymbol&gt;1&lt;/StockSymbol&gt;&#xD;&#xA;        &lt;LastTradeAmount&gt;0&lt;/LastTradeAmount&gt;&#xD;&#xA;        &lt;LastTradeDateTime&gt;0001-01-01T00:00:00&lt;/LastTradeDateTime&gt;&#xD;&#xA;        &lt;StockChange&gt;0&lt;/StockChange&gt;&#xD;&#xA;        &lt;OpenAmount&gt;0&lt;/OpenAmount&gt;&#xD;&#xA;        &lt;DayHigh&gt;0&lt;/DayHigh&gt;&#xD;&#xA;        &lt;DayLow&gt;0&lt;/DayLow&gt;&#xD;&#xA;        &lt;StockVolume&gt;0&lt;/StockVolume&gt;&#xD;&#xA;        &lt;PrevCls&gt;0&lt;/PrevCls&gt;&#xD;&#xA;        &lt;EarnPerShare&gt;0&lt;/EarnPerShare&gt;&#xD;&#xA;        &lt;PE&gt;0&lt;/PE&gt;&#xD;&#xA;        &lt;QuoteError&gt;true&lt;/QuoteError&gt;&#xD;&#xA;      &lt;/GetQuoteResult&gt;&#xD;&#xA;    &lt;/GetQuoteResponse&gt;&#xD;&#xA;  &lt;/soap:Body&gt;&#xD;&#xA;&lt;/soap:Envelope&gt;" Param="Response:" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ReturnValues>
+</ActWebAPIModel>
+<ActWebAPIModel Active="True" APImodelGUID="edcfa24a-21c3-413a-b703-adcb8b9bb093" Description="Web API Model Action REST - Testing" Guid="5cbf348c-2614-468a-9c5b-26f12659d440" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="8b86f3f0-8121-44b3-b897-4e7ffa1c08ee" Param="{STOCKSYMBOL}" ParamGuid="b6f39795-01bb-4cba-bcc9-42a05d6c15d4" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="1" Value="1" />
+<EnhancedActInputValue Guid="62ebf860-41a9-4471-a292-eb2af8ab2b49" Param="{LICENSEKEY}" ParamGuid="f93acc5e-e1fc-4ec3-bbf7-8def00c1854c" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="aa" Value="aa" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="898be68d-d63b-48f4-a84b-05c0c5bc0dda" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="edcfa24a-21c3-413a-b703-adcb8b9bb093" Value="edcfa24a-21c3-413a-b703-adcb8b9bb093" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b228224a-5349-4063-a4df-40c042425ada" mExpected="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;soap:Body&gt;&#xD;&#xA;    &lt;GetQuoteResponse xmlns=&quot;http://ws.cdyne.com/&quot;&gt;&#xD;&#xA;      &lt;GetQuoteResult&gt;&#xD;&#xA;        &lt;StockSymbol&gt;1&lt;/StockSymbol&gt;&#xD;&#xA;        &lt;LastTradeAmount&gt;0&lt;/LastTradeAmount&gt;&#xD;&#xA;        &lt;LastTradeDateTime&gt;0001-01-01T00:00:00&lt;/LastTradeDateTime&gt;&#xD;&#xA;        &lt;StockChange&gt;0&lt;/StockChange&gt;&#xD;&#xA;        &lt;OpenAmount&gt;0&lt;/OpenAmount&gt;&#xD;&#xA;        &lt;DayHigh&gt;0&lt;/DayHigh&gt;&#xD;&#xA;        &lt;DayLow&gt;0&lt;/DayLow&gt;&#xD;&#xA;        &lt;StockVolume&gt;0&lt;/StockVolume&gt;&#xD;&#xA;        &lt;PrevCls&gt;0&lt;/PrevCls&gt;&#xD;&#xA;        &lt;EarnPerShare&gt;0&lt;/EarnPerShare&gt;&#xD;&#xA;        &lt;PE&gt;0&lt;/PE&gt;&#xD;&#xA;        &lt;QuoteError&gt;true&lt;/QuoteError&gt;&#xD;&#xA;      &lt;/GetQuoteResult&gt;&#xD;&#xA;    &lt;/GetQuoteResponse&gt;&#xD;&#xA;  &lt;/soap:Body&gt;&#xD;&#xA;&lt;/soap:Envelope&gt;" Param="Response:" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="WebServices-App" Guid="1a57069b-787f-4525-914c-38abb5953c20" LastExecutingAgentName="WebServicesAgent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+</BusinessFlow></GingerRepositoryItem>

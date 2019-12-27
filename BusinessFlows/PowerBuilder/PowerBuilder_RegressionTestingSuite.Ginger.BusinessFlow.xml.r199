@@ -1,0 +1,1861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Ginger Repository Item created with version: 2.6.0.0-->
+<GingerCore.BusinessFlow Active="False" Created="9/6/17 12:05:57 PM" CreatedBy="sandesba" Elapsed="140553" EnableActivitiesVariablesDependenciesControl="False" Guid="3f4ad18e-1ad8-4a44-bb0a-657dee7a7340" LastUpdate="11/30/17 10:50:46 AM" LastUpdateBy="ankukhar" Name="PowerBuilder_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Version="70">
+<Activities>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Init" AutomationStatus="Development" Created="9/6/17 12:05:57 PM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="845b0a03-8410-43ca-b41f-16025c3adea0" LastUpdate="1/1/01 12:00:00 AM" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActFileOperations Active="True" ConfigOutputDS="False" Created="2/3/17 8:25:23 AM" CreatedBy="dishav" Description="Init-File Operations-Launch Test App" EnableRetryMechanism="False" ExternalID="" FileOperationMode="Execute" Guid="7203a92f-cc56-46d1-9d8b-5f1bb41e9700" LastUpdate="1/1/01 12:00:00 AM" LocateBy="NA" MaxNumberOfRetries="0" ParentGuid="8c54b71a-e660-4787-ab27-d498d6de6edb" Platform="NA" RetryMechanismInterval="0" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="2/3/17 8:25:27 AM" CreatedBy="dishav" Guid="8128b5af-1ec2-447d-b73f-b7647c2b61f5" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="2/3/17 8:25:27 AM" CreatedBy="dishav" Guid="5e1ddcfc-c4e6-48ff-92b2-39b8370435a3" LastUpdate="1/1/01 12:00:00 AM" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\Documents\Power Builder\TestAplication\pb_test_app.exe" Value="~\Documents\Power Builder\TestAplication\pb_test_app.exe" Version="0" />
+<GingerCore.Actions.ActInputValue Created="2/3/17 8:25:27 AM" CreatedBy="dishav" Guid="d6836a77-0cc5-4338-a840-a47c2ae6e609" LastUpdate="1/1/01 12:00:00 AM" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActFileOperations>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/7/17 7:31:16 AM" CreatedBy="sandesba" Description="Init-Switch Window - Simple Page" EnableRetryMechanism="False" Guid="a39aca44-7b1e-4727-a7e1-0d3ae7b1c436" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 8:26:09 AM" CreatedBy="sandesba" Guid="dc47d573-3a2d-4fd8-8022-a54b4b57d197" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/7/17 7:31:23 AM" CreatedBy="sandesba" Description="Init-Click Button Maximize" EnableRetryMechanism="False" Guid="48cd0f9d-a899-4091-be76-290c199c960f" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Maximize" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:31:31 AM" CreatedBy="sandesba" Guid="928c14e4-c9c9-4c99-8640-63ba188bf6da" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Window Action-Testing" AutomationStatus="Development" Created="9/7/17 7:22:09 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="139eaf7a-dd72-4398-beef-5ccb915e65e4" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActWindow Active="True" ConfigOutputDS="False" Created="9/7/17 7:23:09 AM" CreatedBy="sandesba" Description="Window Action-Testing" EnableRetryMechanism="False" ExternalID="" Guid="0940cc2e-761d-4824-b3fb-6b42d387d46e" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="da68d2fb-5af1-472c-a4e0-badbde041cb8" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 7:25:17 AM" CreatedBy="sandesba" Guid="433ca94c-0554-4701-9313-b15a6330f8a3" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActWindow>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Power Builder Control Action-Testing" AutomationStatus="Development" Created="9/7/17 4:26:41 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="48d57f9f-8dee-4643-8968-f4e1eedf5419" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/7/17 4:28:18 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Switch Window-Init" EnableRetryMechanism="False" Guid="10ae2965-f78f-447b-8ff0-9e4b6f019284" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/8/17 1:18:30 PM" CreatedBy="sandesba" Guid="18c9bf44-50a3-483e-b7d7-6640e5f13ae1" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/7/17 4:28:47 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Click-Testing" EnableRetryMechanism="False" ExternalID="" Guid="a0ac7805-56e5-41f4-97a9-25fbe03bfff4" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/cb_acc_command" MaxNumberOfRetries="2" ParentGuid="0d06abd1-9018-4ed9-8f14-a09f9eaea755" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:28:50 AM" CreatedBy="sandesba" Guid="f59ce067-9186-40f1-b625-20ec756f876b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsExist" Created="9/7/17 4:30:41 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Click-Validate" EnableRetryMechanism="False" ExternalID="" Guid="5af61627-6666-409f-9cda-823d1bc284b3" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="b853b805-6b73-4aaa-b6ee-fe59432023d4" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:30:43 AM" CreatedBy="sandesba" Guid="e04aee3e-8496-40cf-86e4-c06e99b44355" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:31:09 AM" CreatedBy="sandesba" Guid="1e935189-7963-4789-87d4-154ff13ed5f7" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/7/17 4:28:47 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Click-Cleanup" EnableRetryMechanism="False" ExternalID="" Guid="b31e0370-0eaa-451c-aea5-66d51749e3c4" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="3fbb3851-3eb6-4862-8a83-588282bcc8ef" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:28:50 AM" CreatedBy="sandesba" Guid="f59ce067-9186-40f1-b625-20ec756f876b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="ClickXY" Created="9/7/17 4:28:47 AM" CreatedBy="sandesba" Description="Power Builder Control Action-ClickXY-Testing" EnableRetryMechanism="False" ExternalID="" Guid="78acadfb-5e92-41e0-9795-a75c0d488f4e" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/cb_acc_command" MaxNumberOfRetries="2" ParentGuid="bf562f45-89d0-4c76-a4cc-5acc1e7b691e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:28:50 AM" CreatedBy="sandesba" Guid="f59ce067-9186-40f1-b625-20ec756f876b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2,2" Value="2,2" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsExist" Created="9/7/17 4:30:41 AM" CreatedBy="sandesba" Description="Power Builder Control Action-ClickXY-Validate" EnableRetryMechanism="False" ExternalID="" Guid="b446b168-7dd4-4457-ae24-543893c8fdb5" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="b2d35752-2b78-4d3f-aa37-49b4a6009c7f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:30:43 AM" CreatedBy="sandesba" Guid="e04aee3e-8496-40cf-86e4-c06e99b44355" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:31:09 AM" CreatedBy="sandesba" Guid="1e935189-7963-4789-87d4-154ff13ed5f7" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/7/17 4:28:47 AM" CreatedBy="sandesba" Description="Power Builder Control Action-ClickXY-Cleanup" EnableRetryMechanism="False" ExternalID="" Guid="88026c91-b9d8-4b50-8d02-5d553ee58f64" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="d9cb15a8-5efd-4457-83c4-968499128059" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:28:50 AM" CreatedBy="sandesba" Guid="f59ce067-9186-40f1-b625-20ec756f876b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="DoubleClick" Created="9/7/17 4:28:47 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Double Click-Testing" EnableRetryMechanism="False" ExternalID="" Guid="2fb7b781-0c31-4c37-8b1a-05c0950466e2" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/cb_acc_command" MaxNumberOfRetries="2" ParentGuid="8986ccf7-0304-4bc2-a0d9-58fab94b92ac" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:28:50 AM" CreatedBy="sandesba" Guid="f59ce067-9186-40f1-b625-20ec756f876b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsExist" Created="9/7/17 4:30:41 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Double Click-Validate" EnableRetryMechanism="False" ExternalID="" Guid="fb1d9e01-a4d8-4dcd-a386-591c363e6b3a" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="MsgBox Test" MaxNumberOfRetries="2" ParentGuid="daed9e39-3336-46a1-bd62-bda18328a2d6" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:30:43 AM" CreatedBy="sandesba" Guid="e04aee3e-8496-40cf-86e4-c06e99b44355" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:31:09 AM" CreatedBy="sandesba" Guid="1e935189-7963-4789-87d4-154ff13ed5f7" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/7/17 4:28:47 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Double Click-Cleanup" EnableRetryMechanism="False" ExternalID="" Guid="ade65f78-f689-4e2b-88a9-14ad1f52f616" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="OK" MaxNumberOfRetries="2" ParentGuid="c77fed36-a17f-4f3c-98a4-76a7e7490b55" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:28:50 AM" CreatedBy="sandesba" Guid="f59ce067-9186-40f1-b625-20ec756f876b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetFieldValue" Created="9/7/17 4:50:38 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetFieldValue-Testing" EnableRetryMechanism="False" ExternalID="" Guid="c3f13dc9-f75c-4ce8-bad4-c646b6479d21" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="lb_acc_language" MaxNumberOfRetries="2" ParentGuid="79fe6460-8034-4457-8a83-b74ac9643880" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:50:40 AM" CreatedBy="sandesba" Guid="c7b0c3d1-e649-4161-8635-ed009088a8d2" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="English" Value="English" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 5:50:30 AM" CreatedBy="sandesba" Guid="bf619518-28f8-4492-8038-2803ddf8e6e0" LastUpdate="1/1/01 12:00:00 AM" mExpected="French" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Select" Created="9/7/17 5:54:07 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetSelected-Init" EnableRetryMechanism="False" Guid="e13e0e42-b0c0-4ff6-92c7-b9c38342dc50" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="French" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:54:14 AM" CreatedBy="sandesba" Guid="cf045752-a161-4cc8-a608-29b5478b3a2d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetSelected" Created="9/7/17 5:51:04 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetSelected-Testing" EnableRetryMechanism="False" ExternalID="" Guid="70d53623-2c52-4458-a208-77d36fd1d920" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="lb_acc_language" MaxNumberOfRetries="2" ParentGuid="0b116220-e513-45c2-9bbd-b1f7de922e8f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:51:06 AM" CreatedBy="sandesba" Guid="1a15ed71-da65-4a19-89f5-7e99d268d94a" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 5:52:44 AM" CreatedBy="sandesba" Guid="3697a1c3-da3d-4884-9ec7-c5765ed84c14" LastUpdate="1/1/01 12:00:00 AM" mExpected="French" Param="Selected Item" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetTitle" Created="9/7/17 5:54:55 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Get Title-Testing" EnableRetryMechanism="False" ExternalID="" Guid="6379f754-fa89-4118-a280-605c14b38ef0" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/st_acc_label" MaxNumberOfRetries="2" ParentGuid="e426c6d4-c3c3-40de-aebb-e2ba419dc330" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:54:57 AM" CreatedBy="sandesba" Guid="58e42d89-7003-4787-8ca5-1f2c360376a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 5:55:44 AM" CreatedBy="sandesba" Guid="bb4874b7-9f1f-498d-83bd-9d064acedca7" LastUpdate="1/1/01 12:00:00 AM" mExpected="st_acc_label" Param="Dialog Title" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="SetValue" Created="9/7/17 5:56:17 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Get Value-Init" EnableRetryMechanism="False" ExternalID="" Guid="148647e6-ad38-47d2-aa40-013e65bacf76" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/sle_acc_text" MaxNumberOfRetries="2" ParentGuid="e48f24c3-39cc-4cc5-a67c-1e64d9c9bc45" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:56:19 AM" CreatedBy="sandesba" Guid="849d9951-671c-4bbf-93c7-cafdcc8835c6" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetValue" Created="9/7/17 5:57:29 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Get Value-Testing" EnableRetryMechanism="False" ExternalID="" Guid="f7442fe0-5341-4b8d-aad6-98b694af8311" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/sle_acc_text" MaxNumberOfRetries="2" ParentGuid="b82d5f2b-f662-4ae5-894d-4115a77174ac" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:57:30 AM" CreatedBy="sandesba" Guid="8477b64a-8e77-4f4d-88c5-927c33c63820" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 5:57:41 AM" CreatedBy="sandesba" Guid="2c449e40-c216-4ad3-8eb6-bcf2c8f2214c" LastUpdate="1/1/01 12:00:00 AM" mExpected="Ginger" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsExist" Created="9/7/17 5:58:57 AM" CreatedBy="sandesba" Description="Power Builder Control Action-IsExist-Testing" EnableRetryMechanism="False" ExternalID="" Guid="3e4e6536-d151-41fa-9b5d-20e827485a28" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Tabbed" MaxNumberOfRetries="2" ParentGuid="e904614e-f30c-44c9-bd93-8da3ac1eb0b4" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:58:59 AM" CreatedBy="sandesba" Guid="59d2fd38-09f0-4239-985a-2bab718c8471" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 5:59:26 AM" CreatedBy="sandesba" Guid="9431e745-e651-4828-b681-435eaf8fb6b5" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsEnabled" Created="9/7/17 5:58:04 AM" CreatedBy="sandesba" Description="Power Builder Control Action-IsEnable-Testing" EnableRetryMechanism="False" ExternalID="" Guid="4bba1c82-eaa5-4597-98ed-dfa7a5a24694" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="4f5c1401-c22e-42b4-8df3-9a1226419664" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:58:07 AM" CreatedBy="sandesba" Guid="1e07fb12-170a-4adb-ac1e-e9bd0af529de" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 5:58:38 AM" CreatedBy="sandesba" Guid="ba3b120f-106e-4961-8eb7-dfc75641d76f" LastUpdate="1/1/01 12:00:00 AM" mExpected="true" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Select" Created="9/7/17 5:54:07 AM" CreatedBy="sandesba" Description="Power Builder Control Action-IsSelected-Init" EnableRetryMechanism="False" ExternalID="" Guid="b5202a66-7e95-44e2-8324-996db770bba7" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="French" MaxNumberOfRetries="2" ParentGuid="7d9e6158-674e-4b47-861e-8ff467c08c7b" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 5:54:14 AM" CreatedBy="sandesba" Guid="cf045752-a161-4cc8-a608-29b5478b3a2d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsSelected" Created="9/7/17 6:00:03 AM" CreatedBy="sandesba" Description="Power Builder Control Action-IsSelected-Testing" EnableRetryMechanism="False" ExternalID="" Guid="a231ceec-6d11-4a33-83bc-cffc6b7ee01d" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="French" MaxNumberOfRetries="2" ParentGuid="652f06d7-3962-4dff-b5eb-2b439481e29a" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:00:05 AM" CreatedBy="sandesba" Guid="3d788f29-3a13-400f-b903-996b108b39d8" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 6:01:21 AM" CreatedBy="sandesba" Guid="78cd8c3c-6871-4755-82de-e2e5234161cb" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="RightClick" Created="9/7/17 6:01:49 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Right Click-Testing" EnableRetryMechanism="False" ExternalID="" Guid="dab31739-bc75-41bf-96bd-257b62f5f51d" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="579d4028-2393-47ee-a520-c2675b060cf0" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:01:50 AM" CreatedBy="sandesba" Guid="cec7bb6a-fd09-47aa-bd4f-c7f5c59129cd" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetSelected" Created="9/7/17 6:00:03 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Right Click-Validate" EnableRetryMechanism="False" ExternalID="" Guid="8fc4cab6-12e7-4628-9d97-c07a57deb61a" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="2fb7df7e-cf81-442a-b41d-09312e99b76c" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:00:05 AM" CreatedBy="sandesba" Guid="3d788f29-3a13-400f-b903-996b108b39d8" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Select" Created="9/7/17 6:11:03 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Select-Testing" EnableRetryMechanism="False" ExternalID="" Guid="eed88efd-9692-423a-96eb-92ed8d74fac6" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Hindi" MaxNumberOfRetries="2" ParentGuid="9cebc753-72d2-4e22-9440-fb40fb83238f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:11:04 AM" CreatedBy="sandesba" Guid="71623e43-2957-45fc-86ab-45f0f7e77d74" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Hindi" Value="Hindi" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetSelected" Created="9/7/17 6:14:59 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Select-Validate" EnableRetryMechanism="False" ExternalID="" Guid="4b4ae6da-ec14-4b21-8036-915322094552" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="lb_acc_language" MaxNumberOfRetries="2" ParentGuid="efa45430-f5ce-4c64-8235-4766e342a23f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:15:01 AM" CreatedBy="sandesba" Guid="dc82642f-8dc2-4484-b63f-183157331a40" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 6:20:10 AM" CreatedBy="sandesba" Guid="ef912925-3e8e-484f-a5a3-3e52b7b91a06" LastUpdate="1/1/01 12:00:00 AM" mExpected="Hindi" Param="Selected Item" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="SendKeys" Created="9/7/17 6:21:29 AM" CreatedBy="sandesba" Description="Power Builder Control Action-SendKeys-Testing" EnableRetryMechanism="False" ExternalID="" Guid="5932103f-f5a4-4adf-8dbb-a4bcfb6f95b3" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/mle_acc_notes" MaxNumberOfRetries="2" ParentGuid="ea85cc47-9fd4-4427-9018-acc2b6d8500e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:21:32 AM" CreatedBy="sandesba" Guid="d6aa3c19-c843-4b40-91e2-a9c2675b74bd" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetValue" Created="9/7/17 6:26:24 AM" CreatedBy="sandesba" Description="Power Builder Control Action-SendKeys-Validate" EnableRetryMechanism="False" ExternalID="" Guid="f41e1d53-c0d0-4a51-a200-e2eb9a47753b" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/mle_acc_notes" MaxNumberOfRetries="2" ParentGuid="905b436c-1475-45a5-ad13-671f7f020216" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:26:25 AM" CreatedBy="sandesba" Guid="6ced3103-b037-435b-aa8a-71cd723c20e5" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 6:26:37 AM" CreatedBy="sandesba" Guid="fe8ee499-8ae2-467d-91aa-b4613b6d6e11" LastUpdate="1/1/01 12:00:00 AM" mExpected="Gingernotes" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="SetValue" Created="9/7/17 6:26:57 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Set Value-Testing" EnableRetryMechanism="False" ExternalID="" Guid="b8c45a95-e498-4425-8ce2-f27bd9a4ddb7" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="edit (1012)" MaxNumberOfRetries="2" ParentGuid="5483749c-5543-4f9f-9ee6-58029dcd9ebf" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:27:00 AM" CreatedBy="sandesba" Guid="e39e647e-9485-4563-82eb-7da69082952d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Welcome" Value="Welcome" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetValue" Created="9/7/17 6:28:08 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Set Value-Validate" EnableRetryMechanism="False" ExternalID="" Guid="d2a345ed-4d92-457b-9a2b-f6bb46eeb876" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="edit (1012)" MaxNumberOfRetries="2" ParentGuid="90bf65d8-f588-4504-8d1e-0163057a09a0" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:28:09 AM" CreatedBy="sandesba" Guid="a548d2ab-23db-46cf-93fd-01a9691e7e4d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 6:28:42 AM" CreatedBy="sandesba" Guid="646a965f-68ae-48fb-ae52-ad93558a7036" LastUpdate="1/1/01 12:00:00 AM" mExpected="Welcome" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Toggle" Created="9/7/17 6:29:34 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Toggle-Testing" EnableRetryMechanism="False" ExternalID="" Guid="19f9ce72-9de3-446f-8f6a-281c9db421e5" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByXPath" LocateValue="/cbx_acc_check" MaxNumberOfRetries="2" ParentGuid="52dcb200-622d-419f-95bc-6205b623f466" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:29:36 AM" CreatedBy="sandesba" Guid="5f0ab56a-7c8f-496b-82cc-d244970ab95d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetValue" Created="9/7/17 6:31:16 AM" CreatedBy="sandesba" Description="Power Builder Control Action-Toggle-Validate" EnableRetryMechanism="False" Guid="7a0d5249-52f3-4c76-8c87-10e52689ba69" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Works in Amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 6:31:16 AM" CreatedBy="sandesba" Guid="6ab03a91-41ee-45a6-abf0-405d3dd6bc57" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Checked" Value="Checked" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 6:31:48 AM" CreatedBy="sandesba" Guid="ad55858b-e2b6-4b7f-953a-99f5796d4cca" LastUpdate="1/1/01 12:00:00 AM" mExpected="Checked" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-IsOffScreen-Testing-Validation" EnableRetryMechanism="False" Guid="3a3a2d8c-f678-48b6-8399-1539f3b0468b" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsOffScreen" Value="IsOffScreen" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-Name-Testing-Validation" EnableRetryMechanism="False" ExternalID="" Guid="313e2338-11ae-4135-9461-590a9c2479d4" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="0ad9e7ee-695a-4db4-912a-a07683e67e0f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Name" Value="Name" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="Spanish" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-AutomationId-Testing" EnableRetryMechanism="False" ExternalID="" Guid="8a2d32af-fbd0-4027-b901-e31c13cd0774" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="8ce20caf-df14-4262-ae95-94d7de5f69eb" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="AutomationId" Value="AutomationId" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-ClassName-Testing" EnableRetryMechanism="False" ExternalID="" Guid="c2e8e830-7866-4048-b818-75e88e1d2dfd" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="f3e2d1f0-1b9d-4e6e-82aa-ed91b2e61bba" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ClassName" Value="ClassName" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-LocalizedControlType-Testing-Validation" EnableRetryMechanism="False" ExternalID="" Guid="f1b1d4c9-0eaf-4534-87d9-87f26dc795c0" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="e24d1524-7b60-49d8-a6eb-0b0891a13231" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="LocalizedControlType" Value="LocalizedControlType" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="list item" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-IsPassword-Testing-Validation" EnableRetryMechanism="False" ExternalID="" Guid="f27ffc29-31ec-4010-ba7f-2f7794b342d9" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="de5e17b7-ca6e-4556-9e55-e7ee3acc4eb1" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsPassword" Value="IsPassword" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="False" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-ProcessId-Testing" EnableRetryMechanism="False" ExternalID="" Guid="febffac6-cdce-4b7a-ae3c-bc30b5219edf" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="0f7097c0-24aa-4acd-83d0-b48bebf3314a" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ProcessId" Value="ProcessId" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-IsEnabled-Testing-Validation" EnableRetryMechanism="False" ExternalID="" Guid="cebb4035-0705-4e67-ba97-1499fba6c277" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="b72fdc32-aa2f-475c-9fc4-9bb5dce739f5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsEnabled" Value="IsEnabled" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-IsKeyboardFocusable-Testing" EnableRetryMechanism="False" ExternalID="" Guid="ac2cfe08-35d4-484b-9291-d7300e777695" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="02b40abd-a799-4bf4-8ef7-ca7ced505fe9" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsKeyboardFocusable" Value="IsKeyboardFocusable" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-XOffset-Testing" EnableRetryMechanism="False" ExternalID="" Guid="573aabdf-e9ad-4609-aa80-6c5ae82d69e9" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="fd67fc6a-0dba-4df1-89ca-8bf3989fb0e8" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="XOffset" Value="XOffset" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-YOffset-Testing" EnableRetryMechanism="False" ExternalID="" Guid="c17e14da-ceab-4940-b3df-fddedcc58909" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="615f248d-bff4-4719-8010-ceea3cd56939" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="YOffset" Value="YOffset" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-NativeWindowHandle-Testing" EnableRetryMechanism="False" ExternalID="" Guid="86f7ebd5-413e-44fd-9a4f-0a8a357a7293" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="571c4fb4-c168-4b72-841f-4bc446957e9b" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NativeWindowHandle" Value="NativeWindowHandle" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-ToggleState-Testing-Validation" EnableRetryMechanism="False" ExternalID="" Guid="05c56d44-d11b-47cb-9f61-9703d91a146a" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Illinois Resident" MaxNumberOfRetries="2" ParentGuid="044c2b10-6bf2-4107-bf8e-4e6ec03c7ad2" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ToggleState" Value="ToggleState" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="Off" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-IsSelected-Testing" EnableRetryMechanism="False" ExternalID="" Guid="b85b00da-8a01-4d28-8c93-2afb554d7079" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="e3c1dbc6-703c-4fd1-8964-46d49a11c0dd" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="IsSelected" Value="IsSelected" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="False" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-Text-Testing" EnableRetryMechanism="False" ExternalID="" Guid="35f4a730-8dfb-4918-bc5c-c0cba5db9025" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="60691074-02c6-46d0-8792-c6beae1de9c6" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Text" Value="Text" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="GetControlProperty" Created="9/7/17 4:48:21 AM" CreatedBy="sandesba" Description="Power Builder Control Action-GetControlProperty-XPATH-Testing" EnableRetryMechanism="False" ExternalID="" Guid="983dd697-8d51-4c4f-826d-9958b086f6fe" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Spanish" MaxNumberOfRetries="2" ParentGuid="7656a655-b86d-42de-b371-b370128a868e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:48:28 AM" CreatedBy="sandesba" Guid="148f6f0f-e0bd-4ed9-87e3-eec2f8c015a4" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="XPATH" Value="XPATH" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:48:47 AM" CreatedBy="sandesba" Guid="a3cb0ef8-57a0-4f28-a4ed-7f41728d8e65" LastUpdate="1/1/01 12:00:00 AM" mExpected="/lb_acc_language/Spanish" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Screenshot Action-Testing" AutomationStatus="Development" Created="9/7/17 6:34:16 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="4f9b9ace-460b-4a76-820b-7e0cc85f81b1" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="1/30/17 1:05:42 PM" CreatedBy="dishav" Description="ScreenShotAction-Init" EnableRetryMechanism="False" ExternalID="" Guid="560e8d98-4a82-4804-bd28-fe96c9b20faf" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="0" ParentGuid="1077555c-7862-4f11-b155-99e9f0f0dc28" Platform="NA" RetryMechanismInterval="0" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="2/9/17 10:18:41 AM" CreatedBy="dishav" Guid="a8bbf853-d440-45e2-9e04-70349e281253" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActScreenShot Active="True" ConfigOutputDS="False" Created="1/25/17 1:46:38 PM" CreatedBy="dishav" Description="ScreenShotAction-Testing" EnableRetryMechanism="False" ExternalID="" Guid="66babc0c-982a-4630-8ea8-3ff320b761ea" LastUpdate="1/1/01 12:00:00 AM" LocateBy="NA" MaxNumberOfRetries="0" ParentGuid="52bc397c-38d7-4e3d-9e5e-f6693f1e12de" Platform="NA" RetryMechanismInterval="0" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="3" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="1/25/17 1:46:40 PM" CreatedBy="dishav" Guid="d1758f4f-3464-4ad4-b94d-e34a8856a703" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="1/25/17 1:46:40 PM" CreatedBy="dishav" Guid="ea98a57e-ccf0-4aac-9075-26b6f8a6ffa9" LastUpdate="1/1/01 12:00:00 AM" Param="SaveToFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" Value="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActScreenShot>
+<GingerCore.Actions.ActScript Active="True" ConfigOutputDS="False" Created="2/2/17 1:08:40 PM" CreatedBy="dishav" Description="ScreenShotAction-Validation" EnableRetryMechanism="False" ExternalID="" Guid="4668a440-1739-4da8-acb1-99e6caf4c7ca" LastUpdate="1/1/01 12:00:00 AM" LocateBy="NA" MaxNumberOfRetries="0" ParentGuid="1201b0ee-f596-4398-b5fd-03885548c44c" Platform="NA" RetryMechanismInterval="0" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="Only_Active_Window_Script_pb.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 12:28:59 PM" CreatedBy="sandesba" Guid="f0c2b6f9-7a0c-487c-b088-f34cc926ebf6" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActScript>
+<GingerCore.Actions.ActScreenShot Active="True" ConfigOutputDS="False" Created="1/25/17 1:46:38 PM" CreatedBy="dishav" Description="ScreenShotAction-Testing" EnableRetryMechanism="False" ExternalID="" Guid="1a88ca5d-bcbb-40f5-8781-8004aeead5cb" LastUpdate="1/1/01 12:00:00 AM" LocateBy="NA" MaxNumberOfRetries="0" ParentGuid="e3ae1e13-1892-47d7-9e75-1ef124e8a62c" Platform="NA" RetryMechanismInterval="0" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WindowsToCapture="AllAvailableWindows">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="1/25/17 1:46:40 PM" CreatedBy="dishav" Guid="d1758f4f-3464-4ad4-b94d-e34a8856a703" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="1/25/17 1:46:40 PM" CreatedBy="dishav" Guid="ea98a57e-ccf0-4aac-9075-26b6f8a6ffa9" LastUpdate="1/1/01 12:00:00 AM" Param="SaveToFileName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" Value="~\DOCUMENTS\POWER BUILDER\GINGER_SCREENSHOTS" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActScreenShot>
+<GingerCore.Actions.ActScript Active="True" ConfigOutputDS="False" Created="2/2/17 1:04:20 PM" CreatedBy="dishav" Description="ScreenShotAction-Validation" EnableRetryMechanism="False" ExternalID="" Guid="41e59475-8c20-4aae-8958-486a62c9958b" LastUpdate="1/1/01 12:00:00 AM" LocateBy="NA" MaxNumberOfRetries="0" ParentGuid="591472f0-b7ee-4113-a701-4a7d4f21a9a6" Platform="NA" RetryMechanismInterval="0" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="All_Available_Windows_Script.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 12:29:35 PM" CreatedBy="sandesba" Guid="9e404798-f17e-4a32-88a3-689440234f28" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActScript>
+<GingerCore.Actions.ActScript Active="True" ConfigOutputDS="False" Created="2/3/17 2:13:57 PM" CreatedBy="dishav" Description="ScreenShotAction-Cleanup" EnableRetryMechanism="False" ExternalID="" Guid="b2ea5e44-c83e-47dd-bd71-3ac6ab1776bd" LastUpdate="1/1/01 12:00:00 AM" LocateBy="NA" MaxNumberOfRetries="0" ParentGuid="713b6ac9-5679-4ba3-bb65-b36ed02a2e60" Platform="NA" RetryMechanismInterval="0" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="Delete_All_Screenshots_pb.vbs" ScriptPath="C:\GingerSourceControl\Solutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 12:29:47 PM" CreatedBy="sandesba" Guid="da8bb54b-e44c-474a-ad68-7b73aa595bea" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActScript>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="SmartSync Action-Testing" AutomationStatus="Development" Created="9/7/17 7:05:09 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="3b273395-0b75-4b82-9bda-02a5f4c687a5" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/7/17 7:05:45 AM" CreatedBy="sandesba" Description="SmartSyncAction-Switch Window-Init" EnableRetryMechanism="False" Guid="432c1e71-8ce3-4d17-a0d3-e861973a966b" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:13:19 AM" CreatedBy="sandesba" Guid="a6c17652-6a33-4e27-a71f-d572edebfedf" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActSmartSync Active="True" ConfigOutputDS="False" Created="1/30/17 8:37:14 AM" CreatedBy="dishav" Description="SmartSyncAction-WaitUntilDisplay-Testing" EnableRetryMechanism="False" ExternalID="" Guid="a4862446-bb1d-4466-b4b4-b7a242514c4c" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="0" ParentGuid="53dda564-7199-4e37-b77c-4b55d7b4d286" Platform="NA" RetryMechanismInterval="0" SmartSyncAction="WaitUntilDisplay" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="1/30/17 8:37:16 AM" CreatedBy="dishav" Guid="a62720df-5449-49a3-acf0-cdbf5e7c2e77" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSmartSync>
+<GingerCore.Actions.ActSmartSync Active="True" ConfigOutputDS="False" Created="1/30/17 8:37:14 AM" CreatedBy="dishav" Description="Smart Sync Action-WaitUntilDisplay (Negative Test)-Testing" EnableRetryMechanism="False" ExternalID="" Guid="0c92005a-3baa-4152-921a-58bf20bf6868" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="50" MaxNumberOfRetries="0" ParentGuid="ac143599-4d57-4477-9d1f-8af1b48d9a2e" Platform="NA" RetryMechanismInterval="0" SmartSyncAction="WaitUntilDisplay" StatusConverter="InvertStatus" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="1/30/17 8:37:16 AM" CreatedBy="dishav" Guid="a62720df-5449-49a3-acf0-cdbf5e7c2e77" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSmartSync>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Switch Window Action-Testing" AutomationStatus="Development" Created="9/7/17 7:10:19 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="bc3a5992-7870-4a9f-aebb-d423da026669" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/7/17 7:10:38 AM" CreatedBy="sandesba" Description="Switch Window Action-Init" EnableRetryMechanism="False" ExternalID="" Guid="25f42032-8dfb-4f7a-9d0e-5ff8fdf7176d" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="7338e409-6409-4bd1-8e6a-ff7e5c3e300f" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="True" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:10:59 AM" CreatedBy="sandesba" Guid="2d342314-8a88-47a5-9b11-b8f9d4edce29" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="IsExist" Created="9/7/17 7:11:44 AM" CreatedBy="sandesba" Description="Switch Window Action-IsExist-Validate" EnableRetryMechanism="False" Guid="f32423eb-16be-4057-9560-c5a7c6a226af" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Click Me" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:11:52 AM" CreatedBy="sandesba" Guid="2ff76915-6ec9-4b2d-b390-70749b0996c5" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 7:11:57 AM" CreatedBy="sandesba" Guid="000153d7-9e69-404b-a959-0af7a61770fa" LastUpdate="1/1/01 12:00:00 AM" mExpected="True" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Table element Action-Testing" AutomationStatus="Development" Created="9/7/17 7:13:57 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="ed9636e3-09a9-44dd-859d-9a931e026b40" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/7/17 7:14:38 AM" CreatedBy="sandesba" Description="Table Element Action-Switch window-Init" EnableRetryMechanism="False" Guid="cca73767-a8b5-4053-9bca-21967d4fa966" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:14:52 AM" CreatedBy="sandesba" Guid="007772b1-f574-4ba9-afac-762fcbe71df6" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActTableElement Active="True" ByRandRow="False" ByRowNum="False" BySelectedRow="False" ByWhere="True" ColSelectorValue="ColTitle" ConfigOutputDS="False" ControlAction="GetValue" Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Description="Table Element Action-Get Value-Testing" EnableRetryMechanism="False" Guid="fd23ae3a-9177-42b2-87f7-91cb3e0ea880" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" LastUpdate="1/1/01 12:00:00 AM" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="189edb7a-f8b8-478e-8613-c554701257da" LastUpdate="1/1/01 12:00:00 AM" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="188aa5a5-8e59-4114-8556-501118530ed2" LastUpdate="1/1/01 12:00:00 AM" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Yaron" Value="Yaron" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:42 AM" CreatedBy="sandesba" Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 7:16:47 AM" CreatedBy="sandesba" Guid="b4786a4f-4173-4bfd-afb6-653c15587517" LastUpdate="1/1/01 12:00:00 AM" mExpected="2109 Fox Dr, Champaign IL " Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActTableElement>
+<GingerCore.Actions.ActTableElement Active="True" ByRandRow="False" ByRowNum="False" BySelectedRow="False" ByWhere="True" ColSelectorValue="ColTitle" ConfigOutputDS="False" ControlAction="SetValue" Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Description="Table Element ActionValue-Set Value-Testing" EnableRetryMechanism="False" ExternalID="" Guid="fe1f0770-6ab4-4782-903e-a77afdbbda0b" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="d18dd136-0e8b-4e21-97ae-fc050d70bc78" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" LastUpdate="1/1/01 12:00:00 AM" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="189edb7a-f8b8-478e-8613-c554701257da" LastUpdate="1/1/01 12:00:00 AM" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="188aa5a5-8e59-4114-8556-501118530ed2" LastUpdate="1/1/01 12:00:00 AM" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ravi" Value="Ravi" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:42 AM" CreatedBy="sandesba" Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Pune" Value="Pune" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActTableElement>
+<GingerCore.Actions.ActTableElement Active="True" ByRandRow="False" ByRowNum="False" BySelectedRow="False" ByWhere="True" ColSelectorValue="ColTitle" ConfigOutputDS="False" ControlAction="GetValue" Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Description="Table Element Action-Set Value-Validate" EnableRetryMechanism="False" ExternalID="" Guid="78068aed-2bc6-4954-af4f-d976ec65ea41" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateColTitle="address" LocateValue="none" MaxNumberOfRetries="2" ParentGuid="cda72f31-97d8-41b0-a032-72c777cdbc8e" Platform="NA" RetryMechanismInterval="5" RunActionOn="OnColNameWhereColName" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WhereColSelector="ColTitle" WhereColumnTitle="name" WhereOperator="Equals" WhereProperty="Value" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="ea332447-6709-4e00-8f5c-d9ab0fc5fc2c" LastUpdate="1/1/01 12:00:00 AM" Param="LocateRowType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Where" Value="Where" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="189edb7a-f8b8-478e-8613-c554701257da" LastUpdate="1/1/01 12:00:00 AM" Param="LocateRowValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:38 AM" CreatedBy="sandesba" Guid="188aa5a5-8e59-4114-8556-501118530ed2" LastUpdate="1/1/01 12:00:00 AM" Param="WhereColumnValue" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ravi" Value="Ravi" Version="0" />
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:16:42 AM" CreatedBy="sandesba" Guid="d18649e7-4c8f-45ec-8425-c2b5625956a8" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 7:16:47 AM" CreatedBy="sandesba" Guid="b4786a4f-4173-4bfd-afb6-653c15587517" LastUpdate="1/1/01 12:00:00 AM" mExpected="Pune" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActTableElement>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Browser Action-Testing" AutomationStatus="Development" Created="9/6/17 12:08:51 PM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="0427ae95-57e0-475a-9ad1-9958e6a2d89e" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/6/17 12:15:36 PM" CreatedBy="sandesba" Description="Browser Action-Switch Window - Simple Page -Init" EnableRetryMechanism="False" Guid="c4211089-c289-49c8-b853-04b75bd9c97e" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:23:25 PM" CreatedBy="sandesba" Guid="f06a97aa-5a03-4dfe-b4a8-18ba6f38fefc" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/6/17 12:13:47 PM" CreatedBy="sandesba" Description="Browser Action-Click Button Launch Widget Window-Init" EnableRetryMechanism="False" Guid="a9a10e87-903d-44f1-9a60-35f44e60ab78" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Launch Widget Window" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:14:25 PM" CreatedBy="sandesba" Guid="a362e0ee-1580-4962-a96e-6ab6aef2e825" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/6/17 12:16:59 PM" CreatedBy="sandesba" Description="Browser Action-Switch Window - CSM Widgets Test Applicaiton -Init" EnableRetryMechanism="False" Guid="5da7778e-67dc-4c9d-9e32-8544bc1e0e86" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="7" WaitTime="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:17:03 PM" CreatedBy="sandesba" Guid="972ba5ec-5f0b-4d27-a87e-a1f52a4ae74e" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActBrowserElement Active="True" ConfigOutputDS="False" ControlAction="InitializeBrowser" Created="9/6/17 12:09:46 PM" CreatedBy="sandesba" Description="Browser Action-Initialize Browser-Testing" EnableRetryMechanism="False" ExternalID="" Guid="f60949a8-9140-44e5-aedf-5330c7b6f3a4" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByClassName" LocateValue="Internet Explorer_Server" MaxNumberOfRetries="2" ParentGuid="00c1d799-2549-471d-a801-98b8f7c3ef02" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:11:55 PM" CreatedBy="sandesba" Guid="031d9732-2dc4-4f8d-8614-d3fe7817ea00" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActBrowserElement>
+<GingerCore.Actions.ActGenElement Active="True" ConfigOutputDS="False" Created="9/7/17 4:23:02 AM" CreatedBy="sandesba" Description="Browser Action-Initialize Browser-Validate" EnableRetryMechanism="False" ExternalID="" GenElementAction="GetValue" Guid="8fe971d5-18f1-431d-ae2a-4a1ddf5587cf" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="btnK" MaxNumberOfRetries="2" ParentGuid="59cdf1a0-1e71-45cd-9198-264cfb70527a" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:23:12 AM" CreatedBy="sandesba" Guid="28274767-89a2-43e5-b1f9-2973c280af1d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="94224b52-93c4-44da-aaff-024d3908606b" LastUpdate="1/1/01 12:00:00 AM" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="61d5eec1-ffb4-476d-91d7-f6d0c171c983" LastUpdate="1/1/01 12:00:00 AM" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:23:15 AM" CreatedBy="sandesba" Guid="0fa0f054-6128-4f29-90df-4888759ecfca" LastUpdate="1/1/01 12:00:00 AM" mExpected="Google Search" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActGenElement>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/6/17 12:27:57 PM" CreatedBy="sandesba" Description="Browser Action-Initialize Browser-Cleanup" EnableRetryMechanism="False" Guid="80d0d519-c2c8-4d03-a693-264eae0397f8" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:28:05 PM" CreatedBy="sandesba" Guid="2f4b3a5e-9ad4-420d-b1b2-b1b9e310d62c" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Generic Element Action-Testing" AutomationStatus="Development" Created="9/8/17 1:05:30 PM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="c72960a4-a859-4622-9898-495234a833da" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/6/17 12:15:36 PM" CreatedBy="sandesba" Description="Generic Element Action-Switch Window-Init" EnableRetryMechanism="False" ExternalID="" Guid="dc55e735-6dbe-437d-887c-e27191d560fd" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="d725e4d4-2e7a-467c-9a57-807a23d6efed" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:23:25 PM" CreatedBy="sandesba" Guid="f06a97aa-5a03-4dfe-b4a8-18ba6f38fefc" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/6/17 12:13:47 PM" CreatedBy="sandesba" Description="Generic Element Action-Click Button Launch Widget Window-Init" EnableRetryMechanism="False" ExternalID="" Guid="4993379e-4268-4efb-b7d4-23d0f46e28b9" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Launch Widget Window" MaxNumberOfRetries="2" ParentGuid="47b6718c-c4cc-442c-bdd1-02195cba4d61" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:14:25 PM" CreatedBy="sandesba" Guid="a362e0ee-1580-4962-a96e-6ab6aef2e825" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/6/17 12:16:59 PM" CreatedBy="sandesba" Description="Generic Element Action-Switch Window - CSM Widgets Test Applicaiton -Init" EnableRetryMechanism="False" ExternalID="" Guid="a62f1e7b-31a8-41e0-afb6-12889624b807" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="CSM Widgets Test Applicaiton" MaxNumberOfRetries="2" ParentGuid="4c165969-5bef-4555-980b-13bccab8409d" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="10" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:17:03 PM" CreatedBy="sandesba" Guid="972ba5ec-5f0b-4d27-a87e-a1f52a4ae74e" LastUpdate="1/1/01 12:00:00 AM" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActBrowserElement Active="True" ConfigOutputDS="False" ControlAction="InitializeBrowser" Created="9/6/17 12:09:46 PM" CreatedBy="sandesba" Description="Generic Element Action-Initialize Browser-Testing" EnableRetryMechanism="False" ExternalID="" Guid="af4b394c-9b27-4e22-a1e0-48fff1829dcf" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByClassName" LocateValue="Internet Explorer_Server" MaxNumberOfRetries="2" ParentGuid="f63c2b6d-3a07-4c24-a01d-3dea53383e1d" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:11:55 PM" CreatedBy="sandesba" Guid="031d9732-2dc4-4f8d-8614-d3fe7817ea00" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActBrowserElement>
+<GingerCore.Actions.ActGenElement Active="True" ConfigOutputDS="False" Created="9/7/17 4:23:02 AM" CreatedBy="sandesba" Description="Generic Element Action-Initialize Browser-Validate" EnableRetryMechanism="False" ExternalID="" GenElementAction="GetValue" Guid="df31e5ab-d491-4a76-937d-8890a8d465f0" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="btnK" MaxNumberOfRetries="2" ParentGuid="89e3c5c0-ba09-4418-8b0d-015aa1ebc7cf" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 4:23:12 AM" CreatedBy="sandesba" Guid="28274767-89a2-43e5-b1f9-2973c280af1d" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="d8ffc7c8-6009-46f8-b30a-ef9f5e301f29" LastUpdate="1/1/01 12:00:00 AM" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="0716c6f0-dfda-4798-9178-f068f64c00a9" LastUpdate="1/1/01 12:00:00 AM" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 4:23:15 AM" CreatedBy="sandesba" Guid="0fa0f054-6128-4f29-90df-4888759ecfca" LastUpdate="1/1/01 12:00:00 AM" mExpected="Google Search" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActGenElement>
+<GingerCore.Actions.ActGenElement Active="True" ConfigOutputDS="False" Created="9/7/17 8:27:43 AM" CreatedBy="sandesba" Description="Generic Element Action-Set Value-Testing" EnableRetryMechanism="False" ExternalID="" GenElementAction="SetValue" Guid="4cea3ff8-632c-49aa-8060-44a531d9b4ef" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByID" LocateValue="lst-ib" MaxNumberOfRetries="2" ParentGuid="4c905281-1132-4969-82a8-11f8b8ae01a4" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 8:28:05 AM" CreatedBy="sandesba" Guid="572031a0-f878-4cd2-9c63-818af88eb8f0" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger Automation" Value="Ginger Automation" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="b248db21-de1c-4837-b7ca-929168473a8c" LastUpdate="1/1/01 12:00:00 AM" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="468dd922-2eb0-4721-b43b-d66d88ea581d" LastUpdate="1/1/01 12:00:00 AM" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActGenElement>
+<GingerCore.Actions.ActGenElement Active="True" ConfigOutputDS="False" Created="9/7/17 8:27:43 AM" CreatedBy="sandesba" Description="Generic Element Action-Set Value-Validate" EnableRetryMechanism="False" ExternalID="" GenElementAction="GetValue" Guid="33e2d57a-3ca1-403d-a0f7-98c6e5d04bad" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByID" LocateValue="lst-ib" MaxNumberOfRetries="2" ParentGuid="47606ad8-f2a9-400e-b105-37c7326a1f42" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 8:28:05 AM" CreatedBy="sandesba" Guid="572031a0-f878-4cd2-9c63-818af88eb8f0" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger Automation" Value="Ginger Automation" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="4264615c-bc81-44f6-a6bc-1135b1d2e3ef" LastUpdate="1/1/01 12:00:00 AM" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="17c5ab2f-93c1-4a47-9dd7-1200bce1dba7" LastUpdate="1/1/01 12:00:00 AM" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+</InputValues>
+
+<ReturnValues>
+<GingerCore.Actions.ActReturnValue Active="True" Created="9/7/17 8:28:57 AM" CreatedBy="sandesba" Guid="9aa5c980-e871-46a6-a686-23ef08017758" LastUpdate="1/1/01 12:00:00 AM" mExpected="Ginger Automation" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" StoreToValue="" Version="0" />
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActGenElement>
+<GingerCore.Actions.ActGenElement Active="True" ConfigOutputDS="False" Created="9/7/17 8:33:14 AM" CreatedBy="sandesba" Description="Generic Element Action-Click-Testing" EnableRetryMechanism="False" ExternalID="" GenElementAction="Click" Guid="e0bc75e2-72f8-454d-b961-8aeba00f7074" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByID" LocateValue="gb_23" MaxNumberOfRetries="2" ParentGuid="b524a340-ce30-4900-a18b-3c98611669c5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 8:33:26 AM" CreatedBy="sandesba" Guid="2d3f294c-3e43-4a82-9c48-68221086797f" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="f0d61231-a5b2-4f58-9da7-9ef638d05bc4" LastUpdate="1/1/01 12:00:00 AM" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="0a5e1fab-9804-445e-ab59-ed1dcfca2964" LastUpdate="1/1/01 12:00:00 AM" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActGenElement>
+<GingerCore.Actions.ActGenElement Active="True" ConfigOutputDS="False" Created="9/7/17 8:36:03 AM" CreatedBy="sandesba" Description="Generic Element Action-Click-Validate" EnableRetryMechanism="False" ExternalID="" GenElementAction="GetValue" Guid="b5abae90-ca51-459c-b016-a7eada87b691" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByID" LocateValue="next" MaxNumberOfRetries="2" ParentGuid="f727d33d-27f5-4a3a-91a3-f7da00ef4dc2" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="2" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 8:36:21 AM" CreatedBy="sandesba" Guid="a3b63898-7751-4ed4-84fa-969755b5bb90" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="30a43636-7e20-4e31-a699-ee0a71b63181" LastUpdate="1/1/01 12:00:00 AM" Param="Xoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+<GingerCore.Actions.ActInputValue Created="11/30/17 10:25:28 AM" CreatedBy="ankukhar" Guid="f6d71752-21f4-4a27-9d35-730d2adcc355" LastUpdate="1/1/01 12:00:00 AM" Param="Yoffset" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActGenElement>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/6/17 12:27:57 PM" CreatedBy="sandesba" Description="Generic Element Action-Click Button Close-Cleanup" EnableRetryMechanism="False" ExternalID="" Guid="78717580-ce5f-4c7a-9c4d-1d4f5d1c953d" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Close" MaxNumberOfRetries="2" ParentGuid="1b5dfc79-7d88-4a3f-8807-8ab3a8fcb7ec" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/6/17 12:28:05 PM" CreatedBy="sandesba" Guid="2f4b3a5e-9ad4-420d-b1b2-b1b9e310d62c" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+<GingerCore.Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Cleanup" AutomationStatus="Development" Created="9/7/17 7:31:43 AM" CreatedBy="sandesba" EnableActionsVariablesDependenciesControl="False" Guid="473ddc4c-8fdd-4a38-962c-f5d213e7ceb8" LastUpdate="1/1/01 12:00:00 AM" Mandatory="False" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="CSM-App" Version="0">
+<Acts>
+<GingerCore.Actions.ActSwitchWindow Active="True" ConfigOutputDS="False" Created="9/7/17 7:31:55 AM" CreatedBy="sandesba" Description="Switch Window - Simple Page" EnableRetryMechanism="False" Guid="b1e98271-be68-4416-9427-94b429fa604d" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByTitle" LocateValue="Simple Page" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WaitTime="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActSwitchWindow>
+<GingerCore.Actions.ActPBControl Active="True" ConfigOutputDS="False" ControlAction="Click" Created="9/7/17 7:32:01 AM" CreatedBy="sandesba" Description="Click Button Close" EnableRetryMechanism="False" Guid="eb031f43-692b-42a2-9472-d8ff211f97d7" LastUpdate="1/1/01 12:00:00 AM" LocateBy="ByName" LocateValue="Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" SupportSimulation="False" TakeScreenShot="False" Version="0" Wait="0" WindowsToCapture="OnlyActiveWindow">
+<DSOutputConfigParams>
+</DSOutputConfigParams>
+
+<FlowControls>
+</FlowControls>
+
+<InputValues>
+<GingerCore.Actions.ActInputValue Created="9/7/17 7:32:13 AM" CreatedBy="sandesba" Guid="d34b0b01-7e97-460a-9b9f-97c7b313cd3b" LastUpdate="1/1/01 12:00:00 AM" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="" Value="" Version="0" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+
+<Tags>
+</Tags>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Actions.ActPBControl>
+</Acts>
+
+<Tags>
+</Tags>
+
+<Variables>
+</Variables>
+
+<VariablesDependencies>
+</VariablesDependencies>
+</GingerCore.Activity>
+</Activities>
+
+<ActivitiesGroups>
+</ActivitiesGroups>
+
+<Tags>
+</Tags>
+
+<TargetApplications>
+<GingerCore.Platforms.TargetApplication AppName="CSM-App" Created="9/6/17 12:06:09 PM" CreatedBy="sandesba" Guid="9bbc3344-9fbb-40cc-8678-52b3a2692b9d" LastExecutingAgentName="PowerBuilder-Agent" LastUpdate="1/1/01 12:00:00 AM" ParentGuid="00000000-0000-0000-0000-000000000000" Version="0" />
+</TargetApplications>
+
+<Variables>
+</Variables>
+</GingerCore.BusinessFlow>

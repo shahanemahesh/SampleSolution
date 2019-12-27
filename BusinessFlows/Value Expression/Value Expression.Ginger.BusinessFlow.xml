@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="f3023878-c859-4047-8610-ae7d9d8ff89e" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901221140" GingerVersion="3.1.0.0" Version="230" LastUpdateBy="NATISHAK" LastUpdate="201901230558" />
+<BusinessFlow Elapsed="11538" Guid="f3023878-c859-4047-8610-ae7d9d8ff89e" Name="Value Expression" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Create an empty solution" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="bd6a3221-0768-4d6b-bb8b-7d26c45879db" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="89%" TargetApplication="Windows-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="3d4e75ac-b290-4669-842b-e388ef5061eb" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\GingerSourceControl\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActFileOperations Active="True" Description="Open Ginger" FileOperationMode="Execute" Guid="8f0c7c6a-c878-46de-a7d0-b0a3b8ea93c6" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="560ce141-26b1-4826-ab8a-0cd2a0a499e9" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="9f1bf22c-b1c8-4b0e-afad-3c15cf5227cd" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1e0068ec-ae7f-4fb3-8c19-4123f1cd2541" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the solution drop down" Guid="819f4680-362a-469b-a187-b3cfc188c922" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/[LocalizedControlType:custom]/" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Create New Solution" Guid="d647c431-42ce-4cc2-ac2f-4228a7929cb3" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/Create New Solution/Create New Solution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the Solution name" Guid="bcb8b93f-08d3-40dd-ba1b-4fb55c5e6b5f" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:QA-SolutionNameTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f5a0671c-7041-4968-b203-9d509624c32f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="TestValueExpression" Value="TestValueExpression" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the path" Guid="60d30aa4-fb85-4216-8bdd-8bacd9887b51" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:QA-SolutionFolderTextBox[0]]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="abe48b10-b0a4-44ae-bf21-21a30d24a7f0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentFolder}" Value="{Var Name=DocumentFolder}" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the Main Application Area" Guid="a6551df7-71c6-4ae0-a3fc-bfc81543d484" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:QA-SolutionFolderTextBox[1]]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="abe48b10-b0a4-44ae-bf21-21a30d24a7f0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="MyWebApp" Value="MyWebApp" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="Enter the Main Application Platform" Guid="46003a8a-615a-4987-a81a-ff6e44ef8236" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:MainPlatformComboBox]/Web" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="abe48b10-b0a4-44ae-bf21-21a30d24a7f0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="Click" Description="Click on Create button" Guid="7c1178cb-bc08-4e0b-82bc-c68613d28b97" LocateBy="ByXPath" LocateValue="/GenericWindow/Create/Create" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="abe48b10-b0a4-44ae-bf21-21a30d24a7f0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Open Ginger &amp; Download SVN Test solution" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="85c65bcc-47d7-4fd9-8f83-9b30da3ecf68" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="66b2b725-0d55-4a8f-bb2b-0cbb6aeb0f9f" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\GingerSourceControl\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActFileOperations Active="True" Description="Open Ginger" FileOperationMode="Execute" Guid="4da59fd1-74dc-4f16-a72b-11e9bd9a0329" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SourceFilePath="Ginger" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="560ce141-26b1-4826-ab8a-0cd2a0a499e9" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="9f1bf22c-b1c8-4b0e-afad-3c15cf5227cd" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1e0068ec-ae7f-4fb3-8c19-4123f1cd2541" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the solution drop down" Guid="81bf07aa-f0ea-4177-8145-fdb20fe73127" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/[LocalizedControlType:custom]/" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Download solution" Guid="87f7e0e2-d1d6-49d9-818c-2f787cfa3de9" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/Download Existing Solution/Download Existing Solution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the user name" Guid="7cc650d2-1cc9-4245-af32-1f7ec4d14fc1" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ConnectionDetailsExpender]/[AutomationId:SourceControlUserTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NatishaKadam" Value="NatishaKadam" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the user name_Copy" Guid="d710b28e-4ce9-4f86-83e8-57e075a3984e" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ConnectionDetailsExpender]/[AutomationId:SourceControlUserTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NatishaKadam" Value="NatishaKadam" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Connect button" Guid="4fe6a2c4-e15a-415d-a809-114f7b6e3392" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xConnectButton]/[AutomationId:xButton]/Connect And Search Repositories" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Windows-App" Guid="3bbca2db-c1f5-4928-942e-165c371136b3" LastExecutingAgentName="Windows-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="9aed0576-4cb7-40e1-beb9-1721476d6819" InitialStringValue="C:\GingerSourceControl\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\GingerSourceControl\Ginger_Regression_Testing\Documents" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

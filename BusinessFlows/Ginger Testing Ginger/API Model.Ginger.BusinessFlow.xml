@@ -1,0 +1,1471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="9b57a521-ddfd-46db-80d8-fb47b61d6c01" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901180705" GingerVersion="3.2.0.0" Version="1317" LastUpdateBy="NATISHAK" LastUpdate="201904191117" />
+<BusinessFlow Elapsed="4085068" Guid="9b57a521-ddfd-46db-80d8-fb47b61d6c01" Name="API Model" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Open Ginger &amp; Download SVN Test solution" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="b1d33931-5817-4e5b-9ad6-41c89d43743a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="86%" TargetApplication="Windows-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="66b2b725-0d55-4a8f-bb2b-0cbb6aeb0f9f" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="D:\JS\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Operator="Legacy" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActFileOperations Active="True" Description="Open Ginger" FileOperationMode="Execute" Guid="4da59fd1-74dc-4f16-a72b-11e9bd9a0329" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="560ce141-26b1-4826-ab8a-0cd2a0a499e9" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="9f1bf22c-b1c8-4b0e-afad-3c15cf5227cd" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1e0068ec-ae7f-4fb3-8c19-4123f1cd2541" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActSwitchWindow Active="True" Description="Switch to Ginger" Guid="37330acd-f0c1-49a9-84cc-8d7145c1581f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2c340550-add2-4062-8056-12e3507fe2b9" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the solution drop down" Guid="81bf07aa-f0ea-4177-8145-fdb20fe73127" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/[LocalizedControlType:custom]/[AutomationId:xFAFont]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Download solution" Guid="87f7e0e2-d1d6-49d9-818c-2f787cfa3de9" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/Download Existing Solution/Download Existing Solution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the SVN url" Guid="d710b28e-4ce9-4f86-83e8-57e075a3984e" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ConnectionDetailsExpender]/[AutomationId:SourceControlURLTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://CMITECHINT1SRV.corp.amdocs.com:81/svn/" Value="http://CMITECHINT1SRV.corp.amdocs.com:81/svn/" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the user name" Guid="7cc650d2-1cc9-4245-af32-1f7ec4d14fc1" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ConnectionDetailsExpender]/[AutomationId:SourceControlUserTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="NatishaKadam" Value="NatishaKadam" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the password" Guid="4b7b1be8-11a5-4099-87a3-67cd6ce8258e" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ConnectionDetailsExpender]/[AutomationId:SourceControlPassTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger1234" Value="Ginger1234" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Connect button" Guid="4fe6a2c4-e15a-415d-a809-114f7b6e3392" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xConnectButton]/[AutomationId:xButton]/Connect And Search Repositories" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0038062e-d171-40a6-9688-22e4ab8c7f25" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the Download path" Guid="f922c8b4-6b6f-4071-9ef7-2d7988886e46" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:SourceControlLocalFolderTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="1678a406-f281-4cb6-99ab-b26490eea4f0" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="44cfa705-0761-4009-be11-f3c5eb05524c#GUID_NAME#click on search text box and enter 'Test'" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="880bfb35-1ae5-40d7-a93a-28bca7508b8c" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="d2654829-0498-4f03-aa8c-f36b5f59a766#GUID_NAME#Click on Browser button" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="1561c505-b81d-4c45-bb7a-27b614ab7a02" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="788e4a24-025c-4d5d-8dea-562319bb6dba" mExpected="C:\New folder" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Browser button" Guid="d2654829-0498-4f03-aa8c-f36b5f59a766" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/Browse/Browse" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7bd2e26-89b7-41ac-bf9d-61df81b03f7f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click the Scroll Down Button" Guid="ce13283d-a934-41f5-b9ba-7bd157137fc6" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/Select Local Folder[1]/Select Local Folder/Vertical/Line down" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="15332108-c29f-48d0-bbee-1f82a860bdfc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Double click on C Drive" Guid="902bcb39-a529-492f-8c62-7c40d19cdbc7" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/Select Local Folder[1]/Select Local Folder/This PC/System (C:)" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cd70e92a-ccdb-45b8-ab61-d4b5df67d4b2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="Click" Description="Click on 'Make New Folder'" Guid="5b031dbf-a72f-49e6-826e-f5960e4729b6" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/Make New Folder" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e37dbc03-027b-45f2-8f9b-90f4732f3475" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="Click" Description="Open the New folder" Guid="bbbc27ef-d4a1-4da6-8d06-57b021cf0ff9" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/Select Local Folder[1]/Select Local Folder/This PC/OSDisk (C:)/New folder" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cf318455-4151-4c3c-beee-6e936052aa46" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="DoubleClick" Description="Double Click on Ginger source control" Guid="df138ca6-ea80-4e24-b775-2bad4050c592" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/Select Local Folder[1]/Select Local Folder/This PC/OSDisk (C:)/GingerSourceControl" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6c6f026a-69e0-41d0-aa7c-f251b0d9dec2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="DoubleClick" Description="Double Click on Solutions" Guid="dbdfe0f4-db58-4a65-be55-b1a2c70f14fb" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/Select Local Folder[1]/Select Local Folder/This PC/OSDisk (C:)/GingerSourceControl/Solutions" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d2348e3f-918e-4b57-b0df-e61c1f64c1e2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Ok button" Guid="614afe11-aa78-46eb-949f-aac76b37f92a" LocateBy="ByXPath" LocateValue="/GenericWindow/Browse For Folder/OK" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="22fddbe0-75b2-4cd6-97b9-87d6d85c25b0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="click on search text box and enter 'Test'" Guid="44cfa705-0761-4009-be11-f3c5eb05524c" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:SolutionsGrid]/[AutomationId:toolbar]/[AutomationId:txtSearch]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="8" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70fb8c8b-f3e0-418f-b57f-b71a48c381e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Test" Value="Test" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Select 'Ginger-ATest' solution" Guid="ba70b1c9-30b5-4188-b822-d30547f1709c" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:SolutionsGrid]/[AutomationId:grdMain]/GingerCoreNET.SourceControl.SolutionInfo[4]/Ginger-ATest/Ginger-ATest" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70fb8c8b-f3e0-418f-b57f-b71a48c381e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on 'Download Selected Solution' button" Guid="a352a9c3-bc60-4914-8344-26ed0b412cf5" LocateBy="ByXPath" LocateValue="/GenericWindow/Download Selected Solution/Download Selected Solution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70fb8c8b-f3e0-418f-b57f-b71a48c381e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Download solution message" Guid="134634ac-71b5-433e-9c41-8d55014d8593" LocateBy="ByTitle" LocateValue="Download Solution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f0fbfd37-ce7c-48dd-97d3-9fc2cb48eb40" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on 'Yes' of 'Do you want to open downloaded solution' message " Guid="ec65d164-6a44-4663-9f20-36a162a8f1f2" LocateBy="ByXPath" LocateValue="/[AutomationId:xYesButton]/[AutomationId:xButton]/Yes" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70fb8c8b-f3e0-418f-b57f-b71a48c381e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Upgrade message" Guid="8b54d6d2-4049-4f65-b67a-9344e3537598" LocateBy="ByTitle" LocateValue="Generic Window" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="33de0942-cbed-4420-b4f9-a4f7d8cea65f" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4cd0bf97-c486-4e22-a765-9d9d94eaa038#GUID_NAME#Switch Window to Ginger" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="e175f8da-f4d0-4420-95a2-2a07e346ff4d" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2fcb11e4-2004-4c54-8adc-62697c09d03e#GUID_NAME#Click on Upgrade button" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="d4e33314-d27c-4c3f-9e4e-b004ccd32fe4" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Upgrade button" Guid="2fcb11e4-2004-4c54-8adc-62697c09d03e" LocateBy="ByXPath" LocateValue="/Upgrade/Upgrade" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="30805d79-d765-4983-b365-eaecc913db8a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Ok message" Guid="153ab990-1d5a-4b4b-81bd-d8728dbef96d" LocateBy="ByTitle" LocateValue="Info" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="6" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="414d5a51-e670-4842-af48-94d975225ebe" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Ok button" Guid="37c69217-a967-474a-81a1-9f25cbe267aa" LocateBy="ByXPath" LocateValue="/[AutomationId:xOKButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4d632fa4-398f-4ad1-9a6f-4d253b20ddc6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Ginger" Guid="4cd0bf97-c486-4e22-a765-9d9d94eaa038" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f0fbfd37-ce7c-48dd-97d3-9fc2cb48eb40" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Open the Solution" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="cb05f0f3-c23b-4553-b854-0eaff51c68a4" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActScript Active="True" Description="Script Action" Guid="70f08caf-a1b6-43cd-8c28-d7b702c5eb5a" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="D:\JS\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Operator="Legacy" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActFileOperations Active="True" Description="Open Ginger" FileOperationMode="Execute" Guid="914f4a11-b4b5-4d87-aa59-9960ac9c1fc1" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="560ce141-26b1-4826-ab8a-0cd2a0a499e9" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="9f1bf22c-b1c8-4b0e-afad-3c15cf5227cd" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1e0068ec-ae7f-4fb3-8c19-4123f1cd2541" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActSwitchWindow Active="True" Description="Switch to Ginger" Guid="e013daf2-83c3-477a-a50a-29c91b79aec0" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2c340550-add2-4062-8056-12e3507fe2b9" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Solution drop down" Guid="24316b2d-7795-4dd0-b428-3ca16e5e9cc2" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/[LocalizedControlType:custom]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6ca370aa-7910-472d-b609-4815b80e70cd" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Select Open Existing Solution" Guid="59b34dca-054d-4492-9bc4-789cc2b7a800" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionSelectionMenu]/[AutomationId:xSolutionSelectionMainMenuItem]/Open Existing Solution/Open Existing Solution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="09eae7b3-3059-434a-aad2-c06e4dad42c8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select C Drive" Guid="e7d7ae54-a7ee-4c45-828a-5cee5a90778b" LocateBy="ByXPath" LocateValue="/Select Ginger Solution Folder/[LocalizedControlType:pane[0]]/Explorer Pane/Folder Layout Pane/Control Host/Namespace Tree Control/Desktop/This PC/System (C:)" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b5304610-3f15-4c80-ab91-2ccab4d01b4b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select GingerSourceControl Folder" Guid="6661b21c-1531-480f-b2c5-c7c8d7ce683f" LocateBy="ByXPath" LocateValue="/Select Ginger Solution Folder/[LocalizedControlType:pane[0]]/Explorer Pane/Folder Layout Pane/Shell Folder View/Items View/GingerSourceControl/Name" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="045b611d-365d-49e7-a3b7-75fdacbd3247" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select Solutions Folder" Guid="65a8d519-5e74-4eb3-802d-94e263fcbd6d" LocateBy="ByXPath" LocateValue="/Select Ginger Solution Folder/[LocalizedControlType:pane[0]]/Explorer Pane/Folder Layout Pane/Shell Folder View/Items View/Solutions/Name" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="db2279b9-3b6b-4429-b23c-bf81c0dd7969" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select Ginger-ATest folder" Guid="b31a202d-7e84-4d2c-b464-910a442ba35e" LocateBy="ByXPath" LocateValue="/Select Ginger Solution Folder/[LocalizedControlType:pane[0]]/Explorer Pane/Folder Layout Pane/Shell Folder View/Items View/Ginger-ATest/Name" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="07d4fb44-7521-4887-896d-384d2e9610d2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Click on Open button" Guid="946cdda9-0ff5-4758-988e-0e5aa947efb7" LocateBy="ByXPath" LocateValue="/Select Ginger Solution Folder/Open" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5b4d301d-d920-4d18-8190-fa4a9d5b3f53" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="API Model - Initiate" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="73ad71d5-a1a4-4532-b683-b220fbefcf25" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="40%" TargetApplication="Windows-App">
+<Acts>
+<ActScript Description="Script Action" Guid="f2c09ee8-efd3-4e29-a434-13d2882cabae" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\GingerSourceControl\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ReturnValues>
+<ActReturnValue Active="True" Guid="132b4fc0-33d5-4ee0-9edf-4593bb2ddb53" Operator="Legacy" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentFolder" />
+</ReturnValues>
+</ActScript>
+<ActFileOperations Description="Open Ginger" FileOperationMode="RunCommand" Guid="a8325f58-b860-4dcf-889e-8eec21cf8e4d" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e657f0a6-d6b5-4214-ad07-3149890dd033" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Ginger" Value="Ginger" />
+<ActInputValue Guid="8db79926-ecaf-4d35-bb21-512c35eb9b00" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="be5c9697-b313-4374-80c6-48819481f9b0" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActSwitchWindow Description="Switch Window Action to Ginger app" Guid="02191819-4c74-478d-bfdd-4b195452852f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Resources tab" Guid="d59439db-318d-46c3-9fea-d9705e1462b7" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8c195c59-918d-486c-a4ae-09d58bfccf82" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on API Models tab" Guid="db236c2e-a830-432a-8514-b63ae780d15d" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[1]/Applications Models/Applications Models" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9d63721f-e707-4037-ae5c-a4d1c8c51f7d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="API Model WSDL - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e610114a-212e-4e80-aea1-8ae431e660ea" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="95%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the 'Add Item' button" Guid="23bcdf99-056c-412c-8f1d-07259e35b933" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:AddButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cb3f14ed-12b6-4428-a023-4e68dfedc8ae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to API Model Import Wizard" Guid="f245ac42-322a-49d9-950a-d704997e6dde" LocateBy="ByTitle" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2" Value="2" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindow Description="Check if API Model Import Wizard is a separate window" Guid="3eedf32d-e06a-4f31-a544-cbae896ce320" LocateBy="ByName" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="8542c247-6f3a-4644-b96c-7824d77e42fa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="f245ac42-322a-49d9-950a-d704997e6dde#GUID_NAME#Switch Window Action to API Model Import Wizard" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="1fe58353-51a8-4fa4-ba1e-ff9a1a4473aa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dfa5cd44-f5fb-42f1-acef-b38023e2906d#GUID_NAME#API Model Wizard -Click on Next button" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="ab7d3492-bbd1-4025-964e-fc27eed7175e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard -Click on Next button" Guid="dfa5cd44-f5fb-42f1-acef-b38023e2906d" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select API Type as WSDL" Guid="e4e14dfb-438d-49cd-b8e7-4198a78f1d52" LocateBy="ByName" LocateValue="WSDL" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="409ac2c8-be8c-4b6b-89bf-1b131dff6074" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizard - Enter the url" Guid="3c8c5dcf-1a5b-4568-b19c-93a20beb0d8b" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xURLTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="https://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx?wsdl" Value="https://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx?wsdl" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Load" Guid="6c098582-d39c-4b78-aa88-18628d057ade" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xBrowseLoadButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to the message box" Guid="f99bcd79-669d-4bb6-9246-d442e02cd4b4" LocateBy="ByTitle" LocateValue="Info" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Ok button of the message box" Guid="ecc1f161-abc3-4c33-accd-51e3e001303f" LocateBy="ByXPath" LocateValue="/[AutomationId:xOKButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action back to API Model Import Wizard" Guid="26f186a5-cbb5-49f8-bdf7-c6e2473bd712" LocateBy="ByTitle" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2" Value="2" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Preview button" Guid="7a39f100-3620-4c68-bd7a-9b444eddc846" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xPreviewButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="API Model Wizard - Click on Preview button - Validation" Guid="05d49ed5-ce8d-455f-ba89-de4e9e7fd361" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/Source Preview:" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e68d68ae-9aa1-40c6-8d2d-be0ade710682" mExpected="Source Preview:" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizard - Click on Next button" Guid="da010db7-5753-44ef-977f-baaad864a10b" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Uncheck all the APIs" Guid="b98644fe-d7e1-478b-9dbf-c03bf778b610" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xApisSelectionGrid]/[AutomationId:toolbar]/[AutomationId:btnMarkAll]/[LocalizedControlType:image]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="28ab45d7-bc01-4ff7-a98e-5e772a29582f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Select the 1st API" Guid="eb347a3d-bb41-42bc-af71-08f69d60409a" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xApisSelectionGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.ApplicationAPIModel[0]/Item: Amdocs.Ginger.Repository.ApplicationAPIModel, Column Display Index: 0/[AutomationId:IsSelected_FieldSelection]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2557c58f-d8b9-4db7-af69-7d8cddeb4397" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next button on 'Select APIs' page" Guid="880185b6-6177-45bb-a6a6-cd040b33d6f4" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]/" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizard - Click on Next button on 'Learn Optioanl Parameters Value' page" Guid="3c15e06c-fe72-47c7-bed3-94a395b32dc9" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select Target Application" Guid="87d8f16b-6710-499f-849f-bfa9b5dd6412" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xTargetApplicationComboBox]/[AutomationId:ComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="MyWebServciesApp" Value="MyWebServciesApp" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Finish button" Guid="d177ed79-6b89-41b6-a10a-30f2a7caa542" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]/Finish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="46e6ffe0-5342-424d-a376-93698fca0d3b" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the addition of added WSDL" Guid="2db228a4-c20b-4c08-b4e8-90c7f7136011" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:6/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/GetQuoteDelayedStockQuoteSoap/GetQuote_DelayedStockQuoteSoap" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23f607c9-44be-47e8-a1e7-6e2b9de83deb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="91847003-9864-4c07-ad86-dab8434f9fa2" mExpected="GetQuote_DelayedStockQuoteSoap" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Add API Model Action for WSDL - Testing &amp; Validation" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="43402ed6-0430-41f8-9550-1467b61eeb59" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="94%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Ginger app" Guid="4c66f5bc-427a-4673-bf86-44cdb1f83351" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Business Flow tab" Guid="0326c204-4ed3-4901-a198-d3ce7076f165" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/System.Windows.Controls.ListViewItem/[LocalizedControlType:custom]/Business Flows" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Double Cick on Business Flow1" Guid="ed3661db-5139-4443-a4ce-d2af7e7b3b77" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:2/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/Business Flow 1/Business Flow 1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Add New Action button" Guid="58b23b5e-5534-4f2b-9b5f-4d94dc6a72f4" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:Add Button AID]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model Action" Guid="d2f4cd13-4426-4f45-b232-c2e543593b09" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ActionsTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[AutomationId:PlatformActionsGrid]/[AutomationId:grdMain]/Web API Model Action/Web API Model Action/Web API Model Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model - GetQuote_DelayedStockQuoteSoap" Guid="d9263cc3-ec61-456b-bd32-38b8a19ea602" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/GetQuoteDelayedStockQuoteSoap/GetQuote_DelayedStockQuoteSoap" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Add API Model Wizard" Guid="d09c2972-ef6c-40bb-92e9-eb1706df86c6" LocateBy="ByTitle" LocateValue="Add API Model Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Next button of Select API Model" Guid="e27db765-9ed0-4172-aef6-e4c10acd7296" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of Symbol" Guid="344321c5-6d90-4498-9c85-8584d43dac65" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[0]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abcd" Value="abcd" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of License" Guid="4708083d-152b-4732-a89b-b7a133060f86" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[1]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="1234" Value="1234" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Finish button" Guid="23187d63-892d-4155-a7da-83830cd30087" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Ginger by amdocs" Guid="ae6ca4b9-856d-4cee-8c56-6d78dc73856f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the Added Action" Guid="a2106bc3-b2e6-4086-a6c4-01352d48f38d" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuote_DelayedStockQuoteSoap- API Model Execution/GetQuote_DelayedStockQuoteSoap- API Model Execution/GetQuote_DelayedStockQuoteSoap- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="cd116511-df93-4ae4-8749-2f66b2024e53" mExpected="GetQuote_DelayedStockQuoteSoap- API Model Execution" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Added Action" Guid="4e244a2c-1968-4a76-9863-273bb5e6b4f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuote_DelayedStockQuoteSoap- API Model Execution/GetQuote_DelayedStockQuoteSoap- API Model Execution/GetQuote_DelayedStockQuoteSoap- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="Click" Description="Select the Action" Guid="fc2da2d0-0a36-4c4f-9b78-fc3cb0d74ba5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Run the Action" Guid="7b36f5d3-c0ac-4752-ae3e-83495330e276" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xRibbon]/Automate/Execution/System.Windows.Controls.Ribbon.RibbonButton[0]/Run Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edddad1a-3f60-4a4b-9414-69e66be012aa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate if the Action Passed" Guid="f31dbb2e-ba8f-4630-a895-c3b03691e1f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/Passed/Passed" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e9960c7f-494a-469f-b2a4-828938c06347" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ff12ed13-a2a9-47b1-a910-42b8cc1493f3" mExpected="Passed" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="API Model WSDL - Cleanup" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="265bee53-9b04-4c2b-9929-c9b4efad5617" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="90%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Action" Guid="814ae445-60f4-43a3-9689-0d30bfb0a5ec" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuote_DelayedStockQuoteSoap- API Model Execution/GetQuote_DelayedStockQuoteSoap- API Model Execution/GetQuote_DelayedStockQuoteSoap- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Delete the Action" Guid="32b6dfa4-55dc-4e13-b577-433229aa65e4" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:btnDelete]/[LocalizedControlType:image]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2afec933-4fda-4ea1-bad4-ac75b6c3887e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Go to Resources tab" Guid="64aa09c8-c139-48a0-9c51-9677875ab3e2" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="32d884f4-450a-4616-87f0-95d5cdcc50c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Applications Models " Guid="93c80f35-c958-42dd-98f0-dff9d9a6a1bf" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[1]/Applications Models/Applications Models" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51835b15-1042-441d-b256-25516acc7521" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="RightClick" Description="Right click on the first API Model" Guid="f6c54335-7140-48ce-b61b-d51d58f4be48" LocateBy="ByName" LocateValue="GetQuote_DelayedStockQuoteSoap" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d6711961-a1ec-44fe-b43e-7e53e4e086a6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Delete button" Guid="835eb5df-6f0f-4327-ae40-62e719a398ed" LocateBy="ByXPath" LocateValue="/[LocalizedControlType:window]/[LocalizedControlType:menu]/[AutomationId:ContextMenuScrollViewer]/Delete" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="354d52eb-224c-4cc9-a079-2583857e27a1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindow Description="Check If Window Delete Item exists" Guid="19f4d13f-7382-424c-b8eb-d31bacac6f17" LocateBy="ByName" LocateValue="Delete Item" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="02763313-e0b8-4902-ab57-12142da85f87" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="db0acac1-df07-4ddc-8054-63015ea84f3e#GUID_NAME#Switch to Window Delete Item" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="db707dbe-1bde-46e1-861b-422752089d59" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="39772581-922d-4c6c-89e5-5dd6c2a3da48#GUID_NAME#Click on Yes button of Delete message" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="e7ee6a87-5248-4019-a6ec-a1ccac866a3d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindow>
+<ActWindow Active="True" Description="Switch to Window Delete Item" Guid="db0acac1-df07-4ddc-8054-63015ea84f3e" LocateBy="ByName" LocateValue="Delete Item" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowActionType="Switch" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="02763313-e0b8-4902-ab57-12142da85f87" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="39772581-922d-4c6c-89e5-5dd6c2a3da48#GUID_NAME#Click on Yes button of Delete message" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="db707dbe-1bde-46e1-861b-422752089d59" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="39772581-922d-4c6c-89e5-5dd6c2a3da48#GUID_NAME#Click on Yes button of Delete message" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="e7ee6a87-5248-4019-a6ec-a1ccac866a3d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Yes button of Delete message" Guid="39772581-922d-4c6c-89e5-5dd6c2a3da48" LocateBy="ByXPath" LocateValue="/[AutomationId:xYesButton]/[AutomationId:xButton]/Yes" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f277d45e-5ae0-49be-b900-70307edac106" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="a109595b-c01b-4220-b936-376bb64c5480" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="API Model Jason - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="1735201c-1021-4898-9b9f-8e72d30e2ea7" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="93%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="3e8b7d51-10f6-434d-8dc2-4cd624d3e921" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the 'Add Item' button" Guid="e570c500-2563-45c6-86c9-52de5ef802fe" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:AddButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cb3f14ed-12b6-4428-a023-4e68dfedc8ae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindow Description="Check if API Model Import Wizard is a separate window" Guid="7cd888a7-1a4a-4cb9-90e2-bcde6f750094" LocateBy="ByName" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="8542c247-6f3a-4644-b96c-7824d77e42fa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="49315010-6a19-40c0-a5ff-7035e8cf5eaa#GUID_NAME#Switch Window Action to API Model Import Wizard" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="1fe58353-51a8-4fa4-ba1e-ff9a1a4473aa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dfa5cd44-f5fb-42f1-acef-b38023e2906d#GUID_NAME#API Model Wizard -Click on Next button" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="ab7d3492-bbd1-4025-964e-fc27eed7175e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindow>
+<ActSwitchWindow Active="True" Description="Switch Window Action to API Model Import Wizard" Guid="49315010-6a19-40c0-a5ff-7035e8cf5eaa" LocateBy="ByTitle" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2" Value="2" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard -Click on Next button" Guid="dfa5cd44-f5fb-42f1-acef-b38023e2906d" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizard - Select API Typeon Templates as Jason----Defect#7309" Guid="e4e14dfb-438d-49cd-b8e7-4198a78f1d52" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:APITypeComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="20" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="409ac2c8-be8c-4b6b-89bf-1b131dff6074" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="Json Templates" Value="Json Templates" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SendKeys" Description="API Model Wizard -Enter the file path" Guid="a33707d2-c56f-4efe-86f4-da0e6a6e5abf" LocateBy="ByName" LocateValue="File name:" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentFolder}\Jason Files\Input Post1.json" Value="{Var Name=DocumentFolder}\Jason Files\Input Post1.json" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard -Click on Open button" Guid="99fa85e3-27d6-4b05-a823-26a112d4f9cd" LocateBy="ByXPath" LocateValue="/Open/Open" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - click Next on APIs Import Source page" Guid="3c8c5dcf-1a5b-4568-b19c-93a20beb0d8b" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next on Select APIs page" Guid="6c098582-d39c-4b78-aa88-18628d057ade" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next on Learn Optional Parameters Values page" Guid="ecc1f161-abc3-4c33-accd-51e3e001303f" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select Target Application" Guid="87d8f16b-6710-499f-849f-bfa9b5dd6412" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xTargetApplicationComboBox]/[AutomationId:ComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="MyWebApp" Value="MyWebApp" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Finish button" Guid="d177ed79-6b89-41b6-a10a-30f2a7caa542" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]/Finish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="46e6ffe0-5342-424d-a376-93698fca0d3b" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the addition of added Jason File" Guid="2db228a4-c20b-4c08-b4e8-90c7f7136011" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:7/System.Windows.Controls.TreeViewItem Header: Items.Count:0[6]/Input Post1/Input Post1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23f607c9-44be-47e8-a1e7-6e2b9de83deb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ae1e3102-b60b-48e3-b081-7fe96decb999" mExpected="Input Post1" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Add API Model Action for Jason - Testing--Jason File not passing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="9710f6ae-6c00-4de4-acf5-2a43cbc02083" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Business Flow tab" Guid="496a8d9f-dcc3-4ee9-af36-ca5fd10378ab" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/System.Windows.Controls.ListViewItem/[LocalizedControlType:custom]/Business Flows" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Double Cick on Business Flow1" Guid="ae411316-59b4-4f48-a2cd-4a9578067985" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:2/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/Business Flow 1/Business Flow 1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Add New Action button" Guid="58b23b5e-5534-4f2b-9b5f-4d94dc6a72f4" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:Add Button AID]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model Action" Guid="d2f4cd13-4426-4f45-b232-c2e543593b09" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ActionsTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[AutomationId:PlatformActionsGrid]/[AutomationId:grdMain]/Web API Model Action/Web API Model Action/Web API Model Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model - Input Post1 " Guid="d9263cc3-ec61-456b-bd32-38b8a19ea602" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/Input Post1/Input Post1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Add API Model Wizard" Guid="d09c2972-ef6c-40bb-92e9-eb1706df86c6" LocateBy="ByTitle" LocateValue="Add API Model Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Next button of Select API Model" Guid="e27db765-9ed0-4172-aef6-e4c10acd7296" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of Name" Guid="344321c5-6d90-4498-9c85-8584d43dac65" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[0]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abcd" Value="abcd" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of Job" Guid="4708083d-152b-4732-a89b-b7a133060f86" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[1]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="xyz" Value="xyz" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Finish button" Guid="23187d63-892d-4155-a7da-83830cd30087" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Ginger by amdocs" Guid="ae6ca4b9-856d-4cee-8c56-6d78dc73856f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the Added Action" Guid="a2106bc3-b2e6-4086-a6c4-01352d48f38d" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Input Post1- API Model Execution/Input Post1- API Model Execution/Input Post1- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="cd116511-df93-4ae4-8749-2f66b2024e53" mExpected="Input Post1- API Model Execution" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Select the Action" Guid="fc2da2d0-0a36-4c4f-9b78-fc3cb0d74ba5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Input Post1- API Model Execution/Input Post1- API Model Execution/Input Post1- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Run the Action" Guid="7b36f5d3-c0ac-4752-ae3e-83495330e276" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xRibbon]/Automate/Execution/System.Windows.Controls.Ribbon.RibbonButton[0]/Run Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edddad1a-3f60-4a4b-9414-69e66be012aa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate if the Action Passed" Guid="f31dbb2e-ba8f-4630-a895-c3b03691e1f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/Passed/Passed" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e9960c7f-494a-469f-b2a4-828938c06347" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ff12ed13-a2a9-47b1-a910-42b8cc1493f3" mExpected="Passed" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Add API Model Action for Jason File - Testing &amp; Validation" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e87a07af-69f7-4975-beaa-ed736b13cc2e" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="88%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Ginger app" Guid="4c66f5bc-427a-4673-bf86-44cdb1f83351" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Business Flow tab" Guid="0326c204-4ed3-4901-a198-d3ce7076f165" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/System.Windows.Controls.ListViewItem/[LocalizedControlType:custom]/Business Flows" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="DoubleClick" Description="Double Cick on Business Flow1" Guid="ed3661db-5139-4443-a4ce-d2af7e7b3b77" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:2/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/Business Flow 1/Business Flow 1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Add New Action button" Guid="58b23b5e-5534-4f2b-9b5f-4d94dc6a72f4" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:Add Button AID]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model Action" Guid="d2f4cd13-4426-4f45-b232-c2e543593b09" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ActionsTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[AutomationId:PlatformActionsGrid]/[AutomationId:grdMain]/Web API Model Action/Web API Model Action/Web API Model Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model - Input Post1" Guid="d9263cc3-ec61-456b-bd32-38b8a19ea602" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/Input Post1/Input Post1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Add API Model Wizard" Guid="d09c2972-ef6c-40bb-92e9-eb1706df86c6" LocateBy="ByTitle" LocateValue="Add API Model Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Next button of Select API Model" Guid="e27db765-9ed0-4172-aef6-e4c10acd7296" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of Name" Guid="344321c5-6d90-4498-9c85-8584d43dac65" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[0]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abcd" Value="abcd" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of Job" Guid="4708083d-152b-4732-a89b-b7a133060f86" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[1]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="1234" Value="1234" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Finish button" Guid="23187d63-892d-4155-a7da-83830cd30087" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Ginger by amdocs" Guid="ae6ca4b9-856d-4cee-8c56-6d78dc73856f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Added Action" Guid="4e244a2c-1968-4a76-9863-273bb5e6b4f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Input Post1- API Model Execution/Input Post1- API Model Execution/Input Post1- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the Added Action" Guid="a2106bc3-b2e6-4086-a6c4-01352d48f38d" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Input Post1- API Model Execution/Input Post1- API Model Execution/Input Post1- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="0681a233-03a3-4033-bb99-db7f475f8001" mExpected="Input Post1- API Model Execution" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="Click" Description="Select the Action" Guid="fc2da2d0-0a36-4c4f-9b78-fc3cb0d74ba5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Run the Action" Guid="7b36f5d3-c0ac-4752-ae3e-83495330e276" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xRibbon]/Automate/Execution/System.Windows.Controls.Ribbon.RibbonButton[0]/Run Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edddad1a-3f60-4a4b-9414-69e66be012aa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate if the Action Passed" Guid="f31dbb2e-ba8f-4630-a895-c3b03691e1f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/GetQuickQuote_DelayedStockQuoteSoap- API Model Execution/Passed/Passed" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e9960c7f-494a-469f-b2a4-828938c06347" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ff12ed13-a2a9-47b1-a910-42b8cc1493f3" mExpected="Passed" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="API Model Swagger - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="f2a9470b-f242-47ea-83f9-611e56762cce" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="94%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="3e8b7d51-10f6-434d-8dc2-4cd624d3e921" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Resources tab" Guid="f7e16c82-05d2-4a26-a830-9a0a88165630" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="62c83f44-3724-4000-b00d-5ea0c9fdb2cc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Applications Models " Guid="e90a206b-0115-4bfa-ad29-3c209d71094c" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[1]/Applications Models/Applications Models" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51835b15-1042-441d-b256-25516acc7521" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the 'Add Item' button" Guid="e570c500-2563-45c6-86c9-52de5ef802fe" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:AddButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cb3f14ed-12b6-4428-a023-4e68dfedc8ae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindow Description="Check if API Model Import Wizard is a separate window" Guid="7cd888a7-1a4a-4cb9-90e2-bcde6f750094" LocateBy="ByName" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="8542c247-6f3a-4644-b96c-7824d77e42fa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="49315010-6a19-40c0-a5ff-7035e8cf5eaa#GUID_NAME#Switch Window Action to API Model Import Wizard" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="1fe58353-51a8-4fa4-ba1e-ff9a1a4473aa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dfa5cd44-f5fb-42f1-acef-b38023e2906d#GUID_NAME#API Model Wizard -Click on Next button" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="ab7d3492-bbd1-4025-964e-fc27eed7175e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindow>
+<ActSwitchWindow Active="True" Description="Switch Window Action to API Model Import Wizard" Guid="49315010-6a19-40c0-a5ff-7035e8cf5eaa" LocateBy="ByTitle" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2" Value="2" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard -Click on Next button" Guid="dfa5cd44-f5fb-42f1-acef-b38023e2906d" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select Swagger(Open API) Document" Guid="e4e14dfb-438d-49cd-b8e7-4198a78f1d52" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:APITypeComboBox]/Swagger(Open API) Document" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="20" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="409ac2c8-be8c-4b6b-89bf-1b131dff6074" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizard - Enter the url" Guid="d317c752-c32b-4777-9f66-57f5ae018880" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xURLTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="https://petstore.swagger.io/v2/swagger.json" Value="https://petstore.swagger.io/v2/swagger.json" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - click Next on APIs Import Source page" Guid="3c8c5dcf-1a5b-4568-b19c-93a20beb0d8b" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - UnSelect all the APIs" Guid="83ee6a17-a41d-4c38-9654-3233f017b1ce" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xApisSelectionGrid]/[AutomationId:toolbar]/[AutomationId:btnMarkAll]/[LocalizedControlType:image]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="3" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="24496d78-80a5-4ba1-a356-5b3b21338392" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Select 'Find Pet by id' API " Guid="d15b805b-cfe3-4727-84e0-8188e234a3f4" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xApisSelectionGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.ApplicationAPIModel[6]/Item: Amdocs.Ginger.Repository.ApplicationAPIModel, Column Display Index: 0/[AutomationId:IsSelected_FieldSelection]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="24496d78-80a5-4ba1-a356-5b3b21338392" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next on Select APIs page" Guid="6c098582-d39c-4b78-aa88-18628d057ade" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]/Next" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next on Learn Optional Parameters Values page" Guid="ecc1f161-abc3-4c33-accd-51e3e001303f" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select Target Application" Guid="87d8f16b-6710-499f-849f-bfa9b5dd6412" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xTargetApplicationComboBox]/[AutomationId:ComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="MyWebServicesApp" Value="MyWebServicesApp" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Finish button" Guid="d177ed79-6b89-41b6-a10a-30f2a7caa542" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]/Finish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="46e6ffe0-5342-424d-a376-93698fca0d3b" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the addition of added Swagger File" Guid="2db228a4-c20b-4c08-b4e8-90c7f7136011" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/Find pet by ID/Find pet by ID" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23f607c9-44be-47e8-a1e7-6e2b9de83deb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d2d0db3c-7051-4d88-84c5-568419f2f759" mExpected="Find pet by ID" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Add API Model Action for Swagger - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="3dfe0bee-83d8-4097-95e8-19272b35d0ac" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="62%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Business Flow tab" Guid="afa597eb-a42f-4321-905b-779a87754a28" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/System.Windows.Controls.ListViewItem/[LocalizedControlType:custom]/Business Flows" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="DoubleClick" Description="Double Cick on Business Flow1" Guid="a4be9ff5-bc94-4e41-98ef-dac461539cf9" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:2/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/Business Flow 1/Business Flow 1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Add New Action button" Guid="58b23b5e-5534-4f2b-9b5f-4d94dc6a72f4" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:Add Button AID]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model Action" Guid="d2f4cd13-4426-4f45-b232-c2e543593b09" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ActionsTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[AutomationId:PlatformActionsGrid]/[AutomationId:grdMain]/Web API Model Action/Web API Model Action/Web API Model Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model - Create user" Guid="d9263cc3-ec61-456b-bd32-38b8a19ea602" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/Find pet by ID" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Add API Model Wizard" Guid="d09c2972-ef6c-40bb-92e9-eb1706df86c6" LocateBy="ByTitle" LocateValue="Add API Model Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Next button of Select API Model" Guid="e27db765-9ed0-4172-aef6-e4c10acd7296" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of ID" Guid="344321c5-6d90-4498-9c85-8584d43dac65" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="1" Value="1" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for user name" Guid="935ce3e5-50c3-43a0-92e9-7da4a3347124" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[1]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abc" Value="abc" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for first name" Guid="b38e9904-aa8d-456d-a38c-336cd4ba0202" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[2]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="test" Value="test" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for last name" Guid="41e6cf5a-a6e1-40df-b39b-a9eae8ff6f9f" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[3]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="xyz" Value="xyz" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for email" Guid="f0a4205a-4295-4d99-b6d4-9b20c211e32b" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[4]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="abc@yahoo.com" Value="abc@yahoo.com" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for password" Guid="a78eacaa-45ff-4e71-bf7a-189fa707b715" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[5]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="ijkl" Value="ijkl" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for phone" Guid="abd11fba-1feb-4f4e-97cf-06970cc7c800" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[6]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="8523698745" Value="8523698745" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="SetValue" Description="API Model Wizrad - Enter value for user status" Guid="6c950934-da2d-4406-83c0-7750e399466a" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[7]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="0" Value="0" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizrad - Click on Finish button" Guid="a463eab5-9f01-44fd-85e4-13e9f93468c1" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]/Finish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Ginger by amdocs" Guid="ae6ca4b9-856d-4cee-8c56-6d78dc73856f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the Added Action" Guid="a2106bc3-b2e6-4086-a6c4-01352d48f38d" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="665b2825-056b-4794-97b8-7b4db689d5f3" mExpected="Find pet by ID- API Model Execution" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Select the Action" Guid="fc2da2d0-0a36-4c4f-9b78-fc3cb0d74ba5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Run the Action" Guid="7b36f5d3-c0ac-4752-ae3e-83495330e276" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xRibbon]/Automate/Execution/System.Windows.Controls.Ribbon.RibbonButton[0]/Run Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edddad1a-3f60-4a4b-9414-69e66be012aa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate if the Action Passed" Guid="f31dbb2e-ba8f-4630-a895-c3b03691e1f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'New Activity'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Find pet by ID- API Model Execution/Passed/Passed" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e9960c7f-494a-469f-b2a4-828938c06347" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ff12ed13-a2a9-47b1-a910-42b8cc1493f3" mExpected="Passed" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="API Model Swagger - Cleanup" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e1caa6b4-1e21-4cb4-989c-06d2cfb5fe89" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="231c1d6d-a75d-43bd-8101-9a298102daf2" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Action" Guid="00b14e28-6f28-4f1b-a6aa-6708caaf78e5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d3d67ce4-5c59-4e38-9c60-c6f919945216" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Delete Button" Guid="7b159f96-4562-4985-b4c6-195afb97fcd5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:btnDelete]/[LocalizedControlType:image]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f1595c65-5ca2-4cd7-95bb-99c0e3901f4e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Go to Resources tab" Guid="64aa09c8-c139-48a0-9c51-9677875ab3e2" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="32d884f4-450a-4616-87f0-95d5cdcc50c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Applications Models " Guid="b4f34f0c-202c-4c71-a400-1c0a7dc61922" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[1]/Applications Models/Applications Models" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51835b15-1042-441d-b256-25516acc7521" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="RightClick" Description="Right click on the API Model" Guid="f6c54335-7140-48ce-b61b-d51d58f4be48" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/Find pet by ID/Find pet by ID" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d6711961-a1ec-44fe-b43e-7e53e4e086a6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Delete button" Guid="835eb5df-6f0f-4327-ae40-62e719a398ed" LocateBy="ByXPath" LocateValue="/[LocalizedControlType:window]/[LocalizedControlType:menu]/[AutomationId:ContextMenuScrollViewer]/Delete" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="354d52eb-224c-4cc9-a079-2583857e27a1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Delete Item message" Guid="1009d115-edd1-4a79-b185-02d096ff4fca" LocateBy="ByTitle" LocateValue="Delete Item" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9a1a19ea-acc9-447c-a3fb-e4c8dbbacfa6" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Yes button of Delete message" Guid="96f72fbd-9134-4915-8ee4-103bc533ad7f" LocateBy="ByXPath" LocateValue="/[AutomationId:xYesButton]/[AutomationId:xButton]/Yes" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f277d45e-5ae0-49be-b900-70307edac106" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="a109595b-c01b-4220-b936-376bb64c5480" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="API Model XML Template - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="b31e0b05-bff4-42cc-81e3-27494e762143" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="91%" TargetApplication="Windows-App">
+<Acts>
+<ActSwitchWindow Description="Switch to Ginger app" Guid="3e8b7d51-10f6-434d-8dc2-4cd624d3e921" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Resources tab" Guid="b84ac6a0-19a3-4adb-9a9f-6fd5a53e7415" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="62c83f44-3724-4000-b00d-5ea0c9fdb2cc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Applications Models " Guid="d72713d3-e05f-4568-bca5-547aff39a635" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[1]/Applications Models/Applications Models" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51835b15-1042-441d-b256-25516acc7521" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the 'Add Item' button" Guid="e570c500-2563-45c6-86c9-52de5ef802fe" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:AddButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cb3f14ed-12b6-4428-a023-4e68dfedc8ae" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindow Description="Check if API Model Import Wizard is a separate window" Guid="7cd888a7-1a4a-4cb9-90e2-bcde6f750094" LocateBy="ByName" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowActionType="IsExist" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Passed&quot;" FlowControlAction="GoToAction" Guid="8542c247-6f3a-4644-b96c-7824d77e42fa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="49315010-6a19-40c0-a5ff-7035e8cf5eaa#GUID_NAME#Switch Window Action to API Model Import Wizard" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="&quot;{ActionStatus}&quot; = &quot;Failed&quot;" FlowControlAction="GoToAction" Guid="1fe58353-51a8-4fa4-ba1e-ff9a1a4473aa" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dfa5cd44-f5fb-42f1-acef-b38023e2906d#GUID_NAME#API Model Wizard -Click on Next button" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="ab7d3492-bbd1-4025-964e-fc27eed7175e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindow>
+<ActSwitchWindow Active="True" Description="Switch Window Action to API Model Import Wizard" Guid="49315010-6a19-40c0-a5ff-7035e8cf5eaa" LocateBy="ByTitle" LocateValue="API Model Import Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="defbc473-1f74-488d-a26c-8ca2880b4955" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="2" Value="2" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard -Click on Next button" Guid="dfa5cd44-f5fb-42f1-acef-b38023e2906d" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select API Type XML Template" Guid="e4e14dfb-438d-49cd-b8e7-4198a78f1d52" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:APITypeComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="20" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="a1d52240-bf6a-491c-af5e-9d3b515de35d" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="a33707d2-c56f-4efe-86f4-da0e6a6e5abf#GUID_NAME#API Model Wizard -Enter the file path" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="409ac2c8-be8c-4b6b-89bf-1b131dff6074" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="XML Templates" Value="XML Templates" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SendKeys" Description="API Model Wizard -Enter the file path" Guid="a33707d2-c56f-4efe-86f4-da0e6a6e5abf" LocateBy="ByName" LocateValue="File name:" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="C:\GingerSourceControl\Solutions\Ginger-ATest\Documents\XML1.xml" Value="C:\GingerSourceControl\Solutions\Ginger-ATest\Documents\XML1.xml" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard -Click on Open button" Guid="99fa85e3-27d6-4b05-a823-26a112d4f9cd" LocateBy="ByXPath" LocateValue="/Open/Open" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b93bdcac-4e04-41a2-b5d4-93d6428780f7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - click Next on APIs Import Source page" Guid="3c8c5dcf-1a5b-4568-b19c-93a20beb0d8b" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next on Select APIs page" Guid="6c098582-d39c-4b78-aa88-18628d057ade" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Next on Learn Optional Parameters Values page" Guid="ecc1f161-abc3-4c33-accd-51e3e001303f" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e43659b7-5475-45b6-b147-add3ad13b4d4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="API Model Wizard - Select Target Application" Guid="87d8f16b-6710-499f-849f-bfa9b5dd6412" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xTargetApplicationComboBox]/[AutomationId:ComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="MyWebServicesApp" Value="MyWebServicesApp" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="API Model Wizard - Click on Finish button" Guid="d177ed79-6b89-41b6-a10a-30f2a7caa542" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]/Finish" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e73eca55-16f8-487b-94a0-f5dcd483cb52" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="46e6ffe0-5342-424d-a376-93698fca0d3b" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the addition of added XML" Guid="2db228a4-c20b-4c08-b4e8-90c7f7136011" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/XML1/XML1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23f607c9-44be-47e8-a1e7-6e2b9de83deb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ae1e3102-b60b-48e3-b081-7fe96decb999" mExpected="XML1" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on added XML" Guid="7d112495-fcb8-49de-9d56-8b88b5db4b10" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/XML1/XML1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="23f607c9-44be-47e8-a1e7-6e2b9de83deb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Select" Description="Select API Type as SOAP" Guid="4521648a-a6ce-400c-adc5-11594eddc447" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:DetailsFrame]/[LocalizedControlType:pane]/[AutomationId:APIModelTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[LocalizedControlType:pane]/[AutomationId:xAPITypeComboBox]/[AutomationId:ComboBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="14cc8509-8629-4e31-90e9-fa642cfc948d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="SOAP" Value="SOAP" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter End Point URL" Guid="2cf8def6-9504-43f1-bc14-01fe48a55ccd" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:DetailsFrame]/[LocalizedControlType:pane]/[AutomationId:APIModelTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[LocalizedControlType:pane]/[AutomationId:EndPointURLTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d784530b-4259-4f70-bdd7-b37a3ad100a5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" Value="http://ws.cdyne.com/delayedstockquote/delayedstockquote.asmx" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="Enter the SOAP Action" Guid="3947e57a-c1a1-42c7-abf1-b7185d1d813c" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:DetailsFrame]/[LocalizedControlType:pane]/[AutomationId:APIModelTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[LocalizedControlType:pane]/[AutomationId:SoapActionTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d784530b-4259-4f70-bdd7-b37a3ad100a5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="http://ws.cdyne.com/GetQuickQuote" Value="http://ws.cdyne.com/GetQuickQuote" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Save button" Guid="2163e0a7-e1fe-4656-9fee-1f92ef5077d9" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xSaveAllButton]/[AutomationId:xButton]/[AutomationId:xButtonImage]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c517c74b-06f6-42c3-b1a6-bcc22d2548ba" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Add API Model Action for XML - Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="eb92b4dd-dd6c-467c-a14d-ebdda630e71a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="93%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Business Flow tab" Guid="04eeea8c-9f39-4db8-b071-e516b455f553" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/System.Windows.Controls.ListViewItem/[LocalizedControlType:custom]/Business Flows" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Cick on Add New Action button" Guid="dabf2f87-e7b5-4db2-b202-c07cc24d398f" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:Add Button AID]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl ControlAction="DoubleClick" Description="Double Cick on Business Flow1" Guid="c15c2dcf-6bb5-471d-b840-fe35f6d29dc7" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:2/System.Windows.Controls.TreeViewItem Header: Items.Count:0[0]/Business Flow 1/Business Flow 1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model Action" Guid="227fa038-6054-4d3e-9b86-8ca658f75a08" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:ActionsTabs]/System.Windows.Controls.TabItem Header: Content:[0]/[AutomationId:PlatformActionsGrid]/[AutomationId:grdMain]/Web API Model Action/Web API Model Action/Web API Model Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Select API Model - XML1" Guid="d9263cc3-ec61-456b-bd32-38b8a19ea602" LocateBy="ByXPath" LocateValue="/GenericWindow/[AutomationId:WindowScrollViewer]/[AutomationId:PageFrame AID]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/XML1/XML1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window Action to Add API Model Wizard" Guid="d09c2972-ef6c-40bb-92e9-eb1706df86c6" LocateBy="ByTitle" LocateValue="Add API Model Wizard" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Next button of Select API Model" Guid="e27db765-9ed0-4172-aef6-e4c10acd7296" LocateBy="ByXPath" LocateValue="/[AutomationId:xNextButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter value of StockSymbol" Guid="344321c5-6d90-4498-9c85-8584d43dac65" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[0]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="123" Value="123" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="SetValue" Description="API Model Wizrad - Enter parameter value of LicenseKey" Guid="14bfa827-4e86-4f1f-a914-239d0f676d09" LocateBy="ByXPath" LocateValue="/[AutomationId:PageFrame]/[AutomationId:xAPIModelParamsValueUCGrid]/[AutomationId:grdMain]/Amdocs.Ginger.Repository.EnhancedActInputValue[1]/Item: Amdocs.Ginger.Repository.EnhancedActInputValue, Column Display Index: 3/[LocalizedControlType:combo box]/[AutomationId:PART_EditableTextBox]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="456" Value="456" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="API Model Wizrad - Click on Finish button" Guid="1b714a23-1ecb-4424-b6bb-0a13eb1f6d27" LocateBy="ByXPath" LocateValue="/[AutomationId:xFinishButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="88f71748-d0b0-42db-b16e-fd5708a33592" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Ginger by amdocs" Guid="ae6ca4b9-856d-4cee-8c56-6d78dc73856f" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a7f5b87a-21af-49bc-b5f8-bf2e69945e32" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate the Added Action" Guid="a2106bc3-b2e6-4086-a6c4-01352d48f38d" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/XML1- API Model Execution/XML1- API Model Execution/XML1- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="dcd95649-fe1b-402f-be34-1cab679b6655" mExpected="XML1- API Model Execution" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Select the Action" Guid="fc2da2d0-0a36-4c4f-9b78-fc3cb0d74ba5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/XML1- API Model Execution/XML1- API Model Execution/XML1- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="43f0d10d-e131-4e6f-b17c-a0c96c9760d3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Run the Action" Guid="7b36f5d3-c0ac-4752-ae3e-83495330e276" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xRibbon]/Automate/Execution/System.Windows.Controls.Ribbon.RibbonButton[0]/Run Action" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="edddad1a-3f60-4a4b-9414-69e66be012aa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="GetValue" Description="Validate if the Action Passed" Guid="f31dbb2e-ba8f-4630-a895-c3b03691e1f0" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (0)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/XML1- API Model Execution/Passed/Passed" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e9960c7f-494a-469f-b2a4-828938c06347" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ff12ed13-a2a9-47b1-a910-42b8cc1493f3" mExpected="Passed" Operator="Legacy" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="API Model XML - Cleanup" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="78f7d18e-59e7-4deb-8846-841b24ae6c90" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="89%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl ControlAction="Click" Description="Click on the Action" Guid="00b14e28-6f28-4f1b-a6aa-6708caaf78e5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:grdMain]/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution/Find pet by ID- API Model Execution" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d3d67ce4-5c59-4e38-9c60-c6f919945216" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Delete Button" Guid="7b159f96-4562-4985-b4c6-195afb97fcd5" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/'Activity 1'- Activity Actions (1)[1]/[AutomationId:ActivityActionsFrame]/[AutomationId:grdActions]/[AutomationId:toolbar]/[AutomationId:btnDelete]/[LocalizedControlType:image]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f1595c65-5ca2-4cd7-95bb-99c0e3901f4e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Go to Resources tab" Guid="64aa09c8-c139-48a0-9c51-9677875ab3e2" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="32d884f4-450a-4616-87f0-95d5cdcc50c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Applications Models " Guid="b4f34f0c-202c-4c71-a400-1c0a7dc61922" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[1]/Applications Models/Applications Models" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51835b15-1042-441d-b256-25516acc7521" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="RightClick" Description="Right click on the API Model" Guid="f6c54335-7140-48ce-b61b-d51d58f4be48" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:1/System.Windows.Controls.TreeViewItem Header: Items.Count:0/XML1/XML1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d6711961-a1ec-44fe-b43e-7e53e4e086a6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on the Delete button" Guid="835eb5df-6f0f-4327-ae40-62e719a398ed" LocateBy="ByXPath" LocateValue="/[LocalizedControlType:window]/[LocalizedControlType:menu]/[AutomationId:ContextMenuScrollViewer]/Delete" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="354d52eb-224c-4cc9-a079-2583857e27a1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Delete Item message" Guid="1009d115-edd1-4a79-b185-02d096ff4fca" LocateBy="ByTitle" LocateValue="Delete Item" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9a1a19ea-acc9-447c-a3fb-e4c8dbbacfa6" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Yes button of Delete message" Guid="96f72fbd-9134-4915-8ee4-103bc533ad7f" LocateBy="ByXPath" LocateValue="/[AutomationId:xYesButton]/[AutomationId:xButton]/Yes" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f277d45e-5ae0-49be-b900-70307edac106" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="a109595b-c01b-4220-b936-376bb64c5480" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivityName="Solution Cleanup" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="b18f8d18-5100-4aac-8504-04264d9a37f7" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Go to Resources tab" Guid="14043397-71d7-4edd-9c4d-add5f2081b01" LocateBy="ByXPath" LocateValue="/[AutomationId:xSolutionTabsListView]/RESOURCES/RESOURCES" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c00737ed-009a-4a20-89c4-4670577f711b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click  on Documents" Guid="7cea61c9-a6c3-4238-9c3c-a768295d2dc2" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xMainNavigationListView]/Ginger.TwoLevelMenuLib.TopMenuItem[5]/Documents/Documents" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0e3cad7d-0be9-4d37-a48e-0aacd1dd4213" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="RightClick" Description="Right Click on Documents" Guid="3e36b4b9-17d8-49ab-bcd5-5b7dbea97f29" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xSelectedItemFrame]/[AutomationId:xTreeView]/[AutomationId:xTreeViewTree]/[AutomationId:Tree]/System.Windows.Controls.TreeViewItem Header: Items.Count:5/Documents/Documents" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f6500cb-e01a-4ef0-baec-93302a4ffd9b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Open Folder in File Explorer" Guid="1076db7f-e66c-424a-befc-0257899c3491" LocateBy="ByXPath" LocateValue="/[LocalizedControlType:window]/[LocalizedControlType:menu]/[AutomationId:ContextMenuScrollViewer]/Open Folder in File Explorer/Open Folder in File Explorer" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="420bb5c8-ed11-4f89-ab98-874a4140ce83" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Close the Ginger" Guid="5c3a523f-8c94-42db-9e1a-0278b1886e36" LocateBy="ByXPath" LocateValue="/[AutomationId:TitleBar]/Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d67fd490-4964-42e7-b285-8953ef86f22d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Close Ginger Window" Guid="4c537cbf-b62b-41eb-97c5-868badc6e181" LocateBy="ByName" LocateValue="Close Ginger" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="04dd2184-3711-462f-836b-fab9b57bc6e2" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="DoubleClick" Description="Click on Yes Button" Guid="f12e047e-326c-491b-abd9-3aec00497ff9" LocateBy="ByXPath" LocateValue="/[AutomationId:xYesButton]/[AutomationId:xButton]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d0e53372-f92c-45bf-b351-1a82a757e672" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to File Explorer" Guid="23fa5293-68c1-4e1b-b59b-a3703da3c222" LocateBy="ByTitle" LocateValue="C:\Ginger-ATest\Documents" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a2e139bd-7d21-4943-ba40-9c50fde9b00e" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click the Up Arrow button" Guid="30b8bd42-cf60-43c5-9166-1b8e700b8f8c" LocateBy="ByName" LocateValue="Up to &quot;Ginger-ATest&quot; (Alt + Up Arrow)" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b1985c3f-b22d-44c6-a4d3-c4d1c1ac50b9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click the Up Arrow button Again" Guid="3af737c1-3225-4bd7-b843-a7a6d5ecba5c" LocateBy="ByName" LocateValue="Up to &quot;OSDisk (C:)&quot; (Alt + Up Arrow)" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b1985c3f-b22d-44c6-a4d3-c4d1c1ac50b9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Delete Button" Guid="5e802a03-7b09-4be8-b185-3f5d3d74a69c" LocateBy="ByXPath" LocateValue="/UIRibbonDockTop/Ribbon/Ribbon/[LocalizedControlType:pane]/Ribbon/Lower Ribbon//Home/Organize/Delete/Delete[0]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b1985c3f-b22d-44c6-a4d3-c4d1c1ac50b9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Folder Access Denied" Guid="45792444-55d8-4a1f-94d4-8dbf545672d8" LocateBy="ByTitle" LocateValue="Folder Access Denied" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopRun" Guid="7c7f8cad-9d7a-4353-a13f-96272521f3fa" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="30812632-bd39-48ec-b044-d963e11ef842" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Continue Button" Guid="76c691b5-1035-4a48-ba49-acd6b93f9c55" LocateBy="ByName" LocateValue="Continue with automatic administrator rights" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b977a5c3-333e-4e59-ba02-32fe8d37f8e3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Close the Ginger" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="d7d507f3-3a87-4a3d-a8ed-ae7c224b95f2" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Windows-App">
+<Acts>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Save button" Guid="b2830f0b-4132-4df6-bd58-82312745d3c7" LocateBy="ByXPath" LocateValue="/[AutomationId:xMainWindowFrame]/[AutomationId:xContentFrame]/[AutomationId:xTreeView]/[AutomationId:xSaveAllButton]/[AutomationId:xButton]/[AutomationId:xButtonImage]" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ad9d2756-6bf7-47b8-8d24-57f6e32e2819" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window - Warning" Guid="133840c9-4dce-4c6b-8393-fe2dd6193418" LocateBy="ByTitle" LocateValue="Warning" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="d94bfd33-014f-426b-90ff-ee87a88ae658" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="536cfd3b-2300-4f30-b220-c6c339c20b3c#GUID_NAME#Click on Ok button" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="55257979-b71a-4842-9224-e04c45aaea39" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2b87013d-d250-4a52-ace8-3d65015bdead#GUID_NAME#Switch to Ginger app" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="ea74047c-8cca-4f1d-b64c-07d3a1f8bb21" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Ok button" Guid="536cfd3b-2300-4f30-b220-c6c339c20b3c" LocateBy="ByXPath" LocateValue="/[AutomationId:xOKButton]/[AutomationId:xButton]/Ok" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2a96e778-5c01-4695-adfd-9ca7391341f2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch to Ginger app" Guid="2b87013d-d250-4a52-ace8-3d65015bdead" LocateBy="ByTitle" LocateValue="Ginger by amdocs" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ecb405c6-97d8-4451-9f16-6e100c2d8229" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="10" Value="10" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Close button" Guid="84337dbe-ffa0-479c-9239-bfe568156122" LocateBy="ByXPath" LocateValue="/[AutomationId:TitleBar]/Close" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ccee458c-d305-4f33-aff9-a5143b55d3eb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+<ActSwitchWindow Active="True" Description="Switch Window to Close Ginger" Guid="ca382072-26b6-4bcf-b697-888848ca4f66" LocateBy="ByXPath" LocateValue="Close Ginger" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8fe6ca37-e77d-4b7f-9bbe-9865aba77a4e" Param="WaitTime" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActSwitchWindow>
+<ActWindowsControl Active="True" ControlAction="Click" Description="Click on Yes button" Guid="17b295f8-cefd-488d-b4fe-d0212f78199c" LocateBy="ByXPath" LocateValue="/[AutomationId:xYesButton]/[AutomationId:xButton]/Yes" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8c3bdeb9-8f25-4528-adb4-927de78a0c97" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActWindowsControl>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Windows-App" Guid="6846fb49-3c10-404f-950a-d40a4b9b3292" LastExecutingAgentName="Windows-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<TargetApplication AppName="WebServices-App" Guid="3379f336-e43c-4b2f-a501-e84c1a29aa09" LastExecutingAgentName="WebServicesAgent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="14b1c980-4f90-48a4-b8f6-92aaefedc3f6" InitialStringValue="C:\GingerSourceControl\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\GingerSourceControl\Ginger_Regression_Testing\Documents" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

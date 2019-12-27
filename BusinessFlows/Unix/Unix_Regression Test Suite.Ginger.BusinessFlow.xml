@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="acd6cb46-0312-4b7f-a8d3-552dc2373ae9" ItemType="BusinessFlow" CreatedBy="mahessha" Created="201811271254" GingerVersion="3.2.0.0" Version="137" LastUpdateBy="JGHODKE" LastUpdate="201905070845" />
+<BusinessFlow Description="Unix commands are run on SSH server." Elapsed="52545" Guid="acd6cb46-0312-4b7f-a8d3-552dc2373ae9" Name="Unix_Regression Test Suite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivityName="Initial Setup" AutomationStatus="Development" Description="Initial set up of variables are created here" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ed0a7eae-30a4-42b1-b854-c60a51d0092d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Unix-App">
+<Acts>
+<ActScript Active="True" Description="Script Action-Get Unix path " Guid="7744697b-1682-42df-b074-9efd56672133" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="GetSolutionFolder.vbs" ScriptPath="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5ee84207-f8b1-49fc-8dd4-2b79d6a7ce5a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e54f605a-9b9d-402d-95ba-9ec720da7b45" Operator="Legacy" Param="DocumentFolder" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="DocumentPath" />
+</ReturnValues>
+</ActScript>
+<ActScript Active="True" Description="Script Action- Create TXT Files" Guid="f5e4f94d-5a2e-4869-b4ea-7468ba8ae59a" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptCommand="Script" ScriptInterpreterType="VBS" ScriptName="CreateTxt4Dos.vbs" ScriptPath="C:\SVN\GingerSolutions\Ginger_Regression_Testing\\Documents\Scripts\" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="be1c5969-a5ee-4745-bc04-9ba8b1027c78" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActScript>
+<ActSetVariableValue Active="True" Description="Set Script Folder Variable " Guid="564dd833-488f-4fed-a147-3332ed206fd6" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="ScriptPath" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentPath}\Scripts" Value="{Var Name=DocumentPath}\Scripts" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Set Unix Path Variable" Guid="6ae1b9ab-c145-4b72-adb0-0b9dcd9e60c8" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="UnixPath" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b12e8cb-a8a3-42b3-bb8f-8b425ea387bc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentPath}\Unix" Value="{Var Name=DocumentPath}\Unix" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="553d937f-6ffd-4175-b5b4-fc4013dc64ff" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="a" />
+</ReturnValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="f2f473f1-2a59-4a4f-b3de-d9cc410648cc" MappedOutputType="None" Name="a" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="SSH-Basic commands-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e2e7f35b-66c0-45fa-a542-a19254f1fb1d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Unix-App">
+<Acts>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Status Checking - Testing" EnableRetryMechanism="True" ExpString="STATUS" Guid="4135d35e-e8ec-4dc5-a458-fe92aaa7232b" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="bcc8a89f-eae4-4caa-8c47-224ef185aa72" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="10" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f80c7f18-b612-4d2e-bc75-2bc3a2afca84" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;STATUS=UP&quot;" Value="echo &quot;STATUS=UP&quot;" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c9241b56-08ba-479c-93ce-ae3e3432fa64" mExpected="UP" Operator="Legacy" Param="STATUS" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" Command="echo &quot;Ginger&quot;" ConsoleCommand="ParametrizedCommand" Description="Console Command Action - Parameterized Command - Testing" Guid="3682e9fb-db7c-456c-9169-a9958600dc24" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="c180c7a5-b412-4d50-8b8b-48b01f7c8148" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a4dd6e1e-6045-454f-94a2-334b315c0c36" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Free Command-Testing" Guid="ac9aae8b-1741-4cbe-a870-b272573e2437" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="636988f3-5aba-4d0a-aedd-f6b98f62882a" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c8e49fc1-f274-4f0a-a3fa-bc11d08a3b0e" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="pwd" Value="pwd" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="859330e5-ecfd-462b-b72b-80c7d92cf2a8" mExpected="InStr({Actual},{EnvParam App=Web-App Param=UnixUserName})&gt;0" Operator="Legacy" Param="Result" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="Script" Description="Console Command Action - Shell script wait time '+ve' scenario - Testing" ExpString="Output Value 4" Guid="9be92f13-7811-4699-b8c0-ddc0d5c69457" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptName="Sample.sh" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow" />
+<ActConsoleCommand Active="True" ConsoleCommand="Script" Description="Console Command Action - Shell script wait time '-ve' scenario - Testing" ExpString="Output Value 4" Guid="6f1af657-ff78-4273-b476-a69b14a55bd0" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" ScriptName="Sample.sh" StatusConverter="InvertStatus" WaitTime="3" WaitVE="0" WindowsToCapture="OnlyActiveWindow" />
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Free Command Delimiter &quot;Default '='&quot; value '+ve' Scenario - Testing " Guid="fdd565bc-15a5-4d16-acb1-13061a135f4a" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c0190cce-e67e-4461-b6a5-d08fef8d24fc" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;VALUE=123&quot;" Value="echo &quot;VALUE=123&quot;" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="014b6a94-8f98-4f35-ac3b-fd4eddee4105" mExpected="123&quot;" Operator="Legacy" Param="echo &quot;VALUE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action - Free Command Delimiter &quot;Default '='&quot; value '-ve' Scenario - Testing" Guid="61ac14e5-709a-4c05-b15d-9680c118c7d2" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="InvertStatus" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a6e8e938-f85e-4c09-bee3-7a71f163dd91" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;VALUE=123&quot;" Value="echo &quot;VALUE=123&quot;" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d778e600-5b93-4139-a858-b45e007bad8c" mExpected="13" Operator="Legacy" Param="VALUE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Delimiter="," Description="Console Command Action - Free Command Delimiter &quot;,&quot; value '+ve' Scenario - Testing " Guid="4f701cba-41cb-466f-9b9a-a64502ae0d18" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d52c9d3f-39e5-466e-8675-33f96fe7b0c7" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;VALUE,123&quot;" Value="echo &quot;VALUE,123&quot;" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="507cecf7-e4cd-4e16-b3a8-5d5d71de149a" mExpected="123" Operator="Legacy" Param="VALUE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Delimiter="," Description="Console Command Action - Free Command Delimiter &quot;,&quot; value '-ve' Scenario - Testing" Guid="870ec579-4295-44ea-bfa1-f8b80e8efd18" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="InvertStatus" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9e235c9f-db47-4287-965c-be6d7056e2ac" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="echo &quot;VALUE,123&quot;" Value="echo &quot;VALUE,123&quot;" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e042476b-ff9f-4709-93da-8630e9cfa836" mExpected="13" Operator="Legacy" Param="VALUE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActConsoleCommand>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="SSH-Advanced Commands" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ed2dee1c-c557-4824-80ed-79ac2b6e270b" ParentGuid="ef9953ed-4859-43f5-b584-39b18867c403" PercentAutomated="100%" TargetApplication="Unix-App">
+<Acts>
+<ActFileTransfer Active="True" Description="Send file to Temporary Directory" FileTransferAction="PutFile" Guid="2a24f217-33f4-49ee-a084-c027045353c6" Host="{EnvParam App=Web-App Param=UnixHost}" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Password="{EnvParam App=Web-App Param=UnixPassword}" PCPath="{Var Name=DocumentPath}\SCRIPTS\ShScript.sh" Platform="NA" Port="22" RetryMechanismInterval="5" StatusConverter="None" UnixPath="/aabusers1/aab/aimsys/{EnvParam App=Web-App Param=UnixUserName}/tmp/" UserName="{EnvParam App=Web-App Param=UnixUserName}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="406e4e49-6113-48c2-a278-d462a377fea3" Param="PCPath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentPath}\SCRIPTS\ShScript.sh" Value="{Var Name=DocumentPath}\SCRIPTS\ShScript.sh" />
+<ActInputValue Guid="8e1204b9-829b-4fc4-bf64-4f6212b5497a" Param="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="/aabusers1/aab/aimsys/{EnvParam App=Web-App Param=UnixUserName}/tmp/" Value="/aabusers1/aab/aimsys/{EnvParam App=Web-App Param=UnixUserName}/tmp/" />
+<ActInputValue Guid="f534d39d-1332-46e0-9b11-e6a997c7ba90" Param="UserName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{EnvParam App=Web-App Param=UnixUserName}" Value="{EnvParam App=Web-App Param=UnixUserName}" />
+<ActInputValue Guid="4767f523-f4bf-4045-90f4-718815bdc3c7" Param="Password" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{EnvParam App=Web-App Param=UnixPassword}" Value="{EnvParam App=Web-App Param=UnixPassword}" />
+<ActInputValue Guid="60368724-b680-4dde-a638-51814110dcc8" Param="PrivateKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="418d1eda-1b21-4845-8f0b-63c5128b3338" Param="PrivateKeyPassPhrase" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b0d851fd-a77e-4288-93f7-2abc1e1ce439" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="22" Value="22" />
+<ActInputValue Guid="fd4379ab-26eb-43d3-bd85-ab1167bdb278" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{EnvParam App=Web-App Param=UnixHost}" Value="{EnvParam App=Web-App Param=UnixHost}" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="57106f96-1e71-467e-a47b-0664355e2dd6" Operator="Equals" Param="Uploaded File Directory" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="uploadedDirPath" />
+</ReturnValues>
+</ActFileTransfer>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Go to Folder" Guid="d41a601f-803e-41dc-b3ae-705ec983c44b" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="728b3dc3-8627-4b5d-b025-9dca25d69134" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="cd {Var Name=uploadedDirPath}" Value="cd {Var Name=uploadedDirPath}" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Set File Permission" Guid="0a1ba3e3-a902-4534-b402-6c9c69f2c996" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="728b3dc3-8627-4b5d-b025-9dca25d69134" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="chmod +x ShScript.sh" Value="chmod +x ShScript.sh" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Run ssh script" Guid="4986d3d7-c0be-4cf8-a313-cf41fcde486b" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="02ce6326-4ec3-4778-b246-1bc2498e489a" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="./ShScript.sh" Value="./ShScript.sh" />
+</InputValues>
+</ActConsoleCommand>
+<ActFileTransfer Active="True" Description="Get Generated File" FileTransferAction="GetFile" Guid="454bb43f-293a-4ae8-bb85-d3f0cef333d4" Host="{EnvParam App=Web-App Param=UnixHost}" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Password="{EnvParam App=Web-App Param=UnixPassword}" PCPath="{Var Name=DocumentPath}\OUTPUTFILES" Platform="NA" Port="22" RetryMechanismInterval="5" StatusConverter="None" UnixPath="{Var Name=uploadedDirPath}/shScriptOutput.txt" UserName="{EnvParam App=Web-App Param=UnixUserName}" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="406e4e49-6113-48c2-a278-d462a377fea3" Param="PCPath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=DocumentPath}\OUTPUTFILES" Value="{Var Name=DocumentPath}\OUTPUTFILES" />
+<ActInputValue Guid="8e1204b9-829b-4fc4-bf64-4f6212b5497a" Param="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=uploadedDirPath}/shScriptOutput.txt" Value="{Var Name=uploadedDirPath}/shScriptOutput.txt" />
+<ActInputValue Guid="f534d39d-1332-46e0-9b11-e6a997c7ba90" Param="UserName" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{EnvParam App=Web-App Param=UnixUserName}" Value="{EnvParam App=Web-App Param=UnixUserName}" />
+<ActInputValue Guid="4767f523-f4bf-4045-90f4-718815bdc3c7" Param="Password" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{EnvParam App=Web-App Param=UnixPassword}" Value="{EnvParam App=Web-App Param=UnixPassword}" />
+<ActInputValue Guid="60368724-b680-4dde-a638-51814110dcc8" Param="PrivateKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="418d1eda-1b21-4845-8f0b-63c5128b3338" Param="PrivateKeyPassPhrase" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b0d851fd-a77e-4288-93f7-2abc1e1ce439" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="22" Value="22" />
+<ActInputValue Guid="fd4379ab-26eb-43d3-bd85-ab1167bdb278" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{EnvParam App=Web-App Param=UnixHost}" Value="{EnvParam App=Web-App Param=UnixHost}" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a72026e9-2f94-41a1-85f2-ffd78a994da1" Operator="Equals" Param="Downloaded File Path" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="downloadedFilePath" />
+<ActReturnValue Active="True" Guid="8c8b8752-f45a-4ee8-9f8d-1459727082b9" Operator="Equals" Param="Downloaded File Directory" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="downloadedFileDirectory" />
+</ReturnValues>
+</ActFileTransfer>
+<ActFileOperations Active="True" Description="Check if file exists or not on directory" FileOperationMode="CheckFileExists" Guid="72bc33b5-5381-47c9-9393-88ef9bb85503" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="833ee4e7-778d-4834-b3c1-25a25f6c4b37" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=downloadedFilePath}" Value="{Var Name=downloadedFilePath}" />
+<ActInputValue Guid="b15fae63-eb54-4927-b13c-0304ccdc2cf0" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fd00d285-9f9e-45ea-96eb-b130aa773814" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="clean up downloaded File" FileOperationMode="DeleteDirectoryFiles" Guid="f51f0df1-2640-49dd-8d28-f59e63a0187d" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="833ee4e7-778d-4834-b3c1-25a25f6c4b37" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="{Var Name=downloadedFileDirectory}" Value="{Var Name=downloadedFileDirectory}" />
+<ActInputValue Guid="b15fae63-eb54-4927-b13c-0304ccdc2cf0" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fd00d285-9f9e-45ea-96eb-b130aa773814" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="clean up uploaded file" Guid="3864d743-5f9e-4d1c-a147-ca785cf411d2" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="728b3dc3-8627-4b5d-b025-9dca25d69134" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="rm -r {Var Name=uploadedDirPath}" Value="rm -r {Var Name=uploadedDirPath}" />
+</InputValues>
+</ActConsoleCommand>
+</Acts>
+
+<Variables>
+<VariableString Guid="656b1d86-136b-4fe8-a045-ab88845e7be9" InitialStringValue="/aabusers1/aab/aimsys/aabwrk61/Ginger/Uploaded" MappedOutputType="None" Name="uploadedDirPath" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="7bd9c236-614b-4f06-aa6b-955e11d2416b" InitialStringValue="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\OUTPUTFILES\shScriptOutput.txt" MappedOutputType="None" Name="downloadedFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\OUTPUTFILES\shScriptOutput.txt" />
+<VariableString Guid="6ac0dd34-53cd-4a37-ae09-ee6e75fbb285" InitialStringValue="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\OUTPUTFILES" MappedOutputType="None" Name="downloadedFileDirectory" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\OUTPUTFILES" />
+<VariableString Description="Variable String" Guid="3f720200-7eb8-48aa-83dd-9bf9ad3e0842" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Clean up" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ff653102-05ff-4509-ad65-365f5c63648f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="Unix-App">
+<Acts>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Remove sh script" Guid="f76da67e-fbbb-44c2-9935-07b023042946" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="26508652-6044-4a14-9083-8e9385304e18" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="rm -f ShScript.sh" Value="rm -f ShScript.sh" />
+</InputValues>
+</ActConsoleCommand>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Remove file generated during process" Guid="acb4d8c4-789b-4de2-8526-1977995e0723" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitTime="5" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="26508652-6044-4a14-9083-8e9385304e18" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="rm -f shScriptOutput.txt" Value="rm -f shScriptOutput.txt" />
+</InputValues>
+</ActConsoleCommand>
+<ActAgentManipulation Active="True" Description="Close Agent" Guid="65e31d12-3d80-4e8f-acc0-753d727641c2" LocateBy="NA" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9a19e524-5ce0-407a-b153-d905c8660e6d" Param="AgentManipulationActionType" ParentGuid="00000000-0000-0000-0000-000000000000" StoreToVariable="CloseAgent" Value="CloseAgent" />
+</InputValues>
+</ActAgentManipulation>
+</Acts>
+</Activity>
+</Activities>
+
+<TargetApplications>
+<TargetApplication AppName="Unix-App" Guid="a63a4858-bb0f-4b51-8b43-b3e9d38bd1d4" LastExecutingAgentName="Unix-Agent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Description="Variable String" Guid="3f720200-7eb8-48aa-83dd-9bf9ad3e0842" InitialStringValue="C:\SVN\GingerSolutions\Ginger_Regression_Testing\Documents" MappedOutputType="None" Name="DocumentPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents" />
+<VariableString Guid="ea804d92-92fd-4e7d-89e7-547e634f37d7" MappedOutputType="None" Name="Name" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="f7aa9efc-8ddd-4a98-b711-d9f71aba8dde" InitialStringValue="C:\NewReg_Suite\Ginger_Regression_Testing\Documents\Scripts" MappedOutputType="None" Name="ScriptPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\Scripts" />
+<VariableString Guid="e46f3ea6-407d-4137-8cd8-7b69c1a1c3f2" InitialStringValue="C:\NewReg_Suite\Ginger_Regression_Testing\Documents\Unix" MappedOutputType="None" Name="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\My Drive\Ginger Solutions\Ginger_Regression_Testing\Documents\Unix" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

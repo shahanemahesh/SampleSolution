@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ItemType="BusinessFlow" CreatedBy="NATISHAK" Created="201901100858" GingerVersion="3.4.0.0" Version="24" LastUpdateBy="JGHODKE" LastUpdate="201909251312" />
+<BusinessFlow Active="False" Elapsed="28610" Guid="4fdac942-6383-409b-ba3f-7a12765d2cf9" Name="Mainframe_RegressionTestingSuite" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Init" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="a4861de5-6c33-45a4-86be-0cb72ea368c3" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeSendKey Active="True" Description="Initialization of Mainframe Agent" Guid="efd89330-fc29-4457-b38c-8ecf9db51ef6" KeyToSend="EraseInput" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="AlwaysPass" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="40c7ee3b-838a-4314-8f6c-16ebb7688360" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Get Details From Mainframe-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="598547e7-6c2d-4896-a3c8-27159bd9abe9" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetText-Testing" DetailsToFetch="GetText" Guid="0e862c2f-0b75-4bd8-9b63-3aca22b95e27" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e47b32e5-8005-4e7f-8c9c-95842600eb43" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="e5af38ca-13fa-4bc3-84d2-a8277a1115d9" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<ActInputValue Guid="b73f429d-addd-4504-a47a-655f0d43cd9d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeGetDetails>
+<ActMainframeSetText Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Init1" Guid="e0715a81-6400-4867-867c-3cced1cbb347" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SendAfterSettingText="True" SetTextMode="SetSingleField" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3c091cb5-272c-44eb-b5d7-8067d1e195b1" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="19c435ce-5611-4e1c-ada5-d9eb597b1b71" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="174" />
+<ActInputValue Guid="cf581136-bfa7-49c5-8fdf-0c1944d714e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CLSSC" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeSendKey Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Init2" Guid="b48f46ba-f8be-4a51-b4bb-47e6e7c97a6d" KeyToSend="Enter" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="95bdb44c-0f11-436b-b2c4-ab439d6d7f10" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Testing" DetailsToFetch="GetAllEditableFeilds" EnableRetryMechanism="True" Guid="8cf3fd6d-0a81-4f35-89f8-f5a2ddf87adf" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="10" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5a49ff75-cc61-438f-a119-c67c13b4ad56" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="ca5a0fdd-13c8-4d91-9658-f629ed52f4ec" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="655" />
+<ActInputValue Guid="ac0677f8-b405-4271-b3ac-127583c02e03" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="cc144d23-8b20-465e-a6e8-00746f01e9c7" mExpected="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;349&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;429&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;509&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;560&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;661&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;693&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;973&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;997&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;1053&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" Operator="Legacy" Param="Fields" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_xmlData" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActXMLTagValidation Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Validation" DocumentType="XML" Guid="1c85b27f-0aaf-4b48-b385-7b5e07a2fdc1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ReqisFromFile="False" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<DynamicElements>
+<ActInputValue Guid="c2710eba-357f-41c2-831a-b711537decd1" Param="/EditableFields/EditableField[3]" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</DynamicElements>
+
+<InputValues>
+<ActInputValue Guid="2c655e2f-a25e-4324-bc5f-96b6de473aad" Param="InputFile" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=_xmlData}" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5327ad6d-07ee-4dac-a71f-5c351cf9abda" mExpected="509" Operator="Equals" Param="/EditableFields/EditableField[3]" ParentGuid="00000000-0000-0000-0000-000000000000" Path="Caret" StoreTo="None" />
+</ReturnValues>
+</ActXMLTagValidation>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetCurrentScreenAsXML-Testing" DetailsToFetch="GetCurrentScreenAsXML" Guid="13e70890-2c98-46eb-9a42-c88521fc67ca" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7210ae55-71ca-48df-9db2-7b5be5743d2a" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="2f9b61b7-be0f-4b2e-9f4f-c840acc9300e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1cd6e2a0-f25e-4ee6-a212-70e6b3f95c9c" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="33f5e5e1-a409-44d4-ad5d-ea683f50ab41" Operator="Legacy" Param="ScreenXML" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_editableFields" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-AfterCaretPosition-Testing" DetailsToFetch="GetDetailsFromText" Guid="c8cef340-4598-4ce8-b2fa-a0758b5d957c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="AfterCaretPosition" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f031aab-9ba0-4dac-9c2b-d8a49c110e1f" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="4192b827-2c7d-4bfe-bb3f-4ce0d21b37ed" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1201" />
+<ActInputValue Guid="484ff908-e02f-404b-a5ff-8a8e48867efe" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-AllInstance-Testing" DetailsToFetch="GetDetailsFromText" Guid="89475760-aaed-481a-87a5-1796b64261ac" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="AllInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fa178931-6148-4bee-bdd9-2be9e243c3f4" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="b76c63f2-a7a1-4288-a849-258adce85fd8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="word" />
+<ActInputValue Guid="291f51cd-e503-4f37-ae1f-ecf90e08c2a3" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bf7c0f28-e5b2-482a-be62-6995f904a714" Operator="Equals" Param="CaretPosition" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="_caretValue" />
+<ActReturnValue Active="True" Guid="200f12eb-985a-4570-90d8-6579faf7c57d" Operator="Equals" Param="X" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="_xPosition" />
+<ActReturnValue Active="True" Guid="cbeb0a8f-40ac-4b41-9e9d-3c7ede437dfb" Operator="Equals" Param="Y" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="_yPosition" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-FirstInstance-Testing/Validation" DetailsToFetch="GetDetailsFromText" Guid="2911c53e-ae70-4f77-ad87-89e91f54104e" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2b369cfa-71a1-4be6-ad5f-c4b60a6ca4af" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1f945370-6640-4cce-80eb-b926c4e2fcdc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="word" />
+<ActInputValue Guid="a78d672b-6338-4b54-ae78-51d317ce288a" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5d2f40d5-be37-4e3d-8232-104e15329c67" mExpected="{Var Name=_caretValue}" Operator="Legacy" Param="CaretPosition" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="c6245d14-e1b1-4cd6-bc91-efb998d9feb4" mExpected="{Var Name=_xPosition}" Operator="Legacy" Param="X" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="188c43d5-f04b-45be-ba8d-d26173b67ff4" mExpected="{Var Name=_yPosition}" Operator="Legacy" Param="Y" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-InstanceN-Testing/Validation" DetailsToFetch="GetDetailsFromText" Guid="ff1dce2f-6827-47f0-a11d-14a4725b6829" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceNumber="1" TextInstanceType="InstanceN" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="016381f5-8350-4101-ae19-baf974c90cf1" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="b2a67e3b-d590-4730-8037-80eca92d83cd" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="word" />
+<ActInputValue Guid="edb43467-d771-43ef-83d5-fb29bf8fa9e0" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="9d9941de-4b38-4221-bacd-a4320f7a049d" mExpected="{Var Name=_caretValue}" Operator="Legacy" Param="CaretPosition" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="5b512778-9e2f-43ce-8742-2b1ce6e1e5de" mExpected="{Var Name=_xPosition}" Operator="Legacy" Param="X" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="45af17c5-6b67-42a6-96c5-35fc202ee6f1" mExpected="{Var Name=_yPosition}" Operator="Legacy" Param="Y" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActMainframeGetDetails>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Send Key To Mainframe-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="a82ddd27-96b8-4753-a8b8-444f073c8416" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeSetText Active="True" Description="SendKeytoMainFrame-Init" Guid="38d5d0c3-00d1-496e-ab35-0579a500c552" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ReloadValue="False" RetryMechanismInterval="5" SetTextMode="SetMultipleFields" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<CaretValueList>
+<ActInputValue Guid="38ff40b2-b7e7-4c31-a97e-6bfd22a8fa5b" Param="669" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Hello" />
+<ActInputValue Guid="e6f25f5f-47b7-4f0a-bef4-902568686c6d" Param="749" ParentGuid="00000000-0000-0000-0000-000000000000" Value="how" />
+<ActInputValue Guid="e2261e16-16a3-4975-96af-d9e4b23e276b" Param="780" ParentGuid="00000000-0000-0000-0000-000000000000" Value="N" />
+<ActInputValue Guid="caafc9c5-bac1-4b4c-abc1-704326c63971" Param="989" ParentGuid="00000000-0000-0000-0000-000000000000" Value="are" />
+<ActInputValue Guid="033a4686-ad3e-441f-b597-b18727db3c45" Param="1069" ParentGuid="00000000-0000-0000-0000-000000000000" Value="you" />
+</CaretValueList>
+
+<InputValues>
+<ActInputValue Guid="54eb2651-8136-4deb-9e6a-9c18c0f64a72" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="13100c2e-adba-41ab-981a-2ed0331cb229" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=_xmlData}" />
+<ActInputValue Guid="9e3d78f5-0e63-4049-99c5-3f68f490d99b" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeSendKey Active="True" Description="SendKeytoMainFrame-Testing" Guid="ff92c278-61fd-4b81-b8de-a6fef449f180" KeyToSend="EraseInput" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6467472f-4c6c-4e62-8c0d-231bcbfd62c2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+<ActMainframeGetDetails Active="True" Description="SendKeytoMainFrame-Validation" DetailsToFetch="GetAllEditableFeilds" Guid="305c0644-639a-4b06-b7d6-442d0dfafe72" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1510a562-0867-421d-bbd2-204163e48c59" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="0ab5c24b-2cda-4b99-9090-ca8c671d3f47" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="655" />
+<ActInputValue Guid="83027486-f5db-4cdb-8196-c6a0fa68f91d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2c67fb6c-03a9-4764-a068-36937c594e19" mExpected="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;349&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;429&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;509&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;560&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;661&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;693&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;973&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;997&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;1053&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" Operator="Legacy" Param="Fields" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_editableFields" />
+</ReturnValues>
+</ActMainframeGetDetails>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Send Text To Mainframe-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2a4d4969-291a-4d19-b3c9-4f38f5d5e161" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeSetText Active="True" Description="SendTextToMainframe-SetSingleField-Testing" Guid="f7b2787c-a91a-4981-9cfa-caaa623db827" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetTextMode="SetSingleField" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3a97b110-8433-47d0-8370-af5e4cbf3ae0" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="65378153-e509-43a6-84c3-17a37dee597f" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="669" />
+<ActInputValue Guid="cf581136-bfa7-49c5-8fdf-0c1944d714e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Ginger" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeGetDetails Active="True" Description="SendTextToMainframe-SetSingleField-Validation" DetailsToFetch="GetText" Guid="bd3b5da5-c447-4e8c-a66b-12e2f4737ccb" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d0e50f2e-d218-48ff-b60b-69c0c7156b38" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXY" />
+<ActInputValue Guid="a60cc619-65db-48a0-8ab8-e83f7ce276bc" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="29,8" />
+<ActInputValue Guid="002c209b-1f42-4eab-a3b1-329613a0cef6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e2d779e1-55e0-4f80-b4f6-faa15ffddb70" mExpected="N)" Operator="Legacy" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeSendKey Active="True" Description="SendTextToMainframe-SetMultipleFields-Init" Guid="1e2598bd-dd66-43be-89aa-3c692eeac42e" KeyToSend="EraseInput" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6467472f-4c6c-4e62-8c0d-231bcbfd62c2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+<ActMainframeSetText Active="True" Description="SendTextToMainframe-SetMultipleFields-Testing" Guid="0c8a3d5a-e899-4c55-a172-cd895045b5bd" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ReloadValue="False" RetryMechanismInterval="5" SendAfterSettingText="True" SetTextMode="SetMultipleFields" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<CaretValueList>
+<ActInputValue Guid="38ff40b2-b7e7-4c31-a97e-6bfd22a8fa5b" Param="669" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Hello" />
+<ActInputValue Guid="e6f25f5f-47b7-4f0a-bef4-902568686c6d" Param="749" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e2261e16-16a3-4975-96af-d9e4b23e276b" Param="780" ParentGuid="00000000-0000-0000-0000-000000000000" Value="N" />
+<ActInputValue Guid="caafc9c5-bac1-4b4c-abc1-704326c63971" Param="989" ParentGuid="00000000-0000-0000-0000-000000000000" Value="are" />
+<ActInputValue Guid="033a4686-ad3e-441f-b597-b18727db3c45" Param="1069" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</CaretValueList>
+
+<InputValues>
+<ActInputValue Guid="aea37c6d-139a-4677-a13e-4eb700fd0689" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="13100c2e-adba-41ab-981a-2ed0331cb229" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=_xmlData}" />
+<ActInputValue Guid="778b9312-95cb-4886-803e-ae8cb607d8ff" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeGetDetails Active="True" Description="SendTextToMainframe-SetMultipleFields-Validation" DetailsToFetch="GetAllEditableFeilds" EnableRetryMechanism="True" Guid="2bf56b39-815e-458d-b81c-e41d76b0be55" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="3" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70e26ff3-b581-4e9d-a664-fe42e0d8b41d" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="724b54cc-caaa-4815-bfde-aec3f2f331a7" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="669" />
+<ActInputValue Guid="6afbeb7d-87ff-48ea-b2e7-c080edca199f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c195fb11-02b4-4a12-a7a4-1a2337699d83" mExpected="{Var Name=_tempXML}" Operator="Legacy" Param="Fields" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_tempXML" />
+</ReturnValues>
+</ActMainframeGetDetails>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" ActivitiesGroupID="Group" ActivityName="Init" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="a4861de5-6c33-45a4-86be-0cb72ea368c3" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeSendKey Active="True" Description="Initialization of Mainframe Agent" Guid="efd89330-fc29-4457-b38c-8ecf9db51ef6" KeyToSend="EraseInput" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="AlwaysPass" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="40c7ee3b-838a-4314-8f6c-16ebb7688360" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" ActivitiesGroupID="Group" ActivityName="Get Details From Mainframe-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="598547e7-6c2d-4896-a3c8-27159bd9abe9" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetText-Testing" DetailsToFetch="GetText" Guid="0e862c2f-0b75-4bd8-9b63-3aca22b95e27" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e47b32e5-8005-4e7f-8c9c-95842600eb43" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="e5af38ca-13fa-4bc3-84d2-a8277a1115d9" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<ActInputValue Guid="b73f429d-addd-4504-a47a-655f0d43cd9d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeGetDetails>
+<ActMainframeSetText Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Init1" Guid="e0715a81-6400-4867-867c-3cced1cbb347" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SendAfterSettingText="True" SetTextMode="SetSingleField" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3c091cb5-272c-44eb-b5d7-8067d1e195b1" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="19c435ce-5611-4e1c-ada5-d9eb597b1b71" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="174" />
+<ActInputValue Guid="cf581136-bfa7-49c5-8fdf-0c1944d714e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CLSSC" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeSendKey Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Init2" Guid="b48f46ba-f8be-4a51-b4bb-47e6e7c97a6d" KeyToSend="Enter" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="95bdb44c-0f11-436b-b2c4-ab439d6d7f10" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Testing" DetailsToFetch="GetAllEditableFeilds" EnableRetryMechanism="True" Guid="8cf3fd6d-0a81-4f35-89f8-f5a2ddf87adf" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="10" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5a49ff75-cc61-438f-a119-c67c13b4ad56" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="ca5a0fdd-13c8-4d91-9658-f629ed52f4ec" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="655" />
+<ActInputValue Guid="ac0677f8-b405-4271-b3ac-127583c02e03" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="cc144d23-8b20-465e-a6e8-00746f01e9c7" mExpected="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;349&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;429&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;509&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;560&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;661&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;693&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;973&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;997&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;1053&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" Operator="Legacy" Param="Fields" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_xmlData" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActXMLTagValidation Active="True" Description="GetDetailsFromMainframe-GetAllEditableFields-Validation" DocumentType="XML" Guid="1c85b27f-0aaf-4b48-b385-7b5e07a2fdc1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ReqisFromFile="False" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<DynamicElements>
+<ActInputValue Guid="c2710eba-357f-41c2-831a-b711537decd1" Param="/EditableFields/EditableField[3]" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</DynamicElements>
+
+<InputValues>
+<ActInputValue Guid="2c655e2f-a25e-4324-bc5f-96b6de473aad" Param="InputFile" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=_xmlData}" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5327ad6d-07ee-4dac-a71f-5c351cf9abda" mExpected="509" Operator="Equals" Param="/EditableFields/EditableField[3]" ParentGuid="00000000-0000-0000-0000-000000000000" Path="Caret" StoreTo="None" />
+</ReturnValues>
+</ActXMLTagValidation>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetCurrentScreenAsXML-Testing" DetailsToFetch="GetCurrentScreenAsXML" Guid="13e70890-2c98-46eb-9a42-c88521fc67ca" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7210ae55-71ca-48df-9db2-7b5be5743d2a" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="2f9b61b7-be0f-4b2e-9f4f-c840acc9300e" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="aa2ab6e9-b82d-4356-9b5b-2e3e633cb560" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="33f5e5e1-a409-44d4-ad5d-ea683f50ab41" Operator="Legacy" Param="ScreenXML" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_editableFields" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-AfterCaretPosition-Testing" DetailsToFetch="GetDetailsFromText" Guid="c8cef340-4598-4ce8-b2fa-a0758b5d957c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="AfterCaretPosition" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2f031aab-9ba0-4dac-9c2b-d8a49c110e1f" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="4192b827-2c7d-4bfe-bb3f-4ce0d21b37ed" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1201" />
+<ActInputValue Guid="484ff908-e02f-404b-a5ff-8a8e48867efe" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-AllInstance-Testing" DetailsToFetch="GetDetailsFromText" Guid="89475760-aaed-481a-87a5-1796b64261ac" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="AllInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fa178931-6148-4bee-bdd9-2be9e243c3f4" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="b76c63f2-a7a1-4288-a849-258adce85fd8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="word" />
+<ActInputValue Guid="37f81707-795b-41fe-9d21-0b262a28ebd1" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bf7c0f28-e5b2-482a-be62-6995f904a714" Operator="Equals" Param="CaretPosition" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="_caretValue" />
+<ActReturnValue Active="True" Guid="200f12eb-985a-4570-90d8-6579faf7c57d" Operator="Equals" Param="X" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="_xPosition" />
+<ActReturnValue Active="True" Guid="cbeb0a8f-40ac-4b41-9e9d-3c7ede437dfb" Operator="Equals" Param="Y" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="_yPosition" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-FirstInstance-Testing/Validation" DetailsToFetch="GetDetailsFromText" Guid="2911c53e-ae70-4f77-ad87-89e91f54104e" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2b369cfa-71a1-4be6-ad5f-c4b60a6ca4af" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1f945370-6640-4cce-80eb-b926c4e2fcdc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="word" />
+<ActInputValue Guid="5f7200d0-b152-418e-9a80-7ccb01cfa459" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5d2f40d5-be37-4e3d-8232-104e15329c67" mExpected="{Var Name=_caretValue}" Operator="Legacy" Param="CaretPosition" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="c6245d14-e1b1-4cd6-bc91-efb998d9feb4" mExpected="{Var Name=_xPosition}" Operator="Legacy" Param="X" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="188c43d5-f04b-45be-ba8d-d26173b67ff4" mExpected="{Var Name=_yPosition}" Operator="Legacy" Param="Y" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeGetDetails Active="True" Description="GetDetailsFromMainframe-GetDetailsFromText-InstanceN-Testing/Validation" DetailsToFetch="GetDetailsFromText" Guid="ff1dce2f-6827-47f0-a11d-14a4725b6829" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceNumber="1" TextInstanceType="InstanceN" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="016381f5-8350-4101-ae19-baf974c90cf1" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="b2a67e3b-d590-4730-8037-80eca92d83cd" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="word" />
+<ActInputValue Guid="aa643536-6d46-4749-b38c-3d3631b9c969" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="9d9941de-4b38-4221-bacd-a4320f7a049d" mExpected="{Var Name=_caretValue}" Operator="Legacy" Param="CaretPosition" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="5b512778-9e2f-43ce-8742-2b1ce6e1e5de" mExpected="{Var Name=_xPosition}" Operator="Legacy" Param="X" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="45af17c5-6b67-42a6-96c5-35fc202ee6f1" mExpected="{Var Name=_yPosition}" Operator="Legacy" Param="Y" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActMainframeGetDetails>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" ActivitiesGroupID="Group" ActivityName="Send Key To Mainframe-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="a82ddd27-96b8-4753-a8b8-444f073c8416" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeSetText Active="True" Description="SendKeytoMainFrame-Init" Guid="38d5d0c3-00d1-496e-ab35-0579a500c552" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ReloadValue="False" RetryMechanismInterval="5" SetTextMode="SetMultipleFields" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<CaretValueList>
+<ActInputValue Guid="38ff40b2-b7e7-4c31-a97e-6bfd22a8fa5b" Param="669" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Hello" />
+<ActInputValue Guid="e6f25f5f-47b7-4f0a-bef4-902568686c6d" Param="749" ParentGuid="00000000-0000-0000-0000-000000000000" Value="how" />
+<ActInputValue Guid="e2261e16-16a3-4975-96af-d9e4b23e276b" Param="780" ParentGuid="00000000-0000-0000-0000-000000000000" Value="N" />
+<ActInputValue Guid="caafc9c5-bac1-4b4c-abc1-704326c63971" Param="989" ParentGuid="00000000-0000-0000-0000-000000000000" Value="are" />
+<ActInputValue Guid="033a4686-ad3e-441f-b597-b18727db3c45" Param="1069" ParentGuid="00000000-0000-0000-0000-000000000000" Value="you" />
+</CaretValueList>
+
+<InputValues>
+<ActInputValue Guid="54eb2651-8136-4deb-9e6a-9c18c0f64a72" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="13100c2e-adba-41ab-981a-2ed0331cb229" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=_xmlData}" />
+<ActInputValue Guid="a89c5dc0-f495-45b4-a9fc-1f39095e70e3" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeSendKey Active="True" Description="SendKeytoMainFrame-Testing" Guid="ff92c278-61fd-4b81-b8de-a6fef449f180" KeyToSend="EraseInput" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6467472f-4c6c-4e62-8c0d-231bcbfd62c2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+<ActMainframeGetDetails Active="True" Description="SendKeytoMainFrame-Validation" DetailsToFetch="GetAllEditableFeilds" Guid="305c0644-639a-4b06-b7d6-442d0dfafe72" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1510a562-0867-421d-bbd2-204163e48c59" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="0ab5c24b-2cda-4b99-9090-ca8c671d3f47" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="655" />
+<ActInputValue Guid="83027486-f5db-4cdb-8196-c6a0fa68f91d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2c67fb6c-03a9-4764-a068-36937c594e19" mExpected="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;349&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;429&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;509&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;560&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;661&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;693&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;973&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;997&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;1053&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" Operator="Legacy" Param="Fields" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_editableFields" />
+</ReturnValues>
+</ActMainframeGetDetails>
+</Acts>
+</Activity>
+<Activity ActionRunOption="ContinueActionsRunOnFailure" ActivitiesGroupID="Group" ActivityName="Send Text To Mainframe-Testing" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2a4d4969-291a-4d19-b3c9-4f38f5d5e161" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MainframeApp">
+<Acts>
+<ActMainframeSetText Active="True" Description="SendTextToMainframe-SetSingleField-Testing" Guid="f7b2787c-a91a-4981-9cfa-caaa623db827" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetTextMode="SetSingleField" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3a97b110-8433-47d0-8370-af5e4cbf3ae0" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="65378153-e509-43a6-84c3-17a37dee597f" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="669" />
+<ActInputValue Guid="cf581136-bfa7-49c5-8fdf-0c1944d714e0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Ginger" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeGetDetails Active="True" Description="SendTextToMainframe-SetSingleField-Validation" DetailsToFetch="GetText" Guid="bd3b5da5-c447-4e8c-a66b-12e2f4737ccb" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d0e50f2e-d218-48ff-b60b-69c0c7156b38" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXY" />
+<ActInputValue Guid="a60cc619-65db-48a0-8ab8-e83f7ce276bc" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="29,8" />
+<ActInputValue Guid="002c209b-1f42-4eab-a3b1-329613a0cef6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e2d779e1-55e0-4f80-b4f6-faa15ffddb70" mExpected="N)" Operator="Legacy" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActMainframeGetDetails>
+<ActMainframeSendKey Active="True" Description="SendTextToMainframe-SetMultipleFields-Init" Guid="1e2598bd-dd66-43be-89aa-3c692eeac42e" KeyToSend="EraseInput" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6467472f-4c6c-4e62-8c0d-231bcbfd62c2" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSendKey>
+<ActMainframeSetText Active="True" Description="SendTextToMainframe-SetMultipleFields-Testing" Guid="0c8a3d5a-e899-4c55-a172-cd895045b5bd" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" ReloadValue="False" RetryMechanismInterval="5" SendAfterSettingText="True" SetTextMode="SetMultipleFields" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<CaretValueList>
+<ActInputValue Guid="38ff40b2-b7e7-4c31-a97e-6bfd22a8fa5b" Param="669" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Hello" />
+<ActInputValue Guid="e6f25f5f-47b7-4f0a-bef4-902568686c6d" Param="749" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e2261e16-16a3-4975-96af-d9e4b23e276b" Param="780" ParentGuid="00000000-0000-0000-0000-000000000000" Value="N" />
+<ActInputValue Guid="caafc9c5-bac1-4b4c-abc1-704326c63971" Param="989" ParentGuid="00000000-0000-0000-0000-000000000000" Value="are" />
+<ActInputValue Guid="033a4686-ad3e-441f-b597-b18727db3c45" Param="1069" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</CaretValueList>
+
+<InputValues>
+<ActInputValue Guid="aea37c6d-139a-4677-a13e-4eb700fd0689" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="13100c2e-adba-41ab-981a-2ed0331cb229" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=_xmlData}" />
+<ActInputValue Guid="83640b5e-0353-47bc-8324-ef65e2e48ec9" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActMainframeSetText>
+<ActMainframeGetDetails Active="True" Description="SendTextToMainframe-SetMultipleFields-Validation" DetailsToFetch="GetAllEditableFeilds" Guid="2bf56b39-815e-458d-b81c-e41d76b0be55" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextInstanceType="FirstInstance" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="70e26ff3-b581-4e9d-a664-fe42e0d8b41d" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByCaretPosition" />
+<ActInputValue Guid="724b54cc-caaa-4815-bfde-aec3f2f331a7" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="669" />
+<ActInputValue Guid="6afbeb7d-87ff-48ea-b2e7-c080edca199f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c195fb11-02b4-4a12-a7a4-1a2337699d83" mExpected="{Var Name=_tempXML}" Operator="Legacy" Param="Fields" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="_tempXML" />
+</ReturnValues>
+</ActMainframeGetDetails>
+</Acts>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="d2caf2eb-f9af-4d22-96ba-deef822a6db2" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a4861de5-6c33-45a4-86be-0cb72ea368c3" ActivityName="Init" Guid="bd015f56-440f-4dea-a225-fc73a13737f9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="598547e7-6c2d-4896-a3c8-27159bd9abe9" ActivityName="Get Details From Mainframe-Testing" Guid="ec287c76-c290-4c1b-ac13-058117db5793" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a82ddd27-96b8-4753-a8b8-444f073c8416" ActivityName="Send Key To Mainframe-Testing" Guid="3ea09310-1df7-41da-b787-7afc33338772" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="2a4d4969-291a-4d19-b3c9-4f38f5d5e161" ActivityName="Send Text To Mainframe-Testing" Guid="403ad393-5bbf-4bb1-b3c1-8924be44cbd0" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a4861de5-6c33-45a4-86be-0cb72ea368c3" ActivityName="Init" Guid="ded756dd-7725-419b-8b90-2fe8cb4d392a" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="598547e7-6c2d-4896-a3c8-27159bd9abe9" ActivityName="Get Details From Mainframe-Testing" Guid="2e06cb5f-4951-4b82-950e-48130f47e1ce" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a82ddd27-96b8-4753-a8b8-444f073c8416" ActivityName="Send Key To Mainframe-Testing" Guid="803c12e9-08d3-4e6e-aed2-d205f94cd6a2" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="2a4d4969-291a-4d19-b3c9-4f38f5d5e161" ActivityName="Send Text To Mainframe-Testing" Guid="a2e77c98-0f72-4b4a-b142-af5bb6c1be41" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="d2caf2eb-f9af-4d22-96ba-deef822a6db2" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a4861de5-6c33-45a4-86be-0cb72ea368c3" ActivityName="Init" Guid="0ad79b3d-2fa8-4ccb-a864-a50fc23ce43d" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="598547e7-6c2d-4896-a3c8-27159bd9abe9" ActivityName="Get Details From Mainframe-Testing" Guid="09d1a67e-2cf4-4a59-accc-21c531ce0b97" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a82ddd27-96b8-4753-a8b8-444f073c8416" ActivityName="Send Key To Mainframe-Testing" Guid="d1af6968-c822-4ae0-8b0d-fb5f97602a50" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="2a4d4969-291a-4d19-b3c9-4f38f5d5e161" ActivityName="Send Text To Mainframe-Testing" Guid="6c3046fe-1385-4214-8d42-56ecadf39913" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a4861de5-6c33-45a4-86be-0cb72ea368c3" ActivityName="Init" Guid="373e842a-868e-4299-8b2c-8fb5c1a631fb" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="598547e7-6c2d-4896-a3c8-27159bd9abe9" ActivityName="Get Details From Mainframe-Testing" Guid="41fe7318-9f26-48c7-ba04-cc0bdc81ad8e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="a82ddd27-96b8-4753-a8b8-444f073c8416" ActivityName="Send Key To Mainframe-Testing" Guid="86b88aa7-66be-4ba9-b92c-39487acd234d" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="2a4d4969-291a-4d19-b3c9-4f38f5d5e161" ActivityName="Send Text To Mainframe-Testing" Guid="468c5469-b78d-4e4a-a5f5-5dc1c255952e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MainframeApp" Guid="066be65d-da01-4aba-9c90-3a2f2ceb4bd3" LastExecutingAgentName="MainframeAgent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<TargetApplication AppName="MainframeApp" Guid="066be65d-da01-4aba-9c90-3a2f2ceb4bd3" LastExecutingAgentName="MainframeAgent" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Description="Variable String" Guid="6f0adf96-eaff-4cd4-9799-629b059c5d72" InitialStringValue="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;669&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;749&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;780&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;989&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;1069&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" MappedOutputType="None" Name="_xmlData" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="811e3920-1c20-44f1-ae9e-d12ad93c2340" InitialStringValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;XMLScreen xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&lt;Field&gt;&lt;Location position=&quot;1&quot; left=&quot;1&quot; top=&quot;0&quot; length=&quot;8&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;KLGLGON1&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;10&quot; left=&quot;10&quot; top=&quot;0&quot; length=&quot;13&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;sssssssssssss&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;24&quot; left=&quot;24&quot; top=&quot;0&quot; length=&quot;32&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;        Entry Validation        &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;57&quot; left=&quot;57&quot; top=&quot;0&quot; length=&quot;23&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt;ssssssssssssssssssssss &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;80&quot; left=&quot;0&quot; top=&quot;1&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt; Date: 02/08/17                                                System: BC00     &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;160&quot; left=&quot;0&quot; top=&quot;2&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt; Time: 03:48:04                                                Device: IPNGA0LP &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;240&quot; left=&quot;0&quot; top=&quot;3&quot; length=&quot;1&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;242&quot; left=&quot;2&quot; top=&quot;3&quot; length=&quot;78&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;This is an ATT Company system, restricted to company official                 &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;320&quot; left=&quot;0&quot; top=&quot;4&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;  business and subject to inspection at any time.                               &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;400&quot; left=&quot;0&quot; top=&quot;5&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;  Unauthorized access, use, or modification is a violation of certain           &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;480&quot; left=&quot;0&quot; top=&quot;6&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;  laws and may subject the perpetrator to criminal prosecution.                 &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;560&quot; left=&quot;0&quot; top=&quot;7&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;            Identification:                                                     &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;640&quot; left=&quot;0&quot; top=&quot;8&quot; length=&quot;14&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;655&quot; left=&quot;15&quot; top=&quot;8&quot; length=&quot;13&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;Userid.......&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;669&quot; left=&quot;29&quot; top=&quot;8&quot; length=&quot;8&quot; /&gt;&lt;Attributes Base=&quot;194&quot; Protected=&quot;false&quot; FieldType=&quot;High&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;678&quot; left=&quot;38&quot; top=&quot;8&quot; length=&quot;42&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;720&quot; left=&quot;0&quot; top=&quot;9&quot; length=&quot;14&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;735&quot; left=&quot;15&quot; top=&quot;9&quot; length=&quot;13&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;Password.....&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;749&quot; left=&quot;29&quot; top=&quot;9&quot; length=&quot;8&quot; /&gt;&lt;Attributes Base=&quot;195&quot; Protected=&quot;false&quot; FieldType=&quot;Hidden&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;758&quot; left=&quot;38&quot; top=&quot;9&quot; length=&quot;21&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;   Change Password ? &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;780&quot; left=&quot;60&quot; top=&quot;9&quot; length=&quot;1&quot; /&gt;&lt;Attributes Base=&quot;194&quot; Protected=&quot;false&quot; FieldType=&quot;High&quot; /&gt;N&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;782&quot; left=&quot;62&quot; top=&quot;9&quot; length=&quot;18&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;(Y or N)          &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;800&quot; left=&quot;0&quot; top=&quot;10&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;880&quot; left=&quot;0&quot; top=&quot;11&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;            Additional Information:                                             &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;960&quot; left=&quot;0&quot; top=&quot;12&quot; length=&quot;28&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;               ACD Switch ID&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;989&quot; left=&quot;29&quot; top=&quot;12&quot; length=&quot;4&quot; /&gt;&lt;Attributes Base=&quot;192&quot; Protected=&quot;false&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;994&quot; left=&quot;34&quot; top=&quot;12&quot; length=&quot;46&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1040&quot; left=&quot;0&quot; top=&quot;13&quot; length=&quot;28&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;               Position No  &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1069&quot; left=&quot;29&quot; top=&quot;13&quot; length=&quot;4&quot; /&gt;&lt;Attributes Base=&quot;192&quot; Protected=&quot;false&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1074&quot; left=&quot;34&quot; top=&quot;13&quot; length=&quot;46&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1120&quot; left=&quot;0&quot; top=&quot;14&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1200&quot; left=&quot;0&quot; top=&quot;15&quot; length=&quot;0&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1201&quot; left=&quot;1&quot; top=&quot;15&quot; length=&quot;79&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;Bulletins: CLSSC requires RACF authority.  If your ID is not                   &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1280&quot; left=&quot;0&quot; top=&quot;16&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;              yet defined, then contact your group SA                           &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1360&quot; left=&quot;0&quot; top=&quot;17&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;              (security administrator) to define your ID.                       &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1440&quot; left=&quot;0&quot; top=&quot;18&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1520&quot; left=&quot;0&quot; top=&quot;19&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;            For CLSSC Assistance/Password Resets/                               &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1600&quot; left=&quot;0&quot; top=&quot;20&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;              Double click the HELPDESK icon on your desktop.                   &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1680&quot; left=&quot;0&quot; top=&quot;21&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1760&quot; left=&quot;0&quot; top=&quot;22&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt; ENTER USERID                                                                   &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1840&quot; left=&quot;0&quot; top=&quot;23&quot; length=&quot;0&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;&lt;/Field&gt;&lt;Unformatted&gt;&lt;Text&gt; KLGLGON1 sssssssssssss         Entry Validation         ssssssssssssssssssssss &lt;/Text&gt;&lt;Text&gt; Date: 02/08/17                                                System: BC00     &lt;/Text&gt;&lt;Text&gt; Time: 03:48:04                                                Device: IPNGA0LP &lt;/Text&gt;&lt;Text&gt;  This is an ATT Company system, restricted to company official                 &lt;/Text&gt;&lt;Text&gt;  business and subject to inspection at any time.                               &lt;/Text&gt;&lt;Text&gt;  Unauthorized access, use, or modification is a violation of certain           &lt;/Text&gt;&lt;Text&gt;  laws and may subject the perpetrator to criminal prosecution.                 &lt;/Text&gt;&lt;Text&gt;            Identification:                                                     &lt;/Text&gt;&lt;Text&gt;               Userid.......                                                    &lt;/Text&gt;&lt;Text&gt;               Password.....             Change Password ?  N (Y or N)          &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt;            Additional Information:                                             &lt;/Text&gt;&lt;Text&gt;               ACD Switch ID                                                    &lt;/Text&gt;&lt;Text&gt;               Position No                                                      &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt; Bulletins: CLSSC requires RACF authority.  If your ID is not                   &lt;/Text&gt;&lt;Text&gt;              yet defined, then contact your group SA                           &lt;/Text&gt;&lt;Text&gt;              (security administrator) to define your ID.                       &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt;            For CLSSC Assistance/Password Resets/                               &lt;/Text&gt;&lt;Text&gt;              Double click the HELPDESK icon on your desktop.                   &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt; ENTER USERID                                                                   &lt;/Text&gt;&lt;Text&gt; Enter  F1=Help  F3=Exit                                                        &lt;/Text&gt;&lt;/Unformatted&gt;&lt;Formatted&gt;true&lt;/Formatted&gt;&lt;UniqueID&gt;00000000-0000-0000-0000-000000000000&lt;/UniqueID&gt;&lt;/XMLScreen&gt;" MappedOutputType="None" Name="_editableFields" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="e1ce2cfc-0001-4c6d-a2be-3054b991e9f7" InitialStringValue="19" MappedOutputType="None" Name="_xPosition" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="8389f1e2-4499-4ff0-a6b9-037bcd7d1b68" InitialStringValue="9" MappedOutputType="None" Name="_yPosition" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="795ed8b9-5ffa-467c-b4d9-ffd2d508f9c8" InitialStringValue="748" MappedOutputType="None" Name="_caretValue" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="a8dc6ead-6499-46ab-98cd-a5abce07aa97" InitialStringValue="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;669&quot; Text=&quot;HELLO   &quot; /&gt;&lt;EditableField Caret=&quot;749&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;780&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;989&quot; Text=&quot;are &quot; /&gt;&lt;EditableField Caret=&quot;1069&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" MappedOutputType="None" Name="_tempXML" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="6f0adf96-eaff-4cd4-9799-629b059c5d72" InitialStringValue="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;669&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;749&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;780&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;989&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;1069&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" MappedOutputType="None" Name="_xmlData" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="811e3920-1c20-44f1-ae9e-d12ad93c2340" InitialStringValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;XMLScreen xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&lt;Field&gt;&lt;Location position=&quot;1&quot; left=&quot;1&quot; top=&quot;0&quot; length=&quot;8&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;KLGLGON1&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;10&quot; left=&quot;10&quot; top=&quot;0&quot; length=&quot;13&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;sssssssssssss&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;24&quot; left=&quot;24&quot; top=&quot;0&quot; length=&quot;32&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;        Entry Validation        &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;57&quot; left=&quot;57&quot; top=&quot;0&quot; length=&quot;23&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt;ssssssssssssssssssssss &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;80&quot; left=&quot;0&quot; top=&quot;1&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt; Date: 02/08/17                                                System: BC00     &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;160&quot; left=&quot;0&quot; top=&quot;2&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt; Time: 03:48:04                                                Device: IPNGA0LP &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;240&quot; left=&quot;0&quot; top=&quot;3&quot; length=&quot;1&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;neutralWhite&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;242&quot; left=&quot;2&quot; top=&quot;3&quot; length=&quot;78&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;This is an ATT Company system, restricted to company official                 &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;320&quot; left=&quot;0&quot; top=&quot;4&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;  business and subject to inspection at any time.                               &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;400&quot; left=&quot;0&quot; top=&quot;5&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;  Unauthorized access, use, or modification is a violation of certain           &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;480&quot; left=&quot;0&quot; top=&quot;6&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;  laws and may subject the perpetrator to criminal prosecution.                 &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;560&quot; left=&quot;0&quot; top=&quot;7&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;            Identification:                                                     &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;640&quot; left=&quot;0&quot; top=&quot;8&quot; length=&quot;14&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;655&quot; left=&quot;15&quot; top=&quot;8&quot; length=&quot;13&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;Userid.......&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;669&quot; left=&quot;29&quot; top=&quot;8&quot; length=&quot;8&quot; /&gt;&lt;Attributes Base=&quot;194&quot; Protected=&quot;false&quot; FieldType=&quot;High&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;678&quot; left=&quot;38&quot; top=&quot;8&quot; length=&quot;42&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;720&quot; left=&quot;0&quot; top=&quot;9&quot; length=&quot;14&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;735&quot; left=&quot;15&quot; top=&quot;9&quot; length=&quot;13&quot; /&gt;&lt;Attributes Base=&quot;198&quot; Protected=&quot;true&quot; FieldType=&quot;High&quot; /&gt;Password.....&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;749&quot; left=&quot;29&quot; top=&quot;9&quot; length=&quot;8&quot; /&gt;&lt;Attributes Base=&quot;195&quot; Protected=&quot;false&quot; FieldType=&quot;Hidden&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;758&quot; left=&quot;38&quot; top=&quot;9&quot; length=&quot;21&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;yellow&quot; /&gt;   Change Password ? &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;780&quot; left=&quot;60&quot; top=&quot;9&quot; length=&quot;1&quot; /&gt;&lt;Attributes Base=&quot;194&quot; Protected=&quot;false&quot; FieldType=&quot;High&quot; /&gt;N&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;782&quot; left=&quot;62&quot; top=&quot;9&quot; length=&quot;18&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;(Y or N)          &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;800&quot; left=&quot;0&quot; top=&quot;10&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;880&quot; left=&quot;0&quot; top=&quot;11&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;            Additional Information:                                             &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;960&quot; left=&quot;0&quot; top=&quot;12&quot; length=&quot;28&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;               ACD Switch ID&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;989&quot; left=&quot;29&quot; top=&quot;12&quot; length=&quot;4&quot; /&gt;&lt;Attributes Base=&quot;192&quot; Protected=&quot;false&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;994&quot; left=&quot;34&quot; top=&quot;12&quot; length=&quot;46&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1040&quot; left=&quot;0&quot; top=&quot;13&quot; length=&quot;28&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;green&quot; /&gt;               Position No  &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1069&quot; left=&quot;29&quot; top=&quot;13&quot; length=&quot;4&quot; /&gt;&lt;Attributes Base=&quot;192&quot; Protected=&quot;false&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1074&quot; left=&quot;34&quot; top=&quot;13&quot; length=&quot;46&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1120&quot; left=&quot;0&quot; top=&quot;14&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1200&quot; left=&quot;0&quot; top=&quot;15&quot; length=&quot;0&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;turquoise&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1201&quot; left=&quot;1&quot; top=&quot;15&quot; length=&quot;79&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;Bulletins: CLSSC requires RACF authority.  If your ID is not                   &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1280&quot; left=&quot;0&quot; top=&quot;16&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;              yet defined, then contact your group SA                           &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1360&quot; left=&quot;0&quot; top=&quot;17&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;              (security administrator) to define your ID.                       &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1440&quot; left=&quot;0&quot; top=&quot;18&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1520&quot; left=&quot;0&quot; top=&quot;19&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;            For CLSSC Assistance/Password Resets/                               &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1600&quot; left=&quot;0&quot; top=&quot;20&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;              Double click the HELPDESK icon on your desktop.                   &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1680&quot; left=&quot;0&quot; top=&quot;21&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;&lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1760&quot; left=&quot;0&quot; top=&quot;22&quot; length=&quot;80&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt; ENTER USERID                                                                   &lt;/Field&gt;&lt;Field&gt;&lt;Location position=&quot;1840&quot; left=&quot;0&quot; top=&quot;23&quot; length=&quot;0&quot; /&gt;&lt;Attributes Base=&quot;196&quot; Protected=&quot;true&quot; Foreground=&quot;blue&quot; /&gt;&lt;/Field&gt;&lt;Unformatted&gt;&lt;Text&gt; KLGLGON1 sssssssssssss         Entry Validation         ssssssssssssssssssssss &lt;/Text&gt;&lt;Text&gt; Date: 02/08/17                                                System: BC00     &lt;/Text&gt;&lt;Text&gt; Time: 03:48:04                                                Device: IPNGA0LP &lt;/Text&gt;&lt;Text&gt;  This is an ATT Company system, restricted to company official                 &lt;/Text&gt;&lt;Text&gt;  business and subject to inspection at any time.                               &lt;/Text&gt;&lt;Text&gt;  Unauthorized access, use, or modification is a violation of certain           &lt;/Text&gt;&lt;Text&gt;  laws and may subject the perpetrator to criminal prosecution.                 &lt;/Text&gt;&lt;Text&gt;            Identification:                                                     &lt;/Text&gt;&lt;Text&gt;               Userid.......                                                    &lt;/Text&gt;&lt;Text&gt;               Password.....             Change Password ?  N (Y or N)          &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt;            Additional Information:                                             &lt;/Text&gt;&lt;Text&gt;               ACD Switch ID                                                    &lt;/Text&gt;&lt;Text&gt;               Position No                                                      &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt; Bulletins: CLSSC requires RACF authority.  If your ID is not                   &lt;/Text&gt;&lt;Text&gt;              yet defined, then contact your group SA                           &lt;/Text&gt;&lt;Text&gt;              (security administrator) to define your ID.                       &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt;            For CLSSC Assistance/Password Resets/                               &lt;/Text&gt;&lt;Text&gt;              Double click the HELPDESK icon on your desktop.                   &lt;/Text&gt;&lt;Text /&gt;&lt;Text&gt; ENTER USERID                                                                   &lt;/Text&gt;&lt;Text&gt; Enter  F1=Help  F3=Exit                                                        &lt;/Text&gt;&lt;/Unformatted&gt;&lt;Formatted&gt;true&lt;/Formatted&gt;&lt;UniqueID&gt;00000000-0000-0000-0000-000000000000&lt;/UniqueID&gt;&lt;/XMLScreen&gt;" MappedOutputType="None" Name="_editableFields" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="e1ce2cfc-0001-4c6d-a2be-3054b991e9f7" InitialStringValue="19" MappedOutputType="None" Name="_xPosition" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="8389f1e2-4499-4ff0-a6b9-037bcd7d1b68" InitialStringValue="9" MappedOutputType="None" Name="_yPosition" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="795ed8b9-5ffa-467c-b4d9-ffd2d508f9c8" InitialStringValue="748" MappedOutputType="None" Name="_caretValue" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+<VariableString Description="Variable String" Guid="a8dc6ead-6499-46ab-98cd-a5abce07aa97" InitialStringValue="&lt;?xml version=&quot;1.0&quot;?&gt;&lt;EditableFields&gt;&lt;EditableField Caret=&quot;669&quot; Text=&quot;HELLO   &quot; /&gt;&lt;EditableField Caret=&quot;749&quot; Text=&quot;&quot; /&gt;&lt;EditableField Caret=&quot;780&quot; Text=&quot;N&quot; /&gt;&lt;EditableField Caret=&quot;989&quot; Text=&quot;are &quot; /&gt;&lt;EditableField Caret=&quot;1069&quot; Text=&quot;&quot; /&gt;&lt;/EditableFields&gt;" MappedOutputType="None" Name="_tempXML" ParentGuid="4fdac942-6383-409b-ba3f-7a12765d2cf9" ParentName="Mainframe_RegressionTestingSuite" ParentType="Business Flow" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>
